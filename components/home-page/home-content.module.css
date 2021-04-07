@@ -1,0 +1,27 @@
+
+.home {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.home__blog {
+    grid-column: 1 / 8;
+    background-color: var(--cotton-candy);
+    height: 70vh;
+}
+.home__ill {
+    grid-column: 8 / -1;
+    background-color: var(--persian-indigo);
+    height: 70vh;
+}
+
+.home__about {
+    grid-column: 1 / -1;
+    background-color: var(--skyblue-crayola);
+    height: 90vh;
+}
+
+.home__projects {
+    grid-column: 1 / -1;
+    background-color: var(--main-bg-color);
+    height: 90vh;
+}

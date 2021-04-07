@@ -1,0 +1,19 @@
+
+
+.postitem {
+    width: 30%;
+    border-radius: .5rem;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+.postitem > a {
+    color: var(--persian-indigo);
+    text-decoration: none;
+    height: 100%;
+}
+
+.postsgrid {
+    list-style: none;
+    padding: 2rem;
+    border: 2px solid black;
+}

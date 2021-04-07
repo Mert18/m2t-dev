@@ -1,0 +1,39 @@
+
+.header {
+    background-color: var(--cornflower-blue);
+    height: 9vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    font-size: 1rem;
+    color: var(--magnolia)
+}
+.nav__left {
+    height: 100%;
+    grid-column: 2 / 6;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: all .2s;
+
+}
+.nav__left > * {
+    margin-right: 2rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav__left > *:last-child {
+    margin-right: 0rem;
+}
+.nav__left > *:hover {
+    cursor: pointer;
+    color: white;
+    transition: all .2s;
+}
+
+
+.footer {
+    background-color: var(--cornflower-blue);
+    height: 40vh;
+}

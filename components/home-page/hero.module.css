@@ -1,0 +1,10 @@
+
+.hero {
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+    color: var(--tufts-blue);
+}
+.hero__title {
+    padding: 1rem;
+}
