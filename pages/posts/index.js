@@ -1,12 +1,23 @@
 import { Fragment } from 'react';
 import AllPosts from '../../components/posts/all-posts';
 import { getAllPosts } from '../../lib/posts-util';
+import classes from './blog.module.css';
 
 
 function AllPostsPage(props) {
     return (
         <Fragment>
-            <AllPosts posts={props.posts} />
+            <div className={classes.blog__grid}>
+                <div className={classes.hero}>
+                    <h2>Writing about everything.</h2>
+                </div>
+                <div className={classes.posts}>
+                    <AllPosts posts={props.posts} />
+                </div>
+                <div className={classes.info}>
+
+                </div>
+            </div>
         </Fragment>
     )
 

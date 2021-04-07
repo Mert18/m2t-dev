@@ -6,11 +6,11 @@ import Hero from '../components/home-page/hero';
 import HomeContent from '../components/home-page/home-content';
 
 
-export default function Home() {
+export default function Home(props) {
   return (
     <Fragment>
       <Hero />
-      <HomeContent />
+      <HomeContent posts={props.posts} />
     </Fragment>
 
   )

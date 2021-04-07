@@ -1,0 +1,25 @@
+
+.blog__grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.hero{
+    background-color: var(--lavender-floral);
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.1rem;
+    grid-column: 1 / -1;
+}
+
+.posts {
+    grid-column: 1 / 8;
+}
+
+.info{
+    grid-column: 8 / -1;
+    background-color: var(--main-bg-color);
+}

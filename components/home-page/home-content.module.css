@@ -5,13 +5,11 @@
 }
 .home__blog {
     grid-column: 1 / 8;
-    background-color: var(--cotton-candy);
-    height: 70vh;
+    padding: 2rem;
 }
 .home__ill {
     grid-column: 8 / -1;
     background-color: var(--persian-indigo);
-    height: 70vh;
 }
 
 .home__about {

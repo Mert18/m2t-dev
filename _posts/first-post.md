@@ -1,7 +1,7 @@
 ---
-title: Nietzsche Üzerine
+title: About Nietzsche and Others
 date: '2020-03-20T05:35:07.322Z'
-text: Nietzsche'yi Anlamak
+text: Dolor sunt anim nulla adipisicing in minim duis culpa ea anim exercitation cupidatat minim eu.
 isFeatured: true
 ---
 

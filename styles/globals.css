@@ -27,4 +27,5 @@ body {
     color: black;
     background-color: var(--magnolia);
     font-size: 62.5%;
+    list-style: none;
 }
