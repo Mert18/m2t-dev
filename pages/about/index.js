@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import classes from './about.module.css';
 
-const url = "http://localhost:3000";
+const url = "https://mert18-dev-en.vercel.app";
 
 const About = () => {
 
