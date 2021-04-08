@@ -9,13 +9,10 @@ const handler = expressHandler(async (req, res) => {
         const data = new Data(req.body);
         const createdData = await data.save();
         res.status(201).json(createdData);
-    }
-
-    if (req.method === "GET") {
+    } else if (req.method === "GET") {
         const datas = await Data.find({});
         res.status(200).json(datas);
     }
-
 
 })
 

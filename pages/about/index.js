@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import axios from 'axios';
+
+import classes from './about.module.css';
+
 const url = "http://localhost:3000";
 
 const About = () => {
@@ -23,13 +26,13 @@ const About = () => {
 
 
     return (
-        <section>
-            <div className="about__data">
-                <div className="about__data__title">
-                    <h2>Please don't rely on world happiness index. Mine is shown below.</h2>
+        <section className={classes.about}>
+            <div className={classes.about__data}>
+                <div className={classes.data__title}>
+                    <h2>Nobody asked me whether I'm happy or not. So please don't rely on world happiness index. Mine is shown below.</h2>
                 </div>
-                <div className="about__data__chart">
-                    <LineChart width={1200} height={500} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
+                <div className={classes.data__chart}>
+                    <LineChart width={1000} height={400} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
                         <Line type="monotone" strokeDasharray="5 5" dataKey="happiness" stroke="black" />
                         <Line type="monotone" dataKey="work" stroke="green" />
                         <Line type="monotone" dataKey="leisure" stroke="blue" />

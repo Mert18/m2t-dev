@@ -1,6 +1,8 @@
 import mongoose from 'mongoose';
 import moment from 'moment';
 
+delete mongoose.connection.models['Data'];
+
 const dataSchema = mongoose.Schema({
     work: {
         type: Number,
