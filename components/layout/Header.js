@@ -8,6 +8,7 @@ const Header = () => {
             <div className={classes.nav__left}>
                 <Link href="/"><span>ANA SAYFA</span></Link>
                 <Link href="/posts"><span>BLOG</span></Link>
+                <Link href="/about"><span>ABOUT</span></Link>
             </div>
         </div>
     )
