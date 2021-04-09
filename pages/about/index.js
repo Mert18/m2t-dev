@@ -14,7 +14,6 @@ const About = () => {
         axios.get(`${url}/api/about`)
             .then((response) => {
                 const allData = response.data;
-                console.log(allData)
                 getData(allData);
             })
             .catch(error => console.error("can not fetch items."))

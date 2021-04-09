@@ -23,3 +23,12 @@
     background-color: var(--main-bg-color);
     height: 90vh;
 }
+
+@media screen and (max-width: 800px) {
+    .home__blog {
+        grid-column: 1 / -1;
+    }    
+    .home__ill {
+        grid-column: 1 / -1;
+    }
+}

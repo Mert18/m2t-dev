@@ -22,3 +22,12 @@
     align-items: center;
     margin-bottom: 2rem;
 }
+
+@media screen and (max-width: 800px) {
+    .data__title {
+        display: none;
+    }
+    .data__chart {
+        display: none;
+    }
+}
