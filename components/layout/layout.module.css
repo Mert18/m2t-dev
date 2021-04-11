@@ -35,5 +35,37 @@
 
 .footer {
     background-color: var(--cornflower-blue);
-    height: 40vh;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.socials {
+    grid-column: 2 / 5;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.socials__title {
+    color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--magnolia);
+    font-size: .6rem;
+}
+
+.socials__part {
+    padding: 1rem;
+}
+.socials__part:hover {
+    cursor: pointer;
 }
