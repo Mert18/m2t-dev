@@ -10,9 +10,7 @@
 
 }
 .home__blog:hover {
-    background-color: pink;
     transition: all .3s;
-    box-shadow: 0pt 0pt 0pt 5pt var(--lavender-floral);
 }
 .home__ill {
     grid-column: 8 / -1;
@@ -27,33 +25,10 @@
 
 }
 .home__ill:hover {
-    background-color: pink;
     transition: all .3s;
-    box-shadow: 0pt 0pt 0pt 5pt var(--lavender-floral);
 }
 
-.home__about {
-    margin-top: 2rem;
-    grid-column: 1 / -1;
-    color: var(--persian-indigo);
-    transition: all .3s;
-    cursor: pointer;
-    position: relative;
-    margin-bottom: 2rem;
-}
-.home__about:hover {
-    background-color: pink;
-    transition: all .3s;
-    box-shadow: 0pt 0pt 0pt 5pt var(--lavender-floral);
-}
-.home__about__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1rem;
-    padding: 2rem;
-}
+
 
 .home__projects {
     grid-column: 1 / -1;
@@ -63,9 +38,7 @@
 
 }
 .home__projects:hover {
-    background-color: pink;
     transition: all .3s;
-    box-shadow: 0pt 0pt 0pt 5pt var(--lavender-floral);
 }
 
 @media screen and (max-width: 800px) {

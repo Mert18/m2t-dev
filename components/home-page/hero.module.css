@@ -1,16 +1,19 @@
 
 .hero {
-    font-size: 2rem;
     text-align: center;
     padding: 2rem;
-    color: var(--tufts-blue);
     transition: all .3s;
+    display: flex;
+    font-size: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 
 }
-.hero__title {
-    padding: 1rem;
+
+.img {
+    flex: 1;
 }
-.hero:hover{
-    color: var(--lavender-floral);
-    transition: all .3s;
+.oth {
+    flex: 2;
 }

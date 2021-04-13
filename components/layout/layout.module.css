@@ -1,49 +1,46 @@
 
 .header {
-    background-color: var(--cornflower-blue);
     height: 9vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     font-size: 1rem;
-    color: var(--magnolia);
 }
-.nav__left {
+.nav {
     height: 100%;
-    grid-column: 2 / -1;
+    grid-column: 1 / -1;
     display: flex;
     justify-content: start;
     align-items: center;
     transition: all .2s;
-
+    margin-left: 5rem;
 }
-.nav__left > * {
+.nav > * {
     margin-right: 2rem;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .2s;
+
 }
-.nav__left > *:last-child {
+.nav > *:last-child {
     margin-right: 0rem;
 }
-.nav__left > *:hover {
+.nav > *:hover {
     cursor: pointer;
-    color: white;
     transition: all .2s;
+    margin-top: .4rem;
 }
 
 
 .footer {
-    background-color: var(--cornflower-blue);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     transition: all .3s;
 
 }
 .footer:hover {
-    background-color: pink;
     transition: all .3s;
-    box-shadow: 0pt 0pt 0pt 5pt var(--lavender-floral);
 }
 
 .socials {

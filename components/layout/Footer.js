@@ -12,15 +12,6 @@ const Footer = () => {
                 </div>
 
                 <div className={classes.socials__links}>
-                    <div className={classes.socials__part}>
-                        <div className="socials__part__icon">
-                            <img src="/images/icons8-twitter.svg" width="50px"></img>
-                        </div>
-                        <div className="socials__part__title">
-                            <h2>Twitter</h2>
-                        </div>
-
-                    </div>
 
                     <div className={classes.socials__part}>
                         <div className="socials__part__icon">
