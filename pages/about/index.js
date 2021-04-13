@@ -32,7 +32,7 @@ const About = () => {
                 </div>
                 <div className={classes.data__chart}>
                     <LineChart width={1000} height={400} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
-                        <Line type="monotone" strokeDasharray="5 5" dataKey="happiness" stroke="black" />
+                        <Line type="monotone" strokeDasharray="7 7" dataKey="happiness" stroke="white" />
                         <Line type="monotone" dataKey="work" stroke="green" />
                         <Line type="monotone" dataKey="leisure" stroke="blue" />
                         <Line type="monotone" dataKey="game" stroke="red" />
