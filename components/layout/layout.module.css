@@ -4,10 +4,13 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     font-size: 1rem;
+
+    background-color: var(--red);
+    color: white;
 }
 .nav {
     height: 100%;
-    grid-column: 1 / -1;
+    grid-column: 1 / 5;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -20,7 +23,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .2s;
 
 }
 .nav > *:last-child {
@@ -28,10 +30,18 @@
 }
 .nav > *:hover {
     cursor: pointer;
-    transition: all .2s;
-    margin-top: .4rem;
 }
 
+.info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-column: 9 / span 3;
+}
+.info > * {
+    padding: .4rem;
+}
 
 .footer {
     display: grid;

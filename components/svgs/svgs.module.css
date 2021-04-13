@@ -1,0 +1,10 @@
+
+
+.hex g polygon {
+    transition: all .3s;
+}
+
+.hex g polygon:hover {
+    stroke: var(--red);
+    transform: translateX(10px);
+}
