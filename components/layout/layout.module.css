@@ -35,9 +35,15 @@
 
 .footer {
     background-color: var(--cornflower-blue);
-
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    transition: all .3s;
+
+}
+.footer:hover {
+    background-color: pink;
+    transition: all .3s;
+    box-shadow: 0pt 0pt 0pt 5pt var(--lavender-floral);
 }
 
 .socials {
@@ -59,7 +65,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--magnolia);
+    color: var(--main-bg-color);
     font-size: .6rem;
 }
 

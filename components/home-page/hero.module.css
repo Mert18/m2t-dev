@@ -4,7 +4,13 @@
     text-align: center;
     padding: 2rem;
     color: var(--tufts-blue);
+    transition: all .3s;
+
 }
 .hero__title {
     padding: 1rem;
+}
+.hero:hover{
+    color: var(--lavender-floral);
+    transition: all .3s;
 }

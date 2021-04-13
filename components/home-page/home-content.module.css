@@ -6,22 +6,66 @@
 .home__blog {
     grid-column: 1 / 8;
     padding: 2rem;
+    transition: all .3s;
+
+}
+.home__blog:hover {
+    background-color: pink;
+    transition: all .3s;
+    box-shadow: 0pt 0pt 0pt 5pt var(--lavender-floral);
 }
 .home__ill {
     grid-column: 8 / -1;
-    background-color: var(--persian-indigo);
+    color: var(--persian-indigo);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    transition: all .3s;
+
+}
+.home__ill:hover {
+    background-color: pink;
+    transition: all .3s;
+    box-shadow: 0pt 0pt 0pt 5pt var(--lavender-floral);
 }
 
 .home__about {
+    margin-top: 2rem;
     grid-column: 1 / -1;
-    background-color: var(--skyblue-crayola);
-    height: 90vh;
+    color: var(--persian-indigo);
+    transition: all .3s;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.home__about:hover {
+    background-color: pink;
+    transition: all .3s;
+    box-shadow: 0pt 0pt 0pt 5pt var(--lavender-floral);
+}
+.home__about__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    padding: 2rem;
 }
 
 .home__projects {
     grid-column: 1 / -1;
-    background-color: var(--main-bg-color);
     height: 90vh;
+    transition: all .3s;
+    margin-bottom: 2rem;
+
+}
+.home__projects:hover {
+    background-color: pink;
+    transition: all .3s;
+    box-shadow: 0pt 0pt 0pt 5pt var(--lavender-floral);
 }
 
 @media screen and (max-width: 800px) {
