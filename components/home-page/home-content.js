@@ -2,6 +2,8 @@
 import classes from './home-content.module.css';
 import PostItem from '../posts/post-item.js';
 
+import Window from '../svgs/Window';
+
 
 
 const HomeContent = (props) => {
@@ -18,12 +20,7 @@ const HomeContent = (props) => {
             </div>
 
             <div className={classes.home__ill}>
-            </div>
-
-            <div className={classes.home__thing}>
-            </div>
-            <div className={classes.home__projects}>
-
+                <Window />
             </div>
         </section>
     )

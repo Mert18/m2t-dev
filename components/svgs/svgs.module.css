@@ -2,9 +2,14 @@
 
 .hex g polygon {
     transition: all .3s;
+    fill: var(--black);
 }
 
 .hex g polygon:hover {
     stroke: var(--red);
-    transform: translateX(10px);
+}
+
+.window g path {
+    fill: var(--black);
+    stroke: var(--red);
 }

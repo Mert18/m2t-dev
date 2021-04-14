@@ -10,7 +10,7 @@
 }
 .nav {
     height: 100%;
-    grid-column: 1 / 5;
+    grid-column: 1 / 7;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -82,3 +82,19 @@
 .socials__part:hover {
     cursor: pointer;
 }
+
+@media (max-width: 973px) {
+    .hero__links {
+        display: none;
+    }
+ }
+
+ 
+@media (max-width: 660px) {
+    .hero__links {
+        display: none;
+    }
+    .nav {
+        display: none;
+    }
+ }

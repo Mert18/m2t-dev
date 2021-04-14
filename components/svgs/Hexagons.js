@@ -4,7 +4,7 @@ import classes from './svgs.module.css';
 
 
 const Hexagons = () => {
-    const [color, setColor] = useState("");
+    const [color, setColor] = useState("red");
 
     useEffect(() => {
         setTimeout(() => {

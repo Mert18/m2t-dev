@@ -7,16 +7,20 @@
     grid-column: 1 / 8;
     padding: 2rem;
     transition: all .3s;
-    
 }
 .home__blog ul {
     list-style: none;
 }
 
-.home__thing {
-    grid-column: 1 / -1;
-    text-align: center;
+.home__ill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 8 / 12;
+    padding: 3rem;
 }
+
+
 
 @media screen and (max-width: 800px) {
     .home__blog {
