@@ -1,0 +1,6 @@
+
+
+.svgm path {
+    fill: none;
+    stroke: var(--flavor);
+}

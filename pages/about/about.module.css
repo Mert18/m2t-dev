@@ -21,6 +21,42 @@
     margin-bottom: 2rem;
 }
 
+.aboutstack {
+    margin-top: 2rem;
+    grid-column: 2 / 12;
+    font-size: .9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.aboutstack h2 {
+    margin-top: 2rem;
+}
+
+.aboutstack__stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.really {
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    grid-column: 3 / 11;
+}
+.reallytext {
+    padding: 1rem;
+}
+
+
 @media screen and (max-width: 800px) {
     .data__title {
         display: none;
