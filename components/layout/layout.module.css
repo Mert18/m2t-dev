@@ -42,17 +42,6 @@
 .info > * {
     padding: .4rem;
 }
-
-.footer {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    transition: all .3s;
-
-}
-.footer:hover {
-    transition: all .3s;
-}
-
 .socials {
     grid-column: 2 / 5;
     display: flex;

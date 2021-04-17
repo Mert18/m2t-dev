@@ -1,12 +1,11 @@
 
 import classes from './hero.module.css';
-import Hexagons from '../svgs/Hexagons.js';
 
 
 const Hero = () => {
     return (
         <div className={classes.hero}>
-            <Hexagons />
+            <h1>It's been happening because of a web developer.</h1>
         </div>
     )
 }

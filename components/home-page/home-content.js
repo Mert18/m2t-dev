@@ -1,8 +1,8 @@
 
 import classes from './home-content.module.css';
 import PostItem from '../posts/post-item.js';
+import Game from '../Game.js';
 
-import Window from '../svgs/Window';
 
 
 
@@ -18,9 +18,8 @@ const HomeContent = (props) => {
                     )}
                 </ul>
             </div>
-
-            <div className={classes.home__ill}>
-                <Window />
+            <div className={classes.game}>
+                <Game />
             </div>
         </section>
     )

@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+/* font-family: 'Mukta', sans-serif; */
 
 :root {
     --black: #121619;
     --white : #E0E2DB;
-    --red : #FF5964;
+    --red : #ca4d56;
+
+    --text: #1b1717;
+    --back: #eeebdd;
+    --flavor: #810000;
+    --flavor2: #ce1212;
 
 }
 
@@ -15,10 +23,10 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    color: var(--white);
-    background-color: var(--black);
+    color: var(--black);
+    background-color: var(--back);
     font-size: 62.5%;
     list-style: none;
 }
