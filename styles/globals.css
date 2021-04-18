@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
 /* font-family: 'Mukta', sans-serif; */
 
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+ /* font-family: 'Dela Gothic One', cursive; */
+
 :root {
     --black: #121619;
     --white : #E0E2DB;

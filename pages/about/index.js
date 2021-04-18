@@ -45,7 +45,7 @@ const About = () => {
             </div>
 
             <div className={classes.aboutstack}>
-                <h2>I know the following technologies and I've used them in a project before.</h2>
+                <h2>I know the following and I've used them in a project before.</h2>
 
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
@@ -66,6 +66,9 @@ const About = () => {
                     <div className={classes.tech}>
                         <img src="/images/icons/nodejs-icon.svg" width="100px" alt="nodejs icon" />
                     </div>
+                    <div className={classes.tech}>
+                        <img src="/images/icons/mongodb.svg" width="100px" alt="mongodb icon" />
+                    </div>
 
                 </div>
 
@@ -80,8 +83,22 @@ const About = () => {
                         <img src="/images/icons/linux-tux.svg" width="100px" alt="linux icon" />
                     </div>
 
+                    
+                </div>
+
+                <h2>Technologies that I am planning to learn in the near future.</h2>
+
+                <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
-                        <img src="/images/icons/mongodb.svg" width="100px" alt="mongodb icon" />
+                        <img src="/images/icons/php-1.svg" width="100px" alt="postgresql icon" />
+                    </div>
+
+                    <div className={classes.tech}>
+                        <img src="/images/icons/typescript.svg" width="100px" alt="linux icon" />
+                    </div>
+
+                    <div className={classes.tech}>
+                        <img src="/images/icons/graphql.svg" width="100px" alt="mongodb icon" />
                     </div>
                 </div>
             </div>
