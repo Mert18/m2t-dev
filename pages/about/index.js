@@ -37,7 +37,6 @@ const About = () => {
                         <Line type="monotone" dataKey="leisure" stroke="blue" />
                         <Line type="monotone" dataKey="game" stroke="red" />
                         <CartesianGrid stroke="#ccc" />
-                        <XAxis dataKey="date" />
                         <YAxis />
                         <Tooltip />
                     </LineChart>
