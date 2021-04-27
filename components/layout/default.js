@@ -1,11 +1,10 @@
 
 import Header from "./Header.js";
 
-export default function Layout(props) {
+export default function Default(props) {
     return (
         <div>
             <Header />
-            
             <main>
                 {props.children}
             </main>

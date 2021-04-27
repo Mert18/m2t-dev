@@ -92,6 +92,10 @@ const About = () => {
                         <img src="/images/icons/next-js.svg" width="100px" alt="nextjs icon" />
                     </div>
 
+                    <div className={classes.tech}>
+                        <img src="/images/icons/typescript.svg" width="100px" alt="linux icon" />
+                    </div>
+
                     
                 </div>
 
@@ -102,9 +106,7 @@ const About = () => {
                         <img src="/images/icons/php-1.svg" width="100px" alt="postgresql icon" />
                     </div>
 
-                    <div className={classes.tech}>
-                        <img src="/images/icons/typescript.svg" width="100px" alt="linux icon" />
-                    </div>
+                    
 
                     <div className={classes.tech}>
                         <img src="/images/icons/graphql.svg" width="100px" alt="mongodb icon" />
