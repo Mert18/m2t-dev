@@ -5,7 +5,7 @@ import { Fragment } from "react";
 import HomeContent from '../components/home-page/home-content';
 
 
-export default function Home(props) {
+export default function Home() {
   return (
     <Fragment>
       <HomeContent />
@@ -13,6 +13,7 @@ export default function Home(props) {
 
   )
 }
+Home.layout = "home"
 
 export function getStaticProps() {
   const featuredPosts = getFeaturedPosts();

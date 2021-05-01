@@ -1,27 +1,13 @@
 import '../styles/globals.css'
 import Head from "next/head";
-
-import DefaultLayout from "../components/layout/default.js";
-import HomeLayout from "../components/layout/home.js"; 
+import LayoutWrapper from "../components/layout/layout-wrapper";
 
 function MyApp({ Component, pageProps }) {
 
-    const Layout = Component.Layout || DefaultLayout;
-
     return (
-        <HomeLayout>
-            <Layout>
-                <Head>
-                    <title>Mert Dev</title>
-                    <meta
-                        name="Developer Mert Blog"
-                        content="Blog Posts and all about me."
-                    />
-                </Head>
-
+        <LayoutWrapper {...pageProps}>
                 <Component {...pageProps} />
-            </Layout>
-        </HomeLayout>
+        </LayoutWrapper>
     );
 }
 

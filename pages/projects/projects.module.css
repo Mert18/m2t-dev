@@ -6,21 +6,20 @@
 }
 .filters button {
     background: none;
-    color: var(--back);
+    color: var(--text);
     padding: .5rem;
-    border-radius: 1rem;
     width: 5rem;
-    border: 2px solid var(--back);
     margin-right: 1rem;
     transition: all .3s;
     outline:none;
+    border: none;
 
 }
 .filters button:last-child {
     margin-right: 0rem;
 }
 .filters button:hover {
-    background-color: var(--red);
+    background-color: var(--hover);
     cursor: pointer;
     transition: all .3s;
 }
@@ -29,7 +28,7 @@
 .projects {
     align-items: center;
     background: var(--flavor);
-    color: var(--back);
+    color: var(--text);
     display: flex;
     grid-column: 1 / -1;
     flex-direction: column;
@@ -51,7 +50,6 @@
     width: 100%;
 }
 .project {
-    border-bottom: 3px solid var(--back);
     display: grid;
     font-size: .9rem;
     grid-template-columns: repeat(12, 1fr);
@@ -62,8 +60,8 @@
 
 }
 .project:hover {
-    background: var(--red);
     transition: all .2s;
+    color: var(--hover);
 }
 .project__title {
     font-size: 1.2rem;

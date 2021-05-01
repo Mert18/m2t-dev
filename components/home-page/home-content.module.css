@@ -3,8 +3,11 @@
     background-color: var(--flavor);
     height: 100vh;
     width: 100%;
-    color: var(--white);
+    color: var(--text);
     padding: 5rem;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 .home ul {
@@ -12,12 +15,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-size: 3rem;
+    font-size: 2rem;
+    grid-column: 3 /6;
 }
 .home ul span:hover {
     cursor: pointer;
-    color: var(--red);
+    color: var(--hover);
 }
 .links {
-    padding: 2rem;
+    grid-column: 7 / -1;
 }
