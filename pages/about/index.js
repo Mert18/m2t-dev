@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import classes from './about.module.css';
 
-const url = "https://mert18-dev-en.vercel.app/";
+const url = "http://localhost:3000";
 
 const About = () => {
 
@@ -32,13 +32,13 @@ const About = () => {
                     <h2>My happiness index is shown below.</h2>
                 </div>
                 <div className={classes.data__chart}>
-                    <LineChart width={1000} height={400} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
+                <LineChart width={1000} height={400} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
                         <Line type="monotone" dataKey="game" stroke="magenta" strokeDasharray="7 7" dot={false} />
-                        <Line type="monotone" strokeDasharray="7 7" dataKey="work" stroke="cyan" dot={false} />
-                        <Line type="monotone" strokeDasharray="7 7" dataKey="leisure" stroke="white" dot={false} />
+                        <Line type="monotone" strokeDasharray="7 7" dataKey="work" stroke="green" dot={false} />
+                        <Line type="monotone" strokeDasharray="7 7" dataKey="leisure" stroke="blue" dot={false} />
                         <Line type="monotone"  dataKey="happiness" stroke="orange" strokeWidth={3} dot={false} />
-                        <CartesianGrid stroke="#ccc" />
-                        <XAxis dataKey="date" />
+                        <CartesianGrid stroke="white" />
+                        <XAxis dataKey="date" stroke="white" hide={true}   />
                         <YAxis />
                         <Legend />
                         <Tooltip  />

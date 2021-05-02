@@ -11,12 +11,17 @@
     --white : #E0E2DB;
     --red : #ca4d56;
 
-    --text: #eeebdd;
+    --back1: #070600;
+    --back2: #E0E2DB;
 
-    --flavor: #6B2737;
+    --text1: #eeebdd;
+    --text2: #070600;
+    
+    --flavor: #070600;
     --flavor2: #ce1212;
+    --flavor3: #EA526F;
 
-    --hover: #FFB17A;
+    --hover: #FFFFFF;
 
 }
 

@@ -1,16 +1,12 @@
 
-.home {
-    background-color: var(--flavor);
+.homehero {
+    background-color: var(--back1);
+    color: var(--text1);
     height: 100vh;
-    width: 100%;
-    color: var(--text);
-    padding: 5rem;
-    align-items: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
-
-.home ul {
+.homehero ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,10 +14,44 @@
     font-size: 2rem;
     grid-column: 3 /6;
 }
-.home ul span:hover {
+.homehero ul span:hover {
     cursor: pointer;
-    color: var(--hover);
+    color: var(--flavor3);
 }
 .links {
-    grid-column: 7 / -1;
+    grid-column: 6 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.link a img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: var(--text1);
+    border-radius: 2rem;
+    margin: 1rem;
+}
+.link a img:hover {
+    background-color: var(--flavor3);
+}
+
+
+.homeblog {
+    grid-column: 1 / -1;
+    background-color: var(--back2);
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.homeblog__title {
+    grid-column: 2 / -1;
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+.homeblog__title:hover {
+    text-decoration: underline;
 }
