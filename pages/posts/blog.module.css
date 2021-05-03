@@ -20,8 +20,3 @@
 .posts {
     grid-column: 1 / 8;
 }
-
-.info{
-    grid-column: 8 / -1;
-    background-color: var(--main-bg-color);
-}

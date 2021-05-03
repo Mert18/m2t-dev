@@ -37,21 +37,3 @@
 .link a img:hover {
     background-color: var(--flavor3);
 }
-
-
-.homeblog {
-    grid-column: 1 / -1;
-    background-color: var(--back2);
-
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
-
-.homeblog__title {
-    grid-column: 2 / -1;
-    font-size: 1.2rem;
-    margin: 2rem;
-}
-.homeblog__title:hover {
-    text-decoration: underline;
-}

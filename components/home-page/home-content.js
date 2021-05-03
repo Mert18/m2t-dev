@@ -2,8 +2,6 @@
 import Link from 'next/link';
 import classes from './home-content.module.css';
 
-import HomeBlog from './home-blog';
-
 
 const HomeContent = () => {
     return (
@@ -30,10 +28,6 @@ const HomeContent = () => {
                     
                 </div>
 
-            </div>
-
-            <div className={classes.homeblog}>
-                <HomeBlog />
             </div>
         </div>
     )

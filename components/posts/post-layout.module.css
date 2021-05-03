@@ -11,7 +11,7 @@
     height: 100%;
 }
 .postitem a {
-    color: var(--persian-indigo);
+    color: var(--text1);
     text-decoration: none;
 }
 .postitem a:hover {

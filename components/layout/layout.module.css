@@ -1,7 +1,7 @@
 
 .header {
     background-color: var(--flavor);
-    color: var(--text);
+    color: var(--text1);
     display: flex;
     justify-content: center;
     align-items: center;

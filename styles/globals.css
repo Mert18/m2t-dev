@@ -39,7 +39,6 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
     color: var(--text);
     background-color: var(--flavor);
     font-size: 62.5%;

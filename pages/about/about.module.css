@@ -1,6 +1,7 @@
 .about {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    color: var(--text1);
 }
 
 .about__data{
@@ -10,16 +11,11 @@
     align-items: center;
     font-size: 1.1rem;
     grid-column: 1 / -1;
+    margin-top: 4rem;
+    color: var(--text2);
 }
 
-.data__title {
-    width: 100%;
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2rem;
-}
+
 
 .aboutstack {
     margin-top: 2rem;

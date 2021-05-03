@@ -9,14 +9,6 @@ const Projects = () => {
                     <h2>Projects</h2>
                 </div>
 
-                <div className={classes.filters}>
-                    <button>All</button>
-                    <button>SPAs</button>
-                    <button>Layout</button>
-                    <button>Original</button>
-                    <button>Classic</button>
-                </div>
-
                 <div className={classes.projects__projects}>
 
                     <Link href="https://from-the-heap.vercel.app/">

@@ -1,34 +1,8 @@
 
 
-.filters {
-    width: 90%;
-    margin-bottom: 3rem;
-}
-.filters button {
-    background: none;
-    color: var(--text);
-    padding: .5rem;
-    width: 5rem;
-    margin-right: 1rem;
-    transition: all .3s;
-    outline:none;
-    border: none;
-
-}
-.filters button:last-child {
-    margin-right: 0rem;
-}
-.filters button:hover {
-    background-color: var(--hover);
-    cursor: pointer;
-    transition: all .3s;
-}
-
-
 .projects {
     align-items: center;
-    background: var(--flavor);
-    color: var(--text);
+    color: var(--text1);
     display: flex;
     grid-column: 1 / -1;
     flex-direction: column;
