@@ -11,6 +11,12 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head />
                 <title>Mert Dev</title>
+                <link
+            rel="preload"
+            href="/fonts/Gothic.ttf"
+            as="font"
+            crossOrigin=""
+          />
                 <body>
                     <Main />
                     <NextScript />
