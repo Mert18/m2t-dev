@@ -11,7 +11,7 @@ const Graph = () => {
     const [data, getData] = useState([]);
 
     const getAllData = () => {
-        axios.get(`${url}/api/about`)
+        axios.get(`${url}`)
             .then((response) => {
                 const allData = response.data;
                 getData(allData);
