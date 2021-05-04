@@ -1,9 +1,7 @@
 import DefaultLayout from './default';
-import HomeLayout from './home';
 
 const layouts = {
     defalt: DefaultLayout,
-    home: HomeLayout
 }
 
 const LayoutWrapper = (props) => {

@@ -6,10 +6,16 @@ import classes from './layout.module.css';
 const Header = () => {
     return (
         <div className={classes.header}>
-            <Link href="/">HOME</Link>
-            <Link href="/posts">BLOG</Link>
-            <Link href="/about">ABOUT</Link>
-            <Link href="/projects">PROJECTS</Link>
+            <div className={classes.header__title}>
+                <h1>Mert Uygur</h1>
+            </div>
+            <div className={classes.header__nav}>
+                <Link href="/">home</Link>
+                <Link href="/posts">blog</Link>
+                <Link href="/about">about</Link>
+                <Link href="/projects">projects</Link>
+            </div>
+            
         </div>
     )
 }

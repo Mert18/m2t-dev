@@ -1,0 +1,24 @@
+.home {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    min-height: 100vh;
+}
+
+.hero {
+    grid-column: 1 / -1;
+}
+
+
+.content {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.featuredposts {
+    grid-column: 1 / 8;
+}
+.littlethings {
+    grid-column: 9 / 13;
+    border: 2px solid black;
+}

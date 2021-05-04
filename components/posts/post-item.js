@@ -12,10 +12,11 @@ const PostItem = (props) => {
             <Link href={linkPath}>
                 <a>
                     <h1>{title}</h1>
-                    <p>{text}</p>
-                    <time>{formattedDate}</time>
                 </a>
             </Link>
+                    <p>{text}</p>
+                    <time>{formattedDate}</time>
+                
         </li>
     )
 }

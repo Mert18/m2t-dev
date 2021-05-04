@@ -6,22 +6,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
  /* font-family: 'Dela Gothic One', cursive; */
 
+ @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+ /* font-family: 'Balsamiq Sans', cursive; */
+ @font-face {
+    font-family: "Gothic";
+    src: url("/fonts/Gothic.ttf");
+  }
 :root {
-    --black: #121619;
-    --white : #E0E2DB;
-    --red : #ca4d56;
+    --text1: #30343F;
 
-    --back1: #070600;
-    --back2: #E0E2DB;
-
-    --text1: #eeebdd;
-    --text2: #070600;
+    --back1: #F8F0FB;
     
-    --flavor: #070600;
-    --flavor2: #ce1212;
-    --flavor3: #EA526F;
+    --flavor: #A20021;
+    --flavor2: #2F2D2E;
 
-    --hover: #FFFFFF;
+    --hover: #89023E;
 
 }
 
@@ -38,8 +37,8 @@
 
 }
 body {
-    font-family: 'Poppins', sans-serif;
-    color: var(--text);
+    font-family: 'Gothic', cursive;
+    color: var(--text2);
     background-color: var(--flavor);
     font-size: 62.5%;
     list-style: none;

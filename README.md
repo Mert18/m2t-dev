@@ -1,1 +1,2 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+ICONS WILL BE ADDED TO THE HEADER.
+FONT STYLE CAN BE CHANGED.

@@ -1,51 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
-import axios from 'axios';
-
+import React from 'react'
 import classes from './about.module.css';
 
-const url = "https://merd.dev";
+import Graph from '../../components/Graph.js';
 
 const About = () => {
-
-    const [data, getData] = useState([]);
-
-    const getAllData = () => {
-        axios.get(`${url}/api/about`)
-            .then((response) => {
-                const allData = response.data;
-                getData(allData);
-            })
-            .catch(error => console.error("can not fetch items."))
-    }
-
-    useEffect(() => {
-        
-        getAllData();
-    }, [])
-
-
     return (
         <section className={classes.about}>
-            <div className={classes.about__data}>
-                <div className={classes.data__chart}>
-                <LineChart width={1000} height={400} data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }} >
-                        <Line type="monotone" dataKey="game" stroke="magenta" strokeDasharray="7 7" dot={false} />
-                        <Line type="monotone" strokeDasharray="7 7" dataKey="work" stroke="green" dot={false} />
-                        <Line type="monotone" dataKey="leisure" stroke="#FFBA49" dot={false} />
-                        <Line type="monotone"  dataKey="happiness" stroke="#EF5B5B" strokeWidth={3} dot={false} />
-                        <CartesianGrid stroke="#12263A" />
-                        <XAxis dataKey="date" stroke="white" hide={true}   />
-                        <YAxis />
-                        <Legend />
-                        <Tooltip  />
-                    </LineChart>
-                </div>
+            <div className={classes.about__graph}>
+                <Graph />
             </div>
-
             <div className={classes.aboutstack}>
                 <h2>I know the following and I've used them in a project before.</h2>
-
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
                         <img src="/images/icons/html5.svg" width="75px" alt="html icon" />

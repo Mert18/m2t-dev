@@ -1,21 +1,14 @@
 .about {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    color: var(--text1);
-}
-
-.about__data{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1rem;
-    grid-column: 1 / -1;
-    margin-top: 4rem;
     color: var(--text2);
 }
-
-
+.about__graph {
+    grid-column: 1 / -1;
+    justify-self: center;
+    font-size: .8rem;
+    margin: 2rem;
+}
 
 .aboutstack {
     margin-top: 2rem;
