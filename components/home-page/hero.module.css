@@ -3,8 +3,41 @@
 .hero {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    margin: 2rem;
 }
 .hero__img {
-    grid-column: 1 / -1;
+    grid-column: 5 / -1;
+    margin-top: 3rem;
+    -webkit-box-shadow: 4px 0px 36px -7px rgba(0,0,0,0.38);
+    -moz-box-shadow: 4px 0px 36px -7px rgba(0,0,0,0.38);
+    box-shadow: 4px 0px 36px -7px rgba(0,0,0,0.38);
+}
+
+.hero__text {
+    grid-column: 2 / 5;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.hero__text__name {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+.hero__text__nav a {
+    color: var(--text1);
+}
+.hero__text__nav a:hover {
+    color: var(--flavor);
+}
+
+@media (max-width: 1300px) {
+    .hero__text{
+        grid-column: 1 / -1;
+    }
+    .hero__img{
+        grid-column: 1 / -1;
+    }
 }

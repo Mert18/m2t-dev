@@ -29,12 +29,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    text-decoration: none;
 }
 body {
     font-family: 'Noto Serif JP', serif;
     color: var(--text2);
-    background-color: var(--flavor);
+    background-color: var(--back1);
     font-size: 62.5%;
     list-style: none;
 }

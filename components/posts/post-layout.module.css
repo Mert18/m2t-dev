@@ -16,11 +16,11 @@
 .postitem a:hover {
     color: var(--hover);
 }
-.postitem a p {
-    padding: 1rem 0rem;
+.postitem  p {
+    padding: .5rem 0rem;
 }
-.postitem a time {
-    padding: 1rem 0rem;
+.postitem  time {
+    padding: .5rem 0rem;
 }
 
 .postitem h1 {

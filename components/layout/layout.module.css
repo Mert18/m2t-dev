@@ -2,38 +2,9 @@
     display: grid;
     grid-template-columns: repeat(24, 1fr);
 }
-.layhead {
-    grid-column: 1 / -1;
-    background-color: var(--flavor2);
-    height: 4rem;
-}
 .laymain {
-    grid-column: 2 / 23;
+    grid-column: 1 / -1;
     background-color: var(--back1);
-}
-.header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-}
-.header__nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.header a {
-    color: var(--back1);
-    text-decoration: none;
-    margin-right: 3rem;    
-    font-size: 1.2rem;
-}
-
-.header h1 {
-    color: var(--back1);
-    font-size: 1.5rem;
-
 }
 
 @media (max-width: 850px) {
