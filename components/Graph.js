@@ -4,14 +4,14 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'r
 import axios from 'axios';
 import classes from '../pages/about/about.module.css';
 
-const url = process.env.URL;
+const URL = process.env.URL;
 
 const Graph = () => {
 
     const [data, getData] = useState([]);
 
     const getAllData = () => {
-        axios.get(`${url}`)
+        axios.get(`${URL}`)
             .then((response) => {
                 const allData = response.data;
                 getData(allData);
