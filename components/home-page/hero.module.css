@@ -1,13 +1,10 @@
 
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 2rem;
 }
-.hero__text {
-    text-align: center;
+.hero__img {
+    grid-column: 1 / -1;
 }

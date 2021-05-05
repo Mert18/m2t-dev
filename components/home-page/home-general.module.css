@@ -22,7 +22,6 @@
 }
 .littlethings {
     grid-column: 9 / 13;
-    border: 2px solid black;
 }
 
 @media (max-width: 1150px) {
