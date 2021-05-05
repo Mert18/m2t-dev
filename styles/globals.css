@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+/* font-family: 'EB Garamond', serif; */
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* font-family: 'Abril Fatface', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap');
+/* font-family: 'Noto Serif JP', serif; */
 :root {
     --text1: #30343F;
 
-    --back1: #F8F0FB;
+    --back1: #F6F7EB;
     
-    --flavor: #A20021;
-    --flavor2: #2F2D2E;
+    --flavor: #E94F37;
+    --flavor2: #393E41;
 
     --hover: #89023E;
 
@@ -26,7 +32,7 @@
 
 }
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif JP', serif;
     color: var(--text2);
     background-color: var(--flavor);
     font-size: 62.5%;

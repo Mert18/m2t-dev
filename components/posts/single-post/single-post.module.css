@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     color: var(--text1);
+    font-family: 'Noto Serif JP', serif;
 }
 .header {
     text-align: center;

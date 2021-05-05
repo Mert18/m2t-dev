@@ -7,13 +7,24 @@ const Header = () => {
     return (
         <div className={classes.header}>
             <div className={classes.header__title}>
-                <h1>Mert Uygur</h1>
+                <h1>merd.dev</h1>
             </div>
             <div className={classes.header__nav}>
-                <Link href="/">home</Link>
-                <Link href="/posts">blog</Link>
+                <div>
+                    <Link href="/">home</Link>
+                </div>
+                <div>
+                    <Link href="/posts">blog</Link>
+                </div>
+                <div>
                 <Link href="/about">about</Link>
+
+                </div>
+                <div>
                 <Link href="/projects">projects</Link>
+                </div>
+
+                
             </div>
             
         </div>

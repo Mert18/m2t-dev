@@ -3,6 +3,15 @@ import classes from '../components/home-page/home-general.module.css';
 import Hero from '../components/home-page/hero.js';
 import { getFeaturedPosts } from '../lib/posts-util.js';
 import LittleThings from '../components/home-page/little-things.js';
+import Graph from '../components/Graph.js';
+
+
+import dynamic from 'next/dynamic'
+
+const MyChart = dynamic(
+    () => import('../components/Graph.js'),
+    { ssr: false }
+  )
 
 export default function Home(props) {
   return (
@@ -19,6 +28,10 @@ export default function Home(props) {
         <div className={classes.littlethings}>
           <LittleThings />
         </div>
+      </div>
+
+      <div className={classes.graph}>
+        <MyChart />
       </div>
       
 

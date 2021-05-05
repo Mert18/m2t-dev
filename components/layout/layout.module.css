@@ -35,3 +35,9 @@
     font-size: 1.5rem;
 
 }
+
+@media (max-width: 850px) {
+    .laymain {
+        grid-column: 1 / -1;
+    }
+}

@@ -26,8 +26,11 @@
 .postitem h1 {
     text-decoration: underline;
     display: inline-block;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.8rem;
 }
 .postsgrid {
     list-style: none;
     padding: 2rem;
+    
 }

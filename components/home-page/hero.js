@@ -7,12 +7,12 @@ function Hero() {
     return(
         <div className={classes.hero}>
             <div className={classes.hero__logo}>
-                <Image src="/images/assets/logo.svg" width="200px" height="auto" />
+                <h2>Mert Uygur</h2>
             </div>
             <div className={classes.hero__text}>
-                <h1>A Full-Stack Developer</h1>
-                <h1>Computer Engineering Student</h1>
-                <h1>Geek</h1>
+                <p>A Full-Stack Developer</p>
+                <p>Computer Engineering Student</p>
+                <p>Geek</p>
             </div>
         </div>
     )

@@ -6,8 +6,10 @@
 
 .hero {
     grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
 }
-
 
 .content {
     grid-column: 1 / -1;
@@ -21,4 +23,26 @@
 .littlethings {
     grid-column: 9 / 13;
     border: 2px solid black;
+}
+
+@media (max-width: 1150px) {
+    .featuredposts {
+        grid-column: 1 / -1;
+    }
+    .littlethings {
+        grid-column: 1 / -1;
+    }
+}
+
+.graph {
+    grid-column: 1 / -1;
+    justify-self: center;
+    font-size: .8rem;
+    margin: 2rem;
+}
+
+@media (max-width: 1250px) {
+    .graph {
+        display: none;
+    }
 }
