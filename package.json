@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "dotenv": "^8.5.1",
     "express-async-handler": "^1.1.4",
     "gray-matter": "^4.0.2",
     "moment": "^2.29.1",

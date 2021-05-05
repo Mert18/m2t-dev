@@ -4,7 +4,7 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'r
 import axios from 'axios';
 import classes from '../pages/about/about.module.css';
 
-const url = process.env.url;
+const url = process.env.URL;
 
 const Graph = () => {
 

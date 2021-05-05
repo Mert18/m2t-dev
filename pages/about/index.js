@@ -1,13 +1,18 @@
 import React from 'react'
 import classes from './about.module.css';
 
-import Graph from '../../components/Graph.js';
+import dynamic from 'next/dynamic'
+
+const MyChart = dynamic(
+    () => import('../../components/Graph.js'),
+    { ssr: false }
+  )
 
 const About = () => {
     return (
         <section className={classes.about}>
             <div className={classes.about__graph}>
-                <Graph />
+                <MyChart />
             </div>
             <div className={classes.aboutstack}>
                 <h2>I know the following and I've used them in a project before.</h2>
