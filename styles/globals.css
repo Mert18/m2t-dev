@@ -1,18 +1,17 @@
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-/* font-family: 'EB Garamond', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-/* font-family: 'Abril Fatface', cursive; */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap');
-/* font-family: 'Noto Serif JP', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+
 :root {
     --text1: #30343F;
 
-    --back1: #F6F7EB;
+    --back1: #dcd9d4;
+    --back2: #f3f2f0;
     
-    --flavor: #A64253;
+    --flavor: #dc423b;
     --flavor2: #882e3d;
 
     --hover: #89023E;
@@ -30,11 +29,11 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    
 }
 body {
-    font-family: 'Noto Serif JP', serif;
-    color: var(--text2);
-    background-color: var(--back1);
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--flavor);
     font-size: 62.5%;
     list-style: none;
 }

@@ -2,8 +2,34 @@
     display: grid;
     grid-template-columns: repeat(24, 1fr);
 }
-.laymain {
+.layhead {
+    background-color: #474644;
     grid-column: 1 / -1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header__title {
+    font-size: 2rem;
+    padding: .3rem;
+}
+.header__nav {
+    display: flex;
+    font-size: 1rem;
+}
+.header a {
+    color: var(--back1);
+    margin-right: 2rem;
+}
+.header a:hover {
+    color: var(--back2);
+    text-decoration: underline;
+}
+.laymain {
+    grid-column: 2 / 23;
     background-color: var(--back1);
 }
 

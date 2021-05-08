@@ -7,7 +7,7 @@ const About = () => {
     return (
         <section className={classes.about}>
             <div className={classes.aboutstack}>
-                <h2>I know the following and I've used them in a project before.</h2>
+                <h2>Bunları biliyorum ve daha önce bir projede kullandım.</h2>
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
                         <img src="/images/icons/html5.svg" width="75px" alt="html icon" />
@@ -36,7 +36,7 @@ const About = () => {
 
                 </div>
 
-                <h2>I'm familiar and still learning the following technologies</h2>
+                <h2>Bunlara aşinayım ve öğreniyorum.</h2>
 
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
@@ -58,7 +58,7 @@ const About = () => {
                     
                 </div>
 
-                <h2>Technologies that I am planning to learn in the near future.</h2>
+                <h2>Yakın gelecekte de bunları öğrenmeyi planlıyorum.</h2>
 
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
@@ -74,13 +74,13 @@ const About = () => {
             </div>
 
             <div className={classes.really}>
-                <h2>But really, who am I?</h2>
+                <h2>Kimim ben?</h2>
                 <div className={classes.reallytext}>
-                    <p>I was born in southernmost city of Turkey, Hatay.</p><br />
-                    <p>My curiosity about computers and games pushed me to study a familiar field, Computer Engineering.</p><br />
-                    <p>For that reason I moved to Ankara, Capital of Turkey, to study Computer Engineering.</p><br />
-                    <p>In May 2020, a stranger walked into my Discord room and started talking about his website homework.</p><br />
-                    <p>This is where I met Web Development.</p><br />
+                    <p>2000 yılında Hatay'da doğdum.</p><br />
+                    <p>Çocukluğumdan beri bilgisayarlarla iç içeyim. Bu yüzden eğitimime buradan devam etmek istedim.</p><br />
+                    <p>2018 Yılında Gazi Üniversitesi Bilgisayar Mühendisliği bölümüne girdim.</p><br />
+                    <p>Mayıs 2020'de tesadüfen karşılaştığım bir yabancı sayesinde web geliştirmeyle tanıştım.</p><br />
+                    <p>O zamandan beri bu alan üzerine çalışıyorum.</p><br />
 
                 </div>
             </div>

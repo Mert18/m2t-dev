@@ -5,11 +5,9 @@
     grid-template-columns: repeat(12, 1fr);
 }
 .hero__img {
-    grid-column: 5 / -1;
+    grid-column: 1 / -1;
+    justify-self: center;
     margin-top: 3rem;
-    -webkit-box-shadow: 4px 0px 36px -7px rgba(0,0,0,0.38);
-    -moz-box-shadow: 4px 0px 36px -7px rgba(0,0,0,0.38);
-    box-shadow: 4px 0px 36px -7px rgba(0,0,0,0.38);
 }
 
 .hero__text {

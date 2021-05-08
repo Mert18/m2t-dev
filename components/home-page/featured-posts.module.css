@@ -4,6 +4,8 @@
     padding: 2rem;
     line-height: 1.3rem;
 }
-.latest h2 {
+.latest a {
     font-size: 1.5rem;
+    text-decoration: underline;
+    color: var(--flavor2);
 }

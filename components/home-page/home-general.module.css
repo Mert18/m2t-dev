@@ -4,12 +4,11 @@
     min-height: 100vh;
 }
 
+
 .hero {
     grid-column: 1 / -1;
-    justify-self: center;
-    text-align: center;
-    font-family: 'EB Garamond', serif;
 }
+
 
 .content {
     grid-column: 1 / -1;
@@ -21,17 +20,18 @@
     grid-column: 1 / 8;
 }
 .littlethings {
-    grid-column: 9 / 13;
+    grid-column: 8 / 12;
+    border: 2px solid black;
 }
 
-@media (max-width: 1150px) {
+/* @media (max-width: 1150px) {
     .featuredposts {
         grid-column: 1 / -1;
     }
     .littlethings {
         grid-column: 1 / -1;
     }
-}
+} */
 
 .graph {
     grid-column: 1 / -1;

@@ -6,7 +6,7 @@ const Projects = () => {
     return (
         <div className={classes.projects}>
                 <div className={classes.projects__title}>
-                    <h2>Projects</h2>
+                    <h2>Projeler</h2>
                 </div>
 
                 <div className={classes.projects__projects}>
@@ -18,7 +18,7 @@ const Projects = () => {
                                 <h2>From The Heap</h2>
                             </div>
                             <div className={classes.project__exp}>
-                                <h3>Share Songs and Movies, see who liked them!</h3>
+                                <h3>Beğendiğiniz şarkıları veya filmleri paylaşabileceğiniz, başkalarının önerilerini görebileceğiniz en basit haliyle bir sosyal medya.</h3>
                             </div>
 
                             <div className={classes.project__tech}>
@@ -54,7 +54,7 @@ const Projects = () => {
                                     <h2>Virtual Library</h2>
                                 </div>
                                 <div className={classes.project__exp}>
-                                    <h3>Social media alternative for book lovers.</h3>
+                                    <h3>Kullanıcıların hesaplarını oluşturup okudukları kitapları kaydettiği, bunlar hakkında görüşlerini paylaşabildiği, yine kitap severler için bir sosyal medya diyebiliriz.</h3>
                                 </div>
 
                                 <div className={classes.project__tech}>
@@ -90,7 +90,7 @@ const Projects = () => {
                                     <h2>Today is Done.</h2>
                                 </div>
                                 <div className={classes.project__exp}>
-                                    <h3>A Todo application.</h3>
+                                    <h3>Todo uygulaması.</h3>
                                 </div>
 
                                 <div className={classes.project__tech}>
