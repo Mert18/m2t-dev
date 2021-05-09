@@ -31,11 +31,8 @@
     color: var(--flavor);
 }
 
-@media (max-width: 1300px) {
-    .hero__text{
-        grid-column: 1 / -1;
-    }
-    .hero__img{
-        grid-column: 1 / -1;
+@media (max-width: 1000px) {
+    .hero{
+        display: none;
     }
 }

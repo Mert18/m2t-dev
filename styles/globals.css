@@ -4,14 +4,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
 
 :root {
-    --text1: #30343F;
+    --text1: #494949;
 
-    --back1: #dcd9d4;
+    --back1: #f2e8cf;
     --back2: #f3f2f0;
     
-    --flavor: #dc423b;
+    --flavor: #323031;
     --flavor2: #882e3d;
 
     --hover: #89023E;
@@ -32,7 +35,7 @@
     
 }
 body {
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Lora', serif;
     background-color: var(--flavor);
     font-size: 62.5%;
     list-style: none;
