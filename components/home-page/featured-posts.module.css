@@ -7,5 +7,5 @@
 .latest a {
     font-size: 1.5rem;
     text-decoration: underline;
-    color: var(--flavor2);
+    color: var(--text2);
 }

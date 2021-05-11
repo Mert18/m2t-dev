@@ -9,13 +9,15 @@
 
 
 :root {
-    --text1: #494949;
+    --text1: #f1faee;
+    --text2: #0b090a;
 
-    --back1: #f2e8cf;
+    --back1: #f5f3f4;
     --back2: #f3f2f0;
     
-    --flavor: #323031;
+    --flavor: #353535;
     --flavor2: #882e3d;
+    --flavor3: #0202020a;
 
     --hover: #89023E;
 

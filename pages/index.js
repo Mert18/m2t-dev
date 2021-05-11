@@ -17,9 +17,6 @@ export default function Home(props) {
         <div className={classes.featuredposts}>
           <FeaturedPosts posts={props.posts} />
         </div>
-        <div className={classes.littlethings}>
-          <LittleThings />
-        </div>
       </div>
       
 

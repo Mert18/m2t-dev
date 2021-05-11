@@ -22,11 +22,11 @@
     font-size: 1rem;
 }
 .header a {
-    color: var(--back1);
+    color: var(--text1);
     margin-right: 2rem;
 }
 .header a:hover {
-    color: var(--back2);
+    color: var(--back1);
     text-decoration: underline;
 }
 .laymain {
