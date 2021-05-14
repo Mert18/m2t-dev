@@ -3,6 +3,7 @@
 .hero {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 3rem;
 }
 .hero__img {
     grid-column: 1 / -1;

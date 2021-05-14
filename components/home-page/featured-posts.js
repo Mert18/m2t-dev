@@ -5,7 +5,6 @@ import Link from 'next/link'
 
 function featuredPosts(props) {
     return <section className={classes.latest}>
-        <Link href="/posts">Tüm Gönderiler</Link>
         <PostsGrid posts={props.posts} />
     </section>
 }

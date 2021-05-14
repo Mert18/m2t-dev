@@ -12,6 +12,9 @@
     font-size: 1rem;
 
 }
+
+
+
 .item:hover {
     cursor: pointer;
     transition: all .3s;
@@ -39,3 +42,16 @@
     align-items: center;
     padding: 2rem;
 }
+
+@media (max-width: 1300px){
+    .photo {
+        grid-column: 1 /-1;
+    }
+    .text {
+        grid-column: 1 / -1;
+    }
+    .text p {
+        padding: 2rem;
+    }
+}
+

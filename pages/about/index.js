@@ -6,6 +6,16 @@ import classes from './about.module.css';
 const About = () => {
     return (
         <section className={classes.about}>
+            <div className={classes.hakk}>
+                <div className={classes.hakk__prof}>
+                    <img src="/images/assets/dog.jpg" width="250px" />
+                </div>
+
+                <div className={classes.hakk__text}>
+                    <h2>Computer Engineering Student</h2>
+                    <h2>Full-Stack Web Developer</h2>
+                </div>
+            </div>
             <div className={classes.aboutstack}>
                 <h2>Bunları biliyorum ve daha önce bir projede kullandım.</h2>
                 <div className={classes.aboutstack__stack}>

@@ -41,6 +41,30 @@
     padding: 1rem;
 }
 
+.hakk {
+    grid-column: 3 / 10;
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    justify-content: space-around;
+}
+.hakk__prof{
+    display: flex;
+    justify-content: center;
+}
+.hakk__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: .95rem;
+}
+.hakk__text > * {
+    margin-bottom: 3rem;
+}
+.hakk__text >*:last-child{
+    margin-bottom: 0rem;
+}
 
 @media screen and (max-width: 800px) {
     .data__title {

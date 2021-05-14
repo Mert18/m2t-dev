@@ -8,10 +8,14 @@ const PostContent = (props) => {
     const formattedDate = new Date(post.date).toLocaleDateString('tr-TR');
     return (
         <article className={classes.singlepost}>
+            <div className={classes.img}>
+                <img src={post.hero_image} width="1624px" />
+            </div>
             <div className={classes.header}>
                 <PostHeader title={post.title} />
                 <h2>{formattedDate}</h2>
             </div>
+            
             <div className={classes.content}>
                 <ReactMarkdown>
                     {post.content}

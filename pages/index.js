@@ -9,14 +9,16 @@ import LittleThings from '../components/home-page/little-things.js';
 export default function Home(props) {
   return (
     <div className={classes.home}>
-      <div className={classes.hero}>
-        <Hero />
-      </div>
+      
 
       <div className={classes.content}>
         <div className={classes.featuredposts}>
           <FeaturedPosts posts={props.posts} />
         </div>
+      </div>
+
+      <div className={classes.hero}>
+        <Hero />
       </div>
       
 

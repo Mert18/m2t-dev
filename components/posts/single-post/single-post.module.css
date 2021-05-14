@@ -1,20 +1,28 @@
 
 .singlepost {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
     color: var(--text2);
 }
 .header {
+    grid-column: 1 / -1;
+    padding: 3rem;
+    font-size: 1.5rem;
+    justify-self: center;
     text-align: center;
-    font-size: 1.6rem;
-    margin-top: 2rem;
 }
 
 .content {
-    font-size: 1.1rem;
-    width: 70%;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+    grid-column: 4 / 20;
+    font-size: 1.2rem;
+}
+
+.img {
+    grid-column: 1 / -1;
+    margin-top: 4rem;
+}
+
+.img img {
+    display: block;
+    max-width: 100%;
 }

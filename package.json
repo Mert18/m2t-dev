@@ -12,6 +12,7 @@
     "dotenv": "^8.5.1",
     "express-async-handler": "^1.1.4",
     "gray-matter": "^4.0.2",
+    "markdown-to-jsx": "^7.1.2",
     "moment": "^2.29.1",
     "mongoose": "^5.12.3",
     "next": "^10.0.0",
