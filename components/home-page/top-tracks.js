@@ -1,7 +1,7 @@
 
 import useSWR from 'swr';
 
-import fetcher from '@/lib/fetcher';
+import fetcher from '../../lib/fetcher';
 import TopTrack from './TopTrack.js';
 
 export default function TopTracks() {
