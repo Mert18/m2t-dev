@@ -1,2 +1,1 @@
-ICONS WILL BE ADDED TO THE HEADER.
-FONT STYLE CAN BE CHANGED.
+My blog created with Next.js, in Turkish language.
