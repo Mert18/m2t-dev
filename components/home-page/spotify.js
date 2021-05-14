@@ -6,12 +6,11 @@ import {useEffect, useState} from 'react';
 import TopTrack from './TopTrack';
 
 
-
 function Spotify() {
     const [topTracks, setTopTracks] = useState([]);
 
     const getTopTracks = async() => {
-        const response = await axios.get('http://localhost:3000/api/top-tracks');
+        const response = await axios.get(process.env.TOP_TRACKS);
         try {
             setTopTracks(response.data.tracks.slice(1, 6));
         } catch (error) {
