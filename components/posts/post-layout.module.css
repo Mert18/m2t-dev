@@ -13,12 +13,11 @@
 
 }
 
-
-
 .item:hover {
     cursor: pointer;
     transition: all .3s;
-    background-color: var(--flavor3);
+
+    border-bottom: 3px solid var(--flavor);
 }
 .photo {
     grid-column: 1 / 13;

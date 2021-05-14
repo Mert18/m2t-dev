@@ -12,12 +12,12 @@ const About = () => {
                 </div>
 
                 <div className={classes.hakk__text}>
-                    <h2>Computer Engineering Student</h2>
-                    <h2>Full-Stack Web Developer</h2>
+                    <p>Computer Engineering Student</p>
+                    <p>Full-Stack Engineer</p>
                 </div>
             </div>
             <div className={classes.aboutstack}>
-                <h2>Bunları biliyorum ve daha önce bir projede kullandım.</h2>
+                <h2>I know those and have used them in a project before.</h2>
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
                         <img src="/images/icons/html5.svg" width="75px" alt="html icon" />
@@ -46,7 +46,7 @@ const About = () => {
 
                 </div>
 
-                <h2>Bunlara aşinayım ve öğreniyorum.</h2>
+                <h2>I'm still learning the following.</h2>
 
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
@@ -68,7 +68,7 @@ const About = () => {
                     
                 </div>
 
-                <h2>Yakın gelecekte de bunları öğrenmeyi planlıyorum.</h2>
+                <h2>I'm planning to learn in the near future.</h2>
 
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
@@ -84,14 +84,12 @@ const About = () => {
             </div>
 
             <div className={classes.really}>
-                <h2>Kimim ben?</h2>
+                <h2>Who am I?</h2>
                 <div className={classes.reallytext}>
-                    <p>2000 yılında Hatay'da doğdum.</p><br />
-                    <p>Çocukluğumdan beri bilgisayarlarla iç içeyim. Bu yüzden eğitimime buradan devam etmek istedim.</p><br />
-                    <p>2018 Yılında Gazi Üniversitesi Bilgisayar Mühendisliği bölümüne girdim.</p><br />
-                    <p>Mayıs 2020'de tesadüfen karşılaştığım bir yabancı sayesinde web geliştirmeyle tanıştım.</p><br />
-                    <p>O zamandan beri bu alan üzerine çalışıyorum.</p><br />
-
+                    <p>I was born in the southernmost city in Turkey, Hatay.</p><br />
+                    <p>In 2018, I started studying Computer Engineering in Gazi University. </p><br />
+                    <p>In May 2020, I had a chance to dive into web technologies, so I did.</p><br />
+                    <p>From this point, I've been learning and making projects in web development area.</p><br />
                 </div>
             </div>
         </section>

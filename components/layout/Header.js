@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link';
 import classes from './layout.module.css';
+import ThemeToggler from './themeToggler';
 
 
 const Header = () => {
@@ -10,6 +11,10 @@ const Header = () => {
                 <div>
                     <Link href="/">Mert Uygur</Link>
                 </div>
+            </div>
+
+            <div className={classes.toggler}>
+                <ThemeToggler />
             </div>
 
             <div className={classes.header__nav}>

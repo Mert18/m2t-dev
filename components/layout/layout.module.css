@@ -7,6 +7,14 @@
     background-color: var(--back1);
     padding: 2rem;
 }
+.toggler button {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+.toggler button:hover {
+    cursor: pointer;
+}
 
 .header {
     display: flex;

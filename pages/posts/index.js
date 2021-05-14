@@ -9,7 +9,7 @@ function AllPostsPage(props) {
         <Fragment>
             <div className={classes.blog__grid}>
                 <div className={classes.hero}>
-                    <h2>Tüm blog yazılarım.</h2>
+                    <h2>All of my writings.</h2>
                 </div>
                 <div className={classes.posts}>
                     <AllPosts posts={props.posts} />

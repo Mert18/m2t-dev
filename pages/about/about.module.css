@@ -1,7 +1,7 @@
 .about {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    color: var(--text2);
+    color: var(--text1);
 }
 
 
@@ -57,7 +57,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
-    font-size: .95rem;
+    font-size: 1.3rem;
 }
 .hakk__text > * {
     margin-bottom: 3rem;

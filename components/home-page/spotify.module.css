@@ -12,6 +12,7 @@
     text-align: center;
     padding: 1.2rem;
     font-size: 1.1rem;
+    color: var(--text1)
 }
 .spotify__toptracks__toptracks{
     padding: 1rem;
@@ -20,7 +21,8 @@
 .toptrack{
     padding: .6rem;
     font-size: .7rem;
+    color: var(--text1)
 }
 .toptrack a{
-    color: var(--flavor2);
+    color: var(--spotify);
 }

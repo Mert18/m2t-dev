@@ -35,7 +35,7 @@
 .graph {
     grid-column: 1 / -1;
     justify-self: center;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 @media (max-width: 1250px) {
