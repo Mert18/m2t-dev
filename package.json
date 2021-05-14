@@ -21,7 +21,8 @@
     "react-dom": "17.0.1",
     "react-markdown": "^5.0.3",
     "react-router-dom": "^5.2.0",
-    "recharts": "^2.0.9"
+    "recharts": "^2.0.9",
+    "swr": "^0.5.6"
   },
   "devDependencies": {}
 }
