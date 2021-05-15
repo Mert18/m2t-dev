@@ -2,17 +2,16 @@
 
 .hero {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(24, 1fr);
     margin-bottom: 3rem;
 }
 .hero__graph {
-    grid-column: 1 / -1;
-    justify-self: center;
+    grid-column: 5 / -1;
     margin-top: 3rem;
     font-size: 1rem;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
     .hero{
         display: none;
     }

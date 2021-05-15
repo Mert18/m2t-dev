@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './about.module.css';
-
+import Image from 'next/image';
 
 
 const About = () => {
@@ -8,12 +8,21 @@ const About = () => {
         <section className={classes.about}>
             <div className={classes.hakk}>
                 <div className={classes.hakk__prof}>
-                    <img src="/images/assets/dog.jpg" width="250px" />
+                    <img src="/images/assets/prof.jpg" width="250px" />
                 </div>
 
                 <div className={classes.hakk__text}>
                     <p>Computer Engineering Student</p>
                     <p>Full-Stack Engineer</p>
+                    <div className={classes.hakk__text__icons}>
+                        <a href="https://github.com/Mert18" rel="noreferrer" target="_blank">
+                        <Image src="/images/icons/github.svg" width="40px" height="40px" /> 
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/mert-u-8248ab135/" rel="noreferrer" target="_blank">
+                        <Image src="/images/icons/linkedin.svg" width="40px" height="40px" />
+                        </a>
+                    </div>
                 </div>
             </div>
             <div className={classes.aboutstack}>

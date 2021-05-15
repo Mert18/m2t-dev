@@ -37,7 +37,7 @@
     justify-self: center;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1024px) {
     .featuredposts{
         grid-column: 1 / -1;
     }

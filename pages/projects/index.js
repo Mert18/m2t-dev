@@ -13,6 +13,7 @@ const Projects = () => {
 
                     <Link href="https://from-the-heap.vercel.app/">
                         <div className={classes.project}>
+
                         <div className={classes.project__text}>
                             <div className={classes.project__title}>
                                 <h2>From The Heap</h2>
@@ -20,8 +21,13 @@ const Projects = () => {
                             <div className={classes.project__exp}>
                                 <h3>Share your favorite songs and see others'. Social media platform for those who love sharing things.</h3>
                             </div>
+                        </div>
 
-                            <div className={classes.project__tech}>
+                        <div className={classes.project__img}>
+                            <img src="/images/assets/fth.png" width="300px" alt="from the heap site" />
+                        </div>
+
+                        <div className={classes.project__tech}>
                                 <div className={classes.project__tech__item}>
                                     <img src="/images/icons/html5.svg" width="35px" alt="html icon" />
                                 </div>
@@ -38,17 +44,12 @@ const Projects = () => {
                                     <img src="/images/icons/mongodb.svg" width="105px" alt="mongodb icon" />
                                 </div>
                             </div>
-
-                        </div>
-
-                        <div className={classes.project__img}>
-                            <img src="/images/assets/fth.png" width="300px" alt="from the heap site" />
-                        </div>
                     </div>
                     </Link>
 
                     <Link href="https://virtual-library-git-master-mert18.vercel.app/">
                         <div className={classes.project}>
+
                             <div className={classes.project__text}>
                                 <div className={classes.project__title}>
                                     <h2>Virtual Library</h2>
@@ -57,7 +58,14 @@ const Projects = () => {
                                     <h3>Share quotes from books, save your books and your thoughts after you read.</h3>
                                 </div>
 
-                                <div className={classes.project__tech}>
+                                
+                            </div>
+
+                            <div className={classes.project__img}>
+                                <img src="/images/assets/virtual.png" width="300px" alt="from the heap site" />
+                            </div>
+
+                            <div className={classes.project__tech}>
                                     <div className={classes.project__tech__item}>
                                         <img src="/images/icons/html5.svg" width="35px" alt="html icon" />
                                     </div>
@@ -75,11 +83,6 @@ const Projects = () => {
                                     </div>
                                 </div>
 
-                            </div>
-
-                            <div className={classes.project__img}>
-                                <img src="/images/assets/virtual.png" width="300px" alt="from the heap site" />
-                            </div>
                         </div>
                     </Link>
                 </div>

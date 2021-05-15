@@ -37,7 +37,7 @@
 }
 
 
-@media (max-width: 1000px){
+@media screen and (max-width: 1024px){
     .postsgrid {
         padding: .8rem;
     }
@@ -61,13 +61,13 @@
     }
 }
 
-@media (max-width:650px){
+@media screen and (max-width:768px){
     .text{
         font-size: .7rem;
     }
 }
 
-@media (min-width: 1000px){
+@media screen and (min-width: 1024px){
     .postsgrid {
         padding: .8rem;
     }

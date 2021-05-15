@@ -10,6 +10,7 @@
     margin-top: 2rem;
     text-align: center;
 }
+
 .projects__title {
     align-items: center;
     display: flex;
@@ -28,7 +29,6 @@
     font-size: .9rem;
     grid-template-columns: repeat(12, 1fr);
     margin-bottom: 2rem;
-    padding: 2rem;
     width: 100%;
     transition: all .2s;
 
@@ -42,12 +42,7 @@
     padding-bottom: 2rem;
 }
 .project__text {
-    align-items: stretch;
-    display: flex;
-    flex-direction: column;
     grid-column: 2 / 6;
-    justify-content: center;
-    padding: 1rem;
     text-align: start;
 }
 .project__img {
@@ -55,6 +50,7 @@
     grid-column: 6 / 13;
 }
 .project__tech {
+    grid-column: 2 / 12;
     padding: 1.5rem;
     display: flex;
 }
@@ -64,4 +60,18 @@
 .project:hover {
     cursor: pointer;
     transition: all .2s;
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    .project__text{
+        grid-column: 1 / -1;
+        padding: 1.2rem;
+    }
+    .project__title{
+        grid-column: 1 / -1;
+    }
+    .project__img {
+        grid-column: 1 / -1;
+    }
 }

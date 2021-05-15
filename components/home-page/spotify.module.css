@@ -6,29 +6,37 @@
 }
 
 .spotify__toptracks {
-    grid-column: 1 / 11;
+    grid-column: 3 / 14;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 .spotify__toptracks__title{
     text-align: center;
     padding: 1.2rem;
     font-size: 1.1rem;
-    color: var(--text1)
+    color: var(--text1);
+    grid-column: 1 / -1;
 }
 .spotify__toptracks__toptracks{
     padding: 1rem;
+    grid-column: 3 / -1;
 }
 
 .spotify__playlists {
-    grid-column: 13 / 22;
+    grid-column: 14 / 22;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 .spotify__playlists__title{
     text-align: center;
     padding: 1.2rem;
     font-size: 1.1rem;
-    color: var(--text1)
+    color: var(--text1);
+    grid-column: 1 / -1;
 }
 .spotify__playlists__playlists{
-    padding: 1.5rem;
+    padding: 1rem;
+    grid-column: 2 / -1;
 }
 
 .toptrack{
@@ -44,10 +52,10 @@
     margin-right: .5rem;
 }
 .toptrack a{
-    color: var(--spotify);
+    color: var(--flavor2);
 }
 
- @media (max-width: 1050px){
+ @media screen and (max-width: 1024px){
      .spotify__toptracks{
          grid-column: 1 / -1;
      }
