@@ -11,7 +11,6 @@ const Projects = () => {
 
                 <div className={classes.projects__projects}>
 
-                    <Link href="https://from-the-heap.vercel.app/">
                         <div className={classes.project}>
 
                         <div className={classes.project__text}>
@@ -45,9 +44,7 @@ const Projects = () => {
                                 </div>
                             </div>
                     </div>
-                    </Link>
 
-                    <Link href="https://virtual-library-git-master-mert18.vercel.app/">
                         <div className={classes.project}>
 
                             <div className={classes.project__text}>
@@ -84,7 +81,6 @@ const Projects = () => {
                                 </div>
 
                         </div>
-                    </Link>
                 </div>
             </div>
     )
