@@ -1,1 +1,3 @@
-My blog created with Next.js, in Turkish language.
+My blog created with Next.js
+
+Contains Spotify API, Graph.js
