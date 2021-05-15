@@ -19,7 +19,7 @@ const PostItem = (props) => {
                     <div className={classes.text}>
                             <h1>{title}</h1>
                             <p>{text}</p>
-                            <time>{formattedDate}</time>
+                            <time className={classes.text__time}>{formattedDate}</time>
                     </div>
                 </div>
             </Link>

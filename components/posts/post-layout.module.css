@@ -9,8 +9,6 @@
     grid-template-columns: repeat(24, 1fr);
     margin: 3rem;
     transition: all .3s;
-    font-size: 1rem;
-
 }
 
 .item:hover {
@@ -34,23 +32,51 @@
 .text {
     grid-column: 13 / -1;
     color: var(--text2);
-    display: flex;
-    text-align: center;
-    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
     padding: 2rem;
 }
 
-@media (max-width: 1300px){
+
+@media (max-width: 1000px){
+    .postsgrid {
+        padding: .8rem;
+    }
     .photo {
-        grid-column: 1 /-1;
+        display: none;
+    }
+    .item {
+        margin: 0rem;
     }
     .text {
         grid-column: 1 / -1;
+        padding: .9rem;
+        font-size: .9rem;
     }
     .text p {
-        padding: 2rem;
+        margin-top: .5rem;
+        margin-bottom: .8rem;
+    }
+    .text__time{
+        color: rgb(82, 78, 78);;
     }
 }
 
+@media (max-width:650px){
+    .text{
+        font-size: .7rem;
+    }
+}
+
+@media (min-width: 1000px){
+    .postsgrid {
+        padding: .8rem;
+    }
+    .text {
+        font-size: 1rem;
+        align-self: center;
+    }
+
+    .text p {
+        margin: .8rem 0rem;
+    }
+}

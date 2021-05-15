@@ -7,5 +7,8 @@ module.exports = {
   experimental: {
     turboMode: true,
     eslint: true
-  }
+  },
+  images: {
+    domains: ['i.scdn.co', 'lineup-images.scdn.co']
+  },
 }

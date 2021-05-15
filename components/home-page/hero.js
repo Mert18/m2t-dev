@@ -10,7 +10,7 @@ function Hero() {
       )
     return(
         <div className={classes.hero}>
-            <div className={classes.hero__img}>
+            <div className={classes.hero__graph}>
                 <MyChart />
             </div>
         </div>

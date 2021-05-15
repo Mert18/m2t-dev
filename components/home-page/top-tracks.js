@@ -6,7 +6,6 @@ import TopTrack from './TopTrack.js';
 
 export default function TopTracks() {
     const { data } = useSWR('/api/top-tracks', fetcher);
-  
     if (!data) {
       return null;
     }

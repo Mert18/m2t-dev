@@ -20,7 +20,7 @@
 }
 
 .featuredposts {
-    grid-column: 1 / 12;
+    grid-column: 1 / -1;
 }
 
 /* @media (max-width: 1150px) {
@@ -35,10 +35,15 @@
 .graph {
     grid-column: 1 / -1;
     justify-self: center;
-    font-size: 1rem;
 }
 
 @media (max-width: 1250px) {
+    .featuredposts{
+        grid-column: 1 / -1;
+    }
+    .spotify {
+        grid-column: 1 / -1;
+    }
     .graph {
         display: none;
     }

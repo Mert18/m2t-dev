@@ -1,6 +1,7 @@
 
 import classes from './spotify.module.css';
 import TopTracks from './top-tracks.js';
+import Playlists from './Playlists.js';
 
 function Spotify() {
     return(
@@ -15,6 +16,15 @@ function Spotify() {
                     <TopTracks />
                 </div>
                 
+            </div>
+
+            <div className={classes.spotify__playlists}>
+                <div className={classes.spotify__playlists__title}>
+                    <h2>My Spotify Playlists</h2>
+                </div>
+                <div className={classes.spotify__playlists__playlists}>
+                    <Playlists />
+                </div>
             </div>
         </div>
     )

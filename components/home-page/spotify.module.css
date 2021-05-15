@@ -18,11 +18,40 @@
     padding: 1rem;
 }
 
+.spotify__playlists {
+    grid-column: 13 / 22;
+}
+.spotify__playlists__title{
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    color: var(--text1)
+}
+.spotify__playlists__playlists{
+    padding: 1.5rem;
+}
+
 .toptrack{
     padding: .6rem;
     font-size: .7rem;
-    color: var(--text1)
+    color: var(--text1);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.toptrack__img{
+    margin-right: .5rem;
 }
 .toptrack a{
     color: var(--spotify);
 }
+
+ @media (max-width: 1050px){
+     .spotify__toptracks{
+         grid-column: 1 / -1;
+     }
+     .spotify__playlists{
+         grid-column: 1 / -1;
+     }
+ }
