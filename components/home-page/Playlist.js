@@ -6,7 +6,7 @@ const Playlist = (playlist) => {
     return (
         <div className={classes.toptrack}>
                 <div className={classes.toptrack__img}>
-                    <Image src={playlist.image[0].url} width="45px" height="45px" />
+                    <Image src={playlist.image[0].url} width="45px" height="45px" alt="Current track image" />
                 </div>
                 <div className={classes.toptrack__text}>
                     <a href={playlist.playlistUrl} target="_blank" rel="noreferrer">
