@@ -3,11 +3,10 @@ import classes from './spotify.module.css';
 import Image from 'next/image';
 
 const Playlist = (playlist) => {
-    console.log(playlist)
     return (
         <div className={classes.toptrack}>
                 <div className={classes.toptrack__img}>
-                    <Image src={playlist.image[0].url} width={playlist.image[0].width -15} height={playlist.image[0].height-15} />
+                    <Image src={playlist.image[0].url} width="45px" height="45px" />
                 </div>
                 <div className={classes.toptrack__text}>
                     <a href={playlist.playlistUrl} target="_blank" rel="noreferrer">
@@ -17,7 +16,7 @@ const Playlist = (playlist) => {
                     </a>
 
                     <div className={classes.toptrack__artist}>
-                        <h2>{playlist.trackCount.total}</h2>
+                        <h2>{playlist.trackCount.total} Songs</h2>
                     </div>
                 </div>
                
