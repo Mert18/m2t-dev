@@ -2,7 +2,6 @@
 import React, {useEffect, useState} from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import axios from 'axios';
-import classes from '../pages/about/about.module.css';
 
 const Graph = () => {
 
@@ -24,7 +23,7 @@ const Graph = () => {
 
 
     return(
-        <div className={classes.chart}>
+        <div>
                 <LineChart width={1000} height={400} data={data} >
                     <Line type="monotone" dataKey="game" stroke="magenta" strokeDasharray="7 7" dot={false} />
                     <Line type="monotone" strokeDasharray="7 7" dataKey="work" stroke="green" dot={false} />

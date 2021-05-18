@@ -29,12 +29,6 @@ const About = () => {
                 <h2>I know those and have used them in a project before.</h2>
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
-                        <img src="/images/icons/html5.svg" width="75px" alt="html icon" />
-                    </div>
-                    <div className={classes.tech}>
-                        <img src="/images/icons/css3.svg" width="75px" alt="css icon" />
-                    </div>
-                    <div className={classes.tech}>
                         <img src="/images/icons/sass-1.svg" width="75px" alt="sass icon" />
                     </div>
                     <div className={classes.tech}>

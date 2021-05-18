@@ -8,15 +8,7 @@
     align-items: center;
 }
 
-.hero{
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1rem;
-    grid-column: 1 / -1;
-    color: var(--text1);
-}
+
 
 .posts {
     grid-column: 1 / 8;

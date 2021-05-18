@@ -1,18 +1,18 @@
 
 
-.hero {
+.graphcon {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     margin-bottom: 3rem;
 }
-.hero__graph {
+.graphcon__graph {
     grid-column: 5 / -1;
     margin-top: 3rem;
     font-size: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
-    .hero{
+    .graphcon{
         display: none;
     }
 }

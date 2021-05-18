@@ -14,7 +14,7 @@
     text-align: center;
     padding: 1.2rem;
     font-size: 1.1rem;
-    color: var(--text1);
+    color: #1db954;
     grid-column: 1 / -1;
 }
 .spotify__toptracks__toptracks{
@@ -31,19 +31,19 @@
     text-align: center;
     padding: 1.2rem;
     font-size: 1.1rem;
-    color: var(--text1);
+    color: #1db954;
+
     grid-column: 1 / -1;
 }
 .spotify__playlists__playlists{
     padding: 1rem;
-    grid-column: 2 / -1;
+    grid-column: 3 / -1;
 }
 
 .toptrack{
     padding: .6rem;
     font-size: .7rem;
     color: var(--text1);
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -52,7 +52,8 @@
     margin-right: .5rem;
 }
 .toptrack a{
-    color: var(--flavor2);
+    color: #1db954;
+
 }
 
  @media screen and (max-width: 1024px){

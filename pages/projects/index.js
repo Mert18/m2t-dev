@@ -28,9 +28,6 @@ const Projects = () => {
 
                         <div className={classes.project__tech}>
                                 <div className={classes.project__tech__item}>
-                                    <img src="/images/icons/html5.svg" width="35px" alt="html icon" />
-                                </div>
-                                <div className={classes.project__tech__item}>
                                     <img src="/images/icons/sass-1.svg" width="35px" alt="sass icon" />
                                 </div>
                                 <div className={classes.project__tech__item}>
@@ -63,9 +60,6 @@ const Projects = () => {
                             </div>
 
                             <div className={classes.project__tech}>
-                                    <div className={classes.project__tech__item}>
-                                        <img src="/images/icons/html5.svg" width="35px" alt="html icon" />
-                                    </div>
                                     <div className={classes.project__tech__item}>
                                         <img src="/images/icons/sass-1.svg" width="35px" alt="sass icon" />
                                     </div>

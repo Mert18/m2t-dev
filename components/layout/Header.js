@@ -19,6 +19,9 @@ const Header = () => {
 
             <div className={classes.header__nav}>
                 <div>
+                    <Link href="/tmi">TMI</Link>
+                </div>
+                <div>
                     <Link href="/posts">BLOG</Link>
                 </div>
                 

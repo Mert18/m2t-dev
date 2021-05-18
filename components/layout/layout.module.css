@@ -49,6 +49,7 @@
 
 .burger {
     position: relative;
+    color: var(--text1);
 }
 
 .burger__menu {

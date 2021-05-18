@@ -1,7 +1,7 @@
 
 .postsgrid {
     list-style: none;
-    padding: 2rem;    
+    padding: 2rem;  
 }
 
 .item {
@@ -46,6 +46,7 @@
     }
     .item {
         margin: 0rem;
+        font-size: 1.1rem;
     }
     .text {
         grid-column: 1 / -1;
@@ -63,7 +64,7 @@
 
 @media screen and (max-width:768px){
     .text{
-        font-size: .7rem;
+        font-size: .9rem;
     }
 }
 
