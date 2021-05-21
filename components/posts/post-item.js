@@ -1,7 +1,6 @@
 
 import Link from 'next/link';
 import classes from './post-layout.module.css';
-import Image from 'next/image';
 
 const PostItem = (props) => {
     const { slug, title, text, hero_image, date } = props.post;
@@ -17,9 +16,9 @@ const PostItem = (props) => {
                     </div>
 
                     <div className={classes.text}>
-                            <h1>{title}</h1>
-                            <p>{text}</p>
-                            <time className={classes.text__time}>{formattedDate}</time>
+                        <h1>{title}</h1>
+                        <p>{text}</p>
+                        <time className={classes.text__time}>{formattedDate}</time>
                     </div>
                 </div>
             </Link>

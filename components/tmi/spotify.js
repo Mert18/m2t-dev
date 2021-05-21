@@ -7,7 +7,6 @@ function Spotify() {
     return(
         <div className={classes.spotify}>
             <div className={classes.spotify__toptracks}>
-
                 <div className={classes.spotify__toptracks__title}>
                     <h2>Top five songs in Spotify</h2>
                 </div>

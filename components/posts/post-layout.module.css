@@ -39,19 +39,18 @@
 
 @media screen and (max-width: 1024px){
     .postsgrid {
-        padding: .8rem;
+        padding: 0rem;
+        font-size: .8rem;
     }
     .photo {
-        display: none;
+        grid-column: 1 / -1;
     }
     .item {
         margin: 0rem;
-        font-size: 1.1rem;
     }
     .text {
         grid-column: 1 / -1;
         padding: .9rem;
-        font-size: .9rem;
     }
     .text p {
         margin-top: .5rem;
@@ -73,7 +72,6 @@
         padding: .8rem;
     }
     .text {
-        font-size: 1rem;
         align-self: center;
     }
 

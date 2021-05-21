@@ -9,7 +9,6 @@ export default async (_, res) => {
     name: playlist.name,
     playlistUrl: playlist.external_urls.spotify,
     trackCount: playlist.tracks,
-    image: playlist.images
   }));
 
   return res.status(200).json({ playlists });

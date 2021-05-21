@@ -1,10 +1,17 @@
 import PostContent from "../../components/posts/single-post/post-content";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
-
+import React, {Fragment} from 'react';
+import Head from 'next/head';
 
 function SinglePostPage(props) {
     return (
-        <PostContent post={props.post} />
+        <Fragment>
+            <Head>
+                <title>{props.post.title}</title>
+                <meta name="description" content={props.post.text} />
+            </Head>
+            <PostContent post={props.post} />
+        </Fragment>
     )
 
 }
