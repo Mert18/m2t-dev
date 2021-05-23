@@ -66,7 +66,7 @@ const About = () => {
                     </div>
 
                     <div className={classes.tech}>
-                        <img src="/images/icons/typescript.svg" width="75px" alt="linux icon" />
+                        <img src="/images/icons/aws-2.svg" width="75px" alt="aws icon" />
                     </div>
 
                     
@@ -83,6 +83,10 @@ const About = () => {
 
                     <div className={classes.tech}>
                         <img src="/images/icons/graphql.svg" width="75px" alt="mongodb icon" />
+                    </div>
+
+                    <div className={classes.tech}>
+                        <img src="/images/icons/typescript.svg" width="75px" alt="typescript icon" />
                     </div>
                 </div>
             </div>

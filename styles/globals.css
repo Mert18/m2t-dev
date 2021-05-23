@@ -59,6 +59,9 @@
     display: none;
 }
 
+a {
+    color: inherit;
+}
 *,
 *::before,
 *::after {
