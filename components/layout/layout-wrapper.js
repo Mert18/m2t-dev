@@ -1,3 +1,5 @@
+
+import React from 'react';
 import DefaultLayout from './default';
 
 const layouts = {
@@ -11,6 +13,7 @@ const LayoutWrapper = (props) => {
     if(Layout != null) {
         return <Layout {...props}>{props.children}</Layout>
     }
+    
     return <DefaultLayout {...props}>{props.children}</DefaultLayout>
 };
 

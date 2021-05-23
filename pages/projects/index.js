@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './projects.module.css';
-import Link from 'next/link';
 
 const Projects = () => {
     return (

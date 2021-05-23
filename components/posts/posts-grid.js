@@ -1,4 +1,5 @@
 
+import React from 'react';
 import PostItem from './post-item';
 import classes from './post-layout.module.css';
 

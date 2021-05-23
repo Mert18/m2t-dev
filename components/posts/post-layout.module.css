@@ -9,6 +9,7 @@
     grid-template-columns: repeat(24, 1fr);
     margin: 3rem;
     transition: all .3s;
+    font-size: 1.1rem;
 }
 
 .item:hover {

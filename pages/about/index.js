@@ -1,4 +1,5 @@
-import React from 'react'
+
+import React from 'react';
 import classes from './about.module.css';
 import Image from 'next/image';
 

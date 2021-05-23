@@ -1,4 +1,5 @@
 
+import React from 'react';
 import PostsGrid from './posts-grid'
 
 const AllPosts = (props) => {

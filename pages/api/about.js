@@ -1,3 +1,4 @@
+
 import connectDB from '../../middleware/mongodb';
 import Data from '../../models/dataModel.js';
 import expressHandler from 'express-async-handler';

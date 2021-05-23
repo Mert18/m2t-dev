@@ -1,8 +1,7 @@
 
+import React from 'react';
 import useSWR from 'swr';
-
 import fetcher from '../../lib/fetcher';
-
 import Playlist from './Playlist.js';
 
 export default function Playlists() {

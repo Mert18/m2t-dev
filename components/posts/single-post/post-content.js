@@ -1,3 +1,5 @@
+
+import React from 'react';
 import PostHeader from './post-header';
 import ReactMarkdown from 'react-markdown';
 import Image from 'next/image';

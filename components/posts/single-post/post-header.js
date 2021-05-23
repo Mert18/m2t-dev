@@ -1,4 +1,5 @@
 
+import React from 'react';
 import classes from './single-post.module.css';
 
 const PostHeader = (props) => {

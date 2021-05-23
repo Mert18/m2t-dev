@@ -16,7 +16,6 @@ function MyApp({ Component, pageProps }) {
                 <meta property="og:description" content="Full stack developer web blog page, writing about technology, web and everything." key="ogdesc" />
             </Head>
             <LayoutWrapper {...pageProps}>
-                
                 <Component {...pageProps} />
             </LayoutWrapper>
         </Fragment>

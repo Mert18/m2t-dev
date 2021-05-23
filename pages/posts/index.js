@@ -1,4 +1,6 @@
-import { Fragment } from 'react';
+
+
+import React, { Fragment } from 'react';
 import AllPosts from '../../components/posts/all-posts';
 import { getAllPosts } from '../../lib/posts-util';
 import Hero from '../../components/posts/hero';

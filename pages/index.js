@@ -1,9 +1,8 @@
+
 import FeaturedPosts from '../components/home-page/featured-posts.js';
 import classes from '../components/home-page/home-general.module.css';
 import { getFeaturedPosts } from '../lib/posts-util.js';
 import Head from 'next/head';
-
-
 
 export default function Home(props) {
   return (
@@ -12,8 +11,7 @@ export default function Home(props) {
         <title>Mert Uygur Web Developer Blog</title>
         <meta
           name='description'
-          content='An experimental area of a web developer.'
-         />
+          content='An experimental area of a web developer.' />
       </Head>
 
       <div className={classes.content}>
@@ -23,6 +21,7 @@ export default function Home(props) {
         </div>
 
       </div>
+      
     </div>
   )
 }

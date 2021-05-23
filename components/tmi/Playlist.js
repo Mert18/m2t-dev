@@ -1,6 +1,7 @@
+
+
 import React from 'react';
 import classes from './spotify.module.css';
-import Image from 'next/image';
 
 const Playlist = (playlist) => {
     return (

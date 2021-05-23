@@ -1,7 +1,6 @@
+
 import React, { useContext} from 'react'
-
 import {ThemeContext} from '../../lib/context';
-
 import Image from 'next/image';
 
 

@@ -1,4 +1,5 @@
-import React,{ useState } from 'react';
+
+import React, { useState } from 'react';
 import classes from './layout.module.css';
 
 import Hamburger from 'hamburger-react'
@@ -44,7 +45,8 @@ const HamburgerMenu = () => {
                 <div></div>
             )
             }
-            </div>
+            
+        </div>
            
     )
 }

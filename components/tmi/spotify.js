@@ -1,4 +1,5 @@
 
+import React from 'react';
 import classes from './spotify.module.css';
 import TopTracks from './top-tracks.js';
 import Playlists from './Playlists'
