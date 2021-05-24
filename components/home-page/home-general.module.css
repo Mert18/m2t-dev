@@ -15,12 +15,8 @@
     grid-template-columns: repeat(12, 1fr);
 }
 
-.home__spotify {
-    grid-column: 2 / 23;
-}
-
 .featuredposts {
-    grid-column: 1 / -1;
+    grid-column: 1 / 8;
 }
 
 /* @media (max-width: 1150px) {

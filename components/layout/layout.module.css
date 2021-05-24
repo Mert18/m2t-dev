@@ -39,7 +39,7 @@
     position: relative;
     display: inline-block;
     overflow: hidden;
-
+    color: var(--text1);
 
 }
 .header a:hover {

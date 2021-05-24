@@ -2,7 +2,7 @@
 title: First Post Here
 date: '2020-03-20T05:35:07.322Z'
 text: Excepteur eu commodo adipisicing tempor deserunt culpa sunt in dolore voluptate commodo cupidatat. Ex in dolor sit enim reprehenderit sint laboris id do exercitation cillum dolor.
-hero_image: /images/posts/first-post/sce.svg
+hero_image: /images/posts/first-post/kindred.svg
 isFeatured: true
 ---
 

@@ -1,28 +1,22 @@
 
 .postsgrid {
     list-style: none;
-    padding: 2rem;  
 }
 
 .item {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
-    margin: 3rem;
     transition: all .3s;
-    font-size: 1.1rem;
+    font-size: .9rem;
 }
 
 .item:hover {
     cursor: pointer;
-    transition: all .3s;
-
-    border-bottom: 3px solid var(--flavor);
 }
 .photo {
-    grid-column: 1 / 13;
+    grid-column: 1 / 6;
     position: relative;
     overflow: hidden;
-    height: 400px;
 }
 .photo img {
     position: absolute;
@@ -31,7 +25,7 @@
     transform: translate(-50%, -50%);
 }
 .text {
-    grid-column: 13 / -1;
+    grid-column: 6 / -1;
     color: var(--text2);
     justify-content: space-around;
     padding: 2rem;

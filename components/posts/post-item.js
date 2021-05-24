@@ -13,7 +13,7 @@ const PostItem = (props) => {
             <Link href={linkPath}>
                 <div className={classes.item}>
                     <div className={classes.photo}>
-                        <img src={hero_image} width="1024px" />
+                        <img src={hero_image} width="170px" />
                     </div>
 
                     <div className={classes.text}>
