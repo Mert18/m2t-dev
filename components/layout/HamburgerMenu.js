@@ -31,10 +31,6 @@ const HamburgerMenu = () => {
                         <div className={classes.burger__menu__nav__item}>
                             <Link href="/tmi">TMI</Link>
                         </div>
-
-                        <div className={classes.burger__menu__nav__item}>
-                            <Link href="/posts">BLOG</Link>
-                        </div>
                         
                         <div className={classes.burger__menu__nav__item}>
                             <Link href="/about">ABOUT</Link>

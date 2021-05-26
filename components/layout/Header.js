@@ -22,11 +22,6 @@ const Header = () => {
                 <div className={classes.linkbox}>
                     <Link href="/tmi">TMI</Link>
                 </div>
-
-                <div className={classes.linkbox}>
-                    <Link href="/posts">BLOG</Link>
-                </div>
-                
                 <div className={classes.linkbox}>
                     <Link href="/about">ABOUT</Link>
                 </div>
