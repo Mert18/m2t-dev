@@ -25,7 +25,7 @@ export default function Home({posts}) {
                   <a>
                     <div className={classes.filteredpost}>
                       <div className={classes.img}>
-                        <img src={post.image} alt="post head img" width="175px" />
+                        <img src={post.image} alt="post head img" width="150px" />
                       </div>
                       <div className={classes.text}>
                         <h2>{post.title}</h2>
@@ -39,8 +39,8 @@ export default function Home({posts}) {
           })}
         </div>
         <div className={classes.artwork}>
-          <h2>Artwork of the day</h2>
-          <img src="/images/assets/tree-circle.svg" width="450px" alt="artwork of the day" />
+          <p>It is here because I wanted It to be here.</p>
+          <img src="/images/illustrations/red-scene.svg" width="450px" alt="artwork of the day" />
         </div>
 
       </div>

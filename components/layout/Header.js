@@ -10,7 +10,7 @@ const Header = () => {
         <div className={classes.header}>
             <div className={classes.header__title}>
                 <div className={classes.linkbox}>
-                    <Link href="/">Mert Uygur</Link>
+                    <Link href="/">Merd</Link>
                 </div>
             </div>
 

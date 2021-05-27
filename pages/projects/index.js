@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './projects.module.css';
 import Head from 'next/head';
+import Project from '../../components/projects/Project';
 
 const Projects = () => {
     return (
@@ -14,69 +15,20 @@ const Projects = () => {
             </div>
 
             <div className={classes.projects__projects}>
-                <div className={classes.project}>
-                    <div className={classes.project__text}>
-                        <div className={classes.project__title}>
-                            <h2>From The Heap</h2>
-                        </div>
+                
+                <Project title="This Website!" desc="My blog. I share Illustrations I made, blog posts and other odd things." img="/images/assets/merd.png" techs={["next-js","mongodb"]} link="https://merd.dev/" />
 
-                        <div className={classes.project__exp}>
-                            <h3>Share your favorite songs and see others'. Social media platform for those who love sharing things.</h3>
-                        </div>
-                    </div>
+                <Project title="Sticker Haven" desc="An E-commerce website all about stickers." img="/images/assets/notav.jpg" techs={["react", "mongodb", "sass"]} link="https://merd.dev/" />
 
-                    <div className={classes.project__img}>
-                        <img src="/images/assets/fth.png" width="300px" alt="from the heap site" />
-                    </div>
+                <Project title="Virtual Library" desc="Social media platform for book lovers but It is more about library other than social media." img="/images/assets/notav.jpg" techs={["react", "mongodb", "sass"]} link="https://virtual-library-git-master-mert18.vercel.app/" />
 
-                    <div className={classes.project__tech}>
-                        <div className={classes.project__tech__item}>
-                            <img src="/images/icons/sass-1.svg" width="35px" alt="sass icon" />
-                        </div>
+                <Project title="Reign of Cards" desc="Card games about math and any other thing." img="/images/assets/notav.jpg" techs={["react", "sass"]} link="https://reign-of-cards.vercel.app/" />
 
-                        <div className={classes.project__tech__item}>
-                            <img src="/images/icons/react-2.svg" width="35px" alt="react icon" />
-                        </div>
+                <Project title="From The Heap" desc="Sharing platform. Share the songs and movies you love, see others' and discover new things!" img="/images/assets/notav.jpg" techs={["react", "mongodb", "sass"]} link="https://from-the-heap.vercel.app/" />
 
-                        <div className={classes.project__tech__item}>
-                            <img src="/images/icons/nodejs-icon.svg" width="35px" alt="node icon" />
-                        </div>
-                        
-                        <div className={classes.project__tech__item}>
-                            <img src="/images/icons/mongodb.svg" width="105px" alt="mongodb icon" />
-                        </div>
-                    </div>
-                </div>
+                <Project title="Tesadüf" desc="Decide the next book you will read, next movie you will watch. In Turkish language." img="/images/assets/notav.jpg" techs={["react", "mongodb", "sass"]} link="https://tesaduf.vercel.app/" />
 
-                <div className={classes.project}>
-                    <div className={classes.project__text}>
-                        <div className={classes.project__title}>
-                            <h2>Virtual Library</h2>
-                        </div>
-                        <div className={classes.project__exp}>
-                            <h3>Share quotes from books, save your books and your thoughts after you read.</h3>
-                        </div> 
-                    </div>
 
-                    <div className={classes.project__img}>
-                        <img src="/images/assets/virtual.png" width="300px" alt="from the heap site" />
-                    </div>
-
-                    <div className={classes.project__tech}>
-                        <div className={classes.project__tech__item}>
-                            <img src="/images/icons/sass-1.svg" width="35px" alt="sass icon" />
-                        </div>
-                        <div className={classes.project__tech__item}>
-                            <img src="/images/icons/react-2.svg" width="35px" alt="react icon" />
-                        </div>
-                        <div className={classes.project__tech__item}>
-                            <img src="/images/icons/nodejs-icon.svg" width="35px" alt="node icon" />
-                        </div>
-                        <div className={classes.project__tech__item}>
-                            <img src="/images/icons/postgresql.svg" width="35px" alt="postgresql icon" />
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     )

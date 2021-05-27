@@ -22,12 +22,12 @@
     align-items: center;
 }
 .header__title {
-    font-size: 2rem;
+    font-size: 1.3rem;
     padding: .3rem;
 }
 .header__nav {
     display: flex;
-    font-size: 1rem;
+    font-size: .95rem;
 }
 
 
@@ -84,6 +84,20 @@
     color: var(--text1);
 }
 
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+.themeToggler {
+    animation: float 4s ease-in-out infinite;
+}
 
 @media (max-width: 768px) {
     .laymain {

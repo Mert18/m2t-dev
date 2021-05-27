@@ -7,16 +7,18 @@
 }
 .filteredposts {
     grid-column: 3 / 14;
-    font-size: .9rem;
+    font-size: .8rem;
+    margin-top: 4rem;
 }
 .artwork{
-    grid-column: 15 / 23;
+    grid-column: 14 / 23;
     text-align: center;
     color: var(--text1);
+    margin-top: 3rem;
 }
-.artwork h2{
+.artwork p{
     padding: .8rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
 }
 .filteredpost{

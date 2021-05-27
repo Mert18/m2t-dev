@@ -1,0 +1,53 @@
+
+
+.project {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3rem;
+    grid-column: 1 / -1;
+    border: 2px solid black;
+    margin-left: 3rem;
+    margin-right: 4rem;
+}
+.project__text {
+    font-size: .8rem;
+}
+.project__img img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 1.3rem;
+}
+.project__tech {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.project__tech > * {
+    margin-right: 1rem;
+}
+
+.link {
+    position: absolute;
+    top: 0;
+    left: 95%;
+    font-size: 1rem;
+    animation: float 6s ease-in-out infinite;
+}
+.link:hover {
+    cursor: pointer;
+}
+
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-20px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
