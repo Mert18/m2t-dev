@@ -1,0 +1,23 @@
+
+.illustration {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1 / -1;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--flavor2);
+}
+
+.title {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.img {
+    grid-column: 1 / -1;
+}
+.img img{
+    display: block;
+    max-width: 100%;
+    padding: 2rem;
+}

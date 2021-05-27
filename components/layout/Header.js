@@ -29,6 +29,9 @@ const Header = () => {
                 <div className={classes.linkbox}>
                     <Link href="/projects">PROJECTS</Link>
                 </div>
+                <div className={classes.linkbox}>
+                    <Link href="/illustrations">ILLUSTRATIONS</Link>
+                </div>
             </div>
             
         </div>

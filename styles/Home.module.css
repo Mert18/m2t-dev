@@ -12,6 +12,7 @@
 .artwork{
     grid-column: 15 / 23;
     text-align: center;
+    color: var(--text1);
 }
 .artwork h2{
     padding: .8rem;

@@ -1,9 +1,14 @@
 import React from 'react';
 import classes from './projects.module.css';
+import Head from 'next/head';
 
 const Projects = () => {
     return (
         <div className={classes.projects}>
+            <Head>
+                <title>Web Projects</title>
+                <meta name="description" content="Web Projects" />
+            </Head>
             <div className={classes.projects__title}>
                 <h2>Projects</h2>
             </div>
