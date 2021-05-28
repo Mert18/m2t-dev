@@ -7,7 +7,7 @@
 }
 .filteredposts {
     grid-column: 3 / 14;
-    font-size: .8rem;
+    font-size: 1rem;
     margin-top: 4rem;
 }
 .artwork{
@@ -18,7 +18,7 @@
 }
 .artwork p{
     padding: .8rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 .filteredpost{
@@ -53,4 +53,13 @@
     font-size: 1.3rem;
     text-align: center;
     padding: 2rem;
+}
+
+@media only screen and (max-width: 1200px){
+    .filteredposts{
+        grid-column: 3 / 20;
+    }   
+    .artwork{
+        display: none;
+    }
 }

@@ -30,22 +30,22 @@ const About = () => {
                 <h2>I know those and have used them in a project before.</h2>
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
-                        <img src="/images/icons/sass-1.svg" width="75px" alt="sass icon" />
+                        <img src="/images/icons/sass.svg" width="75px" alt="sass icon" />
                     </div>
                     <div className={classes.tech}>
-                        <img src="/images/icons/logo-javascript.svg" width="75px" alt="js icon" />
+                        <img src="/images/icons/js.svg" width="75px" alt="js icon" />
                     </div>
                     <div className={classes.tech}>
-                        <img src="/images/icons/react-2.svg" width="75px" alt="react icon" />
+                        <img src="/images/icons/react.svg" width="75px" alt="react icon" />
                     </div>
                     <div className={classes.tech}>
-                        <img src="/images/icons/nodejs-icon.svg" width="75px" alt="nodejs icon" />
+                        <img src="/images/icons/node-js.svg" width="75px" alt="nodejs icon" />
                     </div>
                     <div className={classes.tech}>
                         <img src="/images/icons/mongodb.svg" width="75px" alt="mongodb icon" />
                     </div>
                     <div className={classes.tech}>
-                        <img src="/images/icons/git-icon.svg" width="75px" alt="git icon" />
+                        <img src="/images/icons/git.svg" width="75px" alt="git icon" />
                     </div>
 
                 </div>
@@ -66,7 +66,7 @@ const About = () => {
                     </div>
 
                     <div className={classes.tech}>
-                        <img src="/images/icons/aws-2.svg" width="75px" alt="aws icon" />
+                        <img src="/images/icons/aws.svg" width="75px" alt="aws icon" />
                     </div>
 
                     
@@ -76,7 +76,7 @@ const About = () => {
 
                 <div className={classes.aboutstack__stack}>
                     <div className={classes.tech}>
-                        <img src="/images/icons/php-1.svg" width="75px" alt="postgresql icon" />
+                        <img src="/images/icons/php.svg" width="75px" alt="postgresql icon" />
                     </div>
 
                     

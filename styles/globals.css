@@ -63,10 +63,11 @@ a {
     text-decoration: none;
     
 }
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
 body {
-    font-family: 'Merriweather', serif;
+    font-family: 'Rajdhani', sans-serif;
     background-color: var(--flavor);
     font-size: 62.5%;
     list-style: none;

@@ -7,12 +7,11 @@
     position: relative;
     margin-bottom: 3rem;
     grid-column: 1 / -1;
-    border: 2px solid black;
     margin-left: 3rem;
     margin-right: 4rem;
 }
 .project__text {
-    font-size: .8rem;
+    font-size: 1rem;
 }
 .project__img img{
     display: block;
@@ -40,14 +39,31 @@
     cursor: pointer;
 }
 
-    @keyframes float {
-        0% {
-            transform: translatey(0px);
-        }
-        50% {
-            transform: translatey(-20px);
-        }
-        100% {
-            transform: translatey(0px);
-        }
+@keyframes float {
+    0% {
+        transform: translatey(0px);
     }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .project {
+        margin: 0rem .6rem;
+        flex-direction: column;
+        border-bottom: 2px solid var(--flavor2);
+    }
+    .project__text {
+        padding: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .project__text {
+        font-size: .9rem;
+    }
+}

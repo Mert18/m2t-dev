@@ -39,6 +39,9 @@ const HamburgerMenu = () => {
                         <div className={classes.burger__menu__nav__item}>
                             <Link href="/projects">PROJECTS</Link>
                         </div>
+                        <div className={classes.burger__menu__nav__item}>
+                            <Link href="/illustrations">ILLUSTRATIONS</Link>
+                        </div>
                     </div>
                 </div>
             ) :
