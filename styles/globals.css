@@ -63,11 +63,9 @@ a {
     text-decoration: none;
     
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Asar&display=swap');
 body {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Asar', serif;
     background-color: var(--flavor);
     font-size: 62.5%;
     list-style: none;

@@ -6,15 +6,19 @@
     min-height: 100vh;
 }
 .filteredposts {
-    grid-column: 3 / 14;
+    grid-column: 1 / -1;
     font-size: 1rem;
     margin-top: 4rem;
 }
 .artwork{
-    grid-column: 14 / 23;
+    grid-column: 3 / 22;
     text-align: center;
     color: var(--text1);
-    margin-top: 3rem;
+    margin-top: 4rem;
+}
+.artwork img {
+    display: block;
+    max-width: 100%;
 }
 .artwork p{
     padding: .8rem;
@@ -23,7 +27,8 @@
 }
 .filteredpost{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     color: var(--text1);
 }
 .filteredpost:hover{
@@ -57,9 +62,12 @@
 
 @media only screen and (max-width: 1200px){
     .filteredposts{
-        grid-column: 3 / 20;
-    }   
-    .artwork{
-        display: none;
+        grid-column: 2 / 22;
+    }
+}
+@media only screen and (max-width: 800px){
+    .filteredposts{
+        grid-column: 2 / 22;
+        font-size: .8rem;
     }
 }

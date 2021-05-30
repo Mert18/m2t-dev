@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
 .lay {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
@@ -20,14 +22,15 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: 'Comfortaa', cursive;
 }
 .header__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: .3rem;
 }
 .header__nav {
     display: flex;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
@@ -82,6 +85,23 @@
 }
 .burger__menu__nav__item a{
     color: var(--text1);
+}
+
+.footer {
+    height: 30vh;
+    background-color: var(--back1);
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+.footer__links {
+    grid-column: 3 / 9;
+    grid-row: 6 / 9;
+}
+.footer__links img {
+    margin: .5rem;
 }
 
 @keyframes float {

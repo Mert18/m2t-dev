@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
+
 .spotify__toptracks__title{
     text-align: center;
     padding: 1.2rem;
@@ -39,7 +40,11 @@
     padding: 1rem;
     grid-column: 3 / -1;
 }
-
+.toptrack__img img{
+    display: block;
+    max-width: 100%;
+    padding: .5rem;
+}
 .toptrack{
     padding: .6rem;
     font-size: .7rem;

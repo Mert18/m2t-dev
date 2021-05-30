@@ -39,8 +39,9 @@ export default function Home({posts}) {
           })}
         </div>
         <div className={classes.artwork}>
-          <p>It is here because I wanted It to be here.</p>
-          <img src="/images/illustrations/red-scene.svg" width="450px" alt="artwork of the day" />
+          <h2>Illness</h2>
+          <p>March 20, 2000</p>
+          <img src="/images/illustrations/tree-circle.svg" alt="artwork of the day" />
         </div>
 
       </div>
