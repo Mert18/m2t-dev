@@ -1,12 +1,9 @@
 import React from 'react'
-import Link from 'next/link';
 import Head from 'next/head';
 import classes from '../styles/Home.module.css';
 
 const Post = ({children, frontMatter}) => {
     const {title, description, image, date} = frontMatter;
-    console.log(children);
-    console.log(frontMatter)
     return (
         <div className={classes.post}>
             <Head>
@@ -22,7 +19,7 @@ const Post = ({children, frontMatter}) => {
                     <h1>{title}</h1>
                     <p>{date}</p>
                 </div>
-                <div>
+                <div className={classes.main__text}>
                     {children}
                 </div>
             </main>

@@ -8,7 +8,7 @@ import randomColor from 'randomcolor';
 const Header = () => {
 
     const [color, setColor] = useState("black");
-    const [colorTwo, setColorTwo] = useState("black");
+    const [colorTwo, setColorTwo] = useState("red");
 
 
     useEffect(() => {
@@ -20,6 +20,7 @@ const Header = () => {
 
     return (
         <div className={classes.header}>
+
             <div className={classes.header__title}>
                 <Link href="/">
                     <svg viewBox="0 0 168.55 113.85" className="logo">

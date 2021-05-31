@@ -1,96 +1,71 @@
 .about {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    color: var(--text1);
+    grid-template-columns: repeat(24, 1fr);
 }
 
-.hakk {
-    grid-column: 3 / 11;
-    display: flex;
-    align-items: center;
-    padding: 3rem;
-    justify-content: space-around;
-    background-color: var(--blackoverblack);
+.content {
+    grid-column: 2 / 23;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    border: 2px solid var(--flavor3);
+    /* #C39999 */
+    margin-top: 4rem;
+    position: relative;
+    background-color: var(--back1);
+    z-index: 999;
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
 }
-.hakk__prof{
+.shadow{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--flavor3);
+}
+
+.hero{
+    grid-column: 1 / -1;
+    z-index: 999;
+    background-color: var(--back1);
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
 }
-.hakk__text {
+
+.aboutstack{
+    grid-column: 1 / -1;
+    z-index: 999;
+    background-color: var(--back1);
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding-top: 3rem;
+
+}
+.aboutstack__stack{
+    display: flex;
+    padding: .8rem;
+}
+.tech{
+    padding: .6rem;
+    align-self: center;
+}
+
+.really{
+    grid-column: 1 / -1;
+    z-index: 999;
+    background-color: var(--back1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem;
-    font-size: 1.3rem;
-}
-.hakk__text > * {
-    margin-bottom: 3rem;
-}
-.hakk__text >*:last-child{
-    margin-bottom: 0rem;
-}
-
-.hakk__text__icons a{
-    padding: .5rem;
-}
-
-.aboutstack {
-    margin-top: 2rem;
-    grid-column: 2 / 12;
-    font-size: .9rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.aboutstack h2 {
-    margin-top: 2rem;
-}
-
-
-.aboutstack__stack {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.tech {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-
-.really {
-    margin-top: 3rem;
-    font-size: 1.1rem;
-    grid-column: 3 / 11;
-}
-.reallytext {
-    padding: 1rem;
-}
-
-
-
-@media screen and (max-width: 768px) {
-    .hakk {
-        display: flex;
-        flex-direction: column;
-        grid-column: 1 / -1;
-        text-align: center;
-    }
-    .hakk__prof {
-        border-bottom: 4px solid black;
-        border-right: 4px solid black;
-    }
-
-    .aboutstack{
-        grid-column: 1 / -1;
-        padding: 2rem;
-        text-align: center;
-    }
-    .really{
-        grid-column: 1 / -1;
-        padding: 1.2rem;
-    }
 }

@@ -5,24 +5,51 @@
     grid-template-columns: repeat(24, 1fr);
 }
 
-.posts {
-    grid-column: 1 / -1;
+.content {
+    grid-column: 2 / 23;
     display: grid;
-    justify-self: center;
-    grid-template-columns: repeat(24 ,1fr);
-    font-size: .9rem;
+    grid-template-columns: repeat(24, 1fr);
+    border: 2px solid var(--flavor3);
+    /* #C39999 */
+    margin-top: 4rem;
+    position: relative;
+    background-color: var(--back1);
+    z-index: 999;
+    margin-bottom: 5rem;
 }
-.posts a{
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(24 ,1fr);
+.shadow{
+    position: absolute;
+    top: 6%;
+    left: 2%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--flavor3);
 }
-.post {
+
+
+.posts{
     grid-column: 1 / -1;
+    font-size: 1rem;
+    z-index: 999;
+    background-color: var(--back1);
+}
+.post{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--text1);
+    margin: 2rem;
 }
 .text {
-    margin-left: 1rem;
+    font-size: 1.4rem;
+}
+.text h1{
+    font-size: 1.9rem;
+}
+.text h1:hover{
+    color: var(--flavor2);
+    cursor: pointer;
+}
+.text p {
+    margin-top: .6rem;
 }

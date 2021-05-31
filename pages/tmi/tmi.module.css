@@ -1,6 +1,4 @@
-
-
-.projects {
+.tmi {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
 }
@@ -24,10 +22,4 @@
     width: 100%;
     height: 100%;
     background-color: var(--flavor3);
-}
-
-.projects__projects{
-    grid-column: 1 / -1;
-    z-index: 999;
-    background-color: var(--back1);
 }

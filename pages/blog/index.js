@@ -10,27 +10,26 @@ import classes from './blog.module.css';
 const Blog = ({posts}) => {
     return (
         <div className={classes.blog}>
-            <div className={classes.posts}>
+            <div className={classes.content}>
+              <div className={classes.shadow}>
+
+              </div>
+              <div className={classes.posts}>
                 {posts.map(post => {
                 return(
-                    <Link key={post.path} href={post.path}>
-                        <a>
-                            <div className={classes.post}>
-                                <div className={classes.img}>
-                                    <img src={post.image} alt="post head img" width="150px" />
-                                </div>
-                                <div className={classes.text}>
-                                    <h2>{post.title}</h2>
-                                    <p>{post.description}</p>
-                                    <p>{post.date}</p>
-                                </div>
-                            </div>
-                        </a>
-                    </Link>
+                  <div className={classes.post}>
+                    <div className={classes.text}>
+                      <Link key={post.path} href={post.path}>
+                        <h1>{post.title}</h1>
+                      </Link>
+                      <p>{post.description}</p>
+                      <p>{post.date}</p>
+                    </div>
+                  </div>
                     )
                 })}
+              </div>
             </div>
-            
         </div>
     )
 }

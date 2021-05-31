@@ -3,10 +3,15 @@
 .graphcon {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
-    margin-bottom: 3rem;
+    grid-column: 1 / -1;
+    z-index: 999;
+    background-color: var(--back1);
+    padding-bottom: 2rem;
+
 }
 .graphcon__graph {
-    grid-column: 5 / -1;
+    grid-column: 1 / -1;
+    justify-self: center;
     margin-top: 3rem;
     font-size: 1rem;
 }

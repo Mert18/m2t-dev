@@ -32,7 +32,7 @@ const HamburgerMenu = () => {
                             <Link href="/tmi">TMI</Link>
                         </div>
 
-                        <div className={classes.linkbox}>
+                        <div className={classes.burger__menu__nav__item}>
                             <Link href="/blog">BLOG</Link>
                         </div>
                         

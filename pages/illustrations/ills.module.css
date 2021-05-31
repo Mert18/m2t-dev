@@ -1,5 +1,31 @@
-
 .illustrations {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(24, 1fr);
+}
+
+.content {
+    grid-column: 2 / 23;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    border: 2px solid var(--flavor3);
+    /* #C39999 */
+    margin-top: 4rem;
+    position: relative;
+    background-color: var(--back1);
+    z-index: 999;
+    margin-bottom: 5rem;
+}
+.shadow{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--flavor3);
+}
+
+.ills{
+    grid-column: 1 / -1;
+    z-index: 999;
+    background-color: var(--back1);
 }

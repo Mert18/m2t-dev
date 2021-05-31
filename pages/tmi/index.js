@@ -5,18 +5,25 @@ import Spotify from '../../components/tmi/spotify';
 import Hero from '../../components/tmi/Hero';
 
 import Head from 'next/head';
+import classes from './tmi.module.css'
 
 function tmi(){
     return(
-        <Fragment>
+        <div className={classes.tmi}>
             <Head>
                 <title>Too Much Information</title>
                 <meta name="description" content="Too much info about me." />
             </Head>
-            <Hero />
-            <GraphCon />
-            <Spotify />
-        </Fragment>
+            <div className={classes.content}>
+                <div className={classes.shadow}>
+
+                </div>
+                <Hero />
+                <GraphCon />
+                <Spotify />
+            </div>
+            
+        </div>
     )
 }
 

@@ -5,7 +5,7 @@ import classes from './hero.module.css';
 function Hero() {
     return(
         <div className={classes.hero}>
-            <p>This is just Too Much Information.</p>
+            <h2>This is just Too Much Information.</h2>
         </div>
     )
 }

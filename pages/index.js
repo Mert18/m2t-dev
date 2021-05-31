@@ -15,37 +15,46 @@ export default function Home({posts}) {
           name='description'
           content='An experimental area of a web developer.' />
       </Head>
-
-      <div className={classes.content}>
-
-        <div className={classes.filteredposts}>
-          {posts.map(post => {
-            return(
-                <Link key={post.path} href={post.path}>
-                  <a>
-                    <div className={classes.filteredpost}>
-                      <div className={classes.img}>
-                        <img src={post.image} alt="post head img" width="150px" />
-                      </div>
-                      <div className={classes.text}>
-                        <h2>{post.title}</h2>
-                        <p>{post.description}</p>
-                        <p>{post.date}</p>
-                      </div>
-                    </div>
-                  </a>
-                </Link>
-            )
-          })}
-        </div>
-        <div className={classes.artwork}>
-          <h2>Illness</h2>
-          <p>March 20, 2000</p>
-          <img src="/images/illustrations/tree-circle.svg" alt="artwork of the day" />
-        </div>
-
-      </div>
       
+      <div className={classes.content}>
+        <div className={classes.shadow}>
+
+        </div>
+        <div className={classes.filteredposts}>
+            {posts.map(post => {
+              return(
+                      <div key={post.path} className={classes.filteredpost}>
+                        <div className={classes.filteredpost__text}>
+                        <Link  href={post.path}>
+                          <h1>{post.title}</h1>
+                        </Link>
+                          <p>{post.description}</p>
+                          <p>{post.date}</p>
+                        </div>
+                      </div>
+              )
+            })}
+          </div>
+          <div className={classes.others}>
+              <div className={classes.social}>
+                <div className={classes.social__title}>
+                    <p>Elsewhere</p>
+                  </div>
+                <div className={classes.social__link}>
+                  <div className={classes.social__link__text}>
+                    <a href="https://github.com/mert18" target="_blank"><p>GITHUB</p></a>
+                  </div>
+                </div>
+
+                <div className={classes.social__link}>
+                  <div className={classes.social__link__text}>
+                    <a href="https://www.linkedin.com/in/mert-u-8248ab135/" target="_blank"><p>LINKEDIN</p></a>
+                  </div>
+                </div>
+
+              </div>
+          </div>
+       </div>
     </div>
   )
 }
