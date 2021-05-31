@@ -24,15 +24,13 @@
     align-items: center;
     font-family: 'Comfortaa', cursive;
 }
-.header__title {
-    font-size: 1.5rem;
-    padding: .3rem;
-}
 .header__nav {
     display: flex;
     font-size: 1rem;
 }
-
+.header__title {
+    width: 3.5rem;
+}
 
 .header a {
     margin-right: 2rem;
@@ -109,7 +107,7 @@
         transform: translatey(0px);
     }
     50% {
-        transform: translatey(-20px);
+        transform: translatey(-10px);
     }
     100% {
         transform: translatey(0px);
