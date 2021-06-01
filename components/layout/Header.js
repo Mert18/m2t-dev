@@ -20,6 +20,9 @@ const Header = () => {
 
     return (
         <div className={classes.header}>
+            <div className={classes.shadow}>
+
+            </div>
 
             <div className={classes.header__title}>
                 <Link href="/">

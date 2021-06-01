@@ -24,7 +24,9 @@
     
     --flavor: #353535;
     --flavor2: #882e3d;
-    --flavor3: red;
+    --flavor3: #8B2635;
+    --flavor4: #8B2635;
+
     --spotify: #1db954;
 
     --hover: #89023E;
@@ -39,7 +41,9 @@
     
     --flavor: #f1faee;
     --flavor2: #882e3d;
-    --flavor3: red;
+    --flavor3: #8B2635;
+    --flavor4: #8B2635;
+
     --spotify: #1db954;
 
     --blackoverblack: #12165c;
@@ -68,4 +72,5 @@ body {
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 62.5%;
     list-style: none;
+    background-color: var(--back1);
 }

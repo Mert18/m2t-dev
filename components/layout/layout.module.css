@@ -3,21 +3,31 @@
 .lay {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
+    background-color: var(--back2);
+
 }
 .layhead {
-    grid-column: 1 / -1;
+    grid-column: 2 / 23;
     background-color: var(--back1);
-    padding: 2rem;
+    border: 2px  solid var(--flavor4);
+    margin: 2rem;
+    
 }
 .toggler{
-    grid-column: 8 / 10;
+    grid-column: 3 / 10;
     align-self: center;
+    z-index: 999;
+    background-color: var(--back1);
+    padding: 3rem 3rem;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
 }
 .toggler button {
     background: transparent;
     outline: none;
     border: none;
-    
 }
 .toggler button:hover {
     cursor: pointer;
@@ -27,19 +37,35 @@
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     font-family: 'Comfortaa', cursive;
-    height: 30vh;
     background-color: var(--back1);
+    position: relative;
+}
+.shadow{
+    position: absolute;
+    top:15%;
+    left: 1%;
+    background-color: var(--flavor4);
+    width: 100%;
+    height: 95%;
 }
 .header__nav {
-    grid-column: 13 / -1;
+    grid-column: 10 / -1;
+    padding-left: 2rem;
     align-self: center;
     display: flex;
     font-size: 1rem;
+    z-index: 999;
+    background-color: var(--back1);
+    height: 100%;
+    align-items: center;
 }
 .header__title {
-    width: 5.5rem;
-    grid-column: 2 / 4;
+    padding-left: 2rem;
+    grid-column: 1 / 3;
     align-self: center;
+    z-index: 999;
+    background-color: var(--back1);
+    padding: 4rem 2rem;
 }
 .header__title:hover{
     cursor: pointer;
@@ -81,7 +107,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 9999;
 }
 .burger__menu__toggler button{
     background: transparent;
