@@ -98,7 +98,6 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     color: var(--text1);
-
 }
 
 .main__head {
@@ -122,6 +121,10 @@
         grid-column: 1 / -1;
         font-size: .8rem;
     }
+    .main__text{
+        grid-column: 1  / -1;
+        padding: 3rem;
+    }
     .others{
         grid-column: 1 / -1;
         text-align: center;
@@ -135,11 +138,11 @@
     .home{
         background-color: var(--back1);
     }
-    .content{
+/*     .content{
         grid-column: 1/-1;
         border: none;
     }
     .shadow{
         display: none;
-    }
+    } */
 }

@@ -25,7 +25,7 @@ export default function Default(props) {
 
             <div className={classes.lay} data-theme={theme}>
                 <header className={classes.layhead}>
-                {widthD < 650 ? 
+                {widthD < 1100 ? 
                 (
                     <HamburgerMenu />
                 )

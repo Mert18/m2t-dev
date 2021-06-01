@@ -1,10 +1,11 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './layout.module.css';
 
 import Hamburger from 'hamburger-react'
 import ThemeToggler from './themeToggler';
 import Link from 'next/link';
+import { useRouter } from 'next/router'
 
 
 const HamburgerMenu = () => {
@@ -13,6 +14,14 @@ const HamburgerMenu = () => {
     const handleClick = () => {
         setIsOpen(!isOpen);
     }
+
+    const router = useRouter();
+
+    useEffect(() => {
+    if (isOpen) {
+      setIsOpen(!isOpen);
+    }
+    }, [router.asPath]);
     return (
         <div className={classes.burger}>
             <Hamburger toggled={isOpen} toggle={handleClick} />
