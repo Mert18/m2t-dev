@@ -68,8 +68,11 @@ a {
     
 }
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 body {
-    font-family: 'Darker Grotesque', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 62.5%;
     list-style: none;
     background-color: var(--back1);

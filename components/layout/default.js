@@ -10,7 +10,7 @@ import useWindowDimensions from '../useWindowDimensions.js';
 
 export default function Default(props) {
 
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('dark');
 
     const { height, width } = useWindowDimensions();
 

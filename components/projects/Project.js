@@ -10,7 +10,7 @@ const Project = ({title, desc, img, techs, link }) => {
 
             <div className={classes.link}>
                 <a href={link} target="_blank">
-                    <h1>&#8682;</h1>
+                    <p>VISIT</p>
                 </a>
             </div>
 
