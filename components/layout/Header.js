@@ -16,7 +16,7 @@ const Header = () => {
     }, [color]);
 
     return (
-        <div className={classes.header}>
+        <header className={classes.header}>
             <div className={classes.shadow}>
 
             </div>
@@ -39,7 +39,7 @@ const Header = () => {
                 <ThemeToggler />
             </div>
 
-            <div className={classes.header__nav}>
+            <nav className={classes.header__nav}>
                 <div className={classes.linkbox}>
                     <Link href="/tmi">TMI</Link>
                 </div>
@@ -56,9 +56,9 @@ const Header = () => {
                 <div className={classes.linkbox}>
                     <Link href="/illustrations">ILLUSTRATIONS</Link>
                 </div>
-            </div>
+            </nav>
             
-        </div>
+        </header>
     )
 }
 

@@ -1,23 +1,7 @@
 
-.illustration {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column: 1 / -1;
-    padding: 1rem;
-    margin-bottom: 2rem;
+.figure{
     color: var(--text1);
-}
-
-.title {
-    grid-column: 1 / -1;
     text-align: center;
     font-size: 1.2rem;
-}
-.img {
-    grid-column: 3 / 11;
-}
-.img img{
-    display: block;
-    max-width: 100%;
-    padding: 2rem;
+    padding: 3rem;
 }

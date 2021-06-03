@@ -16,14 +16,14 @@ export default function Home({posts}) {
           content='An experimental area of a web developer.' />
       </Head>
       
-      <div className={classes.content}>
+      <section className={classes.content}>
         <div className={classes.shadow}>
 
         </div>
-        <div className={classes.filteredposts}>
+        <ul className={classes.filteredposts}>
             {posts.map(post => {
               return(
-                      <div key={post.path} className={classes.filteredpost}>
+                      <li key={post.path} className={classes.filteredpost}>
                         <div className={classes.filteredpost__text}>
                         <Link  href={post.path}>
                           <h1>{post.title}</h1>
@@ -31,11 +31,11 @@ export default function Home({posts}) {
                           <p>{post.description}</p>
                           <p>{post.date}</p>
                         </div>
-                      </div>
+                      </li>
               )
             })}
-          </div>
-          <div className={classes.others}>
+          </ul>
+          <section className={classes.others}>
               <div className={classes.social}>
                 <div className={classes.social__title}>
                     <p>Elsewhere</p>
@@ -53,8 +53,8 @@ export default function Home({posts}) {
                 </div>
 
               </div>
-          </div>
-       </div>
+          </section>
+       </section>
     </div>
   )
 }

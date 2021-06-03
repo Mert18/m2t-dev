@@ -3,15 +3,10 @@ import classes from './illustration.module.css';
 
 const Illustration = ({img, title, date}) => {
     return (
-        <div className={classes.illustration}>
-            <div className={classes.title}>
-                <h2>{title}</h2>
-                <p>{date}</p>
-            </div>
-            <div className={classes.img}>
+            <figure className={classes.figure}>
                 <img src={img} alt={title} />
-            </div>
-        </div>
+                <figcaption>{title} , {date}</figcaption>
+            </figure>
     )
 }
 

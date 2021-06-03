@@ -23,7 +23,7 @@ const HamburgerMenu = () => {
     }
     }, [router.asPath]);
     return (
-        <div className={classes.burger}>
+        <header className={classes.burger}>
             <Hamburger toggled={isOpen} toggle={handleClick} />
 
             {isOpen ? (
@@ -32,7 +32,7 @@ const HamburgerMenu = () => {
                         <ThemeToggler />
                     </div>
 
-                    <div className={classes.burger__menu__nav}>
+                    <nav className={classes.burger__menu__nav}>
                         <div className={classes.burger__menu__nav__item}>
                             <Link href="/">MERT UYGUR</Link>
                         </div>
@@ -55,7 +55,7 @@ const HamburgerMenu = () => {
                         <div className={classes.burger__menu__nav__item}>
                             <Link href="/illustrations">ILLUSTRATIONS</Link>
                         </div>
-                    </div>
+                    </nav>
                 </div>
             ) :
             (
@@ -63,7 +63,7 @@ const HamburgerMenu = () => {
             )
             }
             
-        </div>
+        </header>
            
     )
 }

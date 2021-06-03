@@ -24,7 +24,7 @@ export default function Default(props) {
         <ThemeContext.Provider value={{theme, setTheme}}>
 
             <div className={classes.lay} data-theme={theme}>
-                <header className={classes.layhead}>
+                <div className={classes.layhead}>
                 {widthD < 1100 ? 
                 (
                     <HamburgerMenu />
@@ -35,7 +35,7 @@ export default function Default(props) {
                     <Header />
                 )
                 }
-                </header>
+                </div>
                 <main className={classes.laymain}>
                     {props.children}
                 </main>

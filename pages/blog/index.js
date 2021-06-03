@@ -14,10 +14,10 @@ const Blog = ({posts}) => {
               <div className={classes.shadow}>
 
               </div>
-              <div className={classes.posts}>
+              <ul className={classes.posts}>
                 {posts.map(post => {
                 return(
-                  <div className={classes.post}>
+                  <li className={classes.post}>
                     <div className={classes.text}>
                       <Link key={post.path} href={post.path}>
                         <h1>{post.title}</h1>
@@ -25,10 +25,10 @@ const Blog = ({posts}) => {
                       <p>{post.description}</p>
                       <p>{post.date}</p>
                     </div>
-                  </div>
+                  </li>
                     )
                 })}
-              </div>
+              </ul>
             </div>
         </div>
     )
