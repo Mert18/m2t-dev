@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 :root {
     --text1: #f1faee;
@@ -67,9 +67,6 @@ a {
     text-decoration: none;
     
 }
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 body {
     font-family: 'Quicksand', sans-serif;
