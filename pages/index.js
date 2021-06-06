@@ -42,13 +42,13 @@ export default function Home({posts}) {
                   </div>
                 <div className={classes.social__link}>
                   <div className={classes.social__link__text}>
-                    <a href="https://github.com/mert18" target="_blank"><p>GITHUB</p></a>
+                    <a href="https://github.com/mert18" rel="roreferrer" target="_blank"><p>GITHUB</p></a>
                   </div>
                 </div>
 
                 <div className={classes.social__link}>
                   <div className={classes.social__link__text}>
-                    <a href="https://www.linkedin.com/in/mert-u-8248ab135/" target="_blank"><p>LINKEDIN</p></a>
+                    <a href="https://www.linkedin.com/in/mert-u-8248ab135/" rel="roreferrer" target="_blank"><p>LINKEDIN</p></a>
                   </div>
                 </div>
 

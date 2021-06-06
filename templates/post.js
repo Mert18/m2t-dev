@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head';
-import classes from '../styles/Home.module.css';
+import classes from './post.module.css';
 
 const Post = ({children, frontMatter}) => {
     const {title, description, image, date} = frontMatter;
@@ -11,18 +11,24 @@ const Post = ({children, frontMatter}) => {
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="description" content={description} />
             </Head>
-            <header className={classes.header}>
-                <img src={image} alt="post header img" />
-            </header>
-            <main className={classes.main}>
-                <div className={classes.main__head}>
-                    <h1>{title}</h1>
-                    <p>{date}</p>
+            <div className={classes.content}>
+                <div className={classes.shadow}>
+
                 </div>
-                <div className={classes.main__text}>
-                    {children}
-                </div>
-            </main>
+                <header className={classes.header}>
+                    <img src={image} alt="post header img" />
+                </header>
+                <main className={classes.main}>
+                    <div className={classes.main__head}>
+                        <h1>{title}</h1>
+                        <p>{date}</p>
+                    </div>
+                    <div className={classes.main__text}>
+                        {children}
+                    </div>
+                </main>
+            </div>
+           
             
         </div>
     )

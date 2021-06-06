@@ -16,7 +16,7 @@ const Projects = () => {
                 </div>
 
                 <div className={classes.projects__projects}>
-                    <Project title="This Website!" desc="My blog. I share Illustrations I made, blog posts and other odd things." img="/images/illustrations/kindred.svg" techs={["next-js","mongodb"]} link="https://merd.dev/" />
+                    <Project title="This Website!" desc="My blog. I share Illustrations I made, blog posts and other odd things." img="/images/mm.svg" techs={["next-js","mongodb"]} link="https://merd.dev/" />
 
                     <Project title="Sticker Haven" desc="An E-commerce website all about stickers." img="/images/illustrations/kindred.svg" techs={["react", "mongodb", "sass"]} link="https://merd.dev/" />
 
