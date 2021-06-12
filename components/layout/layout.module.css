@@ -2,15 +2,52 @@
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     background-color: var(--back2);
-
 }
 .layhead {
-    grid-column: 2 / 23;
+    grid-column: 1 / 24;
     background-color: var(--back1);
     border: 2px  solid var(--flavor4);
     margin: 2rem;
-    
+    min-height: 30vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.colors{
+    grid-column: 23 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--back1);
+}
+.colors button{
+    border: none;
+    outline: none;
+}
+.colors button:hover{
+    cursor: pointer;
+    border: 3px solid var(--text1);
+}
+.y{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(179, 87, 102);
+    border-radius: 50%;
+}
+.g{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: blue;
+    border-radius: 50%;
+}
+.r{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(188, 202, 62);
+    border-radius: 50%;
+}
+
 .toggler{
     grid-column: 4 / 10;
     align-self: center;
@@ -34,34 +71,29 @@
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     background-color: var(--back1);
-    position: relative;
 }
-.shadow{
-    position: absolute;
-    top:15%;
-    left: 1%;
-    background-color: var(--flavor4);
-    width: 100%;
-    height: 95%;
-}
+
 .header__nav {
-    grid-column: 10 / -1;
-    padding-left: 2rem;
+    grid-column: 10 / 23;
     align-self: center;
     display: flex;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     z-index: 999;
     background-color: var(--back1);
     height: 100%;
     align-items: center;
 }
 .header__title {
-    padding-left: 2rem;
-    grid-column: 1 / 4;
+    grid-column: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-self: center;
     z-index: 999;
     background-color: var(--back1);
-    padding: 4rem 2rem;
+}
+.header__title svg path {
+    fill: var(--flavor4);
 }
 .header__title:hover{
     cursor: pointer;
@@ -76,11 +108,15 @@
 
 }
 .header a:hover {
-    color: var(--flavor2);
+    color: var(--flavor3);
 }
+
+
+
 .laymain {
     grid-column: 1 / -1;
     background-color: var(--back2);
+    min-height: 80vh;
 }
 
 .hamburger {
@@ -97,7 +133,8 @@
     position: absolute;
     top: 50px;
     left: 0px;
-    width: 100%;
+    transform: translateX(-47%);
+    min-width: 100vw;
     padding-top: 2rem;
     padding-bottom: 2rem;
     background-color: var(--back1);

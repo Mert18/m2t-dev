@@ -41,3 +41,9 @@
 .main__head{
     text-align: center;
 }
+
+@media only screen and (max-width: 900px){
+    .main{
+        font-size: 1.2rem;
+    }
+}

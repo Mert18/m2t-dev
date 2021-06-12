@@ -35,6 +35,7 @@
 }
 .link:hover {
     cursor: pointer;
+    color: var(--flavor3);
 }
 
 

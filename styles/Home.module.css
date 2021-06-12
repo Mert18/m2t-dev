@@ -40,7 +40,7 @@
     color: var(--text1);
 }
 .social{
-    grid-column: 5 / 7;
+    grid-column: 5 / 9;
     font-size: 1.2rem;
     padding-top: 7rem;
 }
@@ -60,7 +60,7 @@
 }
 .social__link__text a:hover{
     cursor: pointer;
-    color: var(--flavor2);
+    color: var(--flavor3);
 
 }
 .filteredpost{
@@ -77,7 +77,7 @@
     font-size: 1.5rem;
 }
 .filteredpost__text h1:hover{
-    color: var(--flavor2);
+    color: var(--flavor3);
     cursor: pointer;
 }
 .filteredpost__text p {

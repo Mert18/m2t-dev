@@ -24,11 +24,7 @@
     
     --flavor: #353535;
     --flavor2: #882e3d;
-    --flavor3: #8B2635;
-    --flavor4: #8B2635;
-
-    --spotify: #1db954;
-
+    --flavor3: #5f1520;
     --hover: #89023E;
 }
 
@@ -41,14 +37,31 @@
     
     --flavor: #f1faee;
     --flavor2: #882e3d;
-    --flavor3: #8B2635;
-    --flavor4: #8B2635;
-
-    --spotify: #1db954;
-
-    --blackoverblack: #12165c;
+    
 
     --hover: #89023E;
+}
+
+[color-palette="first"]{
+    --flavor3: #ce4358;
+    --flavor4: #80105a;
+
+    --flavor5: #1b1da0;
+    --flavor6: #279611;
+}
+[color-palette="second"]{
+    --flavor3: #4648b9;
+    --flavor4: #4154a8;
+
+    --flavor5: #1b1da0;
+    --flavor6: #279611;
+}
+[color-palette="third"]{
+    --flavor3: #e0d53c;
+    --flavor4: #7a7523;
+    
+    --flavor5: #1b1da0;
+    --flavor6: #279611;
 }
 
 ::-webkit-scrollbar {

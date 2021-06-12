@@ -31,22 +31,22 @@ const About = () => {
                     <h2>I know those and have used them in a project before.</h2>
                     <div className={classes.aboutstack__stack}>
                         <div className={classes.tech}>
-                            <img src="/images/icons/sass.svg" width="75px" alt="sass icon" />
+                            <img src="/images/icons/sass.svg" width="60px" alt="sass icon" />
                         </div>
                         <div className={classes.tech}>
-                            <img src="/images/icons/js.svg" width="75px" alt="js icon" />
+                            <img src="/images/icons/js.svg" width="60px" alt="js icon" />
                         </div>
                         <div className={classes.tech}>
-                            <img src="/images/icons/react.svg" width="75px" alt="react icon" />
+                            <img src="/images/icons/react.svg" width="60px" alt="react icon" />
                         </div>
                         <div className={classes.tech}>
-                            <img src="/images/icons/node-js.svg" width="75px" alt="nodejs icon" />
+                            <img src="/images/icons/node-js.svg" width="60px" alt="nodejs icon" />
                         </div>
                         <div className={classes.tech}>
-                            <img src="/images/icons/mongodb.svg" width="75px" alt="mongodb icon" />
+                            <img src="/images/icons/mongodb.svg" width="60px" alt="mongodb icon" />
                         </div>
                         <div className={classes.tech}>
-                            <img src="/images/icons/git.svg" width="75px" alt="git icon" />
+                            <img src="/images/icons/git.svg" width="60px" alt="git icon" />
                         </div>
                     </div>
 
@@ -54,19 +54,19 @@ const About = () => {
 
                     <div className={classes.aboutstack__stack}>
                         <div className={classes.tech}>
-                            <img src="/images/icons/postgresql.svg" width="75px" alt="postgresql icon" />
+                            <img src="/images/icons/postgresql.svg" width="60px" alt="postgresql icon" />
                         </div>
 
                         <div className={classes.tech}>
-                            <img src="/images/icons/linux-tux.svg" width="75px" alt="linux icon" />
+                            <img src="/images/icons/linux-tux.svg" width="60px" alt="linux icon" />
                         </div>
 
                         <div className={classes.tech}>
-                            <img src="/images/icons/next-js.svg" width="75px" alt="nextjs icon" />
+                            <img src="/images/icons/next-js.svg" width="60px" alt="nextjs icon" />
                         </div>
 
                         <div className={classes.tech}>
-                            <img src="/images/icons/aws.svg" width="75px" alt="aws icon" />
+                            <img src="/images/icons/aws.svg" width="60px" alt="aws icon" />
                         </div>
 
                         
@@ -76,15 +76,15 @@ const About = () => {
 
                     <div className={classes.aboutstack__stack}>
                         <div className={classes.tech}>
-                            <img src="/images/icons/php.svg" width="75px" alt="postgresql icon" />
+                            <img src="/images/icons/php.svg" width="60px" alt="postgresql icon" />
                         </div>
 
                         <div className={classes.tech}>
-                            <img src="/images/icons/graphql.svg" width="75px" alt="mongodb icon" />
+                            <img src="/images/icons/graphql.svg" width="60px" alt="mongodb icon" />
                         </div>
 
                         <div className={classes.tech}>
-                            <img src="/images/icons/typescript.svg" width="75px" alt="typescript icon" />
+                            <img src="/images/icons/typescript.svg" width="60px" alt="typescript icon" />
                         </div>
                     </div>
                 </div>

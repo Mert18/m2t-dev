@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import Header from "./Header.js";
 import classes from './layout.module.css'
 
-import {ThemeContext} from '../../lib/context.js';
+import {ThemeContext, ColorContext} from '../../lib/context.js';
 import HamburgerMenu from './HamburgerMenu.js';
 
 import useWindowDimensions from '../useWindowDimensions.js';
@@ -11,6 +11,7 @@ import useWindowDimensions from '../useWindowDimensions.js';
 export default function Default(props) {
 
     const [theme, setTheme] = useState('dark');
+    const [color, setColor] = useState('first');
 
     const { height, width } = useWindowDimensions();
 
@@ -22,25 +23,25 @@ export default function Default(props) {
 
     return (
         <ThemeContext.Provider value={{theme, setTheme}}>
+            <ColorContext.Provider value={{color, setColor}}>
+                <div className={classes.lay} data-theme={theme} color-palette={color}>
+                    <div className={classes.layhead}>
+                    {widthD < 1100 ? 
+                    (
+                        <HamburgerMenu />
+                    )
 
-            <div className={classes.lay} data-theme={theme}>
-                <div className={classes.layhead}>
-                {widthD < 1100 ? 
-                (
-                    <HamburgerMenu />
-                )
-
-                : 
-                (
-                    <Header />
-                )
-                }
+                    : 
+                    (
+                        <Header />
+                    )
+                    }
+                    </div>
+                    <main className={classes.laymain}>
+                        {props.children}
+                    </main>
                 </div>
-                <main className={classes.laymain}>
-                    {props.children}
-                </main>
-            </div>
-
+            </ColorContext.Provider>
         </ThemeContext.Provider>
     );
 }

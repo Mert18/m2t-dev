@@ -38,7 +38,7 @@ export default function Home({posts}) {
           <section className={classes.others}>
               <div className={classes.social}>
                 <div className={classes.social__title}>
-                    <p>Elsewhere</p>
+                    <p>Me Elsewhere</p>
                   </div>
                 <div className={classes.social__link}>
                   <div className={classes.social__link__text}>
