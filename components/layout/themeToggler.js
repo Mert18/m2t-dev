@@ -19,9 +19,9 @@ const ThemeToggler = () => {
         <button className={classes.themeToggler} onClick={handleThemeToggle}>
             <span role="img" aria-label="switch theme">
               {theme === 'light'? (
-                <Image src="/images/icons/sleep-mode.svg" width="35px" height="35px" alt="moon pic" />
+                <Image src="/images/icons/sleep-mode.svg" width="35px" height="35px" alt="moon icon" />
               ) : (
-                <Image src="/images/icons/brightness.svg" width="35px" height="35px" alt="sun pic" />
+                <Image src="/images/icons/brightness.svg" width="35px" height="35px" alt="sun icon" />
               )}
             </span>
         </button>

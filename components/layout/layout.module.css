@@ -111,8 +111,6 @@
     color: var(--flavor3);
 }
 
-
-
 .laymain {
     grid-column: 1 / -1;
     background-color: var(--back2);

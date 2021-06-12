@@ -7,7 +7,6 @@
     z-index: 999;
     background-color: var(--back1);
     font-size: 1.1rem;
-    
 }
 
 .spotify__toptracks {
@@ -19,7 +18,7 @@
 .spotify__toptracks__title{
     text-align: center;
     padding: 1.2rem;
-    color: var(--flavor2);
+    color: var(--flavor3);
     grid-column: 1 / -1;
 }
 .spotify__toptracks__toptracks{
@@ -35,7 +34,7 @@
 .spotify__playlists__title{
     text-align: center;
     padding: 1.2rem;
-    color: var(--flavor2);
+    color: var(--flavor3);
     grid-column: 1 / -1;
 }
 .spotify__playlists__playlists{
@@ -57,7 +56,7 @@
 }
 
 .toptrack a{
-    color: var(--flavor2);
+    color: var(--flavor3);
 
 }
 

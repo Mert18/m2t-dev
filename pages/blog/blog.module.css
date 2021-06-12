@@ -47,7 +47,7 @@
     font-size: 1.9rem;
 }
 .text h1:hover{
-    color: var(--flavor2);
+    color: var(--flavor3);
     cursor: pointer;
 }
 .text p {
