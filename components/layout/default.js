@@ -1,6 +1,7 @@
 
 import React, {useState, useEffect} from 'react';
 import Header from "./Header.js";
+import Footer from "./Footer.js";
 import classes from './layout.module.css'
 
 import {ThemeContext, ColorContext} from '../../lib/context.js';
@@ -40,6 +41,10 @@ export default function Default(props) {
                     <main className={classes.laymain}>
                         {props.children}
                     </main>
+
+                    <footer className={classes.layhead}>
+                        <Footer />
+                    </footer>
                 </div>
             </ColorContext.Provider>
         </ThemeContext.Provider>

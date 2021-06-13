@@ -40,6 +40,9 @@ const About = () => {
                             <img src="/images/icons/react.svg" width="60px" alt="react icon" />
                         </div>
                         <div className={classes.tech}>
+                            <img src="/images/icons/next-js.svg" width="60px" alt="nextjs icon" />
+                        </div>
+                        <div className={classes.tech}>
                             <img src="/images/icons/node-js.svg" width="60px" alt="nodejs icon" />
                         </div>
                         <div className={classes.tech}>
@@ -62,7 +65,7 @@ const About = () => {
                         </div>
 
                         <div className={classes.tech}>
-                            <img src="/images/icons/next-js.svg" width="60px" alt="nextjs icon" />
+                            <img src="/images/icons/typescript.svg" width="60px" alt="typescript icon" />
                         </div>
 
                         <div className={classes.tech}>
@@ -83,9 +86,7 @@ const About = () => {
                             <img src="/images/icons/graphql.svg" width="60px" alt="mongodb icon" />
                         </div>
 
-                        <div className={classes.tech}>
-                            <img src="/images/icons/typescript.svg" width="60px" alt="typescript icon" />
-                        </div>
+                        
                     </div>
                 </div>
 

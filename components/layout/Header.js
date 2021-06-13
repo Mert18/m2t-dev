@@ -19,12 +19,7 @@ const Header = () => {
                         </g>
                     </svg>
                 </Link>
-                
-            
-                    
             </div>
-
-            
 
             <div className={classes.toggler}>
                 <ThemeToggler />
