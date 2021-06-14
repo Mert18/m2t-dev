@@ -15,8 +15,9 @@
     align-items: center;
 }
 .colors{
-    grid-column: 23 / -1;
+    grid-column: 23 / 24;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: var(--back1);
@@ -24,30 +25,32 @@
 .colors button{
     border: none;
     outline: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
 }
 .colors button:hover{
     cursor: pointer;
     border: 3px solid var(--text1);
 }
 .y{
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: rgb(179, 87, 102);
-    border-radius: 50%;
+    background-color: #ce4358;
 }
 .g{
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: blue;
-    border-radius: 50%;
+    background-color: #4648b9;
 }
 .r{
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: rgb(188, 202, 62);
-    border-radius: 50%;
+    background-color: #e0d53c
 }
-
+.s{
+    background-color: #ec9cb8;
+}
+.t{
+    background-color: #66023c;
+}
+.v{
+    background-color: #40826D;
+}
 .toggler{
     grid-column: 4 / 10;
     align-self: center;
@@ -161,26 +164,9 @@
     width: 100%;
     font-size: 1rem;
 }
-.footer__colors{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.footer__source{
+    margin-left: 3rem;
 }
-.footer__colors__title{
-    margin-bottom: 3rem;
-}
-.footer__colors__colors{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.footer__colors__colors:hover{
-    cursor: pointer;
-}
-
 @media (max-width: 1100px) {
     .laymain {
         grid-column: 1 / -1;
