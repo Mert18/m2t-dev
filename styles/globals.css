@@ -88,4 +88,5 @@ body {
     font-size: 62.5%;
     list-style: none;
     background-color: var(--back1);
+    font-weight: 600;
 }
