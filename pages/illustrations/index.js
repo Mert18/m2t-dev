@@ -16,6 +16,7 @@ const Illustrations = () => {
                 </div>
                 <div className={classes.ills}>
                     <Illustration img="/images/illustrations/kindred.svg" title="Kindred" date="5/27/2021" />
+                    <Illustration img="/images/illustrations/capsule.svg" title="Capsule" date="6/24/2021" />
                     <Illustration img="/images/illustrations/red-scene.svg" title="Scene Red" date="5/27/2021" />
                     <Illustration img="/images/illustrations/tree-circle.svg" title="Tree Circle" date="5/27/2021" />
                 </div>
