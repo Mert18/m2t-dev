@@ -22,7 +22,7 @@ const About = () => {
 
                     <div className={classes.hero__text}>
                         <p>Computer Engineering Student</p>
-                        <p>Full-Stack Engineer</p>
+                        <p>Frontend Developer</p>
                     </div>
 
                 </div>
