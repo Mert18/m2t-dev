@@ -42,6 +42,9 @@ const Header = () => {
                 <div className={classes.linkbox}>
                     <Link href="/illustrations">ILLUSTRATIONS</Link>
                 </div>
+                <div className={classes.linkbox}>
+                    <Link href="/comics">COMICS</Link>
+                </div>
             </nav>
 
             <div className={classes.colors}>
