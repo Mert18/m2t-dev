@@ -4,8 +4,11 @@ import Link from 'next/link';
 import classes from './layout.module.css';
 import ThemeToggler from './themeToggler';
 import ColorToggler from './colorToggler';
+import {useRouter} from 'next/router';
 
 const Header = () => {
+    const router = useRouter();
+    console.log(router.pathname);
     return (
         <header className={classes.header}>
             <div className={classes.header__title}>
@@ -26,23 +29,23 @@ const Header = () => {
             </div>
 
             <nav className={classes.header__nav}>
-                <div className={classes.linkbox}>
+                <div className={router.pathname === "/tmi" ? classes.active : classes.linkbox}>
                     <Link href="/tmi">TMI</Link>
                 </div>
-                <div className={classes.linkbox}>
+                <div className={router.pathname === "/blog" ? classes.active : classes.linkbox}>
                     <Link href="/blog">BLOG</Link>
                 </div>
-                <div className={classes.linkbox}>
+                <div className={router.pathname === "/about" ? classes.active : classes.linkbox}>
                     <Link href="/about">ABOUT</Link>
                 </div>
 
-                <div className={classes.linkbox}>
+                <div className={router.pathname === "/projects" ? classes.active : classes.linkbox}>
                     <Link href="/projects">PROJECTS</Link>
                 </div>
-                <div className={classes.linkbox}>
+                <div className={router.pathname === "/illustrations" ? classes.active : classes.linkbox}>
                     <Link href="/illustrations">ILLUSTRATIONS</Link>
                 </div>
-                <div className={classes.linkbox}>
+                <div className={router.pathname === "/comics" ? classes.active : classes.linkbox}>
                     <Link href="/comics">COMICS</Link>
                 </div>
             </nav>
