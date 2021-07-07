@@ -32,7 +32,7 @@
     --text1: #f1faee;
     --text2: #f1faee;
 
-    --back1: #191414;
+    --back1: #201c1c;
     --back2: #0b090a;
     
     --flavor: #f1faee;
@@ -43,13 +43,13 @@
 }
 
 [color-palette="first"]{
-    --flavor3: #ce4358;
+    --flavor3: #e0d53c;
 }
 [color-palette="second"]{
     --flavor3: #4648b9;
-}
+}s
 [color-palette="third"]{
-    --flavor3: #e0d53c;
+    --flavor3: #ce4358;
 }
 
 [color-palette="sarcoline"]{
