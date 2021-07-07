@@ -23,7 +23,7 @@
     outline: none;
     width: 1.5rem;
     height: 1.5rem;
-    border-radius: 50%;
+    margin: .2rem;
 }
 .colors button:hover{
     cursor: pointer;
