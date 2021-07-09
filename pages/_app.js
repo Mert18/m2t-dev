@@ -1,10 +1,13 @@
 import '../styles/globals.css'
 import Head from "next/head";
 import LayoutWrapper from "../components/layout/layout-wrapper";
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect} from 'react';
 
 function MyApp({ Component, pageProps }) {
 
+    useEffect(() => {
+        window.scrollTo(0, 100);
+    })
     return (
         <Fragment>
             <Head>

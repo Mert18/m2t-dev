@@ -29,12 +29,7 @@ const Header = () => {
             </div>
 
             <nav className={classes.header__nav}>
-                <div className={router.pathname === "/tmi" ? classes.active : classes.linkbox}>
-                    <Link href="/tmi">TMI</Link>
-                </div>
-                <div className={router.pathname === "/blog" ? classes.active : classes.linkbox}>
-                    <Link href="/blog">BLOG</Link>
-                </div>
+                
                 <div className={router.pathname === "/about" ? classes.active : classes.linkbox}>
                     <Link href="/about">ABOUT</Link>
                 </div>
@@ -42,17 +37,23 @@ const Header = () => {
                 <div className={router.pathname === "/projects" ? classes.active : classes.linkbox}>
                     <Link href="/projects">PROJECTS</Link>
                 </div>
+
+                
+                <div className={router.pathname === "/tmi" ? classes.active : classes.linkbox}>
+                    <Link href="/tmi">TMI</Link>
+                </div>
                 <div className={router.pathname === "/illustrations" ? classes.active : classes.linkbox}>
                     <Link href="/illustrations">ILLUSTRATIONS</Link>
                 </div>
                 <div className={router.pathname === "/comics" ? classes.active : classes.linkbox}>
                     <Link href="/comics">COMICS</Link>
                 </div>
+                <div className={classes.colors}>
+                    <ColorToggler />
+                </div>
             </nav>
 
-            <div className={classes.colors}>
-                <ColorToggler />
-            </div>
+            
             
         </header>
     )

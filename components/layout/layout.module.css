@@ -6,7 +6,7 @@
 .layhead {
     grid-column: 1 / -1;
     background-color: var(--back1);
-    min-height: 30vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +14,6 @@
 .colors{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--back1);
 }
 .colors button{
@@ -48,7 +46,9 @@
     background-color: #40826D;
 }
 .toggler{
-    grid-column: 4 / 10;
+    grid-column: 18 / -1;
+    top: 90%;
+    left: 90%;
     align-self: center;
     z-index: 999;
     background-color: var(--back1);
@@ -65,14 +65,17 @@
 .toggler button:hover {
     cursor: pointer;
 }
+.themeToggler span svg {
+    fill: var(--flavor3);
+}
 
 .header {
     width: 90%;
-    display: flex;
-    justify-content: center;
     background-color: var(--back1);
     flex-wrap: wrap;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns:repeat(24 ,1fr) ;
 }
 .header a {
     margin-right: 2rem;
@@ -80,13 +83,13 @@
     display: inline-block;
     overflow: hidden;
     color: inherit;
-
 }
 .header a:hover {
     color: var(--flavor3);
 }
 
 .header__nav {
+    grid-column: 1 / -1;
     align-self: center;
     display: flex;
     font-size: 1.2rem;
@@ -94,6 +97,7 @@
     background-color: var(--back1);
     height: 100%;
     position: relative;
+    padding: 2rem;
 }
 .linkbox{
     color: var(--text1);

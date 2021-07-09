@@ -1,33 +1,78 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import classes from './projects.module.css';
 import Head from 'next/head';
 import Project from '../../components/projects/Project';
 
+const arrProjects = [
+    {
+        title:"This Website!",
+        desc:"My blog. I share Illustrations I made, blog posts and other odd things.",
+        img:"/images/projects/merd.png",
+        techs:["next-js","mongodb"],
+        link:"https://merd.dev/"
+    },
+    {
+        title:"Sticker Haven",
+        desc:"An E-commerce website all about stickers.",
+        img:"/images/illustrations/kindred.svg",
+        techs:["react", "mongodb", "sass"],
+        link:"https://merd.dev/",
+    }
+]
+
 const Projects = () => {
+
+    const [filter, setFilter] = useState(null);
+    const [filteredPosts, setFilteredPosts] = useState(arrProjects)
+
+    useEffect(() => {
+        if(filter){
+            setFilteredPosts(arrProjects.filter(el => el.techs.indexOf(filter) > -1))
+        }else{
+            setFilteredPosts(arrProjects);
+        }
+        
+    }, [filter])
+    const isActive = (path) => {
+        if (filter == path) {
+          return {
+              border: '2px solid var(--flavor3)'
+          };
+        } else {
+          return { color: "var(--text1)" };
+        }
+      };
+
     return (
         <div className={classes.projects}>
             <Head>
                 <title>Web Projects</title>
                 <meta name="description" content="Web Projects" />
             </Head>
+            
             <div className={classes.content}>
+
                 <div className={classes.shadow}>
 
                 </div>
 
-                <div className={classes.projects__projects}>
-                    <Project title="This Website!" desc="My blog. I share Illustrations I made, blog posts and other odd things." img="/images/projects/merd.png" techs={["next-js","mongodb"]} link="https://merd.dev/" />
+                
 
-                    <Project title="Sticker Haven" desc="An E-commerce website all about stickers." img="/images/illustrations/kindred.svg" techs={["react", "mongodb", "sass"]} link="https://merd.dev/" />
+                <ul className={classes.projects__projects}>
+                    <div className={classes.filterItems}>
+                        <button style={isActive()} onClick={(e) => setFilter(null) }>NO FILTER</button>
+                        <button style={isActive("react")} onClick={(e) => setFilter("react") }><img src="/images/icons/react.svg" /></button>
+                        <button style={isActive("mongodb")} onClick={(e) => setFilter("mongodb") }><img src="/images/icons/mongodb.svg" /></button>
+                        <button style={isActive("next-js")} onClick={(e) => setFilter("next-js") }><img src="/images/icons/next-js.svg" /></button>
+                        <button style={isActive("postgresql")} onClick={(e) => setFilter("postgresql") }><img src="/images/icons/postgresql.svg" /></button>
 
-                    <Project title="Virtual Library" desc="Social media platform for book lovers but It is more about library other than social media." img="/images/illustrations/kindred.svg" techs={["react", "mongodb", "sass"]} link="https://virtual-library-git-master-mert18.vercel.app/" />
-
-                    <Project title="Reign of Cards" desc="Card games about math and any other thing." img="/images/illustrations/kindred.svg" techs={["react", "sass"]} link="https://reign-of-cards.vercel.app/" />
-
-                    <Project title="From The Heap" desc="Sharing platform. Share the songs and movies you love, see others' and discover new things!" img="/images/illustrations/kindred.svg" techs={["react", "mongodb", "sass"]} link="https://from-the-heap.vercel.app/" />
-
-                    <Project title="Tesadüf" desc="Decide the next book you will read, next movie you will watch. In Turkish language." img="/images/illustrations/kindred.svg" techs={["react", "mongodb", "sass"]} link="https://tesaduf.vercel.app/" />
-                </div>
+                    </div>
+                   {filteredPosts.map((el) => {
+                       return <li key={el.title}>
+                           <Project title={el.title} desc={el.desc} img={el.img} techs={el.techs} link={el.link} />
+                       </li>
+                   })}
+                </ul>
 
             </div>
 

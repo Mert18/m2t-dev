@@ -48,6 +48,9 @@
     .project__text {
         padding: 1.5rem;
     }
+    .link {
+        position: static;
+    }
 }
 
 @media only screen and (max-width: 768px){

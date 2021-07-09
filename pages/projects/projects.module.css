@@ -31,4 +31,33 @@
     grid-column: 1 / -1;
     z-index: 999;
     background-color: var(--back1);
+    list-style: none;
 }
+.filterItems{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+}
+.filterItems button{
+    width: 5rem;
+    height: 5rem;
+    background: transparent;
+    color: var(--text1);
+    border: none;
+    outline: none;
+    padding: .5rem;
+}
+.filterItems button:hover {
+    cursor: pointer;
+    border-bottom: 3px solid var(--flavor3);
+}
+.filterItems button img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+

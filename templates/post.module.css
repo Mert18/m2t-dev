@@ -15,8 +15,9 @@
     background-color: var(--back1);
     z-index: 999;
     margin-bottom: 5rem;
-    font-size: 1.3rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    font-weight: 300;
 }
 .shadow{
     position: absolute;
@@ -31,13 +32,13 @@
     grid-column: 1 / -1;
     z-index: 999;
     background-color: var(--back1);
-    padding: 5rem;
+    padding: 3rem;
 }
 .main{
     grid-column: 1 / -1;
     z-index: 999;
     background-color: var(--back1);
-    padding: 4rem;
+    padding: 8rem;
 }
 .main__head{
     text-align: center;
@@ -46,5 +47,6 @@
 @media only screen and (max-width: 900px){
     .main{
         font-size: 1.2rem;
+        padding: 3rem;
     }
 }
