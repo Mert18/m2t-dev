@@ -49,15 +49,44 @@
     border: none;
     outline: none;
     padding: .5rem;
+    transition: .3s;
+
 }
 .filterItems button:hover {
     cursor: pointer;
     border-bottom: 3px solid var(--flavor3);
+    transition: .3s;
 }
 .filterItems button img {
     display: block;
     max-width: 100%;
     max-height: 100%;
 }
-
-
+ 
+.tooltip{
+    position: relative;
+    transition: all .4s;
+}
+.tooltip:hover::before{
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    font-size: 1rem;
+    white-space: nowrap;
+    padding: 1rem;
+    transform: translate(-50%, 0%);
+    background-color: var(--flavor3);
+    transition: all .4s;
+}
+#reacttool:hover::before{
+    content: "React";
+}
+#mongodbtool:hover::before{
+    content: "MongoDB"
+}
+#nextjstool:hover::before{
+    content: "NextJS"
+}
+#postgrestool:hover::before{
+    content: "PostgreSQL"
+}

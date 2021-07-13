@@ -61,10 +61,20 @@ const Projects = () => {
                 <ul className={classes.projects__projects}>
                     <div className={classes.filterItems}>
                         <button style={isActive()} onClick={(e) => setFilter(null) }>NO FILTER</button>
-                        <button style={isActive("react")} onClick={(e) => setFilter("react") }><img src="/images/icons/react.svg" /></button>
-                        <button style={isActive("mongodb")} onClick={(e) => setFilter("mongodb") }><img src="/images/icons/mongodb.svg" /></button>
-                        <button style={isActive("next-js")} onClick={(e) => setFilter("next-js") }><img src="/images/icons/next-js.svg" /></button>
-                        <button style={isActive("postgresql")} onClick={(e) => setFilter("postgresql") }><img src="/images/icons/postgresql.svg" /></button>
+
+                        <div id={classes.reacttool} className={classes.tooltip}>
+                            <button  style={isActive("react")} onClick={(e) => setFilter("react") }><img src="/images/icons/react.svg" /></button>
+                        </div>
+                        <div id={classes.mongodbtool} className={classes.tooltip}>
+                            <button style={isActive("mongodb")} onClick={(e) => setFilter("mongodb") }><img src="/images/icons/mongodb.svg" /></button>
+                        </div>
+                        <div id={classes.nextjstool} className={classes.tooltip}>
+                            <button style={isActive("next-js")} onClick={(e) => setFilter("next-js") }><img src="/images/icons/next-js.svg" /></button>
+
+                        </div>
+                        <div id={classes.postgrestool} className={classes.tooltip}>
+                            <button style={isActive("postgresql")} onClick={(e) => setFilter("postgresql") }><img src="/images/icons/postgresql.svg" /></button>
+                        </div>
 
                     </div>
                    {filteredPosts.map((el) => {
