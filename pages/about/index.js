@@ -30,25 +30,25 @@ const About = () => {
                 <div className={classes.aboutstack}>
                     <h2>I know those and have used them in a project before.</h2>
                     <div className={classes.aboutstack__stack}>
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.sasstool} className={classes.tooltip}>
                             <img src="/images/icons/sass.svg" width="60px" alt="sass icon" />
                         </div>
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.jstool} className={classes.tooltip}>
                             <img src="/images/icons/js.svg" width="60px" alt="js icon" />
                         </div>
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.reacttool} className={classes.tooltip}>
                             <img src="/images/icons/react.svg" width="60px" alt="react icon" />
                         </div>
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.nextjstool} className={classes.tooltip}>
                             <img src="/images/icons/next-js.svg" width="60px" alt="nextjs icon" />
                         </div>
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.nodejstool} className={classes.tooltip}>
                             <img src="/images/icons/node-js.svg" width="60px" alt="nodejs icon" />
                         </div>
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.mongodbtool} className={classes.tooltip}>
                             <img src="/images/icons/mongodb.svg" width="60px" alt="mongodb icon" />
                         </div>
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.gittool} className={classes.tooltip}>
                             <img src="/images/icons/git.svg" width="60px" alt="git icon" />
                         </div>
                     </div>
@@ -56,19 +56,19 @@ const About = () => {
                     <h2>I'm still learning the following.</h2>
 
                     <div className={classes.aboutstack__stack}>
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.postgrestool} className={classes.tooltip}>
                             <img src="/images/icons/postgresql.svg" width="60px" alt="postgresql icon" />
                         </div>
 
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.linuxtool} className={classes.tooltip}>
                             <img src="/images/icons/linux-tux.svg" width="60px" alt="linux icon" />
                         </div>
 
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.typetool} className={classes.tooltip}>
                             <img src="/images/icons/typescript.svg" width="60px" alt="typescript icon" />
                         </div>
 
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.awstool} className={classes.tooltip}>
                             <img src="/images/icons/aws.svg" width="60px" alt="aws icon" />
                         </div>
 
@@ -78,11 +78,11 @@ const About = () => {
                     <h2>I'm planning to learn in the near future.</h2>
 
                     <div className={classes.aboutstack__stack}>
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.phptool} className={classes.tooltip}>
                             <img src="/images/icons/php.svg" width="60px" alt="postgresql icon" />
                         </div>
 
-                        <div className={classes.tech}>
+                        <div className={classes.tech} id={classes.graphtool} className={classes.tooltip}>
                             <img src="/images/icons/graphql.svg" width="60px" alt="mongodb icon" />
                         </div>
 

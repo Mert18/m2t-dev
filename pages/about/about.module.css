@@ -79,3 +79,68 @@
         font-size: 1rem
     }
 }
+
+.tooltip{
+    position: relative;
+    transition: all .4s;
+    padding: 1rem;
+}
+.tooltip:hover::before{
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    font-size: 1rem;
+    white-space: nowrap;
+    padding: 1rem;
+    transform: translate(-50%, 0%);
+    background-color: var(--flavor3);
+    transition: all .4s;
+}
+#reacttool:hover::before{
+    content: "React";
+}
+#mongodbtool:hover::before{
+    content: "MongoDB"
+}
+#nextjstool:hover::before{
+    content: "NextJS"
+}
+#postgrestool:hover::before{
+    content: "PostgreSQL"
+}
+#sasstool:hover::before{
+    content: "Sass";
+}
+#jstool:hover::before{
+    content: "Javascript";
+}
+#reacttool:hover::before{
+    content: "React";
+}
+#nextjstool:hover::before{
+    content: "NextJS";
+}
+#nodejstool:hover::before{
+    content: "NodeJS";
+}
+#mongodbtool:hover::before{
+    content: "MongoDB";
+}
+#gittool:hover::before{
+    content: "Git";
+}
+#linuxtool:hover::before{
+    content: "Linux";
+}
+#typetool:hover::before{
+    content: "Typescript";
+}
+#awstool:hover::before{
+    content: "Amazon Web Services";
+}
+#phptool:hover::before{
+    content: "PHP";
+}
+#graphtool:hover::before{
+    content: "GraphQL";
+}
