@@ -5,13 +5,13 @@ import Head from 'next/head';
 
 const About = () => {
     return (
-        <div className={classes.about}>
+        <section className={classes.about}>
             <Head>
                 <title>About a web developer</title>
                 <meta name="description" content="Important things about a web developer." />
             </Head>
-            <div className={classes.content}>
-                <div className={classes.hero}>
+            <main className={classes.content}>
+                <header className={classes.hero}>
                     <div className={classes.hero__prof}>
                         <img src="/images/assets/prof.jpg" width="250px" />
                     </div>
@@ -20,10 +20,9 @@ const About = () => {
                         <p>Computer Engineering Student</p>
                         <p>Frontend Developer</p>
                     </div>
-
-                </div>
+                </header>
                 
-                <div className={classes.aboutstack}>
+                <main className={classes.aboutstack}>
                     <h2>I know those and have used them in a project before.</h2>
                     <div className={classes.aboutstack__stack}>
                         <div className={classes.tech} id={classes.sasstool} className={classes.tooltip}>
@@ -82,22 +81,17 @@ const About = () => {
                             <img src="/images/icons/graphql.svg" width="60px" alt="mongodb icon" />
                         </div>
 
-                        
                     </div>
-                </div>
 
-                <div className={classes.really}>
-                    <div className={classes.reallytext}>
+                    <div className={classes.really}>
                         <p>I was born in the southernmost city in Turkey, Hatay.</p><br />
                         <p>In 2018, I started studying Computer Engineering in Gazi University. </p><br />
                         <p>In May 2020, I had a chance to dive into web technologies, so I did.</p><br />
                         <p>From this point, I've been learning and making projects in web development area.</p><br />
                     </div>
-                </div>
-            </div>
-            
-            
-        </div>
+                </main>
+            </main>
+        </section>
     )
 }
 

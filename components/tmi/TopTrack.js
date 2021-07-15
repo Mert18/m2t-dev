@@ -4,7 +4,7 @@ import classes from './spotify.module.css';
 
 const TopTrack = (track) => {
     return (
-        <div className={classes.toptrack}>
+        <article className={classes.toptrack}>
             <a href={track.songUrl} target="_blank" rel="noreferrer">
                 <div className={classes.toptrack__title}>
                     <h2>{track.title}</h2>
@@ -14,7 +14,7 @@ const TopTrack = (track) => {
                 <h2>{track.artist}</h2>
             </div>
             
-        </div>
+        </article>
     )
 }
 

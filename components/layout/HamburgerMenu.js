@@ -27,10 +27,10 @@ const HamburgerMenu = () => {
             <Hamburger toggled={isOpen} toggle={handleClick} />
 
             {isOpen ? (
-                <div className={classes.burger__menu}>
-                    <div className={classes.burger__menu__toggler}>
+                <section className={classes.burger__menu}>
+                    <header className={classes.burger__menu__toggler}>
                         <ThemeToggler />
-                    </div>
+                    </header>
 
                     <nav className={classes.burger__menu__nav}>
                         <div className={classes.burger__menu__nav__item}>
@@ -56,7 +56,7 @@ const HamburgerMenu = () => {
                             <Link href="/illustrations">ILLUSTRATIONS</Link>
                         </div>
                     </nav>
-                </div>
+                </section>
             ) :
             (
                 <div></div>

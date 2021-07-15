@@ -10,13 +10,13 @@ export default function NowPlaying() {
     }
     return(
       <>
-        <div className={classes.nowplaying__spotifylogo}>
+        <header className={classes.nowplaying__spotifylogo}>
           <Image src="/images/icons/spotify.svg" width="70px" height="70px" alt="spotify" />
-        </div>
-        <div className={classes.nowplaying__text}>
+        </header>
+        <main className={classes.nowplaying__text}>
           <a href={data.songUrl} target="_blank" rel="noreferrer">{data.title}</a>
           <p>{data.artist}</p>
-        </div>
+        </main>
       </>
     )
   }

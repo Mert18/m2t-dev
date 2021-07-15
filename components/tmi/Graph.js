@@ -22,7 +22,7 @@ const Graph = () => {
 
 
     return(
-        <div>
+            <>
                 <LineChart width={1000} height={400} data={data} >
                     <Line type="monotone" dataKey="game" stroke="magenta" strokeDasharray="7 7" dot={false} />
                     <Line type="monotone" strokeDasharray="7 7" dataKey="work" stroke="green" dot={false} />
@@ -34,7 +34,7 @@ const Graph = () => {
                     <Legend />
                     <Tooltip  />
                 </LineChart>
-            </div>
+            </>
     )
 }
 

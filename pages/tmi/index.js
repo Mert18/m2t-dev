@@ -9,18 +9,18 @@ import classes from './tmi.module.css'
 
 function tmi(){
     return(
-        <div className={classes.tmi}>
+        <section className={classes.tmi}>
             <Head>
                 <title>Too Much Information</title>
                 <meta name="description" content="Too much info about me." />
             </Head>
-            <div className={classes.content}>
+            <main className={classes.content}>
                 <Hero />
                 <GraphCon />
                 <Spotify />
-            </div>
+            </main>
             
-        </div>
+        </section>
     )
 }
 

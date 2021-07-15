@@ -45,13 +45,13 @@ const Projects = () => {
       };
 
     return (
-        <div className={classes.projects}>
+        <section className={classes.projects}>
             <Head>
                 <title>Web Projects</title>
                 <meta name="description" content="Web Projects" />
             </Head>
             
-            <div className={classes.content}>
+            <main className={classes.content}>
                 <ul className={classes.projects__projects}>
                     <div className={classes.filterItems}>
                         <button style={isActive()} onClick={(e) => setFilter(null) }>NO FILTER</button>
@@ -78,10 +78,10 @@ const Projects = () => {
                    })}
                 </ul>
 
-            </div>
+            </main>
 
             
-        </div>
+        </section>
     )
 }
 

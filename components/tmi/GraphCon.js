@@ -10,11 +10,11 @@ function Hero() {
         { ssr: false }
       )
     return(
-        <div className={classes.graphcon}>
-            <div className={classes.graphcon__graph}>
+        <section className={classes.graphcon}>
+            <article className={classes.graphcon__graph}>
                 <MyChart />
-            </div>
-        </div>
+            </article>
+        </section>
     )
 }
 

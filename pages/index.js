@@ -17,21 +17,18 @@ export default function Home({posts}) {
       </Head>
       
       <section className={classes.content}>
-        <div className={classes.shadow}>
-
-        </div>
         <ul className={classes.filteredposts}>
             {posts.map(post => {
               return(
-                      <li key={post.path} className={classes.filteredpost}>
-                        <div className={classes.filteredpost__text}>
-                        <Link  href={post.path}>
-                          <h1>{post.title}</h1>
-                        </Link>
-                          <p>{post.description}</p>
-                          <p>{post.date}</p>
-                        </div>
-                      </li>
+                <li key={post.path} className={classes.filteredpost}>
+                  <div className={classes.filteredpost__text}>
+                  <Link  href={post.path}>
+                    <h1>{post.title}</h1>
+                  </Link>
+                    <p>{post.description}</p>
+                    <p>{post.date}</p>
+                  </div>
+                </li>
               )
             })}
           </ul>

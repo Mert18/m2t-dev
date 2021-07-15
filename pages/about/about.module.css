@@ -47,6 +47,7 @@
     justify-self: center;
     background-color: var(--back1);
     margin-top: 3rem;
+    font-size: 1.4rem;
 }
 
 @media only screen and (max-width: 900px){

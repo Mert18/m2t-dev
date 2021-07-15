@@ -9,11 +9,11 @@ const Footer = () => {
     const {color, setColor} = useContext(ColorContext);
 
     return (
-        <div className={classes.footer}>
-            <div className={classes.footer__source}>
+        <section className={classes.footer}>
+            <main className={classes.footer__source}>
                 <a href='https://github.com/Mert18/merd-dev' target='_blank' rel='noreferrer'>Source Code</a>
-            </div>
-        </div>
+            </main>
+        </section>
     )
 }
 

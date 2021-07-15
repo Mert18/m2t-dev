@@ -5,16 +5,13 @@ import classes from './post.module.css';
 const Post = ({children, frontMatter}) => {
     const {title, description, image, date} = frontMatter;
     return (
-        <div className={classes.post}>
+        <article className={classes.post}>
             <Head>
                 <title>{title}</title>
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="description" content={description} />
             </Head>
-            <div className={classes.content}>
-                <div className={classes.shadow}>
-
-                </div>
+            <main className={classes.content}>
                 <header className={classes.header}>
                     <img src={image} alt="post header img" />
                 </header>
@@ -27,10 +24,10 @@ const Post = ({children, frontMatter}) => {
                         {children}
                     </div>
                 </main>
-            </div>
+            </main>
            
             
-        </div>
+        </article>
     )
 }
 

@@ -11,10 +11,9 @@ const comicsList = [
 
 const Comics = () => {
     return (
-        <div className={classes.comics}>
-
-            <div className={classes.content}>
-                <div className={classes.comiclist}>
+        <section className={classes.comics}>
+            <main className={classes.content}>
+                <section className={classes.comiclist}>
                     {comicsList.map(el => {
                         return(
                             <li key={el.path}>
@@ -22,10 +21,10 @@ const Comics = () => {
                             </li>
                         )
                     })}
-                </div>
-            </div>
+                </section>
+            </main>
             
-        </div>
+        </section>
     )
 }
 

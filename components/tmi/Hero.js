@@ -4,9 +4,9 @@ import classes from './hero.module.css';
 
 function Hero() {
     return(
-        <div className={classes.hero}>
+        <header className={classes.hero}>
             <h2>This is just Too Much Information.</h2>
-        </div>
+        </header>
     )
 }
 export default Hero;
