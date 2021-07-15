@@ -6,7 +6,6 @@
 .layhead {
     grid-column: 1 / -1;
     background-color: var(--back1);
-    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +69,6 @@
     width: 90%;
     background-color: var(--back1);
     flex-wrap: wrap;
-    justify-content: space-between;
     display: grid;
     grid-template-columns:repeat(24 ,1fr) ;
 }
@@ -121,8 +119,6 @@
     cursor: pointer;
 }
 
-
-
 .laymain {
     grid-column: 1 / -1;
     background-color: var(--back2);
@@ -136,6 +132,7 @@
 .burger {
     position: relative;
     color: var(--text1);
+    margin-top: 2rem;
 }
 
 .burger__menu {
@@ -172,9 +169,11 @@
     color: var(--text1);
     width: 100%;
     font-size: 1rem;
+    min-height: 25vh;
 }
 .footer__source{
     margin-left: 3rem;
+    margin-top: 4rem;
 }
 @media (max-width: 1100px) {
     .laymain {

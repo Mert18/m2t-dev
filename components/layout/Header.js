@@ -8,7 +8,6 @@ import {useRouter} from 'next/router';
 
 const Header = () => {
     const router = useRouter();
-    console.log(router.pathname);
     return (
         <header className={classes.header}>
             <div className={classes.header__title}>

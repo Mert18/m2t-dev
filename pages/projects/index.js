@@ -36,7 +36,8 @@ const Projects = () => {
     const isActive = (path) => {
         if (filter == path) {
           return {
-              border: '2px solid var(--flavor3)'
+              animationName: "bounce",
+              animationTimingFunction: "linear"
           };
         } else {
           return { color: "var(--text1)" };
@@ -51,19 +52,12 @@ const Projects = () => {
             </Head>
             
             <div className={classes.content}>
-
-                <div className={classes.shadow}>
-
-                </div>
-
-                
-
                 <ul className={classes.projects__projects}>
                     <div className={classes.filterItems}>
                         <button style={isActive()} onClick={(e) => setFilter(null) }>NO FILTER</button>
 
                         <div id={classes.reacttool} className={classes.tooltip}>
-                            <button  style={isActive("react")} onClick={(e) => setFilter("react") }><img src="/images/icons/react.svg" /></button>
+                            <button style={isActive("react")} onClick={(e) => setFilter("react") }><img  src="/images/icons/react.svg" /></button>
                         </div>
                         <div id={classes.mongodbtool} className={classes.tooltip}>
                             <button style={isActive("mongodb")} onClick={(e) => setFilter("mongodb") }><img src="/images/icons/mongodb.svg" /></button>

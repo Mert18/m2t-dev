@@ -17,7 +17,6 @@ const Graph = () => {
     }
 
     useEffect(() => {
-        
         getAllData();
     }, [])
 

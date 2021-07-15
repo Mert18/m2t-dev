@@ -11,10 +11,6 @@ const About = () => {
                 <meta name="description" content="Important things about a web developer." />
             </Head>
             <div className={classes.content}>
-                <div className={classes.shadow}>
-
-                </div>
-
                 <div className={classes.hero}>
                     <div className={classes.hero__prof}>
                         <img src="/images/assets/prof.jpg" width="250px" />
@@ -91,7 +87,6 @@ const About = () => {
                 </div>
 
                 <div className={classes.really}>
-                    <h2>Who am I?</h2>
                     <div className={classes.reallytext}>
                         <p>I was born in the southernmost city in Turkey, Hatay.</p><br />
                         <p>In 2018, I started studying Computer Engineering in Gazi University. </p><br />

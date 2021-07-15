@@ -15,9 +15,6 @@ function tmi(){
                 <meta name="description" content="Too much info about me." />
             </Head>
             <div className={classes.content}>
-                <div className={classes.shadow}>
-
-                </div>
                 <Hero />
                 <GraphCon />
                 <Spotify />

@@ -4,27 +4,12 @@
 }
 
 .content {
-    grid-column: 2 / 24;
+    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(24, 1fr);
-    border: 2px solid var(--flavor3);
     margin-top: 4rem;
-    position: relative;
-    background-color: var(--back1);
-    z-index: 999;
-    margin-bottom: 5rem;
-}
-.shadow{
-    position: absolute;
-    top: 2rem;
-    left: 2%;
-    width: 100%;
-    height: 100%;
-    background-color: var(--flavor3);
 }
 
 .ills{
-    grid-column: 1 / -1;
-    z-index: 999;
-    background-color: var(--back1);
+    grid-column: 5 / 21;
 }

@@ -11,9 +11,6 @@ const Illustrations = () => {
                 <meta name="description" content="Adobe Illustrator artworks." />
             </Head>
             <div className={classes.content}>
-                <div className={classes.shadow}>
-
-                </div>
                 <div className={classes.ills}>
                     <Illustration img="/images/illustrations/kindred.svg" title="Kindred" date="5/27/2021" />
                     <Illustration img="/images/illustrations/capsule.svg" title="Capsule" date="6/24/2021" />

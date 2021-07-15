@@ -14,9 +14,6 @@ const Comics = () => {
         <div className={classes.comics}>
 
             <div className={classes.content}>
-                <div className={classes.shadow}>
-
-                </div>
                 <div className={classes.comiclist}>
                     {comicsList.map(el => {
                         return(
