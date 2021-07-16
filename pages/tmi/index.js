@@ -1,8 +1,8 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 
-import GraphCon from '../../components/tmi/GraphCon';
-import Spotify from '../../components/tmi/spotify';
-import Hero from '../../components/tmi/Hero';
+import GraphCon from '../../components/GraphCon';
+import Spotify from '../../components/spotify';
+import Hero from '../../components/Hero';
 
 import Head from 'next/head';
 import classes from './tmi.module.css'
