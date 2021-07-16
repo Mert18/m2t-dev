@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 export default function Home({posts}) {
   return (
-    <div className={classes.home}>
+    <section className={classes.home}>
       <Head>
         <title>Mert Uygur Web Developer Blog</title>
         <meta
@@ -52,7 +52,7 @@ export default function Home({posts}) {
               </div>
           </section>
        </section>
-    </div>
+    </section>
   )
 }
 

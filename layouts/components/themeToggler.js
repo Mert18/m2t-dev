@@ -1,7 +1,7 @@
 
 import React, { useContext} from 'react'
 import {ThemeContext} from '../../lib/context';
-import classes from './layout.module.css';
+import classes from '../styles/default.module.css';
 
 
 const ThemeToggler = () => {

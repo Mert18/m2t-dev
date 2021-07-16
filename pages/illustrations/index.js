@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './ills.module.css';
-import Illustration from '../../components/illustrations/Illustration';
+import Illustration from '../../components/Illustration';
 import Head from 'next/head';
 
 const Illustrations = () => {
@@ -11,12 +11,12 @@ const Illustrations = () => {
                 <meta name="description" content="Adobe Illustrator artworks." />
             </Head>
             <main className={classes.content}>
-                <div className={classes.ills}>
+                <section className={classes.ills}>
                     <Illustration img="/images/illustrations/kindred.svg" title="Kindred" date="5/27/2021" />
                     <Illustration img="/images/illustrations/capsule.svg" title="Capsule" date="6/24/2021" />
                     <Illustration img="/images/illustrations/red-scene.svg" title="Scene Red" date="5/27/2021" />
                     <Illustration img="/images/illustrations/tree-circle.svg" title="Tree Circle" date="5/27/2021" />
-                </div>
+                </section>
             </main>
             
             

@@ -1,7 +1,7 @@
 
 import React  from 'react';
 import Link from 'next/link';
-import classes from './layout.module.css';
+import classes from '../styles/default.module.css';
 import ThemeToggler from './themeToggler';
 import ColorToggler from './colorToggler';
 import {useRouter} from 'next/router';

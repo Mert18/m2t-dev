@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import classes from './projects.module.css';
 import Head from 'next/head';
-import Project from '../../components/projects/Project';
+import Project from '../../components/Project';
 
 const arrProjects = [
     {
@@ -36,8 +36,7 @@ const Projects = () => {
     const isActive = (path) => {
         if (filter == path) {
           return {
-              animationName: "bounce",
-              animationTimingFunction: "linear"
+              borderBottom: "1px solid var(--flavor3)",
           };
         } else {
           return { color: "var(--text1)" };

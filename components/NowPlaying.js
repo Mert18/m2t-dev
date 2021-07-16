@@ -1,6 +1,6 @@
 import useSWR from 'swr';
-import fetcher from '../../lib/fetcher';
-import classes from './spotify.module.css'
+import fetcher from '../lib/fetcher';
+import classes from './styles/spotify.module.css'
 import Image from 'next/image'
 
 export default function NowPlaying() {

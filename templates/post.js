@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head';
 import classes from './post.module.css';
+import Image from 'next/image';
 
 const Post = ({children, frontMatter}) => {
     const {title, description, image, date} = frontMatter;
@@ -13,7 +14,7 @@ const Post = ({children, frontMatter}) => {
             </Head>
             <main className={classes.content}>
                 <header className={classes.header}>
-                    <img src={image} alt="post header img" />
+                    <Image src={image} width={2000} height={2000} alt={description} />
                 </header>
                 <main className={classes.main}>
                     <div className={classes.main__head}>

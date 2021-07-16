@@ -1,6 +1,6 @@
 
 import React from 'react';
-import classes from './spotify.module.css';
+import classes from './styles/spotify.module.css';
 
 const TopTrack = (track) => {
     return (

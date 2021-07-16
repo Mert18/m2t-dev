@@ -70,10 +70,7 @@
     grid-column: 1 / -1;
     color: var(--text1);
 }
-.header img {
-    display: block;
-    max-width: 100%;
-}
+
 .main{
     grid-column: 1 / -1;
     font-size: 1.4rem;

@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import Head from "next/head";
-import LayoutWrapper from "../components/layout/layout-wrapper";
 import React, {Fragment, useEffect} from 'react';
+import Layout from '../layouts/default';
 
 function MyApp({ Component, pageProps }) {
 
@@ -18,9 +18,9 @@ function MyApp({ Component, pageProps }) {
                 <meta property="og:title" content="Mert Dev Web Developer Blog" key="ogtitle" />
                 <meta property="og:description" content="Full stack developer web blog page, writing about technology, web and everything." key="ogdesc" />
             </Head>
-            <LayoutWrapper {...pageProps}>
+            <Layout>
                 <Component {...pageProps} />
-            </LayoutWrapper>
+            </Layout>
         </Fragment>
     );
 }

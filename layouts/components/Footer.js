@@ -1,6 +1,6 @@
 
 import React, {useContext}  from 'react';
-import classes from './layout.module.css';
+import classes from '../styles/default.module.css';
 import {ColorContext} from '../../lib/context';
 
 

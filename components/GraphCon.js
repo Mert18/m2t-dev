@@ -1,6 +1,6 @@
 
 import React from 'react';
-import classes from './graphcon.module.css';
+import classes from './styles/graphcon.module.css';
 import dynamic from 'next/dynamic'
 
 function Hero() {

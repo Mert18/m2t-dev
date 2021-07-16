@@ -1,3 +1,4 @@
-My blog created with Next.js
+## My Portfolio Site
 
-Contains Spotify API, Graph.js
+Created with NextJS, MongoDB for storing data, Spotify API for fetching some cool things from Spotify. Chart.js is used. 
+

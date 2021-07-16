@@ -1,12 +1,12 @@
 import React from 'react'
-import Comic from '../../components/comics/Comic'
+import Comic from '../../components/Comic'
 import classes from './comics.module.css';
 const comicsList = [
-    {
+   /*  {
         path: '/images/comics/turn.png',
         desc: 'Do not turn immediately',
         date: '6.30.2021'
-    },
+    }, */
 ]
 
 const Comics = () => {

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import classes from './spotify.module.css';
+import classes from './styles/spotify.module.css';
 import TopTracks from './top-tracks.js';
 import NowPlaying from './NowPlaying.js';
 function Spotify() {

@@ -1,11 +1,12 @@
 import React from 'react';
-import classes from './project.module.css';
+import classes from './styles/project.module.css';
+import Image from 'next/image'
 
 const Project = ({title, desc, img, techs, link }) => {
     return (
         <article className={classes.project}>
             <header className={classes.project__img}>
-                <img src={img} width="440px" alt="overlook of the website" />
+                <Image src={img} width={340} height={340} alt="overlook of the website" />
             </header>
 
             <main className={classes.project__text}>

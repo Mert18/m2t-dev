@@ -12,7 +12,7 @@
 .project__text {
     font-size: 1rem;
 }
-.project__img img{
+.project__img{
     display: block;
     max-width: 100%;
     max-height: 100%;

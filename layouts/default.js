@@ -1,13 +1,13 @@
 
 import React, {useState, useEffect} from 'react';
-import Header from "./Header.js";
-import Footer from "./Footer.js";
-import classes from './layout.module.css'
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
+import classes from './styles/default.module.css'
 
-import {ThemeContext, ColorContext} from '../../lib/context.js';
-import HamburgerMenu from './HamburgerMenu.js';
+import {ThemeContext, ColorContext} from '../lib/context';
+import HamburgerMenu from './components/HamburgerMenu.js';
 
-import useWindowDimensions from '../useWindowDimensions.js';
+import useWindowDimensions from './components/useWindowDimensions.js';
 
 export default function Default(props) {
 

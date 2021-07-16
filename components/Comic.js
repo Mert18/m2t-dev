@@ -1,10 +1,11 @@
-import React from 'react'
-import classes from './comic.module.css';
+import React from 'react';
+import classes from './styles/comic.module.css';
+import Image from 'next/image';
 
 const Comic = ({path, desc, date}) => {
     return (
         <figure className={classes.comic}>
-            <img src={path} alt={desc} />
+            <Image src={path} alt={desc} width={1200} height={1200} />
             <figcaption>{desc} - {date}</figcaption>
         </figure>
     )

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import classes from './layout.module.css';
+import classes from '../styles/default.module.css';
 
 import Hamburger from 'hamburger-react'
 import ThemeToggler from './themeToggler';
