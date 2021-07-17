@@ -1,10 +1,14 @@
-
-
-const composePlugins = require('next-compose-plugins');
-const mdxEnhanced = require('next-mdx-enhanced');
+const composePlugins = require("next-compose-plugins");
+const mdxEnhanced = require("next-mdx-enhanced");
 
 module.exports = composePlugins([
-    mdxEnhanced({
-        layoutPath: './templates'
-    })
-])
+  mdxEnhanced({
+    layoutPath: "./templates",
+  }),
+], {
+  images: {
+    domains: [
+      //domains come here
+    ]
+  }
+});
