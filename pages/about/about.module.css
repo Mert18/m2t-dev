@@ -1,126 +1,126 @@
 .about {
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    color: var(--text1);
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  color: var(--text1);
 }
 
 .content {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    margin-top: 4rem;
-    background-color: var(--back1);
-    margin-bottom: 5rem;
-    font-size: 1.5rem;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  margin-top: 4rem;
+  background-color: var(--back1);
+  margin-bottom: 5rem;
+  font-size: 1.5rem;
 }
 
-.hero{
-    grid-column: 1 / -1;
-    z-index: 999;
-    background-color: var(--back1);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 2rem;
+.hero {
+  grid-column: 1 / -1;
+  z-index: 999;
+  background-color: var(--back1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
 }
 
-.aboutstack{
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.aboutstack {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+}
+.aboutstack__stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.really {
+  grid-column: 1 / -1;
+  justify-self: center;
+  background-color: var(--back1);
+  margin-top: 3rem;
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .content {
     font-size: 1rem;
-    margin-top: 3rem;
-}
-.aboutstack__stack{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.really{
-    grid-column: 1 / -1;
-    justify-self: center;
-    background-color: var(--back1);
-    margin-top: 3rem;
-    font-size: 1.4rem;
-}
-
-@media only screen and (max-width: 900px){
-    .content{
-        font-size: 1rem;
-        padding: 2rem;
-    }
-    .aboutstack{
-        font-size: 1rem
-    }
-}
-
-.tooltip{
-    position: relative;
-    transition: all .4s;
-    padding: 1rem;
-}
-.tooltip:hover::before{
-    position: absolute;
-    top: -60px;
-    left: 50%;
+    padding: 2rem;
+  }
+  .aboutstack {
     font-size: 1rem;
-    white-space: nowrap;
-    padding: 1rem;
-    transform: translate(-50%, 0%);
-    background-color: var(--flavor3);
-    transition: all .4s;
+  }
 }
-#reacttool:hover::before{
-    content: "React";
+
+.tooltip {
+  position: relative;
+  transition: all 0.4s;
+  padding: 1rem;
 }
-#mongodbtool:hover::before{
-    content: "MongoDB"
+.tooltip:hover::before {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  font-size: 1rem;
+  white-space: nowrap;
+  padding: 1rem;
+  transform: translate(-50%, 0%);
+  background-color: var(--flavor3);
+  transition: all 0.4s;
 }
-#nextjstool:hover::before{
-    content: "NextJS"
+#reacttool:hover::before {
+  content: "React";
 }
-#postgrestool:hover::before{
-    content: "PostgreSQL"
+#mongodbtool:hover::before {
+  content: "MongoDB";
 }
-#sasstool:hover::before{
-    content: "Sass";
+#nextjstool:hover::before {
+  content: "NextJS";
 }
-#jstool:hover::before{
-    content: "Javascript";
+#postgrestool:hover::before {
+  content: "PostgreSQL";
 }
-#reacttool:hover::before{
-    content: "React";
+#sasstool:hover::before {
+  content: "Sass";
 }
-#nextjstool:hover::before{
-    content: "NextJS";
+#jstool:hover::before {
+  content: "Javascript";
 }
-#nodejstool:hover::before{
-    content: "NodeJS";
+#reacttool:hover::before {
+  content: "React";
 }
-#mongodbtool:hover::before{
-    content: "MongoDB";
+#nextjstool:hover::before {
+  content: "NextJS";
 }
-#gittool:hover::before{
-    content: "Git";
+#nodejstool:hover::before {
+  content: "NodeJS";
 }
-#linuxtool:hover::before{
-    content: "Linux";
+#mongodbtool:hover::before {
+  content: "MongoDB";
 }
-#typetool:hover::before{
-    content: "Typescript";
+#gittool:hover::before {
+  content: "Git";
 }
-#awstool:hover::before{
-    content: "Amazon Web Services";
+#linuxtool:hover::before {
+  content: "Linux";
 }
-#phptool:hover::before{
-    content: "PHP";
+#typetool:hover::before {
+  content: "Typescript";
 }
-#graphtool:hover::before{
-    content: "GraphQL";
+#awstool:hover::before {
+  content: "Amazon Web Services";
+}
+#phptool:hover::before {
+  content: "PHP";
+}
+#graphtool:hover::before {
+  content: "GraphQL";
 }

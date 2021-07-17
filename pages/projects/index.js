@@ -29,7 +29,7 @@ const arrProjects = [
     title: "Maths and Cards",
     desc: "Maths and Card games with React.",
     img: "/images/illustrations/kindred.svg",
-    techs: ["react", "scss"],
+    techs: ["react", "sass"],
     link: "https://reign-of-cards.vercel.app/",
   },
   {

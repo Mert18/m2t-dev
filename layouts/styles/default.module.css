@@ -1,185 +1,185 @@
 .lay {
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    background-color: var(--back2);
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  background-color: var(--back2);
 }
 .layhead {
-    grid-column: 1 / -1;
-    background-color: var(--back1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-column: 1 / -1;
+  background-color: var(--back1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
 }
-.colors{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: var(--back1);
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--back1);
 }
-.colors button{
-    border: none;
-    outline: none;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: .2rem;
+.colors button {
+  border: none;
+  outline: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.2rem;
 }
-.colors button:hover{
-    cursor: pointer;
-    border: 3px solid var(--text1);
+.colors button:hover {
+  cursor: pointer;
+  border: 3px solid var(--text1);
 }
-.y{
-    background-color: #ce4358;
+.y {
+  background-color: #ce4358;
 }
-.g{
-    background-color: #bebeda;
+.g {
+  background-color: #bebeda;
 }
-.r{
-    background-color: #e0d53c
+.r {
+  background-color: #e0d53c;
 }
-.s{
-    background-color: #ec9cb8;
+.s {
+  background-color: #ec9cb8;
 }
-.v{
-    background-color: #098b3b;
+.v {
+  background-color: #098b3b;
 }
-.toggler{
-    grid-column: 18 / -1;
-    top: 90%;
-    left: 90%;
-    align-self: center;
-    z-index: 999;
-    background-color: var(--back1);
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    align-items: center;
+.toggler {
+  grid-column: 18 / -1;
+  top: 90%;
+  left: 90%;
+  align-self: center;
+  z-index: 999;
+  background-color: var(--back1);
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
 }
 .toggler button {
-    background: transparent;
-    outline: none;
-    border: none;
+  background: transparent;
+  outline: none;
+  border: none;
 }
 .toggler button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 .themeToggler span svg {
-    fill: var(--flavor3);
+  fill: var(--flavor3);
 }
 
 .header {
-    width: 90%;
-    background-color: var(--back1);
-    flex-wrap: wrap;
-    display: grid;
-    grid-template-columns:repeat(24 ,1fr) ;
+  width: 90%;
+  background-color: var(--back1);
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
 }
 .header a {
-    margin-right: 2rem;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    color: inherit;
+  margin-right: 2rem;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: inherit;
 }
 .header a:hover {
-    color: var(--flavor3);
+  color: var(--flavor3);
 }
 
 .header__nav {
-    grid-column: 1 / -1;
-    align-self: center;
-    display: flex;
-    font-size: 1.2rem;
-    z-index: 999;
-    background-color: var(--back1);
-    height: 100%;
-    position: relative;
-    padding: 2rem;
+  grid-column: 1 / -1;
+  align-self: center;
+  display: flex;
+  font-size: 1.2rem;
+  z-index: 999;
+  background-color: var(--back1);
+  height: 100%;
+  position: relative;
+  padding: 2rem;
 }
-.linkbox{
-    color: var(--text1);
+.linkbox {
+  color: var(--text1);
 }
-.active{
-    color: var(--flavor3);
-    text-decoration: underline;
+.active {
+  color: var(--flavor3);
+  text-decoration: underline;
 }
-
 
 .header__title {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-self: center;
-    z-index: 999;
-    background-color: var(--back1);
-    width: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: center;
+  z-index: 999;
+  background-color: var(--back1);
+  width: 7rem;
 }
 .header__title svg path {
-    fill: var(--flavor3);
+  fill: var(--flavor3);
 }
-.header__title:hover{
-    cursor: pointer;
+.header__title:hover {
+  cursor: pointer;
 }
 
 .laymain {
-    grid-column: 1 / -1;
-    background-color: var(--back2);
+  grid-column: 1 / -1;
+  background-color: var(--back2);
 }
 
 .hamburger {
-    background-color: var(--back1);
-    grid-column: 1/ -1;
+  background-color: var(--back1);
+  grid-column: 1/ -1;
 }
 
 .burger {
-    position: relative;
-    color: var(--text1);
-    margin-top: 2rem;
+  position: relative;
+  color: var(--text1);
+  margin-top: 2rem;
 }
 
 .burger__menu {
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    transform: translateX(-47%);
-    min-width: 100vw;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    background-color: var(--back1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  transform: translateX(-47%);
+  min-width: 100vw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--back1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
-.burger__menu__toggler button{
-    background: transparent;
-    outline: none;
-    border: none;
+.burger__menu__toggler button {
+  background: transparent;
+  outline: none;
+  border: none;
 }
-.burger__menu__nav__item{
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 1rem;
-    margin: 1rem;
+.burger__menu__nav__item {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
 }
-.burger__menu__nav__item a{
-    color: var(--text1);
+.burger__menu__nav__item a {
+  color: var(--text1);
 }
 
-.footer{
-    color: var(--text1);
-    width: 100%;
-    font-size: 1rem;
-    min-height: 25vh;
+.footer {
+  color: var(--text1);
+  width: 100%;
+  font-size: 1rem;
+  min-height: 25vh;
 }
-.footer__source{
-    margin-left: 3rem;
-    margin-top: 4rem;
+.footer__source {
+  margin-left: 3rem;
+  margin-top: 4rem;
 }
 @media (max-width: 1100px) {
-    .laymain {
-        grid-column: 1 / -1;
-    }
-    .layhead {
-        grid-column: 1 / -1;
-    }
+  .laymain {
+    grid-column: 1 / -1;
+  }
+  .layhead {
+    grid-column: 1 / -1;
+  }
 }
