@@ -18,7 +18,7 @@ const Project = ({ title, desc, techs, link }) => {
               src={`/images/icons/${tech}.svg`}
               alt={tech}
               layout="fill"
-              objectFit="cover"
+              objectFit="contain"
             />
           </div>
         ))}

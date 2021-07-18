@@ -31,7 +31,7 @@ const arrProjects = [
     title: "What is Happiness?",
     desc: "A way to figure out what makes you happy. You are asked to enter some values every day, then it graphs your happiness.",
     techs: ["react", "node-js", "postgresql"],
-    link: "https://what-is-happiness.vercel.app/",
+    link: "https://what-is-happiness-client.vercel.app/",
   },
   {
     title: "Maths and Cards",
@@ -44,6 +44,18 @@ const arrProjects = [
     desc: "Recommends random books and movies. In Turkish language.",
     techs: ["react"],
     link: "https://tesaduf.vercel.app/",
+  },
+  {
+    title: "Frontend Mentor Tip Calculator Challenge",
+    desc: "Takes necessary inputs from determined fields, returns some values.",
+    techs: ["js"],
+    link: "https://fm-tip-calculator.vercel.app/",
+  },
+  {
+    title: "From The Heap",
+    desc: "From The Heap basically a song and movie sharing platform. You throw something to the heap, someone gets.",
+    techs: ["react", "node-js", "postgresql", "sass"],
+    link: "https://from-the-heap.vercel.app/",
   },
 ];
 const About = () => {
