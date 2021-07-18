@@ -9,7 +9,6 @@
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   margin-top: 4rem;
-  background-color: var(--back1);
   margin-bottom: 5rem;
   font-size: 1.5rem;
 }
@@ -50,7 +49,7 @@
   position: relative;
   width: 50px;
   height: 50px;
-  margin: 0.8rem;
+  margin: 1rem;
   transition: all 0.9s;
 }
 .icon:hover {

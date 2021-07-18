@@ -14,17 +14,26 @@
 }
 
 .filteredposts {
-  grid-column: 4 / 10;
+  grid-column: 1 / -1;
   list-style: none;
   margin: 2rem;
   display: grid;
   grid-template-columns: 1fr;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .filteredpost {
   margin: 2rem;
-  font-size: 1.2rem;
   padding: 1rem;
+  position: relative;
+}
+
+.filteredpost p {
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+.filteredpost h3 {
+  font-size: 3.5rem;
 }
 .filteredpost h3:hover {
   cursor: pointer;
@@ -34,5 +43,23 @@
   padding: 0.8rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media (max-width: 1100px) {
+  .filteredposts {
+    grid-column: 1 / -1;
+  }
+  .filteredpost h3 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 800px) {
+  .filteredpost h3 {
+    font-size: 1.5rem;
+  }
+  .filteredpost p {
+    font-size: 1.2rem;
+  }
+  .filteredpost {
+    margin: 2rem 0rem;
+    padding: 0.2rem;
+  }
 }

@@ -12,9 +12,7 @@ const ThemeToggler = () => {
 
   return (
     <button className={classes.themeToggler} onClick={handleThemeToggle}>
-      <span role="img" aria-label="switch theme">
-        {theme === "light" ? "DARK" : "LIGHT"}
-      </span>
+      {theme === "light" ? "NIGHT" : "DAY"}
     </button>
   );
 };

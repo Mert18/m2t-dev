@@ -7,7 +7,6 @@
 }
 .spotify h2 {
   grid-column: 1/ -1;
-  width: 50%;
   justify-self: center;
 }
 .spotify__toptracks {

@@ -25,7 +25,7 @@ export default function Default(props) {
       <ColorContext.Provider value={{ color, setColor }}>
         <div className={classes.lay} data-theme={theme} color-palette={color}>
           <header className={classes.layhead}>
-            {widthD < 1100 ? <HamburgerMenu /> : <Header />}
+            {widthD < 800 ? <HamburgerMenu /> : <Header />}
           </header>
           <main className={classes.laymain}>{props.children}</main>
 

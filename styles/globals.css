@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+
 :root {
   --text1: #f1faee;
   --text2: #0b090a;
 
   --back1: #dfdbdd;
-  --back2: #f3f2f0;
 
   --flavor: #353535;
   --flavor2: #882e3d;
@@ -17,8 +19,7 @@
   --text1: #0b090a;
   --text2: #0b090a;
 
-  --back1: #f1f1f1dc;
-  --back2: #f1f0f0d5;
+  --back1: #ffecd3;
 
   --projectback: rgb(247, 242, 235);
   --flavor: #353535;
@@ -31,8 +32,8 @@
   --text1: #f1faee;
   --text2: #a7a7a7;
 
-  --back1: #161515;
-  --back2: #161515;
+  --back1: #0f0f0f;
+  --back2: #0f0f0f;
 
   --projectback: rgb(51, 51, 50);
   --flavor: #f1faee;
@@ -42,13 +43,13 @@
 }
 
 [color-palette="first"] {
-  --flavor3: #098b3b;
+  --flavor3: #ce4358;
 }
 [color-palette="second"] {
   --flavor3: #bebeda;
 }
 [color-palette="third"] {
-  --flavor3: #ce4358;
+  --flavor3: #098b3b;
 }
 
 [color-palette="sarcoline"] {
@@ -79,7 +80,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 62.5%;
   list-style: none;
-  background-color: var(--back1);
 }
 
 ::-moz-selection {

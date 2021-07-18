@@ -3,6 +3,7 @@
   grid-template-columns: repeat(24, 1fr);
   margin-top: 4rem;
   color: var(--text1);
+  font-family: "Ubuntu", sans-serif;
 }
 
 .header {
@@ -13,17 +14,19 @@
   position: relative;
 }
 .header__text {
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
   font-size: 2rem;
 }
 
 .main {
-  grid-column: 1 / -1;
-  font-size: 1.3rem;
+  grid-column: 4 / 23;
+  font-size: 1.6rem;
   justify-self: center;
   width: 80%;
   margin-top: 2rem;
+  font-weight: 300;
+  line-height: 2.5rem;
 }
 
 .back {
