@@ -14,7 +14,7 @@
 }
 
 .filteredposts {
-  grid-column: 1 / -1;
+  grid-column: 3 / 12;
   list-style: none;
   margin: 2rem;
   display: grid;
@@ -30,14 +30,16 @@
 
 .filteredpost p {
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  color: var(--text2);
 }
 .filteredpost h3 {
-  font-size: 3.5rem;
+  font-size: 1.9rem;
+  color: var(--flavor3);
 }
 .filteredpost h3:hover {
   cursor: pointer;
-  color: var(--flavor3);
+  color: var(--hover);
 }
 .filteredpost > * {
   padding: 0.8rem;
@@ -48,12 +50,12 @@
     grid-column: 1 / -1;
   }
   .filteredpost h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 @media (max-width: 800px) {
   .filteredpost h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .filteredpost p {
     font-size: 1.2rem;
