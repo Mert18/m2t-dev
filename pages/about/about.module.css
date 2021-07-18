@@ -16,50 +16,69 @@
 
 .hero {
   grid-column: 1 / -1;
-  z-index: 999;
-  background-color: var(--back1);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  justify-self: center;
   text-align: center;
   padding-top: 2rem;
 }
+.hero__links {
+  padding: 2rem;
+}
+.hero__links a {
+  margin: 1rem;
+  font-weight: 300;
+}
+.hero__links a:hover {
+  color: var(--flavor3);
+}
 
-.aboutstack {
+.ttle {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 5rem;
+}
+
+.icons {
   grid-column: 1 / -1;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  font-size: 1.3rem;
   margin-top: 3rem;
-}
-.aboutstack__stack {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
 }
 
-.really {
+.icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0.8rem;
+  transition: all 0.9s;
+}
+.icon:hover {
+  cursor: pointer;
+}
+
+.removefilter {
   grid-column: 1 / -1;
   justify-self: center;
-  background-color: var(--back1);
-  margin-top: 3rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  margin: 0.9rem;
+  position: relative;
+  transition: all 0.9;
+}
+.removefilter:hover {
+  cursor: pointer;
 }
 
+.projects {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 @media only screen and (max-width: 900px) {
-  .content {
-    font-size: 1rem;
-    padding: 2rem;
-  }
-  .aboutstack {
-    font-size: 1rem;
-  }
 }
-
+/* 
 .tooltip {
   position: relative;
   transition: all 0.4s;
@@ -124,3 +143,4 @@
 #graphtool:hover::before {
   content: "GraphQL";
 }
+ */

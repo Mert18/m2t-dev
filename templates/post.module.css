@@ -1,0 +1,31 @@
+.post {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  margin-top: 4rem;
+  color: var(--text1);
+}
+
+.header {
+  grid-column: 1 /-1;
+}
+.header__img {
+  height: 80vh;
+  position: relative;
+}
+.header__text {
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.main {
+  grid-column: 1 / -1;
+  font-size: 1.3rem;
+  justify-self: center;
+  width: 80%;
+  margin-top: 2rem;
+}
+
+.back {
+  margin: 5rem 0 0 2rem;
+}

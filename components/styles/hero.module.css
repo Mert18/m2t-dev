@@ -1,10 +1,6 @@
-
 .hero {
-    text-align: center;
-    font-size: 1.1rem;
-    color: var(--text1);
-    grid-column: 1 / -1;
-    z-index: 999;
-    background-color: var(--back1);
-    padding: 2rem;
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-size: 1.1rem;
+  color: var(--flavor3);
 }

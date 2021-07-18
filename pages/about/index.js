@@ -1,8 +1,73 @@
+import React, { useState, useEffect } from "react";
 import classes from "./about.module.css";
 import Head from "next/head";
 import Image from "next/image";
+import Project from "../../components/Project";
 
+const icons = [
+  "sass",
+  "js",
+  "react",
+  "mongodb",
+  "node-js",
+  "next-js",
+  "postgresql",
+];
+
+const arrProjects = [
+  {
+    title: "This Website!",
+    desc: "My blog. I share Illustrations I made, blog posts and other odd things.",
+    techs: ["next-js", "mongodb"],
+    link: "https://merd.dev/",
+  },
+  {
+    title: "E-commerce",
+    desc: "An E-commerce website all about stickers.",
+    techs: ["react", "node-js", "mongodb"],
+    link: "https://sticker-ankara-mert18.vercel.app/",
+  },
+  {
+    title: "What is Happiness?",
+    desc: "A way to figure out what makes you happy. You are asked to enter some values every day, then it graphs your happiness.",
+    techs: ["react", "node-js", "postgresql"],
+    link: "https://what-is-happiness.vercel.app/",
+  },
+  {
+    title: "Maths and Cards",
+    desc: "Maths and Card games with React.",
+    techs: ["react", "sass"],
+    link: "https://reign-of-cards.vercel.app/",
+  },
+  {
+    title: "Tesadüf",
+    desc: "Recommends random books and movies. In Turkish language.",
+    techs: ["react"],
+    link: "https://tesaduf.vercel.app/",
+  },
+];
 const About = () => {
+  const [filter, setFilter] = useState(null);
+  const [filteredPosts, setFilteredPosts] = useState(arrProjects);
+
+  useEffect(() => {
+    if (filter) {
+      setFilteredPosts(
+        arrProjects.filter((el) => el.techs.indexOf(filter) > -1)
+      );
+    } else {
+      setFilteredPosts(arrProjects);
+    }
+  }, [filter]);
+  const isActive = (path) => {
+    if (filter == path) {
+      return {
+        transform: "scale(1.55)",
+      };
+    } else {
+      return { color: "var(--text1)" };
+    }
+  };
   return (
     <section className={classes.about}>
       <Head>
@@ -13,183 +78,76 @@ const About = () => {
         />
       </Head>
       <main className={classes.content}>
-        <header className={classes.hero}>
+        <div className={classes.hero}>
           <div className={classes.hero__prof}>
             <Image src="/images/assets/prof.jpg" width="250px" height="250px" />
           </div>
 
           <div className={classes.hero__text}>
-            <p>Computer Engineering Student</p>
             <p>Frontend Developer</p>
+            <p>Computer Engineering Student</p>
           </div>
-        </header>
-
-        <main className={classes.aboutstack}>
-          <p>I know those and have used them in a project before.</p>
-          <div className={classes.aboutstack__stack}>
-            <div
-              className={classes.tech}
-              id={classes.sasstool}
-              className={classes.tooltip}
+          <div className={classes.hero__links}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/Mert18"
             >
-              <img src="/images/icons/sass.svg" width="60px" alt="sass icon" />
-            </div>
-            <div
-              className={classes.tech}
-              id={classes.jstool}
-              className={classes.tooltip}
+              Github
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/mert-u-8248ab135/"
             >
-              <img src="/images/icons/js.svg" width="60px" alt="js icon" />
-            </div>
-            <div
-              className={classes.tech}
-              id={classes.reacttool}
-              className={classes.tooltip}
-            >
-              <img
-                src="/images/icons/react.svg"
-                width="60px"
-                alt="react icon"
-              />
-            </div>
-            <div
-              className={classes.tech}
-              id={classes.nextjstool}
-              className={classes.tooltip}
-            >
-              <img
-                src="/images/icons/next-js.svg"
-                width="60px"
-                alt="nextjs icon"
-              />
-            </div>
-            <div
-              className={classes.tech}
-              id={classes.nodejstool}
-              className={classes.tooltip}
-            >
-              <img
-                src="/images/icons/node-js.svg"
-                width="60px"
-                alt="nodejs icon"
-              />
-            </div>
-            <div
-              className={classes.tech}
-              id={classes.mongodbtool}
-              className={classes.tooltip}
-            >
-              <img
-                src="/images/icons/mongodb.svg"
-                width="60px"
-                alt="mongodb icon"
-              />
-            </div>
-            <div
-              className={classes.tech}
-              id={classes.gittool}
-              className={classes.tooltip}
-            >
-              <img src="/images/icons/git.svg" width="60px" alt="git icon" />
-            </div>
+              Linkedin
+            </a>
           </div>
-
-          <p>I'm still learning the following.</p>
-
-          <div className={classes.aboutstack__stack}>
-            <div
-              className={classes.tech}
-              id={classes.postgrestool}
-              className={classes.tooltip}
-            >
-              <img
-                src="/images/icons/postgresql.svg"
-                width="60px"
-                alt="postgresql icon"
-              />
-            </div>
-
-            <div
-              className={classes.tech}
-              id={classes.linuxtool}
-              className={classes.tooltip}
-            >
-              <img
-                src="/images/icons/linux-tux.svg"
-                width="60px"
-                alt="linux icon"
-              />
-            </div>
-
-            <div
-              className={classes.tech}
-              id={classes.typetool}
-              className={classes.tooltip}
-            >
-              <img
-                src="/images/icons/typescript.svg"
-                width="60px"
-                alt="typescript icon"
-              />
-            </div>
-
-            <div
-              className={classes.tech}
-              id={classes.awstool}
-              className={classes.tooltip}
-            >
-              <img src="/images/icons/aws.svg" width="60px" alt="aws icon" />
-            </div>
-          </div>
-
-          <p>I'm planning to learn in the near future.</p>
-
-          <div className={classes.aboutstack__stack}>
-            <div
-              className={classes.tech}
-              id={classes.phptool}
-              className={classes.tooltip}
-            >
-              <img
-                src="/images/icons/php.svg"
-                width="60px"
-                alt="postgresql icon"
-              />
-            </div>
-
-            <div
-              className={classes.tech}
-              id={classes.graphtool}
-              className={classes.tooltip}
-            >
-              <img
-                src="/images/icons/graphql.svg"
-                width="60px"
-                alt="mongodb icon"
-              />
-            </div>
-          </div>
-
-          <div className={classes.really}>
-            <p>I was born in the southernmost city in Turkey, Hatay.</p>
-            <br />
-            <p>
-              In 2018, I started studying Computer Engineering in Gazi
-              University.{" "}
-            </p>
-            <br />
-            <p>
-              In May 2020, I had a chance to dive into web technologies, so I
-              did.
-            </p>
-            <br />
-            <p>
-              From this point, I've been learning and making projects in web
-              development area.
-            </p>
-            <br />
-          </div>
-        </main>
+        </div>
+        <div className={classes.ttle}>
+          <p>PROJECTS</p>
+        </div>
+        <div className={classes.icons}>
+          {icons.map((icon) => {
+            return (
+              <div
+                key={icon}
+                className={classes.icon}
+                onClick={(e) => setFilter(icon)}
+                style={isActive(icon)}
+              >
+                <Image
+                  src={`/images/icons/${icon}.svg`}
+                  alt={icon}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div
+          className={classes.removefilter}
+          onClick={(e) => setFilter(null)}
+          style={isActive()}
+        >
+          Remove Filters
+        </div>
+        <div className={classes.projects}>
+          {filteredPosts.map((el) => {
+            return (
+              <li key={el.title}>
+                <Project
+                  title={el.title}
+                  desc={el.desc}
+                  img={el.img}
+                  techs={el.techs}
+                  link={el.link}
+                />
+              </li>
+            );
+          })}
+        </div>
       </main>
     </section>
   );

@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 300;
 }
 .colors {
   display: flex;
@@ -17,8 +18,8 @@
 .colors button {
   border: none;
   outline: none;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
   margin-left: 0.4rem;
 }
 .colors button:hover {
@@ -42,7 +43,6 @@
 }
 .themeToggler {
   color: var(--text1);
-  font-size: 1.2rem;
   margin-left: 2rem;
   font-weight: 700;
 }
@@ -72,6 +72,19 @@
   color: var(--flavor3);
 }
 
+.header__title {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 5rem;
+  margin: 2rem;
+}
+.header__title svg path {
+  fill: var(--flavor3);
+}
+.header__title:hover {
+  cursor: pointer;
+}
+
 .header__nav {
   grid-column: 1 / -1;
   display: flex;
@@ -80,25 +93,13 @@
   justify-content: center;
   align-items: center;
 }
+
 .linkbox {
   color: var(--text1);
 }
 .active {
   color: var(--flavor3);
   text-decoration: underline;
-}
-
-.header__title {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: 7rem;
-  margin: 2rem;
-}
-.header__title svg path {
-  fill: var(--flavor3);
-}
-.header__title:hover {
-  cursor: pointer;
 }
 
 .laymain {

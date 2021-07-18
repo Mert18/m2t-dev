@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 :root {
   --text1: #f1faee;
   --text2: #0b090a;
@@ -18,9 +17,10 @@
   --text1: #0b090a;
   --text2: #0b090a;
 
-  --back1: #faf9f9;
-  --back2: #faf9f9;
+  --back1: #f1f1f1dc;
+  --back2: #f1f0f0d5;
 
+  --projectback: rgb(247, 242, 235);
   --flavor: #353535;
   --flavor2: #882e3d;
   --flavor3: #ce4358;
@@ -34,6 +34,7 @@
   --back1: #161515;
   --back2: #161515;
 
+  --projectback: rgb(51, 51, 50);
   --flavor: #f1faee;
   --flavor2: #882e3d;
 
@@ -75,7 +76,7 @@ a {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 62.5%;
   list-style: none;
   background-color: var(--back1);
