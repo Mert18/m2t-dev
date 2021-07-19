@@ -96,24 +96,24 @@ const About = () => {
           </div>
 
           <div className={classes.hero__text}>
-            <p>Frontend Developer</p>
+            <p id={classes.role}>Frontend Developer</p>
             <p>Computer Engineering Student</p>
-          </div>
-          <div className={classes.hero__links}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/Mert18"
-            >
-              Github
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://www.linkedin.com/in/mert-u-8248ab135/"
-            >
-              Linkedin
-            </a>
+            <div className={classes.hero__links}>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/Mert18"
+              >
+                Github
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/mert-u-8248ab135/"
+              >
+                Linkedin
+              </a>
+            </div>
           </div>
         </div>
         <div className={classes.ttle}>

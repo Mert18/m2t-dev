@@ -15,18 +15,26 @@
 
 .hero {
   grid-column: 1 / -1;
+  display: flex;
   justify-self: center;
-  text-align: center;
-  padding-top: 2rem;
+  font-weight: 700;
+}
+.hero__text {
+  font-size: 2.5rem;
+  padding: 2rem;
 }
 .hero__links {
   padding: 2rem;
+  font-size: 1.5rem;
 }
 .hero__links a {
   margin: 1rem;
   font-weight: 300;
 }
 .hero__links a:hover {
+  color: var(--flavor3);
+}
+#role {
   color: var(--flavor3);
 }
 
@@ -76,6 +84,13 @@
   align-items: center;
 }
 @media only screen and (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero__prof {
+    display: flex;
+    justify-content: center;
+  }
 }
 /* 
 .tooltip {

@@ -12,14 +12,6 @@ export default function Post({ children, frontMatter }) {
       </Head>
 
       <header className={classes.header}>
-        <div className={classes.header__img}>
-          <Image
-            src={image}
-            alt={description}
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
         <div className={classes.header__text}>
           <h1>{title}</h1>
           <p>{date}</p>

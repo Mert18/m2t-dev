@@ -27,10 +27,10 @@
 }
 
 [data-theme="dark"] {
-  --text1: #e0e0e0e1;
-  --text2: #a7a7a7;
+  --text1: #fafafa;
+  --text2: #d1d1d1;
 
-  --back1: #0f0f0f;
+  --back1: #1b1b1b;
   --back2: #0f0f0f;
 
   --projectback: rgb(51, 51, 50);
