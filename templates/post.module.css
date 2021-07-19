@@ -3,7 +3,6 @@
   grid-template-columns: repeat(24, 1fr);
   margin-top: 4rem;
   color: var(--text1);
-  font-family: "Ubuntu", sans-serif;
 }
 
 .header {
@@ -16,17 +15,18 @@
 .header__text {
   padding: 2rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .main {
-  grid-column: 4 / 23;
-  font-size: 1.6rem;
+  grid-column: 6 / 21;
+  font-size: 1.2rem;
   justify-self: center;
   width: 80%;
   margin-top: 2rem;
-  font-weight: 300;
-  line-height: 2.5rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+  font-family: "Nunito", sans-serif;
 }
 
 .back {

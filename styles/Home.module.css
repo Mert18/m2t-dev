@@ -14,12 +14,11 @@
 }
 
 .filteredposts {
-  grid-column: 3 / 12;
+  grid-column: 4 / 11;
   list-style: none;
-  margin: 2rem;
+  margin: 2rem 0rem;
   display: grid;
   grid-template-columns: 1fr;
-  font-family: "Ubuntu", sans-serif;
 }
 
 .filteredpost {
@@ -36,10 +35,11 @@
 .filteredpost h3 {
   font-size: 1.9rem;
   color: var(--flavor3);
+  font-weight: 900;
 }
 .filteredpost h3:hover {
   cursor: pointer;
-  color: var(--hover);
+  text-decoration: underline;
 }
 .filteredpost > * {
   padding: 0.8rem;

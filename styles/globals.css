@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap");
 
 :root {
-  --text1: #f1faee;
+  --text1: #e9ebe8;
   --text2: #0b090a;
 
   --back1: #dfdbdd;
@@ -17,7 +15,7 @@
 
 [data-theme="light"] {
   --text1: #0b090a;
-  --text2: #474546;
+  --text2: #555454;
 
   --back1: #ffecd3;
 
@@ -29,7 +27,7 @@
 }
 
 [data-theme="dark"] {
-  --text1: #f1faee;
+  --text1: #e0e0e0e1;
   --text2: #a7a7a7;
 
   --back1: #0f0f0f;
@@ -77,7 +75,7 @@ a {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 62.5%;
   list-style: none;
 }

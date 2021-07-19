@@ -9,7 +9,7 @@ import HamburgerMenu from "./components/HamburgerMenu.js";
 import useWindowDimensions from "./components/useWindowDimensions.js";
 
 export default function Default(props) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const [color, setColor] = useState("first");
 
   const { height, width } = useWindowDimensions();

@@ -8,12 +8,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 300;
+  font-weight: 700;
 }
 .colors {
   display: flex;
-  flex-wrap: wrap;
-  background-color: var(--back1);
 }
 .colors button {
   border: none;
