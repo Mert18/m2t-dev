@@ -8,7 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
 }
 .colors {
   display: flex;
@@ -42,7 +41,6 @@
 .themeToggler {
   color: var(--flavor3);
   margin-left: 2rem;
-  font-weight: 700;
 }
 
 .toggler {
@@ -61,14 +59,6 @@
 .header {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  width: 100%;
-}
-.header a {
-  margin-right: 2rem;
-  display: inline-block;
-}
-.header a:hover {
-  color: var(--flavor3);
 }
 
 .header__title {
@@ -87,18 +77,33 @@
 .header__nav {
   grid-column: 1 / -1;
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1rem;
   height: 10vh;
   justify-content: center;
   align-items: center;
 }
 
+.header a {
+  margin-right: 2rem;
+  text-decoration-color: var(--flavor3);
+  animation-name: nav;
+  animation-duration: 4s;
+}
+.header a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--flavor3);
+  text-decoration-thickness: 5px;
+  text-underline-offset: 4px;
+}
+
 .linkbox {
-  color: var(--text1);
+  color: var(--text2);
 }
 .active {
-  color: var(--flavor3);
+  color: var(--text1);
   text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 4px;
 }
 
 .laymain {

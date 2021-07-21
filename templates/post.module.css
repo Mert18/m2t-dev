@@ -24,12 +24,10 @@
 .main {
   color: var(--text2);
   grid-column: 6 / 21;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   justify-self: center;
   width: 80%;
   margin-top: 2rem;
-  font-weight: 400;
-  font-family: "Nunito", sans-serif;
 }
 
 .back {

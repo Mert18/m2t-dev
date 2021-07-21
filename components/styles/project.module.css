@@ -1,7 +1,7 @@
 .project {
   margin: 1rem;
   padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--text1);
   background-color: var(--projectback);
   height: 35vh;
@@ -12,7 +12,7 @@
   justify-content: space-evenly;
 }
 .title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--flavor3);
 }

@@ -20,12 +20,12 @@
   font-weight: 700;
 }
 .hero__text {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 2rem;
 }
 .hero__links {
   padding: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .hero__links a {
   margin: 1rem;
@@ -67,7 +67,7 @@
 .removefilter {
   grid-column: 1 / -1;
   justify-self: center;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   margin: 0.9rem;
   position: relative;
   transition: all 0.9;

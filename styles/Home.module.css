@@ -29,17 +29,18 @@
 
 .filteredpost p {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--text2);
 }
 .filteredpost h3 {
-  font-size: 1.9rem;
-  color: var(--flavor3);
-  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--text1);
+  text-underline-offset: 4px;
 }
 .filteredpost h3:hover {
   cursor: pointer;
   text-decoration: underline;
+  text-decoration-color: var(--flavor3);
 }
 .filteredpost > * {
   padding: 0.8rem;

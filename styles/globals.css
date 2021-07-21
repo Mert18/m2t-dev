@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Paprika&display=swap");
+
 :root {
   --text1: #e9ebe8;
   --text2: #0b090a;
 
-  --back1: #dfdbdd;
+  --back1: #f2e8da;
 
   --flavor: #353535;
   --flavor2: #882e3d;
@@ -14,10 +18,10 @@
 }
 
 [data-theme="light"] {
-  --text1: #0b090a;
-  --text2: #555454;
+  --text1: #3a3936;
+  --text2: #524e47;
 
-  --back1: #ffecd3;
+  --back1: #eff1f3;
 
   --projectback: rgb(247, 242, 235);
   --flavor: #353535;
@@ -27,10 +31,10 @@
 }
 
 [data-theme="dark"] {
-  --text1: #fafafa;
+  --text1: #d6d5d4;
   --text2: #d1d1d1;
 
-  --back1: #1b1b1b;
+  --back1: #141414;
   --back2: #0f0f0f;
 
   --projectback: rgb(51, 51, 50);
@@ -75,8 +79,10 @@ a {
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Paprika", cursive;
+
   font-size: 62.5%;
+
   list-style: none;
 }
 

@@ -69,15 +69,25 @@ export async function getStaticProps() {
       };
     })
   );
-  const posts = files.map((file) => {
-    return {
-      path: `./posts/${file.filename.replace(".mdx", "")}`,
-      title: file.matter.data.title,
-      description: file.matter.data.description,
-      date: file.matter.data.date,
-      image: file.matter.data.image,
-    };
-  });
+
+  const posts = files
+    .map((file) => {
+      return {
+        path: `./posts/${file.filename.replace(".mdx", "")}`,
+        title: file.matter.data.title,
+        description: file.matter.data.description,
+        date: file.matter.data.date,
+        image: file.matter.data.image,
+      };
+    })
+    .sort((a, b) => {
+      if (a.date < b.date) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+
   return {
     props: {
       posts,
