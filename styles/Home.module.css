@@ -13,7 +13,24 @@
   color: var(--text1);
   margin-bottom: 4rem;
 }
-
+.hero {
+  width: 70%;
+  grid-column: 1 / -1;
+  align-items: center;
+  height: max-content;
+  justify-self: center;
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.hero__img {
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+  grid-column: 1 / 7;
+}
+.hero__txt {
+  grid-column: 7/ -1;
+}
 .sectiontitle {
   color: var(--text2);
 }
@@ -64,7 +81,14 @@
   .elsewhere {
     grid-column: 2 / 12;
   }
+  .hero__img {
+    grid-column: 1 / -1;
+  }
+  .hero__txt {
+    grid-column: 1 / -1;
+  }
 }
+
 @media (max-width: 800px) {
   .filteredpost h3 {
     font-size: 1.4rem;
@@ -75,5 +99,11 @@
   .filteredpost {
     margin: 2rem 0rem;
     padding: 0.2rem;
+  }
+  .hero {
+    width: 90%;
+  }
+  .hero__txt {
+    font-size: 1.5rem;
   }
 }

@@ -15,6 +15,7 @@ const Header = () => {
       </div>
       <nav className={classes.header__nav}>
         <Link href="/about">ABOUT</Link>
+        <Link href="/blog">BLOG</Link>
         <Link href="/projects">PROJECTS</Link>
         <Link href="/tmi">TMI</Link>
         <Link href="/illustrations">ILLS</Link>

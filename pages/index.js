@@ -15,6 +15,19 @@ export default function Home({ posts }) {
       </Head>
 
       <main className={classes.content}>
+        <div className={classes.hero}>
+          <div className={classes.hero__img}>
+            <Image
+              src="/images/assets/ill.svg"
+              alt="people"
+              width="450px"
+              height="450px"
+            />
+          </div>
+          <div className={classes.hero__txt}>
+            <h1>Hi, I'm Mert, frontend developer, designer, and musician.</h1>
+          </div>
+        </div>
         <div className={classes.posts}>
           <div className={classes.sectiontitle}>
             <h2>Latest Blog Posts</h2>
