@@ -28,8 +28,7 @@ export default function Default(props) {
             {widthD < 800 ? <HamburgerMenu /> : <Header />}
           </header>
           <main className={classes.laymain}>{props.children}</main>
-
-          <footer className={classes.layhead}>
+          <footer className={classes.layfoot}>
             <Footer />
           </footer>
         </div>

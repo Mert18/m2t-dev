@@ -3,7 +3,7 @@
   grid-template-columns: repeat(24, 1fr);
   grid-column: 1 / -1;
   font-size: 1.1rem;
-  color: var(--flavor3);
+  color: var(--flavor);
 }
 .spotify h2 {
   grid-column: 1/ -1;
@@ -33,7 +33,7 @@
 }
 .toptrack {
   font-size: 1rem;
-  border-bottom: 2px solid var(--flavor3);
+  border-bottom: 2px solid var(--flavor);
   padding: 2rem;
 }
 .toptrack__title {

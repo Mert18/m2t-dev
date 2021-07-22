@@ -4,33 +4,74 @@ import Link from "next/link";
 import path from "path";
 import fs from "fs";
 import grayMatter from "gray-matter";
+import Image from "next/image";
 
 export default function Home({ posts }) {
   return (
     <section className={classes.home}>
       <Head>
         <title>Mert Uygur Web Developer Blog</title>
-        <meta
-          name="description"
-          content="An experimental area of a web developer."
-        />
+        <meta name="description" content="Web, frontend developer blog" />
       </Head>
 
       <main className={classes.content}>
-        <ul className={classes.filteredposts}>
-          {posts.map(({ title, description, path, date }) => {
-            return (
-              <li key={path} className={classes.filteredpost}>
-                <Link href={path} key={path}>
-                  <h3>{title}</h3>
-                </Link>
+        <div className={classes.posts}>
+          <div className={classes.sectiontitle}>
+            <h2>Latest Blog Posts</h2>
+          </div>
+          <ul className={classes.filteredposts}>
+            {posts.map(({ title, description, path, date }) => {
+              return (
+                <li key={path} className={classes.filteredpost}>
+                  <Link href={path} key={path}>
+                    <h3>{title}</h3>
+                  </Link>
 
-                <p>{description}</p>
-                <p>{date}</p>
-              </li>
-            );
-          })}
-        </ul>
+                  <p>{description}</p>
+                  <p>{date}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className={classes.elsewhere}>
+          <div className={classes.links}>
+            <a
+              href="https://github.com/Mert18"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <div className={classes.link}>
+                <Image
+                  src="/images/icons/github.svg"
+                  width="30px"
+                  height="30px"
+                  alt="github"
+                />
+                <p>Github</p>
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/mert-u-8248ab135/"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              <div className={classes.link}>
+                <Image
+                  src="/images/icons/linkedin.svg"
+                  width="30px"
+                  height="30px"
+                  alt="linkedin"
+                />
+                <p>Linkedin</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div>{/* A NICE ILLUSTRATION WILL COME HERE. */}</div>
       </main>
     </section>
   );
@@ -77,7 +118,6 @@ export async function getStaticProps() {
         title: file.matter.data.title,
         description: file.matter.data.description,
         date: file.matter.data.date,
-        image: file.matter.data.image,
       };
     })
     .sort((a, b) => {

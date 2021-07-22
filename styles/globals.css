@@ -1,65 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Paprika&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
 
 :root {
-  --text1: #e9ebe8;
-  --text2: #0b090a;
-
-  --back1: #f2e8da;
-
-  --flavor: #353535;
-  --flavor2: #882e3d;
-  --flavor3: #ce4358;
-
-  --hover: #89023e;
-}
-
-[data-theme="light"] {
-  --text1: #3a3936;
-  --text2: #524e47;
-
-  --back1: #eff1f3;
-
-  --projectback: rgb(247, 242, 235);
-  --flavor: #353535;
-  --flavor2: #882e3d;
-  --flavor3: #ce4358;
-  --hover: #b8668b;
+  --one: #fff5fd;
+  --two: #ff96ad;
+  --three: #005a8d;
+  --four: #022e57;
 }
 
 [data-theme="dark"] {
-  --text1: #d6d5d4;
-  --text2: #d1d1d1;
+  --text1: #fff5fd;
+  --text2: #ffe6cd;
 
-  --back1: #141414;
-  --back2: #0f0f0f;
+  --back1: #1a0d3d;
+  --back2: #3a3936;
 
-  --projectback: rgb(51, 51, 50);
-  --flavor: #f1faee;
-  --flavor2: #882e3d;
+  --flavor: #ff96ad;
+  --flavor2: #005a8d;
+  --flavor3: #022e57;
 
-  --hover: #92516e;
+  --projectback: rgb(31, 28, 77);
 }
+[data-theme="light"] {
+  --text1: #141414;
+  --text2: #147077;
 
-[color-palette="first"] {
-  --flavor3: #ce4358;
-}
-[color-palette="second"] {
-  --flavor3: #bebeda;
-}
-[color-palette="third"] {
-  --flavor3: #098b3b;
-}
+  --back1: #fff5fd;
 
-[color-palette="sarcoline"] {
-  --flavor3: #df80a1;
-}
+  --flavor: #ff96ad;
+  --flavor2: #005a8d;
+  --flavor3: #022e57;
 
-[color-palette="viridian"] {
-  --flavor3: #d4c924;
+  --projectback: rgb(247, 242, 235);
 }
 
 ::-webkit-scrollbar {
@@ -79,16 +52,15 @@ a {
 }
 
 body {
-  font-family: "Paprika", cursive;
-
+  font-family: "Philosopher", sans-serif;
   font-size: 62.5%;
-
   list-style: none;
+  background-color: var(--four);
 }
 
 ::-moz-selection {
-  color: var(--flavor3);
+  color: var(--flavor);
 }
 ::selection {
-  color: var(--flavor3);
+  color: var(--flavor);
 }

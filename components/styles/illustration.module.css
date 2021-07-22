@@ -1,7 +1,6 @@
-
-.figure{
-    color: var(--flavor3);
-    text-align: center;
-    font-size: 1.6rem;
-    padding: 3rem;
+.figure {
+  color: var(--flavor);
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 3rem;
 }

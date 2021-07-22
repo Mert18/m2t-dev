@@ -1,0 +1,56 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  min-height: 90vh;
+  color: var(--text1);
+}
+
+.filtersort {
+  grid-column: 1/ -1;
+  justify-self: center;
+  margin: 3rem 0rem;
+  font-size: 1.2rem;
+}
+.filter {
+  justify-self: center;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter:hover {
+  cursor: pointer;
+}
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0rem 1rem;
+  padding: 1rem;
+  transition: all 0.6s;
+  margin: 1rem;
+}
+.icon:hover {
+  cursor: pointer;
+}
+
+.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.projects {
+  grid-column: 1/ -1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  margin-bottom: 4rem;
+}

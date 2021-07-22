@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../lib/context";
 import classes from "../styles/default.module.css";
+import Image from "next/image";
 
 const ThemeToggler = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -11,9 +12,27 @@ const ThemeToggler = () => {
   };
 
   return (
-    <button className={classes.themeToggler} onClick={handleThemeToggle}>
-      {theme === "light" ? "NIGHT" : "DAY"}
-    </button>
+    <div className={classes.themeToggler} onClick={handleThemeToggle}>
+      {theme === "light" ? (
+        <div className={classes.icon}>
+          <Image
+            src="/images/icons/moon.svg"
+            alt="moon"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+      ) : (
+        <div className={classes.icon}>
+          <Image
+            src="/images/icons/sun.svg"
+            alt="sun"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+      )}
+    </div>
   );
 };
 

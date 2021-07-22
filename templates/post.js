@@ -4,7 +4,7 @@ import classes from "./post.module.css";
 import Image from "next/image";
 
 export default function Post({ children, frontMatter }) {
-  const { title, description, image, date } = frontMatter;
+  const { title, description, date } = frontMatter;
   return (
     <div className={classes.post}>
       <Head>
