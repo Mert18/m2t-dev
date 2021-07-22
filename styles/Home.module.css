@@ -23,6 +23,9 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+.hero__txt span {
+  color: var(--flavor2);
+}
 .hero__img {
   margin-bottom: 2rem;
   margin-right: 3rem;
@@ -73,6 +76,9 @@
   padding: 0.8rem;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+.link p:hover {
+  color: var(--text2);
 }
 @media (max-width: 1100px) {
   .posts {

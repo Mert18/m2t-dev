@@ -40,6 +40,30 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        <section className={classes.introduction}>
+          <article>
+            <p>
+              Welcome, my name is Mert. I started web development in May 2020
+              and since then, I have never ceased learning.
+            </p>
+            <p>I feel confident with the following;</p>
+            <ul className={classes.confident}>
+              <li>HTML Semantics</li>
+              <li>CSS</li>
+              <li>a11y</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>MongoDB</li>
+            </ul>
+            <p>I am still learning the following;</p>
+            <ul className={classes.learning}>
+              <li>PostgreSQL</li>
+              <li>Typescript</li>
+              <li>GraphQL</li>
+            </ul>
+          </article>
+        </section>
       </main>
     </section>
   );

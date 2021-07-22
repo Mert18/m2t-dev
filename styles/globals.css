@@ -18,11 +18,10 @@
   --back1: #100520;
   --back2: #3a3936;
 
-  --flavor: #ff96ad;
-  --flavor2: #005a8d;
+  --flavor: #1d0c35;
+  --flavor2: #80f322;
   --flavor3: #022e57;
-
-  --projectback: rgb(31, 28, 77);
+  --flavor4: #ff96ad;
 }
 [data-theme="light"] {
   --text1: #141414;
@@ -30,11 +29,10 @@
 
   --back1: #fff5fd;
 
-  --flavor: #ff96ad;
-  --flavor2: #005a8d;
+  --flavor: #ffe4ff;
+  --flavor2: #a71493;
   --flavor3: #022e57;
-
-  --projectback: rgb(247, 242, 235);
+  --flavor4: #ff96ad;
 }
 
 ::-webkit-scrollbar {
@@ -61,8 +59,8 @@ body {
 }
 
 ::-moz-selection {
-  color: var(--flavor);
+  color: var(--flavor2);
 }
 ::selection {
-  color: var(--flavor);
+  color: var(--flavor2);
 }

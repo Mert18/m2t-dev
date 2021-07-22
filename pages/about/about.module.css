@@ -33,10 +33,10 @@
   font-weight: 300;
 }
 .hero__links a:hover {
-  color: var(--flavor);
+  color: var(--flavor2);
 }
 #role {
-  color: var(--flavor);
+  color: var(--flavor2);
 }
 
 @media only screen and (max-width: 900px) {
@@ -48,69 +48,27 @@
     justify-content: center;
   }
 }
-/* 
-.tooltip {
-  position: relative;
-  transition: all 0.4s;
+
+.introduction {
+  grid-column: 1 / -1;
+  width: 70%;
+  justify-self: center;
+}
+.introduction article p {
+  margin: 2rem 0rem;
+}
+.introduction ul li {
   padding: 1rem;
+  margin: 1rem;
+  background-color: rgba(255, 0, 0, 0.13);
+  display: inline-block;
+  border-radius: 20px;
 }
-.tooltip:hover::before {
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  font-size: 1rem;
-  white-space: nowrap;
-  padding: 1rem;
-  transform: translate(-50%, 0%);
-  background-color: var(--flavor);
-  transition: all 0.4s;
+
+.confident {
+  list-style: none;
 }
-#reacttool:hover::before {
-  content: "React";
+
+.learning {
+  list-style: none;
 }
-#mongodbtool:hover::before {
-  content: "MongoDB";
-}
-#nextjstool:hover::before {
-  content: "NextJS";
-}
-#postgrestool:hover::before {
-  content: "PostgreSQL";
-}
-#sasstool:hover::before {
-  content: "Sass";
-}
-#jstool:hover::before {
-  content: "Javascript";
-}
-#reacttool:hover::before {
-  content: "React";
-}
-#nextjstool:hover::before {
-  content: "NextJS";
-}
-#nodejstool:hover::before {
-  content: "NodeJS";
-}
-#mongodbtool:hover::before {
-  content: "MongoDB";
-}
-#gittool:hover::before {
-  content: "Git";
-}
-#linuxtool:hover::before {
-  content: "Linux";
-}
-#typetool:hover::before {
-  content: "Typescript";
-}
-#awstool:hover::before {
-  content: "Amazon Web Services";
-}
-#phptool:hover::before {
-  content: "PHP";
-}
-#graphtool:hover::before {
-  content: "GraphQL";
-}
- */

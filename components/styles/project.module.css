@@ -7,7 +7,7 @@
   padding: 1rem;
   font-size: 1.2rem;
   color: var(--text1);
-  background-color: var(--projectback);
+  background-color: var(--flavor);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -15,7 +15,6 @@
 .title {
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--flavor);
 }
 .tech {
   display: flex;

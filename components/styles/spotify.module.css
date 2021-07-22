@@ -3,7 +3,7 @@
   grid-template-columns: repeat(24, 1fr);
   grid-column: 1 / -1;
   font-size: 1.1rem;
-  color: var(--flavor);
+  color: var(--flavor2);
 }
 .spotify h2 {
   grid-column: 1/ -1;

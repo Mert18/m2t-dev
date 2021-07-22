@@ -4,7 +4,7 @@ import Project from "../../components/Project";
 import Image from "next/image";
 
 const icons = [
-  "sass",
+  "html",
   "js",
   "react",
   "mongodb",
@@ -63,6 +63,13 @@ const arrProjects = [
     link: "https://from-the-heap.vercel.app/",
     complexity: 0.5,
   },
+  {
+    title: "Sunnyside Agency Landing Page",
+    desc: "Frontend Mentor challenge. Sunnyside is an agency that help brands to grow. Written with HTML semantics and clean Sass folder structure.",
+    techs: ["html", "sass"],
+    link: "https://fm-sunnyside-agency-landing.vercel.app",
+    complexity: 0.4,
+  },
 ];
 
 const Projects = () => {
@@ -92,7 +99,7 @@ const Projects = () => {
         transform: "scale(1.55)",
       };
     } else {
-      return { color: "var(--text1)" };
+      return { color: "var(--flavor2)" };
     }
   };
   return (
