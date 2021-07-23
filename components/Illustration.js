@@ -9,12 +9,12 @@ const Illustration = ({ img, title, date }) => {
         placeholder="blur"
         src={img}
         alt={title}
-        width={1024}
-        height={1024}
+        layout="fill"
+        objectFit="cover"
       />
-      <figcaption>
+      {/* <figcaption className="caption">
         {title} , {date}
-      </figcaption>
+      </figcaption> */}
     </figure>
   );
 };

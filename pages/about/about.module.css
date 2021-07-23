@@ -60,7 +60,7 @@
 .introduction ul li {
   padding: 1rem;
   margin: 1rem;
-  background-color: rgba(255, 0, 0, 0.13);
+  background-color: var(--flavor);
   display: inline-block;
   border-radius: 20px;
 }

@@ -14,7 +14,7 @@
   border-bottom: 6px solid var(--flavor2);
 }
 .header {
-  width: 60%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,12 +22,14 @@
 }
 .header__logo {
   color: var(--text1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header__logo:hover {
   cursor: pointer;
 }
 .header__nav a {
-  margin-right: 2rem;
   background: linear-gradient(var(--flavor2) 0 0) 0 100% / var(--d, 0) 3px
     no-repeat;
   transition: all 0.5s;

@@ -13,7 +13,7 @@
 
 [data-theme="dark"] {
   --text1: #fff5fd;
-  --text2: #ffe6cd;
+  --text2: #c2e9c4;
 
   --back1: #100520;
   --back2: #3a3936;
@@ -25,7 +25,7 @@
 }
 [data-theme="light"] {
   --text1: #141414;
-  --text2: #147077;
+  --text2: #a8509a;
 
   --back1: #fff5fd;
 

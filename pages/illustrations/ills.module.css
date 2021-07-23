@@ -1,15 +1,35 @@
 .illustrations {
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
 }
 
 .content {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    margin-top: 4rem;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  margin-top: 4rem;
 }
 
-.ills{
-    grid-column: 5 / 21;
+.ills {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 90vh;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  margin: 2rem;
+}
+#kindred {
+  grid-column: 1 / 4;
+  grid-row: span 12;
+}
+
+#capsule {
+  grid-column: 4 / -1;
+  grid-row: span 6;
+}
+#redsc {
+  grid-column: 4 /-1;
+  grid-row: span 6;
 }
