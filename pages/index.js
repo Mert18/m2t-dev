@@ -87,8 +87,6 @@ export default function Home({ posts }) {
             </a>
           </div>
         </div>
-
-        <div>{/* A NICE ILLUSTRATION WILL COME HERE. */}</div>
       </main>
     </section>
   );

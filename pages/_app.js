@@ -3,20 +3,20 @@ import Head from "next/head";
 import { MDXProvider } from "@mdx-js/react";
 import React, { Fragment } from "react";
 import Layout from "../layouts/default";
+import CodeBlock from "../components/CodeBlock.js";
 
 const components = {
-  pre: (props) => <div {...props} />,
-  code: (props) => (
-    <pre
+  pre: (props) => (
+    <div
       style={{
         color: "var(--text1)",
         fontSize: "1rem",
         backgroundColor: "var(--flavor)",
-        padding: "1rem",
       }}
       {...props}
     />
   ),
+  code: CodeBlock,
 };
 
 function MyApp({ Component, pageProps }) {
