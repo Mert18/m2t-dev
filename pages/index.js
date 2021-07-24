@@ -26,10 +26,10 @@ export default function Home({ posts }) {
           </div>
           <div className={classes.hero__txt}>
             <h1>
-              Hi, my name is <span>Mert</span>. I am a{" "}
+              Hi, my name is <span>Mert</span>.<br /> I am a{" "}
               <span>Frontend Developer</span>.
             </h1>
-            <p>I love websites, music and typography.</p>
+            <p>I love websites, typography, vector design and music.</p>
           </div>
         </div>
         <div className={classes.posts}>

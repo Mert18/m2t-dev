@@ -3,13 +3,12 @@
   grid-template-columns: repeat(24, 1fr);
   margin-top: 4rem;
   color: var(--text1);
-  font-family: "PT Serif", serif;
 }
 
 .header {
   grid-column: 6 / 21;
   justify-self: center;
-  width: 86%;
+  width: 100%;
 }
 .header__text {
   padding: 2rem;

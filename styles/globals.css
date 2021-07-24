@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap");
 
 :root {
   --one: #fff5fd;
@@ -25,12 +21,12 @@
 }
 [data-theme="light"] {
   --text1: #141414;
-  --text2: #a8509a;
+  --text2: #cf4769;
 
   --back1: #fff5fd;
 
   --flavor: #ffe4ff;
-  --flavor2: #a71493;
+  --flavor2: #cf4769;
   --flavor3: #022e57;
   --flavor4: #ff96ad;
 }
@@ -52,7 +48,7 @@ a {
 }
 
 body {
-  font-family: "Roboto Slab", serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 62.5%;
   list-style: none;
   background-color: var(--four);

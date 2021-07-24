@@ -44,7 +44,6 @@
 
 .filteredposts {
   list-style: none;
-  font-family: "PT Serif", serif;
   margin-top: 2rem;
 }
 .filteredpost {
@@ -52,6 +51,7 @@
 }
 .filteredpost h3 {
   font-size: 1.5rem;
+  padding: 0.4rem 0rem;
 }
 .filteredpost h3:hover {
   cursor: pointer;
@@ -59,7 +59,7 @@
 }
 .filteredpost p {
   font-size: 1.1rem;
-  padding: 0.6rem 0rem;
+  padding: 0.4rem 0rem;
 }
 
 .elsewhere {

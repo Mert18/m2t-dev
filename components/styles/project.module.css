@@ -25,7 +25,7 @@
   justify-content: flex-end;
 }
 .link:hover {
-  color: var(--flavor);
+  color: var(--flavor2);
 }
 .tech__item {
   position: relative;
