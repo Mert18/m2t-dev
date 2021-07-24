@@ -1,0 +1,8 @@
+.link {
+  text-decoration: underline;
+  color: var(--text2);
+}
+
+.head2 {
+  color: var(--text2);
+}

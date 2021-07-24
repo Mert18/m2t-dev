@@ -1,7 +1,23 @@
 import "../styles/globals.css";
 import Head from "next/head";
+import { MDXProvider } from "@mdx-js/react";
 import React, { Fragment } from "react";
 import Layout from "../layouts/default";
+
+const components = {
+  pre: (props) => <div {...props} />,
+  code: (props) => (
+    <pre
+      style={{
+        color: "var(--text1)",
+        fontSize: "1rem",
+        backgroundColor: "var(--flavor)",
+        padding: "1rem",
+      }}
+      {...props}
+    />
+  ),
+};
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -26,7 +42,9 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Layout>
-        <Component {...pageProps} />
+        <MDXProvider components={components}>
+          <Component {...pageProps} />
+        </MDXProvider>
       </Layout>
     </Fragment>
   );
