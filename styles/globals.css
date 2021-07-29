@@ -9,13 +9,13 @@
 
 [data-theme="dark"] {
   --text1: #fff5fd;
-  --text2: #c2e9c4;
+  --text2: #ff96ad;
 
   --back1: #100520;
   --back2: #3a3936;
 
   --flavor: #1d0c35;
-  --flavor2: #80f322;
+  --flavor2: #cf4769;
   --flavor3: #022e57;
   --flavor4: #ff96ad;
 }
@@ -58,5 +58,6 @@ body {
   color: var(--flavor2);
 }
 ::selection {
-  color: var(--flavor2);
+  color: white;
+  background-color: #cf4769a6;
 }
