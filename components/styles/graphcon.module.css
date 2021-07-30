@@ -3,14 +3,12 @@
   grid-template-columns: repeat(24, 1fr);
   grid-column: 1 / -1;
   padding-bottom: 2rem;
-  color: var(--text1);
 }
 .graphcon__graph {
   grid-column: 1 / -1;
   justify-self: center;
   margin-top: 3rem;
   font-size: 1rem;
-  color: var(--text1);
 }
 
 @media screen and (max-width: 1024px) {

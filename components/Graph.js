@@ -61,7 +61,7 @@ const Graph = () => {
         <XAxis dataKey="date" stroke="white" hide={true} />
         <YAxis />
         <Legend />
-        <Tooltip />
+        <Tooltip stroke="var(--flavor2)" color="var(--flavor2)" />
       </LineChart>
     </>
   );

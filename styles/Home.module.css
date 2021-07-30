@@ -19,6 +19,7 @@
   align-items: center;
   height: max-content;
   justify-self: center;
+  font-weight: 300;
   font-size: 1.6rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
