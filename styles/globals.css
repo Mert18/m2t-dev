@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700;900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100;300;400;600;900&display=swap");
+
 :root {
   --one: #fff5fd;
   --two: #ff96ad;
@@ -48,10 +50,15 @@ a {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Prompt", sans-serif;
   font-size: 62.5%;
   list-style: none;
   background-color: var(--four);
+}
+h1,
+h2,
+h3 {
+  letter-spacing: 2px;
 }
 
 ::-moz-selection {
