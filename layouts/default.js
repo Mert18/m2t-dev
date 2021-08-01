@@ -26,7 +26,16 @@ export default function Default(props) {
         <div className={classes.lay} data-theme={theme} color-palette={color}>
           <header className={classes.layhead}>
             {widthD < 800 ? <HamburgerMenu /> : <Header />}
+            <div className={classes.particles}>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </div>
           </header>
+
           <main className={classes.laymain}>{props.children}</main>
           <footer className={classes.layfoot}>
             <Footer />
