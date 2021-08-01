@@ -25,7 +25,7 @@ const arrProjects = [
     title: "E-commerce",
     desc: "An E-commerce website all about stickers.",
     techs: ["react", "node-js", "mongodb"],
-    link: "https://sticker-ankara-mert18.vercel.app/",
+    link: "https://rsticker-client.vercel.app/",
     complexity: 0.9,
   },
   {
