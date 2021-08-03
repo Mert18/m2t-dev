@@ -1,19 +1,14 @@
 import React from "react";
 import classes from "./blog.module.css";
-
-import Head from "next/head";
 import Link from "next/link";
 import path from "path";
 import fs from "fs";
 import grayMatter from "gray-matter";
-import Image from "next/image";
 
 const Blog = ({ posts }) => {
   return (
-    <div className={classes.blog}>
-      <div className={classes.search}>
-        <input type="text" />
-      </div>
+    <section className={classes.blog}>
+      <div className={classes.filters}>Filters</div>
       <ul className={classes.posts}>
         {posts.map(({ title, description, path, date }) => {
           return (
@@ -28,7 +23,7 @@ const Blog = ({ posts }) => {
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 };
 

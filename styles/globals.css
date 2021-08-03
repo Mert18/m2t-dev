@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@200;300;400;600;700&display=swap");
 
 :root {
   --one: #fff5fd;
@@ -10,6 +10,8 @@
 [data-theme="dark"] {
   --text1: #fff5fd;
   --text2: #ff96ad;
+
+  --background-image: url(../public/images/assets/bg.svg);
 
   --back1: #100520;
   --back2: #3a3936;
@@ -30,11 +32,20 @@
   --flavor3: #022e57;
   --flavor4: #ff96ad;
 }
-
 ::-webkit-scrollbar {
-  display: none;
+  width: 5px;
+  height: 5px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--flavor3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--flavor2);
+}
 a {
   color: inherit;
 }
@@ -48,10 +59,13 @@ a {
 }
 
 body {
-  font-family: "Hahmlet", serif;
+  font-family: "Georama", sans-serif;
   font-size: 62.5%;
   list-style: none;
-  background-color: var(--four);
+}
+
+ul {
+  list-style: none;
 }
 
 ::-moz-selection {

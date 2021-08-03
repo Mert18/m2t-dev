@@ -4,7 +4,6 @@ import Link from "next/link";
 import path from "path";
 import fs from "fs";
 import grayMatter from "gray-matter";
-import Image from "next/image";
 
 export default function Home({ posts }) {
   return (
@@ -15,28 +14,16 @@ export default function Home({ posts }) {
       </Head>
 
       <main className={classes.content}>
-        <div className={classes.hero}>
-          <div className={classes.hero__img}>
-            <Image
-              src="/images/assets/ill.svg"
-              alt="people"
-              width="450px"
-              height="450px"
-            />
-          </div>
-          <div className={classes.hero__txt}>
-            <h1>
-              Hi, my name is <span>Mert</span>.<br /> I am a{" "}
-              <span>Frontend Developer</span>.
-            </h1>
-            <p>I love websites, typography, vector design and music.</p>
-          </div>
-        </div>
-        <div className={classes.posts}>
-          <div className={classes.sectiontitle}>
-            <h2>Latest Blog Posts</h2>
-          </div>
-          <ul className={classes.filteredposts}>
+        <section className={classes.hero}>
+          <p>
+            Hi, my name is Mert.
+            <br /> I am a <span>Frontend Developer</span>.
+          </p>
+        </section>
+
+        <section className={classes.filteredposts}>
+          <h2>Latest Blog Posts</h2>
+          <ul className={classes.posts}>
             {posts.map(({ title, description, path, date }) => {
               return (
                 <li key={path} className={classes.filteredpost}>
@@ -50,43 +37,7 @@ export default function Home({ posts }) {
               );
             })}
           </ul>
-        </div>
-
-        <div className={classes.elsewhere}>
-          <div className={classes.links}>
-            <a
-              href="https://github.com/Mert18"
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              <div className={classes.link}>
-                <Image
-                  src="/images/icons/github.svg"
-                  width="30px"
-                  height="30px"
-                  alt="github"
-                />
-                <p>Github</p>
-              </div>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/mert-u-8248ab135/"
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              <div className={classes.link}>
-                <Image
-                  src="/images/icons/linkedin.svg"
-                  width="30px"
-                  height="30px"
-                  alt="linkedin"
-                />
-                <p>Linkedin</p>
-              </div>
-            </a>
-          </div>
-        </div>
+        </section>
       </main>
     </section>
   );

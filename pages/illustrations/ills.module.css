@@ -7,7 +7,7 @@
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  margin-top: 4rem;
+  margin-top: 12rem;
 }
 
 .ills {

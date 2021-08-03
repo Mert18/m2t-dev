@@ -4,71 +4,8 @@
   color: var(--text1);
   min-height: 80vh;
 }
-
 .content {
   grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  margin-top: 4rem;
-  margin-bottom: 5rem;
-  font-size: 1.5rem;
-}
-
-.hero {
-  grid-column: 1 / -1;
-  display: flex;
   justify-self: center;
-  font-weight: 700;
-}
-.hero__text {
-  font-size: 2rem;
-  padding: 2rem;
-}
-.hero__links {
-  padding: 2rem;
-  font-size: 1.2rem;
-}
-.hero__links a {
-  margin: 1rem;
-  font-weight: 300;
-}
-.hero__links a:hover {
-  color: var(--flavor2);
-}
-#role {
-  color: var(--flavor2);
-}
-
-@media only screen and (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-  }
-  .hero__prof {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.introduction {
-  grid-column: 1 / -1;
-  width: 70%;
-  justify-self: center;
-}
-.introduction article p {
-  margin: 2rem 0rem;
-}
-.introduction ul li {
-  padding: 1rem;
-  margin: 1rem;
-  background-color: var(--flavor);
-  display: inline-block;
-  border-radius: 20px;
-}
-
-.confident {
-  list-style: none;
-}
-
-.learning {
-  list-style: none;
+  align-self: center;
 }

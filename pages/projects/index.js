@@ -103,7 +103,7 @@ const Projects = () => {
     }
   };
   return (
-    <div className={classes.projects}>
+    <section className={classes.projects}>
       <div className={classes.filtersort}>
         <div
           className={classes.filter}
@@ -112,6 +112,7 @@ const Projects = () => {
         >
           <h2>Filter</h2>
         </div>
+
         <div className={classes.icons}>
           {icons.map((icon) => {
             return (
@@ -133,7 +134,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className={classes.projects}>
+      <div className={classes.items}>
         {filteredPosts.map((el) => {
           return (
             <Project
@@ -147,7 +148,7 @@ const Projects = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
