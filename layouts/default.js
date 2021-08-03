@@ -9,7 +9,6 @@ export default function Default(props) {
   const [theme, setTheme] = useState("dark");
   const [color, setColor] = useState("first");
   const router = useRouter();
-  const routes = ["/", "about", "blog", "illustrations", "projects", "tmi"];
   const [route, setRoute] = useState("");
   const submitHandler = (e) => {
     e.preventDefault();
@@ -24,7 +23,7 @@ export default function Default(props) {
               <input type="text" onChange={(e) => setRoute(e.target.value)} />
               <ul className={classes.routes}>
                 <li>/</li>
-                <li onClick={(e) => setRoute(e.target.value)}>/about</li>
+                <li>/about</li>
                 <li>/projects</li>
                 <li>/tmi</li>
                 <li>/illustrations</li>

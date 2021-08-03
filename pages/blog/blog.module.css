@@ -23,7 +23,6 @@
   min-height: 200px;
   max-width: 300px;
   color: white;
-  background: var(--flavor3);
   padding: 1rem;
   transition: all 0.3s ease;
   border: 3px solid var(--flavor4);
