@@ -8,15 +8,16 @@ const Resume = () => {
         <h2>Introduction</h2>
         <div className={classes.introductiontext}>
           <p>
-            Hello My name is Mert. I am a Frontend Developer. I started web
+            Hi, my name is Mert. I have a broad knowledge on web development but
+            I prefer calling myself a Frontend Developer. I started web
             development in May, 2020, and never ceased learning since then.
           </p>
-          <p>Currently I am working with Javascript technologies.</p>
+          <p>Currently, I am working with Javascript technologies.</p>
         </div>
       </article>
 
       <article className={classes.techs}>
-        <h2>Technologies I use</h2>
+        <h2>Technologies and Libraries</h2>
         <div className={classes.techsflex}>
           <Tech name="HTML" rank={90} />
           <Tech name="CSS" rank={70} />
@@ -27,7 +28,6 @@ const Resume = () => {
           <Tech name="PostgreSQL" rank={40} />
           <Tech name="Typescript" rank={30} />
           <Tech name="GraphQL" rank={30} />
-          <Tech name="Prisma" rank={30} />
         </div>
         <h2>Tools</h2>
         <div className={classes.tools}>
@@ -35,7 +35,6 @@ const Resume = () => {
           <p>Atlassian</p>
           <p>Figma</p>
           <p>Webpack</p>
-          <p>Adobe Illustrator</p>
         </div>
       </article>
     </section>

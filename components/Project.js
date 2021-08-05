@@ -1,8 +1,7 @@
 import React from "react";
 import classes from "./styles/project.module.css";
-import Image from "next/image";
 
-const Project = ({ title, desc, techs, link }) => {
+const Project = ({ title, desc, techs, link, linksource }) => {
   return (
     <article className={classes.project}>
       <div className={classes.title}>
@@ -11,21 +10,12 @@ const Project = ({ title, desc, techs, link }) => {
       <div className={classes.desc}>
         <p>{desc}</p>
       </div>
-      <div className={classes.tech}>
-        {techs.map((tech) => (
-          <div key={tech} className={classes.tech__item}>
-            <Image
-              src={`/images/icons/${tech}.svg`}
-              alt={tech}
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
-        ))}
-      </div>
       <footer className={classes.link}>
         <a href={link} target="_blank">
-          <p>VISIT</p>
+          <p>Live Demo</p>
+        </a>
+        <a href={linksource} target="_blank">
+          <p>Source Code</p>
         </a>
       </footer>
     </article>

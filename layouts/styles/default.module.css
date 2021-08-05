@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   min-height: 100vh;
-  background-color: var(--primary);
 }
 
 .header {
@@ -21,8 +20,45 @@
   margin: 1rem;
   padding: 1rem;
   border-top-left-radius: 10px;
+  position: relative;
 }
 
+.header .routes li::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  background-color: black;
+  z-index: 999;
+}
+
+#home::after {
+  background-color: var(--primary);
+}
+
+#resume::after {
+  background-color: var(--tertiary);
+}
+#projects::after {
+  background-color: var(--flavor);
+}
+#tmi::after {
+  background-color: var(--flavor2);
+}
+#ills::after {
+  background-color: var(--flavor3);
+}
+
+.hamburgermenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/ -1;
+  color: var(--secondary);
+  font-weight: 700;
+}
 .laymain {
   grid-column: 1 / -1;
 }
@@ -41,8 +77,8 @@
   display: flex;
   margin-left: 4rem;
 }
-.even a {
-  color: var(--flavor2);
+.footer ul li {
+  margin-right: 2rem;
 }
 
 .icon {
@@ -91,6 +127,10 @@
   width: 100%;
   text-align: center;
   padding-top: 2rem;
+}
+
+.footer {
+  color: var(--secondary);
 }
 
 @media screen and (max-width: 1100px) {

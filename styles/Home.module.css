@@ -55,7 +55,7 @@
 }
 
 #title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 .filteredpost p {
   font-size: 1rem;
@@ -65,7 +65,16 @@
   .filteredposts {
     grid-column: 2 / 24;
   }
+  .hero {
+    grid-column: 2 / 12;
+  }
 }
 
 @media (max-width: 800px) {
+  .filteredposts {
+    grid-column: 2 / 24;
+  }
+  .hero {
+    grid-column: 2 / 16;
+  }
 }

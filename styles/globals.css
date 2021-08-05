@@ -4,8 +4,9 @@
   --primary: #f4da95;
   --secondary: #fff5fd;
   --tertiary: #1d0c35;
-  --flavor: #022e57;
-  --flavor2: #ffe5e5;
+  --flavor: #cf4769;
+  --flavor2: #480cb8;
+  --flavor3: #eeeeee;
 }
 
 ::-webkit-scrollbar {
@@ -38,6 +39,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 62.5%;
   list-style: none;
+  background-color: var(--primary);
 }
 
 ul {

@@ -7,19 +7,19 @@ const Header = () => {
     <header className={classes.header}>
       <ul className={classes.routes}>
         <Link href="/">
-          <li>Home</li>
+          <li id={classes.home}>Home</li>
         </Link>
         <Link href="/resume">
-          <li>Resume</li>
+          <li id={classes.resume}>Resume</li>
         </Link>
         <Link href="/projects">
-          <li>Projects</li>
+          <li id={classes.projects}>Projects</li>
         </Link>
         <Link href="/tmi">
-          <li>Tmi</li>
+          <li id={classes.tmi}>Tmi</li>
         </Link>
         <Link href="/illustrations">
-          <li>Illustrations</li>
+          <li id={classes.ills}>Illustrations</li>
         </Link>
       </ul>
     </header>

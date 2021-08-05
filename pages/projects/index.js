@@ -3,22 +3,13 @@ import classes from "./projects.module.css";
 import Project from "../../components/Project";
 import Image from "next/image";
 
-const icons = [
-  "html",
-  "js",
-  "react",
-  "mongodb",
-  "node-js",
-  "next-js",
-  "postgresql",
-];
-
 const arrProjects = [
   {
     title: "This Website!",
     desc: "My blog. I share Illustrations I made, blog posts and other odd things.",
     techs: ["next-js", "mongodb"],
     link: "https://merd.dev/",
+    linksource: "https://github.com/Mert18/merd-dev",
     complexity: 0.5,
   },
   {
@@ -26,6 +17,7 @@ const arrProjects = [
     desc: "An E-commerce website all about stickers.",
     techs: ["react", "node-js", "mongodb"],
     link: "https://rsticker-client.vercel.app/",
+    linkSource: "https://github.com/Mert18/Rsticker-client",
     complexity: 0.9,
   },
   {
@@ -33,6 +25,7 @@ const arrProjects = [
     desc: "A way to figure out what makes you happy. You are asked to enter some values every day, then it graphs your happiness.",
     techs: ["react", "node-js", "postgresql"],
     link: "https://what-is-happiness-client.vercel.app/",
+    linkSource: "https://github.com/Mert18/what-is-happiness-client",
     complexity: 0.7,
   },
   {
@@ -40,6 +33,7 @@ const arrProjects = [
     desc: "Maths and Card games with React.",
     techs: ["react", "sass"],
     link: "https://reign-of-cards.vercel.app/",
+    linkSource: "https://github.com/Mert18/reign-of-cards",
     complexity: 0.4,
   },
   {
@@ -47,6 +41,7 @@ const arrProjects = [
     desc: "Recommends random books and movies. In Turkish language.",
     techs: ["react"],
     link: "https://tesaduf.vercel.app/",
+    linkSource: "https://github.com/Mert18/tesaduf",
     complexity: 0.2,
   },
   {
@@ -54,6 +49,7 @@ const arrProjects = [
     desc: "Takes necessary inputs from determined fields, returns some values.",
     techs: ["js"],
     link: "https://fm-tip-calculator.vercel.app/",
+    linkSource: "https://github.com/Mert18/fm-tip-calculator",
     complexity: 0.2,
   },
   {
@@ -61,6 +57,7 @@ const arrProjects = [
     desc: "Frontend Mentor challenge. Sunnyside is an agency that help brands to grow. Written with HTML semantics and clean Sass folder structure.",
     techs: ["html", "sass"],
     link: "https://fm-sunnyside-agency-landing.vercel.app",
+    linkSource: "https://github.com/Mert18/fm-sunnyside-agency-landing",
     complexity: 0.4,
   },
 ];
@@ -89,44 +86,43 @@ const Projects = () => {
   const isActive = (path) => {
     if (filter == path) {
       return {
-        transform: "scale(1.55)",
+        transform: "scale(1.25)",
       };
     } else {
-      return { color: "var(--flavor2)" };
+      return { color: "var(--secondary)" };
     }
   };
   return (
     <section className={classes.projects}>
-      <div className={classes.filtersort}>
-        <div
-          className={classes.filter}
-          onClick={(e) => setFilter(null)}
-          style={isActive()}
+      <ul className={classes.filters}>
+        <li onClick={() => setFilter("")} style={isActive("")}>
+          Filter
+        </li>
+        <li onClick={() => setFilter("html")} style={isActive("html")}>
+          HTML
+        </li>
+        <li onClick={() => setFilter("js")} style={isActive("js")}>
+          Javascript
+        </li>
+        <li onClick={() => setFilter("react")} style={isActive("react")}>
+          React.js
+        </li>
+        <li onClick={() => setFilter("node-js")} style={isActive("node-js")}>
+          Node.js
+        </li>
+        <li onClick={() => setFilter("next-js")} style={isActive("next-js")}>
+          Next.js
+        </li>
+        <li onClick={() => setFilter("mongodb")} style={isActive("mongodb")}>
+          MongoDB
+        </li>
+        <li
+          onClick={() => setFilter("postgresql")}
+          style={isActive("postgresql")}
         >
-          <h2>Filter</h2>
-        </div>
-
-        <div className={classes.icons}>
-          {icons.map((icon) => {
-            return (
-              <div
-                key={icon}
-                className={classes.icon}
-                onClick={(e) => setFilter(icon)}
-                style={isActive(icon)}
-              >
-                <Image
-                  src={`/images/icons/${icon}.svg`}
-                  alt={icon}
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
+          PostgreSQL
+        </li>
+      </ul>
       <div className={classes.items}>
         {filteredPosts.map((el) => {
           return (
@@ -134,7 +130,6 @@ const Projects = () => {
               key={el.title}
               title={el.title}
               desc={el.desc}
-              img={el.img}
               techs={el.techs}
               link={el.link}
             />

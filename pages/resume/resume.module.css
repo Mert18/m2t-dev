@@ -1,15 +1,13 @@
 .resume {
   min-height: 90vh;
-  color: var(--text1);
   font-size: 1.1rem;
   padding: 3rem;
   line-height: 27px;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 30px;
+  color: var(--secondary);
 }
-
 .introduction {
   grid-column: 1 / 8;
   align-self: center;

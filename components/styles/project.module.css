@@ -3,16 +3,15 @@
   height: auto;
   justify-self: center;
   margin: 1.5rem;
-  padding: 1rem;
-  font-size: 1rem;
-  color: var(--text1);
+  padding: 1.3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background: var(--secondary);
 }
 .title {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .desc {
   font-size: 0.9rem;
@@ -23,10 +22,14 @@
 }
 .link {
   display: flex;
-  justify-content: flex-end;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+.link a {
+  margin-right: 2rem;
 }
 .link:hover {
-  color: var(--flavor2);
+  color: var(--flavor);
 }
 .tech__item {
   position: relative;

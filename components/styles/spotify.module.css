@@ -4,7 +4,6 @@
   grid-column: 1 / -1;
   justify-self: center;
   font-size: 0.9rem;
-  color: var(--flavor2);
   margin: 2rem;
 }
 .spotify h2 {
@@ -26,15 +25,13 @@
   margin: 3rem;
   font-size: 0.9rem;
 }
-.nowplaying__text p {
-  color: var(--text2);
-}
+
 .nowplaying__text a {
   font-weight: 600;
 }
 .toptrack {
   font-size: 0.6rem;
-  border-bottom: 2px solid var(--flavor);
+  border-bottom: 2px solid var(--tertiary);
   padding: 2rem;
 }
 .toptrack__title {
@@ -43,7 +40,6 @@
 }
 .toptrack__artist {
   margin-right: 1rem;
-  color: var(--text2);
   font-size: 0.8rem;
 }
 

@@ -11,7 +11,7 @@ const Footer = () => {
             Github
           </a>
         </li>
-        <li className={classes.even}>
+        <li>
           <a
             href="https://www.linkedin.com/in/mert-u-8248ab135/"
             target="_blank"
@@ -27,7 +27,7 @@ const Footer = () => {
             Spotify
           </a>
         </li>
-        <li className={classes.even}>
+        <li>
           <a
             href="https://github.com/Mert18/merd-dev"
             target="_blank"
