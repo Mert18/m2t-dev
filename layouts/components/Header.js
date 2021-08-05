@@ -4,28 +4,25 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div>
+    <header className={classes.header}>
       <ul className={classes.routes}>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/resume">Resume</Link>
-        </li>
-        <li>
-          <Link href="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link href="/tmi">Tmi</Link>
-        </li>
-        <li>
-          <Link href="/illustrations">Illustrations</Link>
-        </li>
+        <Link href="/">
+          <li>Home</li>
+        </Link>
+        <Link href="/resume">
+          <li>Resume</li>
+        </Link>
+        <Link href="/projects">
+          <li>Projects</li>
+        </Link>
+        <Link href="/tmi">
+          <li>Tmi</li>
+        </Link>
+        <Link href="/illustrations">
+          <li>Illustrations</li>
+        </Link>
       </ul>
-    </div>
+    </header>
   );
 };
 

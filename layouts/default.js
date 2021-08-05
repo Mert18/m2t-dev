@@ -16,34 +16,32 @@ export default function Default(props) {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <ColorContext.Provider value={{ color, setColor }}>
         <div className={classes.lay} data-theme={theme} color-palette={color}>
-          <header className={classes.layhead}>
-            {width > 570 ? (
-              <Header />
-            ) : (
-              <div className={classes.hamburgermenu}>
-                <div
-                  className={classes.hamburger}
-                  onClick={() => setHambToggle(!hambToggle)}
-                >
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                {hambToggle ? (
-                  <ul className={classes.menu}>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Resume</li>
-                    <li>Projects</li>
-                    <li>Tmi</li>
-                    <li>Illustrations</li>
-                  </ul>
-                ) : (
-                  ""
-                )}
+          {width > 570 || width < 570 ? (
+            <Header />
+          ) : (
+            <header className={classes.hamburgermenu}>
+              <div
+                className={classes.hamburger}
+                onClick={() => setHambToggle(!hambToggle)}
+              >
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-            )}
-          </header>
+              {hambToggle ? (
+                <ul className={classes.menu}>
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Resume</li>
+                  <li>Projects</li>
+                  <li>Tmi</li>
+                  <li>Illustrations</li>
+                </ul>
+              ) : (
+                ""
+              )}
+            </header>
+          )}
           <main className={classes.laymain}>{props.children}</main>
           <footer className={classes.layfoot}>
             <Footer />

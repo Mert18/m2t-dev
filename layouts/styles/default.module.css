@@ -1,31 +1,26 @@
 .lay {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  background-image: var(--background-image);
-  background-size: cover;
-  background-attachment: fixed;
   min-height: 100vh;
-  border-top: 4px solid var(--flavor2);
+  background-color: var(--primary);
 }
 
-.layhead {
-  grid-column: 1 / -1;
+.header {
+  grid-column: 2 / 12;
+  margin-top: 3rem;
+}
+.header .routes {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  font-size: 1.2rem;
 }
-.routes {
-  color: var(--text1);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  padding: 0.9rem;
-  font-size: 1rem;
-
-  display: flex;
+.header .routes li:hover {
+  cursor: pointer;
 }
-
-.routes li {
-  margin: 0.9rem;
+.header .routes li {
+  background: var(--secondary);
+  margin: 1rem;
+  padding: 1rem;
+  border-top-left-radius: 10px;
 }
 
 .laymain {

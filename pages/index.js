@@ -15,20 +15,21 @@ export default function Home({ posts }) {
 
       <main className={classes.content}>
         <section className={classes.hero}>
-          <p>Hi, my name is Mert.</p>
+          <p>
+            Hi, my name is Mert. I am a{" "}
+            <span id={classes.role}>Frontend Developer</span>.
+          </p>
         </section>
 
         <section className={classes.filteredposts}>
-          <h2>Latest Blog Posts</h2>
+          <p id={classes.title}>Latest Blog Posts</p>
           <ul className={classes.posts}>
             {posts.map(({ title, description, path, date }) => {
               return (
                 <li key={path} className={classes.filteredpost}>
                   <Link href={path} key={path}>
-                    <h3>{title}</h3>
+                    <p id={classes.title}>{title}</p>
                   </Link>
-
-                  <p>{description}</p>
                   <p>{date}</p>
                 </li>
               );

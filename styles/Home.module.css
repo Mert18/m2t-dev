@@ -1,47 +1,36 @@
 .home {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  column-gap: 30px;
-  color: var(--text1);
+  color: var(--tertiary);
 }
-.header {
-  position: absolute;
-  top: 5%;
-  left: 90%;
-}
-.header button {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-  background: var(--flavor4);
-}
-.header button:hover {
-  cursor: pointer;
-  background: var(--flavor2);
-}
+
 .content {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
 }
 .hero {
-  grid-column: 2 / 22;
+  grid-column: 2 / 8;
+  min-height: 10vh;
+  padding: 1rem;
+  background: var(--secondary);
   font-size: 1rem;
   margin-top: 3rem;
   display: flex;
   justify-content: space-between;
 }
+#role {
+  font-weight: 700;
+  color: var(--flavor);
+}
 
 .filteredposts {
-  grid-column: 2 / 18;
-  margin-top: 6rem;
+  grid-column: 2 / 22;
+  margin-top: 4rem;
   width: 100%;
 }
 
 .posts {
-  padding: 2rem;
   position: relative;
   display: flex;
   overflow-x: scroll;
@@ -49,41 +38,27 @@
   width: 100%;
 }
 .filteredpost {
-  color: white;
-  min-width: 15rem;
-  min-height: 250px;
+  min-height: 300px;
+  min-width: 300px;
+  max-width: 400px;
   scroll-snap-align: start;
   padding: 1rem;
-  transition: all 0.3s ease;
-  border: 4px solid var(--flavor4);
+  margin: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border-radius: 10px;
-  margin-left: -50px;
+  background: var(--secondary);
 }
-.filteredpost h3 {
-  text-decoration: underline;
-  font-size: 1.5rem;
-}
-.filteredpost h3:hover {
-  color: var(--flavor4);
+.filteredpost:hover {
   cursor: pointer;
+}
+
+#title {
+  font-size: 1.8rem;
 }
 .filteredpost p {
   font-size: 1rem;
-}
-.filteredpost:hover {
-  margin-right: 50px;
-  transform: translateY(-2px);
-  transition: all 0.3s ease;
-}
-.filteredpost:hover:not(:first-child) {
-  margin-left: -50px;
-  transition: all 0.3s ease;
-}
-.filteredpost:first-child {
-  margin-left: 0px;
 }
 
 @media (max-width: 1100px) {

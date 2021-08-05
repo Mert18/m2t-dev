@@ -1,37 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Georama:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 :root {
-  --one: #fff5fd;
-  --two: #ff96ad;
-  --three: #005a8d;
-  --four: #022e57;
+  --primary: #f4da95;
+  --secondary: #fff5fd;
+  --tertiary: #1d0c35;
+  --flavor: #022e57;
+  --flavor2: #ffe5e5;
 }
 
-[data-theme="dark"] {
-  --text1: #fff5fd;
-  --text2: #ff96ad;
-
-  --background-image: url(../public/images/assets/bg.svg);
-
-  --back1: #100520;
-  --back2: #3a3936;
-
-  --flavor: #1d0c35;
-  --flavor2: #cf4769;
-  --flavor3: #022e57;
-  --flavor4: #ff96ad;
-}
-[data-theme="light"] {
-  --text1: #141414;
-  --text2: #cf4769;
-
-  --back1: #fff5fd;
-
-  --flavor: #ffe4ff;
-  --flavor2: #cf4769;
-  --flavor3: #022e57;
-  --flavor4: #ff96ad;
-}
 ::-webkit-scrollbar {
   width: 12px;
   height: 5px;
@@ -39,12 +15,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--four);
+  background: var(--primary);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--one);
+  background: var(--secondary);
 }
 a {
   color: inherit;
@@ -59,7 +35,7 @@ a {
 }
 
 body {
-  font-family: "Georama", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 62.5%;
   list-style: none;
 }
