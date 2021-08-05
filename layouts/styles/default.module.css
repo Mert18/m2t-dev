@@ -7,6 +7,7 @@
 .header {
   grid-column: 2 / 12;
   margin-top: 3rem;
+  font-weight: 500;
 }
 .header .routes {
   display: flex;
@@ -21,6 +22,8 @@
   padding: 1rem;
   border-top-left-radius: 10px;
   position: relative;
+  transition: all 0.5s ease;
+  z-index: 999;
 }
 
 .header .routes li::after {
@@ -30,25 +33,71 @@
   position: absolute;
   bottom: 0%;
   right: 0%;
-  background-color: black;
-  z-index: 999;
 }
-
+.header .routes li:hover {
+  color: var(--secondary);
+}
 #home::after {
   background-color: var(--primary);
+  transition: all 0.5s ease;
+}
+#home:hover:after {
+  background-color: var(--primary);
+  height: 100%;
+  width: 100%;
+  z-index: -9;
+  border-top-left-radius: 10px;
 }
 
 #resume::after {
   background-color: var(--tertiary);
+  transition: all 0.5s ease;
 }
+#resume:hover:after {
+  background-color: var(--tertiary);
+  height: 100%;
+  width: 100%;
+  z-index: -9;
+  border-top-left-radius: 10px;
+}
+#resume:hover:after ~ #resume:hover {
+  color: white;
+}
+
 #projects::after {
   background-color: var(--flavor);
+  transition: all 0.5s ease;
 }
+#projects:hover:after {
+  background-color: var(--flavor);
+  height: 100%;
+  width: 100%;
+  z-index: -9;
+  border-top-left-radius: 10px;
+}
+
 #tmi::after {
   background-color: var(--flavor2);
+  transition: all 0.5s ease;
 }
+#tmi:hover:after {
+  background-color: var(--flavor2);
+  height: 100%;
+  width: 100%;
+  z-index: -9;
+  border-top-left-radius: 10px;
+}
+
 #ills::after {
   background-color: var(--flavor3);
+  transition: all 0.5s ease;
+}
+#ills:hover:after {
+  background-color: var(--flavor3);
+  height: 100%;
+  width: 100%;
+  z-index: -9;
+  border-top-left-radius: 10px;
 }
 
 .hamburgermenu {
@@ -130,7 +179,7 @@
 }
 
 .footer {
-  color: var(--secondary);
+  color: var(--tertiary);
 }
 
 @media screen and (max-width: 1100px) {

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./styles/project.module.css";
 
-const Project = ({ title, desc, techs, link, linksource }) => {
+const Project = ({ title, desc, techs, link, linkSource }) => {
   return (
     <article className={classes.project}>
       <div className={classes.title}>
@@ -14,7 +14,7 @@ const Project = ({ title, desc, techs, link, linksource }) => {
         <a href={link} target="_blank">
           <p>Live Demo</p>
         </a>
-        <a href={linksource} target="_blank">
+        <a href={linkSource} target="_blank">
           <p>Source Code</p>
         </a>
       </footer>

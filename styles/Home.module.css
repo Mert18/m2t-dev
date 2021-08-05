@@ -18,6 +18,15 @@
   margin-top: 3rem;
   display: flex;
   justify-content: space-between;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transition: all 0.5s ease;
+}
+.hero:hover {
+  border-bottom: 5px solid var(--flavor);
+  border-right: 5px solid var(--flavor);
+  transform: translate(-2%, -2%);
+  cursor: pointer;
 }
 #role {
   font-weight: 700;
@@ -40,18 +49,23 @@
 .filteredpost {
   min-height: 300px;
   min-width: 300px;
-  max-width: 400px;
+  max-width: 450px;
   scroll-snap-align: start;
-  padding: 1rem;
   margin: 1rem;
+  padding: 0rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  border-radius: 10px;
+  justify-content: space-around;
   background: var(--secondary);
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transition: all 0.5s ease;
 }
 .filteredpost:hover {
   cursor: pointer;
+  border-bottom: 5px solid var(--tertiary);
+  border-right: 5px solid var(--tertiary);
+  transform: translate(-2%, -2%);
 }
 
 #title {
@@ -59,6 +73,11 @@
 }
 .filteredpost p {
   font-size: 1rem;
+}
+#date {
+  padding: 0.7rem;
+  background: var(--primary);
+  max-width: 8rem;
 }
 
 @media (max-width: 1100px) {

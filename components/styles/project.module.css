@@ -4,6 +4,7 @@
   justify-self: center;
   margin: 1.5rem;
   padding: 1.3rem;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -28,8 +29,9 @@
 .link a {
   margin-right: 2rem;
 }
-.link:hover {
+.link a:hover {
   color: var(--flavor);
+  cursor: pointer;
 }
 .tech__item {
   position: relative;

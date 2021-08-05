@@ -9,7 +9,7 @@ const arrProjects = [
     desc: "My blog. I share Illustrations I made, blog posts and other odd things.",
     techs: ["next-js", "mongodb"],
     link: "https://merd.dev/",
-    linksource: "https://github.com/Mert18/merd-dev",
+    linkSource: "https://github.com/Mert18/merd-dev",
     complexity: 0.5,
   },
   {
@@ -59,6 +59,14 @@ const arrProjects = [
     link: "https://fm-sunnyside-agency-landing.vercel.app",
     linkSource: "https://github.com/Mert18/fm-sunnyside-agency-landing",
     complexity: 0.4,
+  },
+  {
+    title: "Blogr Landing Page",
+    desc: "Frontend Mentor challenge. Grow your online brand with blogr. Folder structure, semantics and flexbox, grid practice.",
+    techs: ["html", "sass"],
+    link: "https://fm-blogr-landing-page-drab.vercel.app",
+    linkSource: "https://github.com/Mert18/fm-blogr-landing-page",
+    complexity: 0.5,
   },
 ];
 
@@ -132,6 +140,7 @@ const Projects = () => {
               desc={el.desc}
               techs={el.techs}
               link={el.link}
+              linkSource={el.linkSource}
             />
           );
         })}

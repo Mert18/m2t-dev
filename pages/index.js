@@ -30,7 +30,7 @@ export default function Home({ posts }) {
                   <Link href={path} key={path}>
                     <p id={classes.title}>{title}</p>
                   </Link>
-                  <p>{date}</p>
+                  <p id={classes.date}>{date}</p>
                 </li>
               );
             })}

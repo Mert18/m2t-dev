@@ -1,6 +1,8 @@
 import React from "react";
 import classes from "./resume.module.css";
 import Tech from "../../components/Tech.js";
+import Link from "next/link";
+
 const Resume = () => {
   return (
     <section className={classes.resume}>
@@ -35,6 +37,12 @@ const Resume = () => {
           <p>Atlassian</p>
           <p>Figma</p>
           <p>Webpack</p>
+        </div>
+      </article>
+      <article className={classes.projects}>
+        <h2>Highlighted Projects</h2>
+        <div id={classes.link}>
+          <Link href="/projects">Projects Section</Link>
         </div>
       </article>
     </section>
