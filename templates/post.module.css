@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   margin-top: 4rem;
-  color: var(--text1);
+  color: var(--tertiary);
 }
 
 .header {
@@ -15,7 +15,7 @@
 }
 .header__text h1 {
   font-size: 2.4rem;
-  color: var(--text2);
+  color: var(--tertiary);
 }
 .header__text p {
   font-size: 1.2rem;
