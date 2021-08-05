@@ -33,18 +33,18 @@
   --flavor4: #ff96ad;
 }
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 12px;
   height: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--flavor3);
+  background: var(--four);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--flavor2);
+  background: var(--one);
 }
 a {
   color: inherit;

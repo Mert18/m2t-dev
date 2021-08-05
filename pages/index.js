@@ -15,10 +15,7 @@ export default function Home({ posts }) {
 
       <main className={classes.content}>
         <section className={classes.hero}>
-          <p>
-            Hi, my name is Mert.
-            <br /> I am a <span>Frontend Developer</span>.
-          </p>
+          <p>Hi, my name is Mert.</p>
         </section>
 
         <section className={classes.filteredposts}>

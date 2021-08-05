@@ -57,13 +57,6 @@ const arrProjects = [
     complexity: 0.2,
   },
   {
-    title: "From The Heap",
-    desc: "From The Heap basically a song and movie sharing platform. You throw something to the heap, someone gets.",
-    techs: ["react", "node-js", "postgresql", "sass"],
-    link: "https://from-the-heap.vercel.app/",
-    complexity: 0.5,
-  },
-  {
     title: "Sunnyside Agency Landing Page",
     desc: "Frontend Mentor challenge. Sunnyside is an agency that help brands to grow. Written with HTML semantics and clean Sass folder structure.",
     techs: ["html", "sass"],

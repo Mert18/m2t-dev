@@ -7,29 +7,26 @@
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  margin-top: 12rem;
 }
 
 .ills {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  height: 90vh;
+  justify-self: center;
+  grid-template-columns: 1fr 1fr;
   row-gap: 2rem;
-  column-gap: 2rem;
-  margin: 2rem;
 }
-#kindred {
-  grid-column: 1 / 4;
-  grid-row: span 12;
+.ill {
+  position: relative;
+  width: 512px;
+  height: 512px;
+  padding: 1rem;
+}
+@media screen and (max-width: 1100px) {
+  .ills {
+    grid-template-columns: 1fr;
+  }
 }
 
-#capsule {
-  grid-column: 4 / -1;
-  grid-row: span 6;
-}
-#redsc {
-  grid-column: 4 /-1;
-  grid-row: span 6;
+@media screen and (max-width: 768px) {
 }

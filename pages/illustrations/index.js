@@ -12,25 +12,31 @@ const Illustrations = () => {
       </Head>
       <main className={classes.content}>
         <section className={classes.ills}>
-          <div id={classes.kindred}>
+          <div className={classes.ill} id={classes.kindred}>
             <Illustration
               img="/images/illustrations/kindred.svg"
               title="Kindred"
               date="5/27/2021"
+              layout={"fill"}
+              objectFit={"contain"}
             />
           </div>
-          <div id={classes.capsule}>
+          <div className={classes.ill} id={classes.capsule}>
             <Illustration
               img="/images/illustrations/capsule.svg"
               title="Capsule"
               date="6/24/2021"
+              layout={"fill"}
+              objectFit={"contain"}
             />
           </div>
-          <div id={classes.redsc}>
+          <div className={classes.ill} id={classes.redsc}>
             <Illustration
               img="/images/illustrations/red-scene.svg"
               title="Scene Red"
               date="5/27/2021"
+              layout={"fill"}
+              objectFit={"contain"}
             />
           </div>
         </section>

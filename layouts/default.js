@@ -1,34 +1,48 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Footer from "./components/Footer.js";
 import classes from "./styles/default.module.css";
-import { useRouter } from "next/router";
-
+import Header from "./components/Header.js";
 import { ThemeContext, ColorContext } from "../lib/context";
+import useWindowDimensions from "./components/useWindowDimensions.js";
 
 export default function Default(props) {
   const [theme, setTheme] = useState("dark");
   const [color, setColor] = useState("first");
-  const router = useRouter();
-  const [route, setRoute] = useState("");
-  const submitHandler = (e) => {
-    e.preventDefault();
-    router.push(route);
-  };
+  const { height, width } = useWindowDimensions();
+
+  const [hambToggle, setHambToggle] = useState(false);
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <ColorContext.Provider value={{ color, setColor }}>
         <div className={classes.lay} data-theme={theme} color-palette={color}>
           <header className={classes.layhead}>
-            <form onSubmit={submitHandler}>
-              <input type="text" onChange={(e) => setRoute(e.target.value)} />
-              <ul className={classes.routes}>
-                <li>/</li>
-                <li>/about</li>
-                <li>/projects</li>
-                <li>/tmi</li>
-                <li>/illustrations</li>
-              </ul>
-            </form>
+            {width > 570 ? (
+              <Header />
+            ) : (
+              <div className={classes.hamburgermenu}>
+                <div
+                  className={classes.hamburger}
+                  onClick={() => setHambToggle(!hambToggle)}
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                {hambToggle ? (
+                  <ul className={classes.menu}>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Resume</li>
+                    <li>Projects</li>
+                    <li>Tmi</li>
+                    <li>Illustrations</li>
+                  </ul>
+                ) : (
+                  ""
+                )}
+              </div>
+            )}
           </header>
           <main className={classes.laymain}>{props.children}</main>
           <footer className={classes.layfoot}>
