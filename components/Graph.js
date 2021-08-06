@@ -28,14 +28,32 @@ const Graph = () => {
   return (
     <>
       <LineChart width={1000} height={400} data={data}>
-        <Line type="monotone" dataKey="game" stroke="blue" dot={false} />
-        <Line type="monotone" dataKey="work" stroke="yellow" dot={false} />
-        <Line type="monotone" dataKey="leisure" stroke="#A6808C" dot={false} />
+        <Line
+          type="monotone"
+          dataKey="game"
+          stroke="blue"
+          strokeWidth={3}
+          dot={false}
+        />
+        <Line
+          type="monotone"
+          dataKey="work"
+          stroke="gray"
+          strokeWidth={3}
+          dot={false}
+        />
+        <Line
+          type="monotone"
+          dataKey="leisure"
+          stroke="black"
+          strokeWidth={3}
+          dot={false}
+        />
         <Line
           type="monotone"
           dataKey="happiness"
-          stroke="#EF5B5B"
-          strokeWidth={3}
+          stroke="white"
+          strokeWidth={4}
           dot={false}
         />
         <CartesianGrid stroke="#ccc" />
