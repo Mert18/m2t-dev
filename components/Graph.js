@@ -56,7 +56,7 @@ const Graph = () => {
           strokeWidth={3}
           dot={false}
         />
-        <CartesianGrid stroke="#ccc" />
+        <CartesianGrid stroke="white" />
         <XAxis dataKey="date" stroke="white" hide={true} />
         <YAxis />
         <Legend />
