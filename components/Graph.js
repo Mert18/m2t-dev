@@ -14,9 +14,8 @@ const Graph = () => {
   const [data, setData] = useState([]);
   const getAllData = async () => {
     await axios
-      .get(`https://merd.dev/api/about`)
+      .get(`/api/about`)
       .then((response) => {
-        console.log(response);
         const allData = response.data;
         setData(allData);
       })
@@ -29,27 +28,9 @@ const Graph = () => {
   return (
     <>
       <LineChart width={1000} height={400} data={data}>
-        <Line
-          type="monotone"
-          dataKey="game"
-          stroke="magenta"
-          strokeDasharray="7 7"
-          dot={false}
-        />
-        <Line
-          type="monotone"
-          strokeDasharray="7 7"
-          dataKey="work"
-          stroke="green"
-          dot={false}
-        />
-        <Line
-          type="monotone"
-          dataKey="leisure"
-          strokeDasharray="7 7"
-          stroke="#A6808C"
-          dot={false}
-        />
+        <Line type="monotone" dataKey="game" stroke="blue" dot={false} />
+        <Line type="monotone" dataKey="work" stroke="yellow" dot={false} />
+        <Line type="monotone" dataKey="leisure" stroke="#A6808C" dot={false} />
         <Line
           type="monotone"
           dataKey="happiness"
@@ -57,11 +38,11 @@ const Graph = () => {
           strokeWidth={3}
           dot={false}
         />
-        <CartesianGrid stroke="#12263A" />
+        <CartesianGrid stroke="#ccc" />
         <XAxis dataKey="date" stroke="white" hide={true} />
         <YAxis />
         <Legend />
-        <Tooltip stroke="var(--flavor2)" color="var(--flavor2)" />
+        <Tooltip wrapperStyle={{ backgroundColor: "#ccc", color: "black" }} />
       </LineChart>
     </>
   );

@@ -14,7 +14,6 @@ export default function Default(props) {
   const [bgColor, setBgColor] = useState("var(--primary)");
   useEffect(() => {
     setMounted(true);
-    console.log(router.asPath);
     if (router.asPath === "/") {
       setBgColor("var(--primary)");
     } else if (router.asPath === "/resume") {
