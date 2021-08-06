@@ -31,29 +31,29 @@ const Graph = () => {
         <Line
           type="monotone"
           dataKey="game"
-          stroke="blue"
-          strokeWidth={3}
+          stroke="#FFD371"
+          strokeWidth={2}
           dot={false}
         />
         <Line
           type="monotone"
           dataKey="work"
           stroke="gray"
-          strokeWidth={3}
+          strokeWidth={2}
           dot={false}
         />
         <Line
           type="monotone"
           dataKey="leisure"
-          stroke="black"
-          strokeWidth={3}
+          stroke="#FFF338"
+          strokeWidth={2}
           dot={false}
         />
         <Line
           type="monotone"
           dataKey="happiness"
-          stroke="white"
-          strokeWidth={4}
+          stroke="#2D2424"
+          strokeWidth={3}
           dot={false}
         />
         <CartesianGrid stroke="#ccc" />
