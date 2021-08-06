@@ -26,12 +26,12 @@ export default function Home({ posts }) {
           <ul className={classes.posts}>
             {posts.map(({ title, description, path, date }) => {
               return (
-                <li key={path} className={classes.filteredpost}>
-                  <Link href={path} key={path}>
+                <Link href={path} key={path}>
+                  <li key={path} className={classes.filteredpost}>
                     <p id={classes.title}>{title}</p>
-                  </Link>
-                  <p id={classes.date}>{date}</p>
-                </li>
+                    <p id={classes.date}>{date}</p>
+                  </li>
+                </Link>
               );
             })}
           </ul>

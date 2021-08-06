@@ -14,19 +14,19 @@
   padding: 2rem;
 }
 .header__text h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: var(--tertiary);
 }
 .header__text p {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 .main {
   color: var(--text1);
   grid-column: 5 / 22;
-  font-size: 1.3rem;
+  font-size: 1rem;
   justify-self: center;
-  width: 80%;
+  width: 70%;
   margin-top: 2rem;
   overflow: hidden;
 }
