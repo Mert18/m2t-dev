@@ -33,21 +33,21 @@ const Graph = () => {
           dataKey="game"
           stroke="#FFD371"
           strokeWidth={2}
-          dot={false}
+          dot={true}
         />
         <Line
           type="monotone"
           dataKey="work"
-          stroke="gray"
+          stroke="#FF686B"
           strokeWidth={2}
-          dot={false}
+          dot={true}
         />
         <Line
           type="monotone"
           dataKey="leisure"
-          stroke="#FFF338"
+          stroke="#FF7F11"
           strokeWidth={2}
-          dot={false}
+          dot={true}
         />
         <Line
           type="monotone"
