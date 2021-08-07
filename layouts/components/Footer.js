@@ -6,36 +6,25 @@ const Footer = () => {
   return (
     <section className={classes.footer}>
       <ul>
-        <li>
-          <a href="https://github.com/Mert18" target="_blank">
-            Github
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/mert-u-8248ab135/"
-            target="_blank"
-          >
-            Linkedin
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://open.spotify.com/user/vnthw0w8gp2uil1unfvq4nz8n?si=22afd1f6e564414c"
-            target="_blank"
-          >
-            Spotify
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/Mert18/merd-dev"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Source Code
-          </a>
-        </li>
+        <a href="https://github.com/Mert18" target="_blank">
+          <li id={classes.github}>Github</li>
+        </a>
+        <a href="https://www.linkedin.com/in/mert-u-8248ab135/" target="_blank">
+          <li id={classes.linkedin}>Linkedin</li>
+        </a>
+        <a
+          href="https://open.spotify.com/user/vnthw0w8gp2uil1unfvq4nz8n?si=22afd1f6e564414c"
+          target="_blank"
+        >
+          <li id={classes.spotify}>Spotify</li>
+        </a>
+        <a
+          href="https://github.com/Mert18/merd-dev"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <li id={classes.sourcecode}>Source Code</li>
+        </a>
       </ul>
     </section>
   );

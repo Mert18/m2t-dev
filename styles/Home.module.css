@@ -5,17 +5,18 @@
 }
 
 .content {
-  grid-column: 1 / -1;
+  grid-column: 2 / -1;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
 }
 .hero {
-  grid-column: 2 / 8;
+  grid-column: 1 / 8;
   min-height: 10vh;
   padding: 1rem;
   background: var(--secondary);
   font-size: 1rem;
-  margin-top: 3rem;
+  margin: 1rem 1rem;
+
   display: flex;
   justify-content: space-between;
   border-bottom: 5px solid transparent;
@@ -34,7 +35,7 @@
 }
 
 .filteredposts {
-  grid-column: 2 / 22;
+  grid-column: 1 / 22;
   margin-top: 4rem;
   width: 100%;
 }
@@ -47,12 +48,12 @@
   width: 100%;
 }
 .filteredpost {
-  min-height: 300px;
+  min-height: 40vh;
   min-width: 300px;
   max-width: 450px;
   scroll-snap-align: start;
-  margin: 1rem;
   padding: 0rem 2rem;
+  margin: 1rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

@@ -100,6 +100,71 @@
   border-top-left-radius: 10px;
 }
 
+.footer {
+  color: var(--tertiary);
+}
+
+.footer ul {
+  display: flex;
+  margin-left: 4rem;
+}
+.footer ul li {
+  margin-right: 2rem;
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 999;
+  padding: 0.5rem;
+}
+.footer ul li::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  bottom: 0%;
+  left: -5%;
+  height: 0%;
+  transition: all 0.5s ease;
+}
+.footer ul li:hover:after {
+  height: 100%;
+  transition: all 0.5s ease;
+  z-index: -9;
+}
+
+.footer ul li:hover {
+  color: var(--secondary);
+}
+
+#github::after {
+  background-color: #333;
+}
+#github:hover:after {
+  background-color: #333;
+  height: 100%;
+  z-index: -9;
+  border-top-right-radius: 10px;
+}
+
+#linkedin::after {
+  background-color: #2867b2;
+}
+#linkedin:hover:after {
+  border-top-right-radius: 10px;
+}
+
+#spotify::after {
+  background-color: #1db954;
+}
+#spotify:hover:after {
+  border-top-right-radius: 10px;
+}
+
+#sourcecode::after {
+  background-color: #333;
+}
+#sourcecode:hover:after {
+  border-top-right-radius: 10px;
+}
+
 .hamburgermenu {
   display: flex;
   justify-content: center;
@@ -110,33 +175,6 @@
 }
 .laymain {
   grid-column: 1 / -1;
-}
-
-.layfoot {
-  grid-column: 1 / -1;
-  color: var(--text1);
-  height: 15vh;
-  text-align: center;
-  font-size: 1rem;
-  align-self: center;
-  padding-top: 2rem;
-}
-
-.footer ul {
-  display: flex;
-  margin-left: 4rem;
-}
-.footer ul li {
-  margin-right: 2rem;
-}
-
-.icon {
-  position: relative;
-  width: 45px;
-  height: 45px;
-}
-.icon:hover {
-  cursor: pointer;
 }
 
 .hamburgermenu {
@@ -178,8 +216,14 @@
   padding-top: 2rem;
 }
 
-.footer {
-  color: var(--tertiary);
+.layfoot {
+  grid-column: 1 / -1;
+  color: var(--text1);
+  height: 15vh;
+  text-align: center;
+  font-size: 1rem;
+  align-self: center;
+  padding-top: 2rem;
 }
 
 @media screen and (max-width: 1100px) {

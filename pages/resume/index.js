@@ -23,9 +23,10 @@ const Resume = () => {
         <div className={classes.techsflex}>
           <Tech name="HTML" rank={90} />
           <Tech name="CSS" rank={70} />
-          <Tech name="Javascript" rank={80} />
+          <Tech name="Javascript" rank={70} />
           <Tech name="React.js" rank={70} />
-          <Tech name="Next.js" rank={70} />
+          <Tech name="Next.js" rank={60} />
+          <Tech name="Node.js" rank={50} />
           <Tech name="MongoDB" rank={50} />
           <Tech name="PostgreSQL" rank={40} />
           <Tech name="Typescript" rank={30} />
