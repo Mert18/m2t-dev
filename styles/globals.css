@@ -4,9 +4,11 @@
   --primary: #f4da95;
   --secondary: #fff5fd;
   --tertiary: #1d0c35;
+  --quarternary: #87a8a4;
   --flavor: #cf4769;
   --flavor2: #832796;
   --flavor3: #747df8;
+  --padding: 1.4rem;
 }
 
 ::-webkit-scrollbar {

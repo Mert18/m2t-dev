@@ -8,7 +8,7 @@ import grayMatter from "gray-matter";
 const Blog = ({ posts }) => {
   return (
     <section className={classes.blog}>
-      <div className={classes.filters}>Filters</div>
+      <div className={classes.all}>All Posts</div>
       <ul className={classes.posts}>
         {posts.map(({ title, description, path, date }) => {
           return (

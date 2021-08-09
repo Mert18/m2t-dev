@@ -12,6 +12,9 @@ const Header = () => {
         <Link href="/resume">
           <li id={classes.resume}>Resume</li>
         </Link>
+        <Link href="/blog">
+          <li id={classes.blog}>Blog</li>
+        </Link>
         <Link href="/projects">
           <li id={classes.projects}>Projects</li>
         </Link>

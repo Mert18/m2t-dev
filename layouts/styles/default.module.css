@@ -64,6 +64,21 @@
   color: white;
 }
 
+#blog::after {
+  background-color: var(--quarternary);
+  transition: all 0.5s ease;
+}
+#blog:hover:after {
+  background-color: var(--quarternary);
+  height: 100%;
+  width: 100%;
+  z-index: -9;
+  border-top-left-radius: 10px;
+}
+#blog:hover:after ~ #blog:hover {
+  color: white;
+}
+
 #projects::after {
   background-color: var(--flavor);
   transition: all 0.5s ease;

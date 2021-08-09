@@ -18,13 +18,13 @@
   color: var(--tertiary);
 }
 .header__text p {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 .main {
   color: var(--text1);
   grid-column: 5 / 22;
-  font-size: 1rem;
+  font-size: 1.3rem;
   justify-self: center;
   width: 70%;
   margin-top: 2rem;

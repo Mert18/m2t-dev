@@ -32,8 +32,11 @@ const Resume = () => {
           <Tech name="Typescript" rank={30} />
           <Tech name="GraphQL" rank={30} />
         </div>
+      </article>
+
+      <article className={classes.tools}>
         <h2>Tools</h2>
-        <div className={classes.tools}>
+        <div className={classes.toolsitems}>
           <p>Git</p>
           <p>Atlassian</p>
           <p>Figma</p>

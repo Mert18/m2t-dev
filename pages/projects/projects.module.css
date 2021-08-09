@@ -16,6 +16,7 @@
   margin-right: 2rem;
   color: var(--secondary);
   transition: all 0.5s ease;
+  font-weight: 700;
 }
 .filters li:last-child {
   margin-right: 0rem;

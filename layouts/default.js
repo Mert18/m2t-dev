@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "./components/Footer.js";
 import classes from "./styles/default.module.css";
 import Header from "./components/Header.js";
@@ -24,6 +24,10 @@ export default function Default(props) {
       setBgColor("var(--flavor2)");
     } else if (router.asPath === "/illustrations") {
       setBgColor("var(--flavor3)");
+    } else if (router.asPath === "/blog") {
+      setBgColor("var(--quarternary)");
+    } else {
+      setBgColor("#EEEEEE");
     }
   }, [router]);
 

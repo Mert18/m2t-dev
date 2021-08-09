@@ -70,7 +70,12 @@
 }
 
 #title {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  padding: 0.9rem;
+  max-width: max-content;
+  margin: 1rem;
 }
 .filteredpost p {
   font-size: 1rem;

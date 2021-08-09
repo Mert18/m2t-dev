@@ -11,6 +11,10 @@
 .introduction {
   grid-column: 1 / 8;
   align-self: center;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  padding: var(--padding);
+  margin: 1rem;
 }
 .introductiontext {
   padding: 1rem;
@@ -18,20 +22,33 @@
 
 .techs {
   grid-column: 1 / 8;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  padding: var(--padding);
+  margin: 1rem;
 }
 .techsflex {
-  padding: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
+
 .tools {
+  grid-column: 1 / 8;
   padding: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+  margin: 1rem;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  padding: var(--padding);
+}
+.toolsitems {
+  display: flex;
 }
 .tools p {
   margin: 0.9rem;
@@ -39,6 +56,10 @@
 
 .projects {
   grid-column: 1 / 8;
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  padding: var(--padding);
+  margin: 1rem;
 }
 #link {
   padding: 1rem;
