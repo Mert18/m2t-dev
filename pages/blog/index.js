@@ -12,14 +12,12 @@ const Blog = ({ posts }) => {
       <ul className={classes.posts}>
         {posts.map(({ title, description, path, date }) => {
           return (
-            <li key={path} className={classes.post}>
-              <Link href={path} key={path}>
-                <h3>{title}</h3>
-              </Link>
-
-              <p>{description}</p>
-              <p>{date}</p>
-            </li>
+            <Link href={path} key={path}>
+              <li key={path} className={classes.post}>
+                <p id={classes.title}>{title}</p>
+                <p id={classes.date}>{date}</p>
+              </li>
+            </Link>
           );
         })}
       </ul>

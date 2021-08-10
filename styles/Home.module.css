@@ -14,7 +14,7 @@
   min-height: 10vh;
   padding: 1rem;
   background: var(--secondary);
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 1rem 1rem;
 
   display: flex;
@@ -24,14 +24,13 @@
   transition: all 0.5s ease;
 }
 .hero:hover {
-  border-bottom: 5px solid var(--flavor);
-  border-right: 5px solid var(--flavor);
+  border-bottom: 5px solid var(--flavor4);
+  border-right: 5px solid var(--flavor4);
   transform: translate(-2%, -2%);
-  cursor: pointer;
 }
 #role {
   font-weight: 700;
-  color: var(--flavor);
+  color: var(--flavor4);
 }
 
 .filteredposts {
@@ -64,18 +63,29 @@
 }
 .filteredpost:hover {
   cursor: pointer;
-  border-bottom: 5px solid var(--tertiary);
-  border-right: 5px solid var(--tertiary);
+  border-bottom: 5px solid var(--flavor4);
+  border-right: 5px solid var(--flavor4);
   transform: translate(-2%, -2%);
 }
 
-#title {
+#titleposts {
   font-size: 1.2rem;
   background-color: var(--secondary);
   color: var(--tertiary);
   padding: 0.9rem;
   max-width: max-content;
   margin: 1rem;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  transition: all 0.5s ease;
+}
+#titleposts:hover {
+  border-bottom: 5px solid var(--flavor4);
+  border-right: 5px solid var(--flavor4);
+  transform: translate(-2%, -2%);
+}
+#title {
+  font-size: 1.2rem;
 }
 .filteredpost p {
   font-size: 1rem;
