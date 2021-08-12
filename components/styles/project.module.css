@@ -9,10 +9,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   background: var(--secondary);
+  border: 1px solid var(--tertiary);
+  transition: all 0.5s ease;
 }
-.title {
-  font-size: 1rem;
-  font-weight: 600;
+.project:hover {
+  transform: translate(0%, -2%);
+  cursor: pointer;
 }
 .desc {
   font-size: 0.9rem;

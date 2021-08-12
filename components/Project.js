@@ -5,7 +5,7 @@ const Project = ({ title, desc, techs, link, linkSource }) => {
   return (
     <article className={classes.project}>
       <div className={classes.title}>
-        <p>{title}</p>
+        <h3>{title}</h3>
       </div>
       <div className={classes.desc}>
         <p>{desc}</p>

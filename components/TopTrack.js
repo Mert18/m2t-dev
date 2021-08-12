@@ -8,10 +8,10 @@ const TopTrack = (track) => {
         <div className={classes.toptrack__title}>
           <p>{track.title}</p>
         </div>
+        <div className={classes.toptrack__artist}>
+          <p>{track.artist}</p>
+        </div>
       </a>
-      <div className={classes.toptrack__artist}>
-        <p>{track.artist}</p>
-      </div>
     </article>
   );
 };

@@ -7,7 +7,7 @@ const Resume = () => {
   return (
     <section className={classes.resume}>
       <article className={classes.introduction}>
-        <h2>Introduction</h2>
+        <h3>Introduction</h3>
         <div className={classes.introductiontext}>
           <p>
             Hi, my name is Mert. I have a broad knowledge on web development but
@@ -19,7 +19,7 @@ const Resume = () => {
       </article>
 
       <article className={classes.techs}>
-        <h2>Technologies and Libraries</h2>
+        <h3>Technologies and Libraries</h3>
         <div className={classes.techsflex}>
           <Tech name="HTML" rank={90} />
           <Tech name="CSS" rank={70} />
@@ -35,7 +35,7 @@ const Resume = () => {
       </article>
 
       <article className={classes.tools}>
-        <h2>Tools</h2>
+        <h3>Tools</h3>
         <div className={classes.toolsitems}>
           <p>Git</p>
           <p>Atlassian</p>
@@ -44,7 +44,7 @@ const Resume = () => {
         </div>
       </article>
       <article className={classes.projects}>
-        <h2>Highlighted Projects</h2>
+        <h3>Highlighted Projects</h3>
         <div id={classes.link}>
           <Link href="/projects">Projects Section</Link>
         </div>
