@@ -24,6 +24,7 @@
   position: relative;
   transition: all 0.5s ease;
   z-index: 999;
+  border: 1px solid var(--tertiary);
 }
 
 .header .routes li::after {
@@ -31,8 +32,8 @@
   width: 1rem;
   height: 1rem;
   position: absolute;
-  bottom: 0%;
-  right: 0%;
+  bottom: 4%;
+  right: 4%;
 }
 .header .routes li:hover {
   color: var(--secondary);
@@ -43,8 +44,8 @@
 }
 #home:hover:after {
   background-color: var(--primary);
-  height: 100%;
-  width: 100%;
+  height: 92%;
+  width: 92%;
   z-index: -9;
   border-top-left-radius: 10px;
 }
@@ -55,8 +56,8 @@
 }
 #resume:hover:after {
   background-color: var(--tertiary);
-  height: 100%;
-  width: 100%;
+  height: 92%;
+  width: 92%;
   z-index: -9;
   border-top-left-radius: 10px;
 }
@@ -70,8 +71,8 @@
 }
 #blog:hover:after {
   background-color: var(--quarternary);
-  height: 100%;
-  width: 100%;
+  height: 92%;
+  width: 92%;
   z-index: -9;
   border-top-left-radius: 10px;
 }
@@ -85,8 +86,8 @@
 }
 #projects:hover:after {
   background-color: var(--flavor);
-  height: 100%;
-  width: 100%;
+  height: 92%;
+  width: 92%;
   z-index: -9;
   border-top-left-radius: 10px;
 }
@@ -97,8 +98,8 @@
 }
 #tmi:hover:after {
   background-color: var(--flavor2);
-  height: 100%;
-  width: 100%;
+  height: 92%;
+  width: 92%;
   z-index: -9;
   border-top-left-radius: 10px;
 }
@@ -109,8 +110,8 @@
 }
 #ills:hover:after {
   background-color: var(--flavor3);
-  height: 100%;
-  width: 100%;
+  height: 92%;
+  width: 92%;
   z-index: -9;
   border-top-left-radius: 10px;
 }
