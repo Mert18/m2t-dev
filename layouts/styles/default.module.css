@@ -5,9 +5,13 @@
 }
 
 .header {
-  grid-column: 2 / 12;
+  grid-column: 1 / -1;
+  justify-self: center;
   margin-top: 3rem;
   font-weight: 500;
+  background: white;
+  border: 1px solid var(--tertiary);
+  border-top-left-radius: 1rem;
 }
 .header .routes {
   display: flex;
