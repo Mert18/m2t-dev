@@ -97,7 +97,7 @@ const Projects = () => {
         transform: "scale(1.25)",
       };
     } else {
-      return { color: "var(--secondary)" };
+      return { color: "var(--white)" };
     }
   };
   return (

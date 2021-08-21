@@ -2,6 +2,12 @@
 
 :root {
   --primary: #f4da95;
+  --resume: #aee3f5;
+  --blog: #614cf5;
+  --projects: #a37df5;
+  --tmi: #f5c089;
+  --ills: #258f81;
+
   --secondary: #fff5fd;
   --tertiary: #1d0c35;
   --quarternary: #87a8a4;
@@ -9,6 +15,9 @@
   --flavor2: #832796;
   --flavor3: #747df8;
   --flavor4: #f1be32;
+
+  --black: #322f36;
+  --white: #fff5fd;
   --padding: 1.4rem;
 }
 
@@ -24,7 +33,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--secondary);
+  background: var(--white);
 }
 a {
   color: inherit;

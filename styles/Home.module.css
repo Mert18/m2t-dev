@@ -1,7 +1,7 @@
 .home {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  color: var(--tertiary);
+  color: var(--black);
 }
 
 .content {
@@ -14,18 +14,18 @@
   grid-column: 2 / 10;
   margin-top: 3rem;
   min-height: 40vh;
-  background: var(--secondary);
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--tertiary);
+  border: 1px solid var(--black);
   transition: all 0.5s ease;
 }
 
 .heropart {
   grid-column: 10 / 23;
-  border: 1px solid var(--tertiary);
-  background: var(--secondary);
+  border: 1px solid var(--black);
+  background: var(--white);
   margin-top: 3rem;
   display: flex;
   justify-content: center;
@@ -62,9 +62,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: var(--secondary);
+  background: var(--white);
   transition: all 0.5s ease;
-  border: 1px solid var(--tertiary);
+  border: 1px solid var(--black);
 }
 .filteredpost:hover {
   cursor: pointer;
@@ -72,15 +72,15 @@
 }
 
 #titleposts {
-  background-color: var(--secondary);
-  color: var(--tertiary);
+  background-color: var(--white);
+  color: var(--black);
   padding: 0.9rem;
   max-width: max-content;
   margin: 1rem;
   border-bottom: 5px solid transparent;
   border-right: 5px solid transparent;
   transition: all 0.5s ease;
-  border: 1px solid var(--tertiary);
+  border: 1px solid var(--black);
 }
 #date {
   padding: 0.7rem;

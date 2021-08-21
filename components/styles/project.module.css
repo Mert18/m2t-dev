@@ -3,15 +3,20 @@
   height: auto;
   justify-self: center;
   margin: 1.5rem;
-  padding: 1.3rem;
+  padding: 1rem;
   min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background: var(--secondary);
-  border: 1px solid var(--tertiary);
+  background: var(--white);
+  border: 1px solid var(--black);
   transition: all 0.5s ease;
 }
+
+.title {
+  color: var(--projects);
+}
+
 .project:hover {
   transform: translate(0%, -2%);
   cursor: pointer;
@@ -32,7 +37,7 @@
   margin-right: 2rem;
 }
 .link a:hover {
-  color: var(--flavor);
+  color: var(--projects);
   cursor: pointer;
 }
 .tech__item {

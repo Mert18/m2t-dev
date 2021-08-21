@@ -8,10 +8,6 @@
   grid-column: 1 / -1;
   justify-self: center;
   margin-top: 3rem;
-  font-weight: 500;
-  background: white;
-  border: 1px solid var(--tertiary);
-  border-top-left-radius: 1rem;
 }
 .header .routes {
   display: flex;
@@ -21,14 +17,13 @@
   cursor: pointer;
 }
 .header .routes li {
-  background: var(--secondary);
-  margin: 1rem;
+  background: var(--white);
+  margin: 0.7rem;
   padding: 1rem;
-  border-top-left-radius: 10px;
   position: relative;
   transition: all 0.5s ease;
   z-index: 999;
-  border: 1px solid var(--tertiary);
+  border: 1px solid var(--flavor3);
 }
 
 .header .routes li::after {
@@ -40,7 +35,7 @@
   right: 4%;
 }
 .header .routes li:hover {
-  color: var(--secondary);
+  color: var(--white);
 }
 #home::after {
   background-color: var(--primary);
@@ -51,77 +46,71 @@
   height: 92%;
   width: 92%;
   z-index: -9;
-  border-top-left-radius: 10px;
 }
 
 #resume::after {
-  background-color: var(--tertiary);
+  background-color: var(--resume);
   transition: all 0.5s ease;
 }
 #resume:hover:after {
-  background-color: var(--tertiary);
+  background-color: var(--resume);
   height: 92%;
   width: 92%;
   z-index: -9;
-  border-top-left-radius: 10px;
 }
 #resume:hover:after ~ #resume:hover {
   color: white;
 }
 
 #blog::after {
-  background-color: var(--quarternary);
+  background-color: var(--blog);
   transition: all 0.5s ease;
 }
 #blog:hover:after {
-  background-color: var(--quarternary);
+  background-color: var(--blog);
   height: 92%;
   width: 92%;
   z-index: -9;
-  border-top-left-radius: 10px;
 }
 #blog:hover:after ~ #blog:hover {
   color: white;
 }
 
 #projects::after {
-  background-color: var(--flavor);
+  background-color: var(--projects);
   transition: all 0.5s ease;
 }
 #projects:hover:after {
-  background-color: var(--flavor);
+  background-color: var(--projects);
   height: 92%;
   width: 92%;
   z-index: -9;
-  border-top-left-radius: 10px;
 }
 
 #tmi::after {
-  background-color: var(--flavor2);
+  background-color: var(--tmi);
   transition: all 0.5s ease;
 }
 #tmi:hover:after {
-  background-color: var(--flavor2);
+  background-color: var(--tmi);
   height: 92%;
   width: 92%;
   z-index: -9;
-  border-top-left-radius: 10px;
 }
 
 #ills::after {
-  background-color: var(--flavor3);
+  background-color: var(--ills);
   transition: all 0.5s ease;
 }
 #ills:hover:after {
-  background-color: var(--flavor3);
+  background-color: var(--ills);
   height: 92%;
   width: 92%;
   z-index: -9;
-  border-top-left-radius: 10px;
 }
 
 .footer {
-  color: var(--tertiary);
+  color: var(--black);
 }
 
 .footer ul {
@@ -151,7 +140,7 @@
 }
 
 .footer ul li:hover {
-  color: var(--secondary);
+  color: var(--white);
 }
 
 #github::after {
@@ -161,28 +150,18 @@
   background-color: #333;
   height: 100%;
   z-index: -9;
-  border-top-right-radius: 10px;
 }
 
 #linkedin::after {
   background-color: #2867b2;
 }
-#linkedin:hover:after {
-  border-top-right-radius: 10px;
-}
 
 #spotify::after {
   background-color: #1db954;
 }
-#spotify:hover:after {
-  border-top-right-radius: 10px;
-}
 
 #sourcecode::after {
   background-color: #333;
-}
-#sourcecode:hover:after {
-  border-top-right-radius: 10px;
 }
 
 .hamburgermenu {
@@ -190,7 +169,7 @@
   justify-content: center;
   align-items: center;
   grid-column: 1/ -1;
-  color: var(--secondary);
+  color: var(--white);
   font-weight: 700;
 }
 .laymain {

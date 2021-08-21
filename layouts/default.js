@@ -17,17 +17,17 @@ export default function Default(props) {
     if (router.asPath === "/") {
       setBgColor("var(--primary)");
     } else if (router.asPath === "/resume") {
-      setBgColor("var(--tertiary)");
+      setBgColor("var(--resume)");
     } else if (router.asPath === "/projects") {
-      setBgColor("var(--flavor)");
+      setBgColor("var(--projects)");
     } else if (router.asPath === "/tmi") {
-      setBgColor("var(--flavor2)");
+      setBgColor("var(--tmi)");
     } else if (router.asPath === "/illustrations") {
-      setBgColor("var(--flavor3)");
+      setBgColor("var(--ills)");
     } else if (router.asPath === "/blog") {
-      setBgColor("var(--quarternary)");
+      setBgColor("var(--blog)");
     } else {
-      setBgColor("#EEEEEE");
+      setBgColor("var(--primary)");
     }
   }, [router]);
 

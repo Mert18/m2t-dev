@@ -5,13 +5,16 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 30px;
-  color: var(--secondary);
+  color: var(--white);
+}
+.resume > * {
+  border: 1px solid var(--black);
 }
 .introduction {
   grid-column: 1 / 8;
   align-self: center;
-  background-color: var(--secondary);
-  color: var(--tertiary);
+  background-color: var(--white);
+  color: var(--black);
   padding: var(--padding);
   margin: 1rem;
 }
@@ -21,8 +24,8 @@
 
 .techs {
   grid-column: 1 / 8;
-  background-color: var(--secondary);
-  color: var(--tertiary);
+  background-color: var(--white);
+  color: var(--black);
   padding: var(--padding);
   margin: 1rem;
 }
@@ -42,8 +45,8 @@
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 1rem;
-  background-color: var(--secondary);
-  color: var(--tertiary);
+  background-color: var(--white);
+  color: var(--black);
   padding: var(--padding);
 }
 .toolsitems {
@@ -55,8 +58,8 @@
 
 .projects {
   grid-column: 1 / 8;
-  background-color: var(--secondary);
-  color: var(--tertiary);
+  background-color: var(--white);
+  color: var(--black);
   padding: var(--padding);
   margin: 1rem;
 }

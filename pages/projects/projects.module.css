@@ -14,7 +14,7 @@
 }
 .filters li {
   margin-right: 2rem;
-  color: var(--secondary);
+  color: var(--white);
   transition: all 0.5s ease;
   font-weight: 700;
 }

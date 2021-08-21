@@ -31,11 +31,10 @@
   font-weight: 500;
 }
 .toptrack {
-  border-bottom: 2px solid var(--secondary);
-  color: var(--tertiary);
-  background: var(--secondary);
+  color: var(--black);
+  background: var(--white);
   margin: 1rem;
-  border: 1px solid var(--tertiary);
+  border: 1px solid var(--black);
   transition: all 0.5s ease;
 }
 .toptrack a {
@@ -51,7 +50,7 @@
 }
 .toptrack__artist {
   margin-right: 1rem;
-  color: var(--flavor2);
+  color: var(--tmi);
 }
 
 @media screen and (max-width: 1100px) {
