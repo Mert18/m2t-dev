@@ -1,8 +1,8 @@
 .blog {
   min-height: 90vh;
-  color: var(--white);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  color: var(--black);
 }
 
 .all {
@@ -10,7 +10,6 @@
   justify-self: center;
   margin-top: 2rem;
   font-weight: 700;
-  color: var(--white);
 }
 .posts {
   display: flex;
