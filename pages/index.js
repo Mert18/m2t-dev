@@ -25,7 +25,7 @@ export default function Home({ posts }) {
         <div className={classes.heropart}>
           <p>
             You are lucky because the man who would kill you accidentally is
-            already died.
+            already dead.
           </p>
         </div>
 
