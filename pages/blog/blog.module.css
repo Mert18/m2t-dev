@@ -10,6 +10,7 @@
   justify-self: center;
   margin-top: 2rem;
   font-weight: 700;
+  color: var(--white);
 }
 .posts {
   display: flex;

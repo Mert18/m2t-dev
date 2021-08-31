@@ -32,29 +32,29 @@ const Graph = () => {
           type="monotone"
           dataKey="game"
           stroke="#FFD371"
-          strokeWidth={2}
+          strokeWidth={3}
           dot={false}
         />
         <Line
           type="monotone"
           dataKey="work"
-          stroke="blue"
-          strokeWidth={2}
+          stroke="brown"
+          strokeWidth={3}
           dot={false}
         />
         <Line
           type="monotone"
           dataKey="leisure"
-          stroke="#FF7F11"
-          strokeWidth={2}
+          stroke="purple"
+          strokeWidth={3}
           dot={false}
         />
         <Line
           type="monotone"
           dataKey="happiness"
-          stroke="#2D2424"
+          stroke="blue"
           strokeWidth={3}
-          dot={true}
+          dot={false}
         />
         <CartesianGrid stroke="white" />
         <XAxis dataKey="date" stroke="white" hide={true} />
