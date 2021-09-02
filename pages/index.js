@@ -24,8 +24,8 @@ export default function Home({ posts }) {
 
         <div className={classes.heropart}>
           <p>
-            You are lucky because the man who would kill you accidentally is
-            already dead.
+            How you spend you days is, of course, how you spend your life.
+            (Annie Dilliard)
           </p>
         </div>
 
