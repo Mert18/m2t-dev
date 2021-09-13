@@ -1,28 +1,41 @@
 import React from "react";
 import classes from "../styles/default.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   return (
-    <header className={classes.header}>
+    <header className={classes.headerhe}>
       <ul className={classes.routes}>
         <Link href="/">
-          <li id={classes.home}>Home</li>
+          <li id={classes.home}>
+            <Image src="/icons/home.svg" width="28px" height="28px" />
+          </li>
         </Link>
         <Link href="/resume">
-          <li id={classes.resume}>Resume</li>
+          <li>
+            <Image src="/icons/resume-and-cv.svg" width="28px" height="28px" />
+          </li>
         </Link>
         <Link href="/blog">
-          <li id={classes.blog}>Blog</li>
+          <li>
+            <Image src="/icons/blog.svg" width="28px" height="28px" />
+          </li>
         </Link>
         <Link href="/projects">
-          <li id={classes.projects}>Projects</li>
+          <li>
+            <Image src="/icons/blueprint.svg" width="28px" height="28px" />
+          </li>
         </Link>
         <Link href="/tmi">
-          <li id={classes.tmi}>Tmi</li>
+          <li>
+            <Image src="/icons/info-button.svg" width="28px" height="28px" />
+          </li>
         </Link>
         <Link href="/illustrations">
-          <li id={classes.ills}>Illustrations</li>
+          <li>
+            <Image src="/icons/nodes.svg" width="28px" height="28px" />
+          </li>
         </Link>
       </ul>
     </header>

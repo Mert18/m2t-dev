@@ -3,7 +3,10 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --primary: #f4da95;
+  --primary: #1d0c35;
+  --yellow: #f4da95;
+  --green: #258f81;
+
   --resume: #aee3f5;
   --blog: #614cf5;
   --projects: #a37df5;
@@ -20,6 +23,7 @@ html {
 
   --black: #322f36;
   --white: #fff5fd;
+  --white-pinkish: #ffe5e5;
   --padding: 1.4rem;
 }
 

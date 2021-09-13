@@ -1,7 +1,6 @@
 .home {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  color: var(--black);
 }
 
 .content {
@@ -11,27 +10,17 @@
   column-gap: 20px;
 }
 .hero {
-  grid-column: 2 / 10;
+  grid-column: 3 / -1;
+  justify-self: start;
   margin-top: 3rem;
-  min-height: 40vh;
-  background: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--black);
-  transition: all 0.5s ease;
+  line-height: 38px;
 }
-
-.heropart {
-  grid-column: 10 / 23;
-  border: 1px solid var(--black);
-  background: var(--white);
-  margin-top: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 25vh;
-  padding: 1rem;
+.hero h1 {
+  color: var(--white);
+  font-size: 4rem;
+}
+.hero p {
+  color: var(--yellow);
 }
 
 #role {

@@ -1,232 +1,31 @@
 .lay {
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  min-height: 100vh;
 }
 
-.header {
-  grid-column: 1 / -1;
-  justify-self: center;
-  margin-top: 3rem;
+.headerhe {
+  grid-column: 23 /-1;
+  position: relative;
 }
-.header .routes {
-  display: flex;
-  font-size: 1.2rem;
+.routes {
+  position: fixed;
 }
-.header .routes li:hover {
+.routes li {
+  padding: 0.8rem;
+  transition: all 0.5s ease;
+  border-radius: 10%;
+}
+.routes li:hover {
+  transition: all 0.5s ease;
   cursor: pointer;
-}
-.header .routes li {
-  background: var(--white);
-  margin: 0.7rem;
-  padding: 1rem;
-  position: relative;
-  transition: all 0.5s ease;
-  z-index: 999;
-  border: 1px solid var(--flavor3);
+  background: var(--green);
 }
 
-.header .routes li::after {
-  content: "";
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  bottom: 4%;
-  right: 4%;
-}
-.header .routes li:hover {
-  color: var(--white);
-}
-#home::after {
-  background-color: var(--primary);
-  transition: all 0.5s ease;
-}
-#home:hover:after {
-  background-color: var(--primary);
-  height: 92%;
-  width: 92%;
-  z-index: -9;
-}
-
-#resume::after {
-  background-color: var(--resume);
-  transition: all 0.5s ease;
-}
-#resume:hover:after {
-  background-color: var(--resume);
-  height: 92%;
-  width: 92%;
-  z-index: -9;
-}
-#resume:hover:after ~ #resume:hover {
-  color: white;
-}
-
-#blog::after {
-  background-color: var(--blog);
-  transition: all 0.5s ease;
-}
-#blog:hover:after {
-  background-color: var(--blog);
-  height: 92%;
-  width: 92%;
-  z-index: -9;
-}
-#blog:hover:after ~ #blog:hover {
-  color: white;
-}
-
-#projects::after {
-  background-color: var(--projects);
-  transition: all 0.5s ease;
-}
-#projects:hover:after {
-  background-color: var(--projects);
-  height: 92%;
-  width: 92%;
-  z-index: -9;
-}
-
-#tmi::after {
-  background-color: var(--tmi);
-  transition: all 0.5s ease;
-}
-#tmi:hover:after {
-  background-color: var(--tmi);
-  height: 92%;
-  width: 92%;
-  z-index: -9;
-}
-
-#ills::after {
-  background-color: var(--ills);
-  transition: all 0.5s ease;
-}
-#ills:hover:after {
-  background-color: var(--ills);
-  height: 92%;
-  width: 92%;
-  z-index: -9;
-}
-
-.footer {
-  color: var(--black);
-}
-
-.footer ul {
-  display: flex;
-  margin-left: 4rem;
-}
-.footer ul li {
-  margin-right: 2rem;
-  position: relative;
-  transition: all 0.5s ease;
-  z-index: 999;
-  padding: 0.5rem;
-}
-.footer ul li::after {
-  content: "";
-  position: absolute;
-  width: 110%;
-  bottom: 0%;
-  left: -5%;
-  height: 0%;
-  transition: all 0.5s ease;
-}
-.footer ul li:hover:after {
-  height: 100%;
-  transition: all 0.5s ease;
-  z-index: -9;
-}
-
-.footer ul li:hover {
-  color: var(--white);
-}
-
-#github::after {
-  background-color: #333;
-}
-#github:hover:after {
-  background-color: #333;
-  height: 100%;
-  z-index: -9;
-}
-
-#linkedin::after {
-  background-color: #2867b2;
-}
-
-#spotify::after {
-  background-color: #1db954;
-}
-
-#sourcecode::after {
-  background-color: #333;
-}
-
-.hamburgermenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 1/ -1;
-  color: var(--white);
-  font-weight: 700;
-}
 .laymain {
-  grid-column: 1 / -1;
-}
-
-.hamburgermenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-.hamburger span {
-  background-color: white;
-  width: 3rem;
-  height: 0.5vh;
-  margin: 0.3rem;
-}
-
-.menu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 1.4rem;
-  color: var(--text1);
-  height: 90vh;
-  margin-top: 2rem;
-}
-.menu li {
-  height: 15vh;
-  width: 100%;
-  text-align: center;
-  padding-top: 2rem;
+  grid-column: 1 / 23;
 }
 
 .layfoot {
-  grid-column: 1 / -1;
-  color: var(--text1);
-  height: 15vh;
-  text-align: center;
-  font-size: 1rem;
-  align-self: center;
-  padding-top: 2rem;
-}
-
-@media screen and (max-width: 1100px) {
-}
-
-@media screen and (max-width: 768px) {
+  grid-column: 1 / 23;
+  justify-self: center;
 }

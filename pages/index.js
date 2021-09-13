@@ -4,7 +4,6 @@ import Link from "next/link";
 import path from "path";
 import fs from "fs";
 import grayMatter from "gray-matter";
-import Image from "next/image";
 
 export default function Home({ posts }) {
   return (
@@ -16,18 +15,9 @@ export default function Home({ posts }) {
 
       <main className={classes.content}>
         <section className={classes.hero}>
-          <p>
-            Hi, my name is Mert.
-            <br /> I am a <span id={classes.role}>Frontend Developer</span>.
-          </p>
+          <h1>Mert Uyğur</h1>
+          <p>Frontend Developer</p>
         </section>
-
-        <div className={classes.heropart}>
-          <p>
-            How you spend you days is, of course, how you spend your life.
-            (Annie Dilliard)
-          </p>
-        </div>
 
         <section className={classes.filteredposts}>
           <p id={classes.titleposts}>Latest Blog Posts</p>
