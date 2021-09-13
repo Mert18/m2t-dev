@@ -3,17 +3,17 @@
   grid-template-columns: repeat(24, 1fr);
 }
 
-.headerhe {
-  grid-column: 23 /-1;
-  position: relative;
-}
-.routes {
-  position: fixed;
+.headerhead {
+  grid-column: 22 /24;
 }
 .routes li {
-  padding: 0.8rem;
+  padding: 1rem;
+  margin: 0.5rem;
   transition: all 0.5s ease;
   border-radius: 10%;
+  width: 23px;
+  height: 23px;
+  border: 2px solid white;
 }
 .routes li:hover {
   transition: all 0.5s ease;
