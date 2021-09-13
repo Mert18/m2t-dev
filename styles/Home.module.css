@@ -1,99 +1,13 @@
-.home {
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-}
 
-.content {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  column-gap: 20px;
-}
-.hero {
-  grid-column: 3 / -1;
-  justify-self: start;
-  margin-top: 3rem;
-  line-height: 38px;
-}
-.hero h1 {
-  color: var(--white);
-  font-size: 4rem;
-}
-.hero p {
-  color: var(--yellow);
-}
-
-#role {
-  font-weight: 500;
-  color: var(--flavor);
-}
-
-.filteredposts {
-  grid-column: 2 / 22;
-  margin-top: 4rem;
-  width: 100%;
-}
-
-.posts {
-  position: relative;
+.container{
   display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
-.filteredpost {
-  min-height: 40vh;
-  min-width: 300px;
-  max-width: 450px;
-  scroll-snap-align: start;
-  padding: 0rem 2rem;
-  margin: 1rem 1rem;
+.main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background: var(--white);
-  transition: all 0.5s ease;
-  border: 1px solid var(--black);
-}
-.filteredpost:hover {
-  cursor: pointer;
-  transform: translate(0%, -2%);
-}
-
-#titleposts {
-  background-color: var(--white);
-  color: var(--black);
-  padding: 0.9rem;
-  max-width: max-content;
-  margin: 1rem;
-  border-bottom: 5px solid transparent;
-  border-right: 5px solid transparent;
-  transition: all 0.5s ease;
-  border: 1px solid var(--black);
-}
-#date {
-  padding: 0.7rem;
-  background: var(--primary);
-  max-width: 8rem;
-}
-
-@media (max-width: 1100px) {
-  .filteredposts {
-    grid-column: 2 / 24;
-  }
-  .hero {
-    grid-column: 2 / 24;
-  }
-  .heropart {
-    grid-column: 2 / 24;
-  }
-}
-
-@media (max-width: 800px) {
-  .filteredposts {
-    grid-column: 2 / 24;
-  }
-  .hero {
-    grid-column: 2 / 24;
-  }
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: purple;
 }
