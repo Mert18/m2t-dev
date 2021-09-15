@@ -1,9 +1,27 @@
+:root {
+  /* Your default theme */
+  --background: #1d0c35;
+  --foreground: #fff5fd;
+
+  --primary: #1d0c35;
+  --yellow: #f4da95;
+  --yellow-sec: #af7d20;
+  --white: #fff5fd;
+}
+
+[data-theme="light"] {
+  --background: #fff5fd;
+  --foreground: #1d0c35;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: var(--background);
+  color: var(--white);
 }
 
 a {

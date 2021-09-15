@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.headerpath {
+  text-shadow: 3px 3px var(--yellow-sec);
+  color: var(--yellow);
+  transition: all 0.3s;
+}
+.headerpath:hover {
+  text-shadow: -2px -2px var(--yellow);
+  color: var(--yellow-sec);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbarlist {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbarlist li {
+  margin-right: 3rem;
+  transition: all 0.3s ease;
+}
+.navbarlist li:hover {
+  transition: all 0.3s ease;
+  color: var(--yellow);
+}
