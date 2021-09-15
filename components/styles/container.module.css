@@ -1,4 +1,12 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  position: relative;
+  min-height: 120vh;
+}
+
 .header {
+  grid-column: 1 / -1;
   display: flex;
   justify-content: space-around;
 }
@@ -14,22 +22,48 @@
   transition: all 0.3s;
   cursor: pointer;
 }
+
 .navbar {
+  grid-column: 22 / 24;
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
   align-items: center;
+  position: fixed;
+  right: 0;
 }
 .navbarlist {
   list-style: none;
+}
+.navbarlist li {
+  transition: all 0.3s ease;
+  margin: 1rem;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.navbarlist li {
-  margin-right: 3rem;
-  transition: all 0.3s ease;
+.navbarlist li a {
+  text-align: center;
 }
+.navbarlist li a svg {
+  padding: 0.3rem;
+}
+.navbarlist li a svg:hover {
+  fill: var(--yellow);
+}
+
 .navbarlist li:hover {
   transition: all 0.3s ease;
   color: var(--yellow);
+}
+
+.main {
+  grid-column: 1 / 22;
+}
+
+.footer {
+  grid-column: 1 / 22;
 }

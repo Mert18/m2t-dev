@@ -22,41 +22,6 @@ const Header = () => {
           <h1 className={classes.headerpath}>{currentPath}</h1>
         </a>
       </Link>
-
-      <nav className={classes.navbar}>
-        <ul className={classes.navbarlist}>
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/resume">
-              <a>Resume</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog">
-              <a>Blog</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects">
-              <a>Projects</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/tmi">
-              <a>Tmi</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/ills">
-              <a>Ills</a>
-            </Link>
-          </li>
-        </ul>
-      </nav>
     </header>
   );
 };
