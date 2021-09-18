@@ -59,9 +59,6 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div className={classes.topimage}>
-        <p>AN ILLUSTRATION WILL BE ARRANGED FOR HERE.</p>
-      </div>
       {width > 1100 ? (
         <header className={classes.navbar}>
           <Link href={router.asPath}>
