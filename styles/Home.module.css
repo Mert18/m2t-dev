@@ -1,13 +1,10 @@
-
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.homehero {
+  line-height: 0px;
 }
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  color: purple;
+.homehero h1 {
+  font-size: 3.5rem;
+}
+.homehero p {
+  color: var(--yellow);
+  letter-spacing: -0.5px;
 }

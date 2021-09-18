@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import classes from "./styles/container.module.css";
 import Link from "next/link";
 import useWindowDimensions from "./useWindowDimensions";
+import Image from "next/image";
 
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
@@ -58,6 +59,9 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
+      <div className={classes.topimage}>
+        <p>AN ILLUSTRATION WILL BE ARRANGED FOR HERE.</p>
+      </div>
       {width > 1100 ? (
         <header className={classes.navbar}>
           <Link href={router.asPath}>
@@ -68,32 +72,44 @@ export default function Container(props) {
           <ul className={classes.navbarlist}>
             <li>
               <Link href="/">
-                <a>Home</a>
+                <a>
+                  H<span className={classes.remaining}>ome</span>
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/resume">
-                <a>Resume</a>
+                <a>
+                  R<span className={classes.remaining}>esume</span>
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-                <a>Blog</a>
+                <a>
+                  B<span className={classes.remaining}>log</span>
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/projects">
-                <a>Projects</a>
+                <a>
+                  P<span className={classes.remaining}>rojects</span>
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/tmi">
-                <a>Tmi</a>
+                <a>
+                  T<span className={classes.remaining}>mi</span>
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/ills">
-                <a>Ills</a>
+                <a>
+                  I<span className={classes.remaining}>lls</span>
+                </a>
               </Link>
             </li>
           </ul>
