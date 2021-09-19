@@ -1,0 +1,24 @@
+.projects {
+  display: grid;
+  grid-template-rows: 10vh 20vh auto;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". filters ."
+    ". projects .";
+}
+
+.filters {
+  grid-area: filters;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.filters li {
+  margin-right: 1rem;
+}
+.allprojects {
+  grid-area: projects;
+  padding: 0;
+  list-style: none;
+}

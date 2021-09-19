@@ -1,0 +1,22 @@
+.resume {
+  display: grid;
+  grid-template-rows: 10vh auto;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". text .";
+}
+
+.textpart {
+  grid-area: text;
+  display: block;
+}
+
+.techlist {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+.techlist li {
+  margin-right: 1rem;
+}
