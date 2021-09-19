@@ -1,0 +1,18 @@
+.ills {
+  display: grid;
+  grid-template-rows: 10vh auto;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". ills .";
+}
+.illslist {
+  grid-area: ills;
+  min-height: 70vh;
+  padding: 0;
+  list-style: none;
+}
+
+.illslist li {
+  margin: 2rem 0rem;
+}

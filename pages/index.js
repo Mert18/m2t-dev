@@ -8,7 +8,6 @@ import Link from "next/link";
 import BlogPost from "../components/BlogPost";
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <Container>
       <div className={classes.homepage}>
