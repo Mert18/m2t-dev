@@ -20,9 +20,7 @@ export default function Container(props) {
     if (router.asPath === "/") {
       setCurrentPath("HOME");
     } else {
-      let myroute = router.asPath
-        .substring(1, router.asPath.length)
-        .toUpperCase();
+      let myroute = router.asPath.substring(1, 11).toUpperCase();
       setCurrentPath(myroute);
     }
     if (width > 1100) {

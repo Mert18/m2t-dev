@@ -18,6 +18,7 @@
   color: var(--yellow);
   transition: all 0.3s;
   font-size: 1.6rem;
+  overflow: hidden;
 }
 .headerpath:hover {
   text-shadow: -2px -2px var(--yellow);
@@ -82,6 +83,7 @@
   position: fixed;
   top: 1rem;
   right: 1rem;
+  z-index: 9999;
 }
 .hamburgerline {
   width: 3rem;
@@ -95,6 +97,7 @@
   top: 0;
   z-index: 999;
   background: var(--primary);
+  width: 100%;
 }
 .main {
   grid-column: 1 / 22;

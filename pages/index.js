@@ -5,27 +5,26 @@ import matter from "gray-matter";
 import path from "path";
 import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 import Link from "next/link";
+import BlogPost from "../components/BlogPost";
 
 export default function Home({ posts }) {
+  console.log(posts);
   return (
     <Container>
-      <div className={classes.homehero}>
-        <h1>Mert UYĞUR</h1>
-        <p>Frontend Developer</p>
-      </div>
-      <div className={classes.blogposthome}>
-        <ul>
-          {posts.map((post) => (
-            <li key={post.filePath}>
-              <Link
-                as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
-                href={`/blog/[slug]`}
-              >
-                <a>{post.data.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <div className={classes.homepage}>
+        <div className={classes.homehero}>
+          <h1>Mert UYĞUR</h1>
+          <p>Frontend Developer</p>
+        </div>
+        <div className={classes.blogposthome}>
+          <ul>
+            {posts.map((post) => (
+              <li key={post.filePath}>
+                <BlogPost post={post} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </Container>
   );

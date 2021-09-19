@@ -1,5 +1,16 @@
+.homepage {
+  display: grid;
+  grid-template-rows: 10vh 20vh auto;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". hero ."
+    ". posts .";
+}
+
 .homehero {
   line-height: 0px;
+  grid-area: hero;
 }
 .homehero h1 {
   font-size: 3.5rem;
@@ -7,4 +18,18 @@
 .homehero p {
   color: var(--yellow);
   letter-spacing: -0.5px;
+}
+
+.blogposthome {
+  grid-area: posts;
+}
+.blogposthome ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.blogposthome ul li {
+  width: 40%;
 }

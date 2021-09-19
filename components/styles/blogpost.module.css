@@ -1,0 +1,17 @@
+.blogpostcard {
+  height: 35vh;
+  padding: 1rem 2rem;
+  border: 1px solid var(--white);
+  line-height: 7px;
+  margin: 1rem;
+}
+
+.posttitle {
+  font-size: 1.3rem;
+}
+.postdate {
+  color: var(--yellow);
+}
+.blogpostcard a {
+  display: block;
+}
