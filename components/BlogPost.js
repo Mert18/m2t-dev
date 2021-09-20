@@ -11,6 +11,7 @@ const BlogPost = ({ post }) => {
       <a>
         <div className={classes.blogpostcard}>
           <h3 className={classes.posttitle}>{post.data.title}</h3>
+          <p className={classes.postdesc}>{post.data.description}</p>
           <p className={classes.postdate}>{post.data.date}</p>
         </div>
       </a>

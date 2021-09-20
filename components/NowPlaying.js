@@ -9,21 +9,25 @@ export default function NowPlaying() {
     return null;
   }
   return (
-    <>
-      <header className={classes.nowplaying__spotifylogo}>
+    <div className={classes.nowplayingcomp}>
+      <div className={classes.nowplayingcomp__spotifylogo}>
         <Image
-          src="/images/icons/spotify.svg"
-          width="70px"
-          height="70px"
+          src="/icons/spotify-2.svg"
+          width="50px"
+          height="50px"
           alt="spotify"
         />
-      </header>
-      <main className={classes.nowplaying__text}>
-        <a href={data.songUrl} target="_blank" rel="noreferrer">
-          {data.title}
-        </a>
-        <p>{data.artist}</p>
-      </main>
-    </>
+      </div>
+      {data.isPlaying ? (
+        <div className={classes.nowplayingcomp__text}>
+          <a href={data.songUrl} target="_blank" rel="noreferrer">
+            <p className={classes.songtitle}>{data.title}</p>
+            <p className={classes.songartist}>{data.artist}</p>
+          </a>
+        </div>
+      ) : (
+        <div className={classes.notplaying}>Not Playing</div>
+      )}
+    </div>
   );
 }

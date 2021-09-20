@@ -8,6 +8,7 @@ import path from "path";
 import CustomLink from "../../components/CustomLink";
 import Layout from "../../components/Container";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
+import classes from "../../styles/blog.module.css";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -24,22 +25,22 @@ const components = {
 export default function PostPage({ source, frontMatter }) {
   return (
     <Layout>
-      <header>
-        <nav>
+      <div className={classes.bloglayout}>
+        <div className={classes.blogpostheader}>
+          <h1>{frontMatter.title}</h1>
+          {frontMatter.description && (
+            <p className={classes.blogpostdesc}>{frontMatter.description}</p>
+          )}
+        </div>
+        <div className={classes.blogcontent}>
+          <MDXRemote {...source} components={components} />
+        </div>
+        <div className={classes.goback}>
           <Link href="/">
             <a>👈 Go back home</a>
           </Link>
-        </nav>
-      </header>
-      <div className="post-header">
-        <h1>{frontMatter.title}</h1>
-        {frontMatter.description && (
-          <p className="description">{frontMatter.description}</p>
-        )}
+        </div>
       </div>
-      <main>
-        <MDXRemote {...source} components={components} />
-      </main>
     </Layout>
   );
 }

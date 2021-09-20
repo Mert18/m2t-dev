@@ -5,7 +5,7 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 
-const Ills = ({ fileNames }) => {
+export default function Ills({ fileNames }) {
   return (
     <Container>
       <div className={classes.ills}>
@@ -26,7 +26,7 @@ const Ills = ({ fileNames }) => {
       </div>
     </Container>
   );
-};
+}
 
 export function getStaticProps() {
   const directory = path.join(process.cwd(), "public", "ills");
@@ -37,5 +37,3 @@ export function getStaticProps() {
     props: { fileNames },
   };
 }
-
-export default Ills;

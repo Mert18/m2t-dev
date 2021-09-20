@@ -3,7 +3,8 @@ import Container from "../components/Container";
 import GraphCon from "../components/GraphCon";
 import Spotify from "../components/spotify";
 import classes from "../styles/tmi.module.css";
-const Tmi = () => {
+
+export default function Tmi() {
   return (
     <Container>
       <div className={classes.tmi}>
@@ -16,6 +17,4 @@ const Tmi = () => {
       </div>
     </Container>
   );
-};
-
-export default Tmi;
+}

@@ -18,6 +18,26 @@
   padding: 0;
 }
 
-.blogposthome ul li {
-  width: 40%;
+/* POST LAYOUT STYLES */
+
+.bloglayout {
+  display: grid;
+  grid-template-rows: 10vh auto auto 10vh 10vh;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". header ."
+    ". content ."
+    ". . ."
+    ". back .";
+}
+
+.blogpostheader {
+  grid-area: header;
+}
+.blogcontent {
+  grid-area: content;
+}
+.goback {
+  grid-area: back;
 }

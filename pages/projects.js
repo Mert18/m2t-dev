@@ -69,7 +69,7 @@ const arrProjects = [
   },
 ];
 
-const Projects = () => {
+export default function Projects() {
   const [filter, setFilter] = useState(null);
   const [filteredPosts, setFilteredPosts] = useState(arrProjects);
 
@@ -94,9 +94,9 @@ const Projects = () => {
     if (filter == path) {
       return {
         transform: "scale(1.25)",
+        transition: "all .5s ease",
+        color: "var(--red)",
       };
-    } else {
-      return { color: "var(--secondary)" };
     }
   };
   return (
@@ -107,7 +107,7 @@ const Projects = () => {
             Filter
           </li>
           <li onClick={() => setFilter("html")} style={isActive("html")}>
-            HTML
+            HTML & CSS
           </li>
           <li onClick={() => setFilter("js")} style={isActive("js")}>
             Javascript
@@ -148,6 +148,4 @@ const Projects = () => {
       </div>
     </Container>
   );
-};
-
-export default Projects;
+}

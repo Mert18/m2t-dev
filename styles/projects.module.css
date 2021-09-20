@@ -13,9 +13,22 @@
   padding: 0;
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .filters li {
-  margin-right: 1rem;
+  margin-right: 2rem;
+  transition: all 0.5s ease;
+}
+.filters li:last-child {
+  margin-right: 0rem;
+}
+.filters li:nth-child(even) {
+  color: var(--yellow);
+}
+.filters li:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 .allprojects {
   grid-area: projects;

@@ -15,7 +15,7 @@ const technologies = [
 
 const tools = ["Git", "Atlassian", "Figma", "Webpack", "Adobe Illustrator"];
 
-const Resume = () => {
+export default function Resume() {
   return (
     <Container>
       <div className={classes.resume}>
@@ -29,7 +29,7 @@ const Resume = () => {
             </p>
           </div>
           <div className={classes.resumetextpart}>
-            <h2>Technologies</h2>
+            <h2 className={classes.headcolored}>Technologies</h2>
             <ul className={classes.techlist}>
               {technologies.map((tech) => {
                 return <li key={tech}>{tech}</li>;
@@ -37,7 +37,7 @@ const Resume = () => {
             </ul>
           </div>
           <div className={classes.resumetextpart}>
-            <h2>Tools</h2>
+            <h2 className={classes.headcolored}>Tools</h2>
             <ul className={classes.techlist}>
               {tools.map((tools) => {
                 return <li key={tools}>{tools}</li>;
@@ -48,6 +48,4 @@ const Resume = () => {
       </div>
     </Container>
   );
-};
-
-export default Resume;
+}

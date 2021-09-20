@@ -1,0 +1,17 @@
+.tmi {
+  display: grid;
+  grid-template-rows: 10vh auto auto;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-areas:
+    ". . ."
+    ". graph ."
+    ". spotify .";
+}
+
+.graph {
+  grid-area: graph;
+}
+
+.spotify {
+  grid-area: spotify;
+}

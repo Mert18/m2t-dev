@@ -1,0 +1,62 @@
+.spotifycomp {
+  display: grid;
+  grid-template-rows: 10vh auto auto;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-areas:
+    ". title ."
+    ". toptracks ."
+    ". nowplaying .";
+}
+
+.spotifycomp h2 {
+  grid-area: title;
+}
+.spotifycomp__toptracks {
+  grid-area: toptracks;
+}
+.spotifycomp__nowplaying {
+  grid-area: nowplaying;
+}
+
+/* TOP TRACK component */
+.toptrack {
+  padding: 0.7rem;
+  line-height: 12px;
+  border-bottom: 1px solid var(--white);
+}
+.toptrack:last-child {
+  border-bottom: none;
+}
+.toptrack__title {
+  font-weight: 600;
+}
+.toptrack__artist {
+  color: var(--yellow);
+}
+
+/* NOW PLAYING component */
+
+.nowplayingcomp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nowplayingcomp__text {
+  text-align: left;
+  padding: 0.9rem;
+  line-height: 9px;
+}
+
+.nowplayingcomp__text .songtitle {
+  font-weight: 600;
+}
+.nowplayingcomp__text .songartist {
+  color: var(--yellow);
+}
+
+.notplaying {
+  font-weight: 600;
+  padding: 0.9rem;
+}

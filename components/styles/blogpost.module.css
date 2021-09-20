@@ -1,8 +1,7 @@
 .blogpostcard {
-  height: 35vh;
+  height: auto;
   padding: 1rem 2rem;
   border: 1px solid var(--white);
-  line-height: 7px;
   margin: 0rem 1rem 1rem 0rem;
 }
 
@@ -14,4 +13,16 @@
 }
 .blogpostcard a {
   display: block;
+}
+
+@media (max-width: 800px) {
+  .posttitle {
+    font-size: 1rem;
+  }
+  .postdesc {
+    font-size: 0.8rem;
+  }
+  .postdate {
+    font-size: 0.8rem;
+  }
 }

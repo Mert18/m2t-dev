@@ -9,14 +9,24 @@
 
 .textpart {
   grid-area: text;
-  display: block;
 }
 
 .techlist {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
+}
+.techlist li:nth-child(even) {
+  color: var(--yellow);
 }
 .techlist li {
   margin-right: 1rem;
+}
+
+@media (max-width: 800px) {
+  .resume {
+    font-size: 0.8rem;
+    grid-template-columns: 1fr 16fr 1fr;
+  }
 }

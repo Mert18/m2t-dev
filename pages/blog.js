@@ -5,10 +5,9 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
-import Link from "next/link";
 import BlogPost from "../components/BlogPost";
 
-const Blog = ({ posts }) => {
+export default function Blog({ posts }) {
   return (
     <Container>
       <div className={classes.blog}>
@@ -24,9 +23,7 @@ const Blog = ({ posts }) => {
       </div>
     </Container>
   );
-};
-
-export default Blog;
+}
 
 export function getStaticProps() {
   const posts = postFilePaths.map((filePath) => {

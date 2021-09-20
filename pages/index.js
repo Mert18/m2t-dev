@@ -4,7 +4,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
-import Link from "next/link";
 import BlogPost from "../components/BlogPost";
 
 export default function Home({ posts }) {
