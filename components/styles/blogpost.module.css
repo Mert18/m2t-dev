@@ -1,8 +1,16 @@
 .blogpostcard {
   height: auto;
   padding: 1rem 2rem;
-  border: 1px solid var(--white);
   margin: 0rem 1rem 1rem 0rem;
+  background: url(../../public/images/post-back.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease;
+  border: 2px solid transparent;
+}
+.blogpostcard:hover {
+  border: 2px solid rgb(122, 122, 40);
+  transition: all 0.5s ease;
 }
 
 .posttitle {

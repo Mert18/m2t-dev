@@ -3,9 +3,22 @@
   margin: 1rem;
   padding: 1rem;
   display: flex;
+  height: max-content;
+  max-width: 50%;
   flex-direction: column;
   justify-content: space-evenly;
-  border-bottom: 1px solid var(--white);
+  width: max-content;
+
+  background: url(../../public/images/project-back.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease;
+  border: 2px solid transparent;
+}
+.project:hover {
+  border: 2px solid rgb(41, 102, 41);
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 .project:last-child {
   border-bottom: none;
@@ -22,13 +35,13 @@
   display: flex;
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: var(--yellow);
+  color: var(--green);
 }
 .link a {
   margin-right: 2rem;
 }
 .link a:hover {
-  color: var(--yellow-sec);
+  color: var(--green-sec);
   cursor: pointer;
 }
 .tech__item {

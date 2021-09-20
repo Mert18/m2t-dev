@@ -24,7 +24,7 @@
   margin-right: 0rem;
 }
 .filters li:nth-child(even) {
-  color: var(--yellow);
+  color: var(--green-sec);
 }
 .filters li:hover {
   transform: scale(1.05);
@@ -34,4 +34,6 @@
   grid-area: projects;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
