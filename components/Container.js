@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import classes from "./styles/container.module.css";
 import Link from "next/link";
 import useWindowDimensions from "./useWindowDimensions";
-import Image from "next/image";
+import Prism from "prismjs";
 
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
@@ -17,6 +17,7 @@ export default function Container(props) {
 
   const { height, width } = useWindowDimensions();
   useEffect(() => {
+    Prism.highlightAll();
     if (router.asPath === "/") {
       setCurrentPath("HOME");
     } else {
