@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Container from "../components/Container";
 import classes from "../styles/projects.module.css";
 import Project from "../components/Project";
+
 const arrProjects = [
   {
     title: "This Website!",
