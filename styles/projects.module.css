@@ -1,7 +1,7 @@
 .projects {
   display: grid;
   grid-template-rows: 10vh 20vh auto;
-  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-columns: 1fr 6fr 1fr;
   grid-template-areas:
     ". . ."
     ". filters ."
@@ -13,6 +13,7 @@
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -35,5 +36,14 @@
   padding: 0;
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+  .projects {
+    grid-template-columns: 1fr 22fr 1fr;
+    font-size: 0.8rem;
+  }
 }

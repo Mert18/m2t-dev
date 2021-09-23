@@ -1,6 +1,6 @@
 .homepage {
   display: grid;
-  grid-template-rows: 10vh 20vh auto;
+  grid-template-rows: 10vh 15vh auto;
   grid-template-columns: 1fr 7fr 1fr;
   grid-template-areas:
     ". . ."
@@ -30,4 +30,14 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 0;
+}
+
+@media (max-width: 800px) {
+  .homehero {
+    line-height: auto;
+    line-height: 0px;
+  }
+  .homehero h1 {
+    font-size: 2rem;
+  }
 }

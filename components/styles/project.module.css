@@ -3,17 +3,15 @@
   margin: 1rem;
   padding: 1rem;
   display: flex;
-  height: max-content;
-  max-width: 50%;
   flex-direction: column;
   justify-content: space-evenly;
-  width: max-content;
-
   background: url(../../public/images/project-back.svg);
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 0.5s ease;
   border: 2px solid transparent;
+  height: 15rem;
+  width: 80%;
 }
 .project:hover {
   border: 2px solid rgb(41, 102, 41);
@@ -56,4 +54,16 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .project {
+    width: 98%;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .desc {
+    font-size: 0.8rem;
+  }
+  .link {
+    font-size: 0.7rem;
+  }
 }

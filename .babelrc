@@ -9,10 +9,7 @@
         "theme": "okaidia",
         "css": true
       },
-      "@babel/plugin-transform-react-jsx",
-      {
-        "runtime": "automatic"
-      }
+      "@babel/plugin-transform-react-jsx"
     ]
   ]
 }
