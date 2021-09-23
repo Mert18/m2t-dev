@@ -1,11 +1,18 @@
 {
   "presets": ["@babel/preset-react"],
   "plugins": [
-    ["prismjs", {
-      "languages": ["javascript", "css", "html", "jsx"],
-      "plugins": ["line-numbers", "show-language"],
-      "theme": "okaidia",
-      "css": true
-    }]
+    [
+      "prismjs",
+      {
+        "languages": ["javascript", "css", "html", "jsx"],
+        "plugins": ["line-numbers", "show-language"],
+        "theme": "okaidia",
+        "css": true
+      },
+      "@babel/plugin-transform-react-jsx",
+      {
+        "runtime": "automatic"
+      }
+    ]
   ]
 }
