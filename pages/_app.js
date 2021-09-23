@@ -1,9 +1,10 @@
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
-import "prismjs/themes/prism-funky.css";
+import "../blogthemes/duotone-sea.css";
 import { pageview } from "../lib/googleAnalytics";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import React from "react";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

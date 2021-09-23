@@ -20,11 +20,11 @@ const Graph = () => {
         const allData = response.data;
         setData(allData);
       })
-      .catch((error) => console.error("can not fetch items."));
+      .catch((error) => console.error(error, "can not fetch items."));
   };
   useEffect(() => {
     getAllData();
-  }, []);
+  }, [data]);
 
   return (
     <>

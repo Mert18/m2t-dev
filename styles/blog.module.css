@@ -37,7 +37,14 @@
 }
 .blogcontent {
   grid-area: content;
+  overflow: auto;
 }
 .goback {
   grid-area: back;
+}
+
+@media (max-width: 800px) {
+  .bloglayout {
+    grid-template-columns: 1fr 16fr 1fr;
+  }
 }

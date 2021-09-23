@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.14.5",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.1.2",
     "axios": "^0.21.4",
@@ -31,6 +32,7 @@
     "tls": "^0.0.1"
   },
   "devDependencies": {
+    "babel-plugin-prismjs": "^2.1.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2"
   }
