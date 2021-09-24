@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../components/Container";
 import classes from "../styles/ills.module.css";
 import fs from "fs";

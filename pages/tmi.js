@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../components/Container";
 import Spotify from "../components/spotify";
 import classes from "../styles/tmi.module.css";

@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../components/Container";
 import classes from "../styles/blog.module.css";
 import fs from "fs";
