@@ -22,6 +22,7 @@
 
 .blogposthome {
   grid-area: posts;
+  margin-bottom: 6rem;
 }
 .blogposthome ul {
   list-style: none;

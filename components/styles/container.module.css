@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   position: relative;
-  min-height: 120vh;
 }
 
 .topimage {
@@ -105,8 +104,22 @@
 
 .footer {
   grid-column: 1 / 22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
 }
 
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer ul li {
+  color: var(--yellow);
+  margin: 0.9rem;
+}
 @media (max-width: 1100px) {
   .main {
     grid-column: 1/ -1;
@@ -117,5 +130,8 @@
     width: 2rem;
     height: 2.5px;
     margin: 0.3rem;
+  }
+  .footer ul {
+    flex-direction: column;
   }
 }
