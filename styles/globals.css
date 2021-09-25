@@ -1,17 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;300;400;700&display=swap");
+
 :root {
   /* Your default theme */
-  --background: #1d0c35;
-  --foreground: #fff5fd;
+  --background: #f5f5f5;
+  --foreground: #1d0c35;
+
+  --flavor: #333333;
+
+  --flavor2: #efefef;
+  --flavor3: #ffc069;
+  --flavor4: #a45d5d;
+  --flavor4: #4a403a;
+  --flavor5: #e4a052;
 
   --primary: #1d0c35;
-  --yellow: #f4da95;
-  --yellow-sec: #af7d20;
-  --red: rgb(161, 13, 13);
-  --green: rgb(38, 102, 38);
-  --green-sec: rgb(70, 160, 70);
-  --white: #fff5fd;
 }
 
 [data-theme="light"] {
@@ -20,17 +24,17 @@
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--primary);
+  background: var(--flavor2);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--yellow);
+  background: var(--flavor);
 }
 
 /* Handle on hover */

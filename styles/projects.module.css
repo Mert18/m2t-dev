@@ -6,6 +6,7 @@
     ". . ."
     ". filters ."
     ". projects .";
+  color: var(--flavor);
 }
 
 .filters {
@@ -25,7 +26,7 @@
   margin-right: 0rem;
 }
 .filters li:nth-child(even) {
-  color: var(--green-sec);
+  color: var(--flavor5);
 }
 .filters li:hover {
   transform: scale(1.05);

@@ -2,19 +2,12 @@
   justify-self: center;
   margin: 1rem;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  background: url(../../public/images/project-back.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
   transition: all 0.5s ease;
   border: 2px solid transparent;
   height: 15rem;
   width: 80%;
 }
 .project:hover {
-  border: 2px solid rgb(41, 102, 41);
   transition: all 0.5s ease;
   cursor: pointer;
 }
@@ -33,13 +26,12 @@
   display: flex;
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: var(--green);
 }
 .link a {
   margin-right: 2rem;
 }
 .link a:hover {
-  color: var(--green-sec);
+  color: var(--flavor3);
   cursor: pointer;
 }
 .tech__item {

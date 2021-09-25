@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(24, 1fr);
   position: relative;
+  color: var(--flavor);
 }
 
 .topimage {
@@ -13,14 +14,13 @@
 }
 
 .headerpath {
-  text-shadow: 3px 3px var(--yellow-sec);
-  color: var(--yellow);
+  text-shadow: 2px 2px var(--flavor5);
   transition: all 0.3s;
   font-size: 1.6rem;
   overflow: hidden;
 }
 .headerpath:hover {
-  text-shadow: -2px -2px var(--yellow);
+  text-shadow: -2px -2px var(--flavor5);
   color: var(--yellow-sec);
   transition: all 0.3s;
   cursor: pointer;
@@ -46,16 +46,12 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  font-weight: 400;
   text-align: left;
 }
 .navbarlist li a {
-  color: var(--yellow);
   text-transform: uppercase;
   width: 100%;
   margin: 0.5rem;
-  font-size: 1.1rem;
-  text-shadow: 1px 2px var(--yellow-sec);
 }
 .navbarlist li a .remaining {
   opacity: 0;
@@ -87,15 +83,16 @@
 .hamburgerline {
   width: 3rem;
   height: 4px;
-  background: var(--yellow);
+  background: var(--flavor);
   margin: 0.5rem;
 }
 
 .mobilemenu {
   position: fixed;
+  font-family: "Arima Madurai", cursive;
   top: 0;
   z-index: 999;
-  background: var(--primary);
+  background: var(--flavor2);
   width: 100%;
 }
 .main {
@@ -108,6 +105,10 @@
   justify-content: center;
   align-items: center;
   margin-top: 6rem;
+  font-family: "Arima Madurai", cursive;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 
 .footer ul {

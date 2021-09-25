@@ -6,18 +6,20 @@
     ". . ."
     ". hero ."
     ". posts .";
+  min-height: 80vh;
 }
 
 .homehero {
   line-height: 0px;
   grid-area: hero;
+  color: var(--flavor);
 }
 .homehero h1 {
   font-size: 3.5rem;
 }
 .homehero p {
-  color: var(--yellow);
   letter-spacing: -0.5px;
+  color: var(--flavor4);
 }
 
 .blogposthome {
@@ -39,6 +41,9 @@
     line-height: 0px;
   }
   .homehero h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+  .homehero p {
+    font-size: 0.8rem;
   }
 }

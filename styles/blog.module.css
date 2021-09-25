@@ -30,6 +30,7 @@
     ". content ."
     ". . ."
     ". back .";
+  font-size: 1.2rem;
 }
 
 .blogpostheader {
@@ -46,5 +47,6 @@
 @media (max-width: 800px) {
   .bloglayout {
     grid-template-columns: 1fr 16fr 1fr;
+    font-size: 1rem;
   }
 }

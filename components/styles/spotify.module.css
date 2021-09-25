@@ -22,7 +22,7 @@
 .toptrack {
   padding: 0.7rem;
   line-height: 12px;
-  border-bottom: 1px solid var(--white);
+  border-bottom: 1px solid var(--flavor);
 }
 .toptrack:last-child {
   border-bottom: none;
@@ -31,7 +31,7 @@
   font-weight: 600;
 }
 .toptrack__artist {
-  color: var(--yellow);
+  color: var(--flavor5);
 }
 
 /* NOW PLAYING component */
@@ -50,13 +50,13 @@
 }
 
 .nowplayingcomp__text .songtitle {
-  font-weight: 600;
+  font-weight: 400;
 }
 .nowplayingcomp__text .songartist {
-  color: var(--yellow);
+  color: var(--flavor5);
 }
 
 .notplaying {
-  font-weight: 600;
+  font-weight: 400;
   padding: 0.9rem;
 }

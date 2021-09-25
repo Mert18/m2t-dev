@@ -4,19 +4,18 @@ import classes from "./styles/blogpost.module.css";
 
 const BlogPost = ({ post }) => {
   return (
-    <article>
+    <article className={classes.blogpostcard}>
       <Link
         as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
         href={`/blog/[slug]`}
       >
         <a>
-          <div className={classes.blogpostcard}>
-            <h3 className={classes.posttitle}>{post.data.title}</h3>
-            <p className={classes.postdesc}>{post.data.description}</p>
-            <p className={classes.postdate}>{post.data.date}</p>
-          </div>
+          <h3 className={classes.posttitle}>{post.data.title}</h3>
         </a>
       </Link>
+
+      <p className={classes.postdesc}>{post.data.description}</p>
+      <p className={classes.postdate}>{post.data.date}</p>
     </article>
   );
 };
