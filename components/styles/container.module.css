@@ -48,11 +48,17 @@
 .navbarlist li a {
   width: 100%;
   margin: 0.5rem;
-  transition: all 0.3s ease;
+  text-shadow: 2px 2px var(--flavor5);
+  transition: all 0.3s;
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 .navbarlist li a:hover {
-  color: var(--flavor5);
+  color: var(--flavor4);
   transition: all 0.3s ease;
+  text-shadow: -2px -2px var(--flavor5);
 }
 
 .hamburgermenu {
@@ -78,11 +84,11 @@
   text-transform: uppercase;
 }
 .main {
-  grid-column: 1 / 22;
+  grid-column: 1 / -1;
 }
 
 .footer {
-  grid-column: 1 / 22;
+  grid-column: 1 / -1;
   display: flex;
   justify-content: center;
   align-items: center;
