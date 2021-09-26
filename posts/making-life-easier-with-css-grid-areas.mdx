@@ -1,0 +1,148 @@
+---
+title: "Making Life Easier With CSS Grid Areas"
+description: "The powerful way of building layouts with CSS Grid"
+date: "26 September, 2021"
+layout: "post"
+---
+
+## Introduction
+
+Comparing to others, Grid is the newest and coolest way to build user interfaces. Grid allows you to build layouts in different ways. The most popular way is using grid-column and grid-row properties. But today, I am going to show you grid area and you will never use others anymore.
+
+The reason I find this approach better is, It is more declarative, readable and easier to change. Also this approach reduces the line of code.
+
+## Getting Started
+
+First, we prepare our grid with grid-template properties.
+
+```css
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10vh 1fr 4fr 2fr 10vh;
+  grid-template-rows: 10vh 2fr 1fr 3fr 10vh;
+}
+```
+
+Notice that I use 10vh spacing in every side. You can configure your layout as you wish and I highly encourage you to.
+
+Now I can create my sections at HTML and spread it over the grid.
+
+```HTML
+<section id="secA"></section>
+<section id="secB"></section>
+<section id="secC"></section>
+<section id="secD"></section>
+<section id="secE"></section>
+<section id="secF"></section>
+```
+
+I have created this sections inside my container div and gave them nice background colors to distinguish.
+
+It is time to create our grid areas and specify every section however I want!
+
+In the container class, add the following line at the end.
+
+```css
+.container {
+  // Other lines
+  grid-template-areas:
+    ". . . . ."
+    ". a b c ."
+    ". a d c ."
+    ". f f e ."
+    ". . . . .";
+}
+```
+
+As I said before, I wanted to give a spacing each side and in order to include it, I use dots around my areas property. You can add spaces around the design but I prefer using grid-gap in that case.
+
+Now the last thing we have to do, we need to assign every section to an area. Know that the names I use here is completely optional and have to relation with section IDs. Just try to avoid some current css properties.
+
+```css
+#secA {
+  grid-area: a;
+}
+#secB {
+  grid-area: b;
+}
+#secC {
+  grid-area: c;
+}
+#secD {
+  grid-area: d;
+}
+#secE {
+  grid-area: e;
+}
+#secF {
+  grid-area: f;
+}
+```
+
+And Viola!
+
+Without diving into numbers in grid design, this is the easier way(in my opinion) to build beautiful layouts.
+
+Now the complete CSS looks like this (I have added some subtle things)
+
+```css
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10vh 1fr 4fr 2fr 10vh;
+  grid-template-rows: 10vh 2fr 1fr 3fr 10vh;
+  grid-template-areas:
+    ". . . . ."
+    ". a b c ."
+    ". a d c ."
+    ". f f e ."
+    ". . . . .";
+}
+section {
+  font-size: 3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#secA {
+  grid-area: a;
+}
+#secB {
+  grid-area: b;
+}
+#secC {
+  grid-area: c;
+}
+#secD {
+  grid-area: d;
+}
+#secE {
+  grid-area: e;
+}
+#secF {
+  grid-area: f;
+}
+```
+
+The result looks like this.
+
+<img src="/images/posts/making-life-easier/result.png" width="100%" />
+
+If you are confused at any point, here is the source code.
+
+[https://github.com/Mert18/making-life-easier-with-css-grid-areas](https://github.com/Mert18/making-life-easier-with-css-grid-areas)
+
+## Conclusion
+
+Instead of struggling with numbers, I think this is way more easier and maintainable. Grid is the newest and most loved layout tool around. So learning it deeper may be the best decision in development. Talking about every aspect of it would take longer but someone did it. I recommend you to go and check css trick's grid post [https://css-tricks.com/snippets/css/complete-guide-grid/](https://css-tricks.com/snippets/css/complete-guide-grid/). Take care of yourself and build layouts with grid :)
