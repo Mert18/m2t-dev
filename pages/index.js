@@ -8,6 +8,10 @@ import BlogPost from "../components/BlogPost";
 import React from "react";
 
 export default function Home({ posts }) {
+  const filteredBlogPosts = posts.sort(
+    (a, b) => b.data.publishedAt - a.data.publishedAt
+  );
+
   return (
     <Container>
       <div className={classes.homepage}>
@@ -17,7 +21,7 @@ export default function Home({ posts }) {
         </div>
         <div className={classes.blogposthome}>
           <ul>
-            {posts.map((post) => (
+            {filteredBlogPosts.map((post) => (
               <li key={post.filePath}>
                 <BlogPost post={post} />
               </li>
