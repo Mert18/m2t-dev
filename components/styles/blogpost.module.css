@@ -9,7 +9,7 @@
 }
 .posttitle:hover {
   text-decoration: underline;
-  color: var(--flavor4);
+  color: var(--flavor5);
 }
 @media (max-width: 1100px) {
   .posttitle {

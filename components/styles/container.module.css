@@ -14,16 +14,52 @@
 }
 
 .headerpath {
-  text-shadow: 2px 2px var(--flavor5);
+  text-shadow: 1px 1px var(--flavor5);
   transition: all 0.3s;
   font-size: 1.6rem;
-  overflow: hidden;
+  position: relative;
+}
+.headerpath::before {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 80%;
+  text-shadow: 0px 0px var(--flavor5);
+  font-weight: 400;
+  left: 100%;
+  width: max-content;
+  z-index: 999;
+  color: var(--flavor5);
+  border: 1px solid var(--flavor5);
+  padding: 0.3rem;
+  font-size: 0.7rem;
+  transition: all 0.3s ease;
+}
+.headerpath:hover::before {
+  content: "Where you are";
+  display: flex;
+  transition: all 0.3s ease;
 }
 .headerpath:hover {
-  text-shadow: -2px -2px var(--flavor5);
-  color: var(--yellow-sec);
+  text-shadow: -1px -1px var(--flavor5);
+  color: var(--flavor5);
   transition: all 0.3s;
-  cursor: pointer;
+}
+
+.tmiabs {
+  position: relative;
+}
+.tmiabs:hover::before {
+  content: "Too Much Information";
+  position: absolute;
+  top: 100%;
+  left: 90%;
+  color: var(--flavor5);
+  font-size: 0.7rem;
+  padding: 0.7rem;
+  border: 1px solid var(--flavor5);
+  width: max-content;
+  z-index: 999;
 }
 
 .navbar {
@@ -48,7 +84,7 @@
 .navbarlist li a {
   width: 100%;
   margin: 0.5rem;
-  text-shadow: 2px 2px var(--flavor5);
+  text-shadow: 0.5px 0.5px var(--flavor5);
   transition: all 0.3s;
   font-size: 1.2rem;
   overflow: hidden;
@@ -56,9 +92,9 @@
   font-weight: 600;
 }
 .navbarlist li a:hover {
-  color: var(--flavor4);
+  color: var(--flavor5);
   transition: all 0.3s ease;
-  text-shadow: -2px -2px var(--flavor5);
+  text-shadow: -1px -1px var(--flavor5);
 }
 
 .hamburgermenu {

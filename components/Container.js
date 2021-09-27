@@ -94,7 +94,7 @@ export default function Container(props) {
                 </a>
               </Link>
             </li>
-            <li>
+            <li className={classes.tmiabs}>
               <Link href="/tmi">
                 <a>
                   T<span className={classes.remaining}>mi</span>

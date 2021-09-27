@@ -10,7 +10,12 @@ import Layout from "../../components/Container";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import classes from "../../styles/blog.module.css";
 
+const MyH1 = (props) => <h1 style={{ color: "#0047AB" }} {...props} />;
+const MyH2 = (props) => <h2 style={{ color: "#0096FF" }} {...props} />;
+
 const components = {
+  h1: MyH1,
+  h2: MyH2,
   a: CustomLink,
   Head,
 };
@@ -20,7 +25,7 @@ export default function PostPage({ source, frontMatter }) {
     <Layout>
       <div className={classes.bloglayout}>
         <div className={classes.blogpostheader}>
-          <h1>{frontMatter.title}</h1>
+          <h1 style={{ color: "#0047AB" }}>{frontMatter.title}</h1>
           {frontMatter.description && (
             <p className={classes.blogpostdesc}>{frontMatter.description}</p>
           )}
