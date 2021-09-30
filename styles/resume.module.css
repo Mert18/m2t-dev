@@ -25,6 +25,34 @@
   margin-right: 1rem;
 }
 
+.resumetextpart {
+  position: relative;
+  border: 1px solid var(--flavor5);
+  padding: 1.5rem;
+  margin: 1.5rem 0rem;
+}
+
+.resumetextpart::before {
+  content: "";
+  position: absolute;
+  top: -1.2rem;
+  left: 2%;
+  background: var(--flavor5);
+  color: var(--flavor2);
+  padding: 0.7rem;
+  width: max-content;
+  font-size: 0.9rem;
+}
+#intro::before {
+  content: "Introduction";
+}
+#techs::before {
+  content: "Technologies";
+}
+#tools::before {
+  content: "Tools";
+}
+
 @media (max-width: 800px) {
   .resume {
     font-size: 0.8rem;

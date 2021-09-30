@@ -67,6 +67,17 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-bottom: 10px solid var(--primary);
+  position: relative;
+}
+.navbar::before {
+  content: "";
+  background: var(--flavor5);
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 .navbarlist {
   list-style: none;
@@ -84,7 +95,6 @@
 .navbarlist li a {
   width: 100%;
   margin: 0.5rem;
-  text-shadow: 0.5px 0.5px var(--flavor5);
   transition: all 0.3s;
   font-size: 1.2rem;
   overflow: hidden;
@@ -94,7 +104,6 @@
 .navbarlist li a:hover {
   color: var(--flavor5);
   transition: all 0.3s ease;
-  text-shadow: -1px -1px var(--flavor5);
 }
 
 .hamburgermenu {

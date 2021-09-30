@@ -51,10 +51,9 @@
 .blogposthome ul {
   list-style: none;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 @media (max-width: 800px) {
@@ -63,7 +62,7 @@
     line-height: 0px;
   }
   .homehero h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   .homehero p {
     font-size: 0.8rem;

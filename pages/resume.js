@@ -19,24 +19,21 @@ export default function Resume() {
     <Container>
       <div className={classes.resume}>
         <div className={classes.textpart}>
-          <div className={classes.resumetextpart}>
-            <h2>Introduction</h2>
+          <div className={classes.resumetextpart} id={classes.intro}>
             <p>
               Hi, my name is Mert. I have a broad knowledge on web development
               but I prefer calling myself a Frontend Developer. I love creating
               websites.
             </p>
           </div>
-          <div className={classes.resumetextpart}>
-            <h2 className={classes.headcolored}>Technologies</h2>
+          <div className={classes.resumetextpart} id={classes.techs}>
             <ul className={classes.techlist}>
               {technologies.map((tech) => {
                 return <li key={tech}>{tech}</li>;
               })}
             </ul>
           </div>
-          <div className={classes.resumetextpart}>
-            <h2 className={classes.headcolored}>Tools</h2>
+          <div className={classes.resumetextpart} id={classes.tools}>
             <ul className={classes.techlist}>
               {tools.map((tools) => {
                 return <li key={tools}>{tools}</li>;
