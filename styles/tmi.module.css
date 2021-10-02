@@ -6,10 +6,7 @@
     ". . ."
     ". graph ."
     ". spotify .";
-}
-
-.graph {
-  grid-area: graph;
+  min-height: 90vh;
 }
 
 .spotify {

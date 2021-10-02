@@ -1,0 +1,33 @@
+.resume {
+  display: grid;
+  grid-template-columns: 8vw auto 8vw;
+  grid-template-rows: 10vh auto;
+  grid-template-areas: ". . ." ". texts .";
+}
+
+.resumecontent {
+  grid-area: texts;
+}
+
+.textpart {
+  font-weight: 200;
+}
+
+.textparttitle {
+  font-weight: 300;
+  color: var(--orange);
+}
+
+.techlist {
+  list-style: none;
+  padding: 0rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.techlist li {
+  margin-right: 2rem;
+}
+.techlist li:last-child {
+  margin-right: 0rem;
+}

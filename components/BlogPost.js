@@ -14,7 +14,6 @@ const BlogPost = ({ post }) => {
         </a>
       </Link>
 
-      <p className={classes.postdesc}>{post.data.description}</p>
       <p className={classes.postdate}>{post.data.date}</p>
     </article>
   );

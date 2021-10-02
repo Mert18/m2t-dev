@@ -1,8 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
-import Footer from "./Footer";
 import classes from "./styles/container.module.css";
 import Link from "next/link";
 import useWindowDimensions from "./useWindowDimensions";
@@ -10,13 +8,13 @@ import Prism from "prismjs";
 
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
 
   const { height, width } = useWindowDimensions();
   useEffect(() => {
+    setMounted(true);
     Prism.highlightAll();
     if (router.asPath === "/") {
       setCurrentPath("HOME");
@@ -42,7 +40,14 @@ export default function Container(props) {
     setMobileMenuVisible(!mobileMenuVisible);
   };
   return (
-    <div className={classes.container}>
+    <div
+      className={classes.container}
+      style={
+        router.asPath === "/"
+          ? { gridTemplateColumns: "1fr 1fr" }
+          : { gridTemplateColumns: "2fr 1fr" }
+      }
+    >
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -59,56 +64,47 @@ export default function Container(props) {
         )}
       </Head>
       {width > 1100 ? (
-        <header className={classes.navbar}>
-          <Link href={router.asPath}>
-            <a>
-              <h1 className={classes.headerpath}>{currentPath}</h1>
-            </a>
-          </Link>
-          <ul className={classes.navbarlist}>
-            <li>
-              <Link href="/">
-                <a>
-                  H<span className={classes.remaining}>ome</span>
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/resume">
-                <a>
-                  R<span className={classes.remaining}>esume</span>
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog">
-                <a>
-                  B<span className={classes.remaining}>log</span>
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/projects">
-                <a>
-                  P<span className={classes.remaining}>rojects</span>
-                </a>
-              </Link>
-            </li>
-            <li className={classes.tmiabs}>
-              <Link href="/tmi">
-                <a>
-                  T<span className={classes.remaining}>mi</span>
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/ills">
-                <a>
-                  I<span className={classes.remaining}>lls</span>
-                </a>
-              </Link>
-            </li>
-          </ul>
+        <header className={classes.sidebar}>
+          <div className={classes.sidebarwrapper}>
+            <div className={classes.sidebartitle}>
+              <h1>Mert UYĞUR</h1>
+              <p>Frontend Developer</p>
+            </div>
+            <nav className={classes.navbar}>
+              <ul className={classes.navbarlist}>
+                <li>
+                  <Link href="/">
+                    <a>HOME</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/me">
+                    <a>ME</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog">
+                    <a>BLOG</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/projects">
+                    <a>PROJECTS</a>
+                  </Link>
+                </li>
+                <li className={classes.tmiabs}>
+                  <Link href="/tmi">
+                    <a>TMI</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/ills">
+                    <a>ILLS</a>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </header>
       ) : (
         <div
@@ -162,7 +158,28 @@ export default function Container(props) {
       <main className={classes.main} role="main">
         {children}
       </main>
-      <Footer />
+      <footer
+        className={classes.footer}
+        style={
+          router.asPath === "/"
+            ? { gridTemplateColumns: "1fr 1fr" }
+            : { gridTemplateColumns: "2fr 1fr" }
+        }
+      >
+        {" "}
+        <ul className={classes.footerright}>
+          <li>
+            <a href="https://github.com/Mert18">Github</a>
+          </li>
+          <li>
+            <a href="https://github.com/Mert18/merd-dev">Source Code</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/mert-u-8248ab135/">Linkedin</a>
+          </li>
+        </ul>
+        <div className={classes.footerleft}></div>
+      </footer>
     </div>
   );
 }

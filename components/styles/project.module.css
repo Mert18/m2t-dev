@@ -1,61 +1,31 @@
 .project {
-  justify-self: center;
-  margin: 1rem;
-  padding: 1rem;
-  transition: all 0.5s ease;
-  border: 2px solid transparent;
-  height: 15rem;
-  width: 80%;
+  font-weight: 300;
+  margin-bottom: 3rem;
 }
-.project:hover {
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-.project:last-child {
-  border-bottom: none;
-}
+
 .title {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.desc {
-  font-size: 1rem;
+  color: var(--orange);
 }
 
 .link {
+  font-weight: 200;
   display: flex;
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  line-height: 0px;
 }
 .link a {
-  margin-right: 2rem;
+  margin-right: 1rem;
+  word-wrap: normal;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
+
+.link a:last-child {
+  margin-right: 0rem;
+}
+
 .link a:hover {
-  color: var(--flavor3);
+  color: var(--black-darker);
+  text-decoration: underline;
   cursor: pointer;
-}
-.tech__item {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  margin: 0.8rem;
-  padding: 0.7rem;
-}
-
-@media only screen and (max-width: 1100px) {
-}
-
-@media only screen and (max-width: 800px) {
-  .project {
-    width: 98%;
-  }
-  .title {
-    font-size: 1rem;
-  }
-  .desc {
-    font-size: 0.8rem;
-  }
-  .link {
-    font-size: 0.7rem;
-  }
+  transition: all 0.3s ease;
 }

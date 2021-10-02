@@ -1,70 +1,12 @@
 .homepage {
-  display: grid;
-  grid-template-rows: 10vh 15vh auto;
-  grid-template-columns: 1fr 7fr 1fr;
-  grid-template-areas:
-    ". . ."
-    ". hero ."
-    ". posts .";
   min-height: 80vh;
-}
-
-.homehero {
-  line-height: 0px;
-  grid-area: hero;
-  color: var(--flavor);
-}
-.homehero h1 {
-  font-size: 3.5rem;
-}
-.homehero p {
-  letter-spacing: -0.5px;
-  color: var(--flavor5);
-}
-
-.blogposthome {
-  grid-area: posts;
-  margin-bottom: 6rem;
-  border: 1px solid var(--flavor5);
-  position: relative;
-  margin-top: 3rem;
-}
-.blogposthome::before {
-  content: "Latest Blog Posts";
-  position: absolute;
-  top: -5%;
-  left: 3%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: var(--background);
-  border: 1px solid var(--flavor5);
-  color: var(--flavor5);
-  padding: 0.5rem;
-  transition: all 0.2s ease;
-}
-.blogposthome:hover::before {
-  color: var(--flavor2);
-  background: var(--flavor5);
-  transition: all 0.2s ease;
-}
-.blogposthome ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 2rem;
 }
 
-@media (max-width: 800px) {
-  .homehero {
-    line-height: auto;
-    line-height: 0px;
-  }
-  .homehero h1 {
-    font-size: 1.4rem;
-  }
-  .homehero p {
-    font-size: 0.8rem;
-  }
+.bloglist {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-top: 3rem;
 }

@@ -1,19 +1,20 @@
 .blog {
   display: grid;
   grid-template-rows: 10vh auto;
-  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-columns: 8vw auto 8vw;
   grid-template-areas:
     ". . ."
     ". posts .";
 }
 .blogposthome {
   grid-area: posts;
+  justify-self: center;
 }
+
 .blogposthome ul {
   list-style: none;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   padding: 0;
 }

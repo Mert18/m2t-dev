@@ -34,12 +34,9 @@
 }
 .allprojects {
   grid-area: projects;
+  justify-self: center;
   padding: 0;
   list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 @media (max-width: 800px) {

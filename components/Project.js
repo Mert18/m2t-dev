@@ -10,14 +10,14 @@ const Project = ({ title, desc, techs, link, linkSource }) => {
       <div className={classes.desc}>
         <p>{desc}</p>
       </div>
-      <footer className={classes.link}>
+      <div className={classes.link}>
         <a href={link} rel="noreferrer" target="_blank">
           <p>Live Demo</p>
         </a>
         <a href={linkSource} rel="noreferrer" target="_blank">
           <p>Source Code</p>
         </a>
-      </footer>
+      </div>
     </li>
   );
 };

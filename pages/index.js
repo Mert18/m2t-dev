@@ -15,19 +15,13 @@ export default function Home({ posts }) {
   return (
     <Container>
       <div className={classes.homepage}>
-        <div className={classes.homehero}>
-          <h1>Mert UYĞUR</h1>
-          <p>Frontend Developer</p>
-        </div>
-        <div className={classes.blogposthome}>
-          <ul>
-            {filteredBlogPosts.map((post) => (
-              <li key={post.filePath}>
-                <BlogPost post={post} />
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className={classes.bloglist}>
+          {filteredBlogPosts.map((post) => (
+            <li key={post.filePath}>
+              <BlogPost post={post} />
+            </li>
+          ))}
+        </ul>
       </div>
     </Container>
   );

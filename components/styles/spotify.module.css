@@ -7,9 +7,9 @@
     ". toptracks ."
     ". nowplaying .";
 }
-
 .spotifycomp h2 {
   grid-area: title;
+  font-weight: 400;
 }
 .spotifycomp__toptracks {
   grid-area: toptracks;
@@ -22,16 +22,16 @@
 .toptrack {
   padding: 0.7rem;
   line-height: 12px;
-  border-bottom: 1px solid var(--flavor);
 }
 .toptrack:last-child {
   border-bottom: none;
 }
 .toptrack__title {
-  font-weight: 600;
+  font-weight: 300;
 }
 .toptrack__artist {
-  color: var(--flavor5);
+  font-weight: 200;
+  color: var(--orange);
 }
 
 /* NOW PLAYING component */
@@ -41,6 +41,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 3rem 0rem;
 }
 
 .nowplayingcomp__text {
@@ -50,13 +51,14 @@
 }
 
 .nowplayingcomp__text .songtitle {
-  font-weight: 400;
+  font-weight: 300;
 }
 .nowplayingcomp__text .songartist {
-  color: var(--flavor5);
+  font-weight: 200;
+  color: var(--orange);
 }
 
 .notplaying {
-  font-weight: 400;
+  font-weight: 300;
   padding: 0.9rem;
 }
