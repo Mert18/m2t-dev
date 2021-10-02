@@ -44,8 +44,16 @@ export default function Container(props) {
       className={classes.container}
       style={
         router.asPath === "/"
-          ? { gridTemplateColumns: "1fr 1fr" }
-          : { gridTemplateColumns: "2fr 1fr" }
+          ? width > 1100
+            ? { gridTemplateColumns: "1fr 1fr" }
+            : width > 800
+            ? { gridTemplateColumns: "2fr 1fr" }
+            : { gridTemplateColumns: "1fr", gridTemplateRows: "auto auto auto" }
+          : width > 1100
+          ? { gridTemplateColumns: "2fr 1fr" }
+          : width > 800
+          ? { gridTemplateColumns: "3fr 1fr" }
+          : { gridTemplateColumns: "1fr", gridTemplateRows: "auto auto auto" }
       }
     >
       <Head>
@@ -63,7 +71,7 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      {width > 1100 ? (
+      {width > 800 ? (
         <header className={classes.sidebar}>
           <div className={classes.sidebarwrapper}>
             <div className={classes.sidebartitle}>
@@ -107,79 +115,94 @@ export default function Container(props) {
           </div>
         </header>
       ) : (
-        <div
-          onClick={mobileMenuVisibleHandler}
-          className={classes.hamburgermenu}
-        >
-          <div className={classes.hamburgerline}></div>
-          <div className={classes.hamburgerline}></div>
-          <div className={classes.hamburgerline}></div>
-        </div>
-      )}
-      {mobileMenuVisible ? (
-        <header className={classes.mobilemenu}>
-          <ul className={classes.navbarlist}>
-            <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/resume">
-                <a>Resume</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog">
-                <a>Blog</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/projects">
-                <a>Projects</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/tmi">
-                <a>Tmi</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/ills">
-                <a>Ills</a>
-              </Link>
-            </li>
-          </ul>
+        <header className={classes.mobileheader}>
+          <Link href="/">
+            <div className={classes.mobileheadertitle}>
+              <h1>Mert UYĞUR</h1>
+              <p>Frontend Developer</p>
+            </div>
+          </Link>
+          <div
+            className={classes.mobileheaderlines}
+            onClick={mobileMenuVisibleHandler}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          {mobileMenuVisible ? (
+            <ul className={classes.mobilemenu}>
+              <li>
+                <Link href="/">
+                  <a>HOME</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/me">
+                  <a>ME</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog">
+                  <a>BLOG</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects">
+                  <a>PROJECTS</a>
+                </Link>
+              </li>
+              <li className={classes.tmiabs}>
+                <Link href="/tmi">
+                  <a>TMI</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/ills">
+                  <a>ILLS</a>
+                </Link>
+              </li>
+            </ul>
+          ) : (
+            ""
+          )}
         </header>
-      ) : (
-        ""
       )}
-
       <main className={classes.main} role="main">
         {children}
       </main>
-      <footer
-        className={classes.footer}
-        style={
-          router.asPath === "/"
-            ? { gridTemplateColumns: "1fr 1fr" }
-            : { gridTemplateColumns: "2fr 1fr" }
-        }
-      >
-        {" "}
-        <ul className={classes.footerright}>
-          <li>
-            <a href="https://github.com/Mert18">Github</a>
-          </li>
-          <li>
-            <a href="https://github.com/Mert18/merd-dev">Source Code</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/mert-u-8248ab135/">Linkedin</a>
-          </li>
-        </ul>
-        <div className={classes.footerleft}></div>
-      </footer>
+      {width > 800 ? (
+        <footer
+          className={classes.footer}
+          style={
+            router.asPath === "/"
+              ? width > 1100
+                ? { gridTemplateColumns: "1fr 1fr" }
+                : { gridTemplateColumns: "2fr 1fr" }
+              : width > 1100
+              ? { gridTemplateColumns: "2fr 1fr" }
+              : { gridTemplateColumns: "3fr 1fr" }
+          }
+        >
+          {" "}
+          <ul className={classes.footerright}>
+            <li>
+              <a href="https://github.com/Mert18">Github</a>
+            </li>
+            <li>
+              <a href="https://github.com/Mert18/merd-dev">Source Code</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mert-u-8248ab135/">
+                Linkedin
+              </a>
+            </li>
+          </ul>
+          <div className={classes.footerleft}></div>
+        </footer>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

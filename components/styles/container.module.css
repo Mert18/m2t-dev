@@ -31,6 +31,8 @@
 .navbarlist {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  line-height: 25px;
   padding: 0rem;
   font-weight: 300;
   margin-top: 3rem;
@@ -74,17 +76,105 @@
 
 .footerright {
   list-style: none;
-  padding: 2rem;
   grid-area: right;
   margin: 0rem;
   grid-column: 2 / -1;
   background: var(--black-darker);
   color: var(--white);
   display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 .footerright li {
   margin-right: 1rem;
 }
 .footerright li a:hover {
   text-decoration: underline;
+}
+
+.mobileheader {
+  grid-area: mobileheader;
+  width: 100%;
+  background: var(--white);
+  min-height: 9vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobileheadertitle {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 2rem;
+  line-height: 0px;
+}
+.mobileheadertitle h1 {
+  color: var(--black-darker);
+  font-size: 1.6rem;
+}
+.mobileheadertitle p {
+  color: var(--orange);
+  font-size: 0.7rem;
+}
+
+.mobileheaderlines {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.mobileheaderlines div {
+  height: 0.25rem;
+  width: 2.8rem;
+  background: var(--black-darker);
+  margin: 0.2rem;
+  margin-right: 2rem;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.mobilemenu {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  background: var(--black-darker);
+  list-style: none;
+  color: var(--white);
+  width: 100%;
+  height: max-content;
+  padding: 0rem;
+  z-index: 999;
+}
+.mobilemenu li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 10vh;
+}
+.mobilemenu li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .sidebartitle {
+    line-height: initial;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    grid-template-areas:
+      "mobileheader"
+      "main"
+      "footer";
+  }
 }
