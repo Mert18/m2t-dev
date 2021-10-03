@@ -6,6 +6,7 @@ import path from "path";
 import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 import BlogPost from "../components/BlogPost";
 import React from "react";
+import { GetStaticProps } from "next";
 
 export default function Home({ posts }) {
   const filteredBlogPosts = posts.sort(
@@ -27,7 +28,7 @@ export default function Home({ posts }) {
   );
 }
 
-export function getStaticProps() {
+export const getStaticProps: GetStaticProps = () => {
   const posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
     const { content, data } = matter(source);
@@ -40,4 +41,4 @@ export function getStaticProps() {
   });
 
   return { props: { posts } };
-}
+};
