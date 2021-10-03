@@ -1,5 +1,6 @@
 import Container from "../components/Container";
 import classes from "../styles/blog.module.css";
+import { GetStaticProps } from "next";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
@@ -27,7 +28,7 @@ export default function Blog({ posts }) {
   );
 }
 
-export function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
     const { content, data } = matter(source);
@@ -40,4 +41,4 @@ export function getStaticProps() {
   });
 
   return { props: { posts } };
-}
+};

@@ -12,7 +12,8 @@
     "@babel/preset-react": "^7.14.5",
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^11.1.2",
-    "axios": "^0.21.4",
+    "@types/google.analytics": "^0.0.42",
+    "@types/mongoose": "^5.11.97",
     "date-fns": "^2.24.0",
     "express-async-handler": "^1.1.4",
     "fs": "^0.0.1-security",
@@ -32,8 +33,10 @@
     "tls": "^0.0.1"
   },
   "devDependencies": {
+    "@types/react": "^17.0.27",
     "babel-plugin-prismjs": "^2.1.0",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "typescript": "^4.4.3"
   }
 }

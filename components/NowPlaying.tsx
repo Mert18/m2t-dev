@@ -3,8 +3,10 @@ import fetcher from "../lib/fetcher";
 import classes from "./styles/spotify.module.css";
 import Image from "next/image";
 
+import { NowPlayingSong } from "../lib/types";
+
 export default function NowPlaying() {
-  const { data } = useSWR("/api/now-playing", fetcher);
+  const { data } = useSWR<NowPlayingSong>("/api/now-playing", fetcher);
   if (!data) {
     return null;
   }

@@ -96,7 +96,7 @@ export default function Projects() {
       return {
         transform: "scale(1.25)",
         transition: "all .5s ease",
-        color: "rgb(125, 199, 125)",
+        color: "#ff7f50",
       };
     }
   };

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./styles/spotify.module.css";
 
-const TopTrack = (track) => {
+const Track = (track) => {
   return (
     <article className={classes.toptrack}>
       <a href={track.songUrl} target="_blank" rel="noreferrer">
@@ -16,4 +16,4 @@ const TopTrack = (track) => {
   );
 };
 
-export default TopTrack;
+export default Track;

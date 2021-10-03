@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import Container from "../components/Container";
 import classes from "../styles/ills.module.css";
 import fs from "fs";
@@ -27,7 +28,7 @@ export default function Ills({ fileNames }) {
   );
 }
 
-export function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const directory = path.join(process.cwd(), "public", "ills");
 
   const fileNames = fs.readdirSync(directory);
@@ -35,4 +36,4 @@ export function getStaticProps() {
   return {
     props: { fileNames },
   };
-}
+};

@@ -1,3 +1,5 @@
+import { AppProps } from "next/app";
+
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import "../blogthemes/duotone-sea.css";
@@ -6,7 +8,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import React from "react";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
