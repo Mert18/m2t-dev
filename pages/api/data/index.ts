@@ -8,7 +8,7 @@ export default async function getData(
 ) {
   try {
     await connectToDatabase();
-    const data = await Data.find();
+    const data = await Data.find({});
     res.json(data);
   } catch (err) {
     console.log(err);
