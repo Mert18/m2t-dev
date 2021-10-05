@@ -9,7 +9,28 @@
   --black: #333333;
   --white: #efefef;
   --orange: #db7b45;
+  --orange-burnt: #cc5500;
   --black-darker: #1d0c35;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-burnt);
 }
 
 html,

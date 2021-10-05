@@ -24,7 +24,7 @@
 .bloglayout {
   display: grid;
   grid-template-rows: 10vh auto auto 10vh 10vh;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
   grid-template-areas:
     ". . ."
     ". header ."

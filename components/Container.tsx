@@ -31,7 +31,7 @@ export default function Container(props) {
 
   const meta = {
     title: "Mert Uygur Personal Website",
-    description: `Software Developer, Front-end Developer`,
+    description: `Software Developer, Full Stack Developer`,
     type: "website",
     ...customMeta,
   };
@@ -76,7 +76,7 @@ export default function Container(props) {
           <div className={classes.sidebarwrapper}>
             <div className={classes.sidebartitle}>
               <h1>Mert UYĞUR</h1>
-              <p>Frontend Developer</p>
+              <p>Full Stack Developer</p>
             </div>
             <nav className={classes.navbar}>
               <ul className={classes.navbarlist}>
