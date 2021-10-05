@@ -1,0 +1,150 @@
+---
+title: "Using External APIs in NextJS"
+description: "Fetching data from external APIs with GetStaticPaths and GetStaticProps."
+date: "October 6, 2021"
+publishedAt: "1633467887"
+layout: "post"
+---
+
+
+# Using External APIs in Next.js
+
+<a href="https://github.com/Mert18/hachiko-dictionary" target="_blank" rel="noreferrer">This is a lot of text for my eyes, show me the code.</a>
+
+
+## The story of mine probably you are not interested.
+
+Two weeks ago, I was working on a project in NextJS. Everything was fine until I needed to fetch some data from an external source. Since NextJS allows you to create your api easily and want you to use it, they don't focus on external APIs much in their documentation. At least, I was having hard time to find useful sources about using external sources with NextJS.
+
+As a -relatively- beginner, It frustrated me and I gave up.But two days ago, I decided to make a Dictionary for learning purposes and had to use external data. This time I did not give up and managed to get it done.
+
+In this blog post. I will explain you **getStaticPaths**, **getStaticProps** and using external sources on this functions. So you will not be having hard time using them 🙂.
+
+## Tell me about those specific functions for NextJS.
+
+"**getStaticPaths** is used for specifying dynamic routes to pre-render pages based on data." says NextJS. Imagine building a dictionary app and you have to specify routes for every word in order to create custom routes for every one of them. I mean, every word have a specific page dedicated to it. [https://www.merriam-webster.com/dictionary/contend](https://www.merriam-webster.com/dictionary/contend) is a good example. In the URL, word comes after the /dictionary route and merriam webster have thousands of words and therefore routes. So, In this function, we will fetch all words and give it to create each route for each word.
+
+In **getStaticProps**, we fetch the data for our statically generated page. We have this function because if we would do fetching in the app itself, it would make the fetching in every render which could be bad for performance. Data is served in build time here. So you must be careful when to use it or getServerSideProps.
+
+We will not use **getServerSideProps** here but to give a brief, If your app content is supposed to change frequently, using getStaticProps would be bad because as we said, in getStaticProps, we fetch data in the build time. getServerSideProps runs in every request that is made by user. So the data is fetched in every request. It is not an efficient way but the only way to handle frequently changing data.
+
+I liked getStaticProps but fetching data at build time is bad any getServerSideProps isn't what I neede... . OK. OK. I got you. If you want to fetch your data in every x seconds, there is revalidate option waiting for you. If you return 
+
+```javascript
+// ...
+	return{
+props,
+revalidate: 100
+}
+// ...
+```
+
+Then your data will be updated in every 100 seconds. I hope everything is clear, lets jump into the project.
+
+All this mess, my friends, is for generating sites statically even if they have dynamic content. At the end, NextJS gives us a simple html page for every route. Amazing, isn't it?
+
+## Project
+
+[Hachiko Dictionary](https://github.com/Mert18/hachiko-dictionary) is a dictionary that I built for myself, learning new words. In this case, it will be a perfect example. My folder structure seems;
+
+```
+project
+│   README.md
+│   ...
+│
+└───lib
+│   │   dictionary.ts
+│
+└───pages
+    │
+		└─── words
+			    │ [slug].tsx
+```
+
+**dictionary.ts and [slug].tsx** are the only files that matters here. They are simply this;
+
+```javascript
+import getConfig from "next/config";
+import { IWord } from "../types";
+
+const { publicRuntimeConfig } = getConfig();
+
+const allwords_uri = publicRuntimeConfig.GET_WORDS;
+const singleword_uri = publicRuntimeConfig.GET_WORD;
+const createword_uri = publicRuntimeConfig.CREATE_WORD;
+
+export const getAllWords = async () => {
+  const response = await fetch(`${allwords_uri}`);
+  const words = response.json();
+  return words;
+};
+
+export const getSingleWord = async (word: IWord) => {
+  const response = await fetch(`${singleword_uri}/${word}`);
+  const myword = response.json();
+  return myword;
+};
+
+export const createWord = async (word: any) => {
+  await fetch(createword_uri, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(word),
+  });
+}
+```
+
+There are simply three functions that is ready to be used in other files.
+
+They are straight forward, async functions that make requests to endpoints (bkz. /server directory). Rather than writing this logic in /pages directory, keeping them here make everything tidier.
+
+And of course, we import these functions into **[slug].tsx.**
+
+```javascript
+import getConfig from "next/config";
+import { GetStaticPaths, GetStaticProps } from "next";
+import classes from "../../styles/wordpage.module.css";
+import { getSingleWord } from "../../lib/dictionary";
+
+const Word = (word: any) => {
+  return (
+    <Container>
+     {/* JSX Code */}
+    </Container>
+  );
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const words = await getAllWords();
+  const paths = words.map((word: any) => ({
+    params: { slug: word.title.toString() },
+  }));
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }: any) => {
+  const word = await getSingleWord(params.slug);
+  return {
+    props: {
+      word,
+    },
+  };
+};
+
+export default Word;
+```
+
+We import the functions from lib and use them in the NextJS specific functions.
+
+That's it. These functions are the core of the NextJS and you will encounter them many times in NextJS. I hope you have a clearer image of the NextJS now.
+
+**Repo** : [https://github.com/Mert18/hachiko-dictionary](https://github.com/Mert18/hachiko-dictionary)
+
+## Further Reading
+
+[https://nextjs.org/docs/basic-features/data-fetching](https://nextjs.org/docs/basic-features/data-fetching)
