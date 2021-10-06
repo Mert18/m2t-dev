@@ -113,6 +113,19 @@ export default function Container(props) {
               </ul>
             </nav>
           </div>
+          <ul className={classes.sociallinks}>
+            <li>
+              <a href="https://github.com/Mert18">Github</a>
+            </li>
+            <li>
+              <a href="https://github.com/Mert18/merd-dev">Source Code</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mert-u-8248ab135/">
+                Linkedin
+              </a>
+            </li>
+          </ul>
         </header>
       ) : (
         <header className={classes.mobileheader}>
@@ -185,19 +198,7 @@ export default function Container(props) {
           }
         >
           {" "}
-          <ul className={classes.footerright}>
-            <li>
-              <a href="https://github.com/Mert18">Github</a>
-            </li>
-            <li>
-              <a href="https://github.com/Mert18/merd-dev">Source Code</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/mert-u-8248ab135/">
-                Linkedin
-              </a>
-            </li>
-          </ul>
+          <div className={classes.footerright}></div>
           <div className={classes.footerleft}></div>
         </footer>
       ) : (

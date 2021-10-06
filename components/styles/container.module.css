@@ -52,11 +52,29 @@
   transition: all 0.3s ease;
 }
 
+.sociallinks {
+  list-style: none;
+  display: flex;
+  position: fixed;
+  top: 90%;
+  padding: 0;
+}
+.sociallinks a {
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+.sociallinks a:hover {
+  transition: all 0.3s ease;
+  color: var(--orange);
+}
+
 .main {
   grid-area: main;
   background: var(--white);
   color: var(--black);
   min-height: 90vh;
+  direction: ltr;
+  overflow-y: auto;
 }
 
 .footer {
