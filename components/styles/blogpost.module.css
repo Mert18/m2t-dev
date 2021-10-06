@@ -16,3 +16,10 @@
   font-size: 0.9rem;
   color: var(--orange);
 }
+
+@media (max-width: 800px) {
+  .blogpostcard {
+    line-height: 20px;
+    padding: 0.3rem;
+  }
+}

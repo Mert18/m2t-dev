@@ -31,3 +31,9 @@
 .techlist li:last-child {
   margin-right: 0rem;
 }
+
+@media (max-width: 800px) {
+  .techlist li {
+    padding: 0.5rem 0rem;
+  }
+}

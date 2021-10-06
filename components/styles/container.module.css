@@ -113,7 +113,7 @@
 .mobileheader {
   grid-area: mobileheader;
   width: 100%;
-  background: var(--white);
+  background: var(--black-darker);
   min-height: 9vh;
   display: flex;
   justify-content: space-between;
@@ -125,11 +125,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-left: 2rem;
   line-height: 0px;
+  padding: 2rem;
 }
 .mobileheadertitle h1 {
-  color: var(--black-darker);
+  color: var(--white);
   font-size: 1.6rem;
 }
 .mobileheadertitle p {
@@ -142,13 +142,13 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+  padding: 2rem;
 }
 .mobileheaderlines div {
   height: 0.25rem;
   width: 2.8rem;
-  background: var(--black-darker);
+  background: var(--white);
   margin: 0.2rem;
-  margin-right: 2rem;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
