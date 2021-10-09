@@ -7,7 +7,10 @@ import Image from "next/image";
 
 export default function Ills({ fileNames }) {
   return (
-    <Container>
+    <Container
+      title="Illustrations - Mert Uygur"
+      description="Illustrations by Mert Uygur. Drawn with Adobe Illustrator."
+    >
       <div className={classes.ills}>
         <ul className={classes.illslist}>
           {fileNames.map((file) => {

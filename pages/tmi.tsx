@@ -6,7 +6,10 @@ import classes from "../styles/tmi.module.css";
 
 export default function Tmi() {
   return (
-    <Container>
+    <Container
+      title="Too Much Information - Mert Uygur"
+      description="Too much information about mert uygur. Spotify top songs."
+    >
       <div className={classes.tmi}>
         <div>
           <Graph />

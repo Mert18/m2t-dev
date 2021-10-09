@@ -12,7 +12,10 @@ export default function Blog({ posts }) {
     (a, b) => b.data.publishedAt - a.data.publishedAt
   );
   return (
-    <Container>
+    <Container
+      title="Blog Posts - Mert Uygur"
+      description="Blog posts about software development, frontend development and backend development."
+    >
       <div className={classes.blog}>
         <div className={classes.blogposthome}>
           <ul>

@@ -1,0 +1,7 @@
+.forofor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  min-height: 80vh;
+}

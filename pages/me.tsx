@@ -16,20 +16,17 @@ const tools = ["Git", "Atlassian", "Figma", "Webpack", "Adobe Illustrator"];
 
 export default function Me() {
   return (
-    <Container>
+    <Container title="About - Mert Uygur" description="About Mert Uygur">
       <div className={classes.resume}>
         <div className={classes.resumecontent}>
           <div className={classes.textpart}>
             <p className={classes.textparttitle}>Introduction</p>
             <p>
-              Frontend Developer with 2 years experience building responsive
+              Full Stack Developer with 2 years experience building responsive
               websites. Proficient in HTML, CSS, Javascript, modern technologies
-              such as React.js, Next.js and Node.js.{" "}
+              such as React.js, Next.js, and Node.js.{" "}
             </p>
-            <p>
-              Currently learning Typescript and GraphQL. Planning to learn PHP
-              in the near future.
-            </p>
+            <p>Currently learning Typescript, PHP, and PostgreSQL.</p>
             <p>
               I mostly use MongoDB as database in my projects, I have also a bit
               knowledge on SQL databases, have used PostgreSQL in a small

@@ -101,7 +101,10 @@ export default function Projects() {
     }
   };
   return (
-    <Container>
+    <Container
+      title="Web Development Projects - Mert Uygur"
+      description="Software development projects of Mert Uygur."
+    >
       <div className={classes.projects}>
         <ul className={classes.filters}>
           <li onClick={() => setFilter("")} style={isActive("")}>
