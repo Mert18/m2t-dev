@@ -24,8 +24,7 @@
 }
 
 .link a:hover {
-  color: var(--black-darker);
-  text-decoration: underline;
+  color: var(--orange-burnt);
   cursor: pointer;
   transition: all 0.3s ease;
 }

@@ -6,9 +6,11 @@
 .posttitle {
   font-family: "Arima Madurai", cursive;
   font-weight: 300;
+  transition: all 0.3s ease;
 }
 .posttitle:hover {
-  text-decoration: underline;
+  transition: all 0.3s ease;
+  color: var(--orange-burnt);
 }
 
 .postdate {
