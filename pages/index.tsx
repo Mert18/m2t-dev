@@ -5,7 +5,6 @@ import matter from "gray-matter";
 import path from "path";
 import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 import BlogPost from "../components/BlogPost";
-import React from "react";
 import { GetStaticProps } from "next";
 
 export default function Home({ posts }) {
