@@ -18,3 +18,20 @@
   -moz-box-shadow: -1px 1px 35px -12px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 1px 35px -12px rgba(0, 0, 0, 0.75);
 }
+
+/* Page contains list of files */
+.hackerranksols {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hackerranksols ul {
+  list-style: none;
+}
+
+.hackerranksols ul li {
+  margin: 1rem 0rem;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid var(--orange-burnt);
+}

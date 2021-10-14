@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import Prism from "prismjs";
 import { useRouter } from "next/router";
 
-export default function Hackerrank({ file }) {
+export default function Solution({ file }) {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
