@@ -1,0 +1,20 @@
+.hackerrank {
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-rows: 10vh auto auto;
+  grid-template-areas:
+    ". . ."
+    ". text ."
+    ". code .";
+}
+
+.hackerrank__title {
+  grid-area: text;
+}
+
+.hackerrank__code {
+  grid-area: code;
+  -webkit-box-shadow: -1px 1px 35px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 35px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 35px -12px rgba(0, 0, 0, 0.75);
+}
