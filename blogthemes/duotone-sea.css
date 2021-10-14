@@ -1,145 +1,123 @@
-/**
- * Shades of Purple Theme for Prism.js
- *
- * @author Ahmad Awais <https://twitter.com/MrAhmadAwais/>
- * @support Follow/tweet at https://twitter.com/MrAhmadAwais/
- */
-
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #9efeff;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-
-  font-family: "Operator Mono", "Fira Code", Consolas, Monaco, "Andale Mono",
-    "Ubuntu Mono", monospace;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 25px;
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px #222245;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #dccf8f;
+  text-shadow: 0;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection,
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
-  color: inherit;
-  background: #a599e9;
+pre > code[class*="language-"] {
+  font-size: 1em;
 }
 
-/* Code blocks. */
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #dccf8f;
+  background: #181914
+    url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAMAAA/+4ADkFkb2JlAGTAAAAAAf/bAIQACQYGBgcGCQcHCQ0IBwgNDwsJCQsPEQ4ODw4OERENDg4ODg0RERQUFhQUERoaHBwaGiYmJiYmKysrKysrKysrKwEJCAgJCgkMCgoMDwwODA8TDg4ODhMVDg4PDg4VGhMRERERExoXGhYWFhoXHR0aGh0dJCQjJCQrKysrKysrKysr/8AAEQgAjACMAwEiAAIRAQMRAf/EAF4AAQEBAAAAAAAAAAAAAAAAAAABBwEBAQAAAAAAAAAAAAAAAAAAAAIQAAEDAwIHAQEAAAAAAAAAAADwAREhYaExkUFRcYGxwdHh8REBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AyGFEjHaBS2fDDs2zkhKmBKktb7km+ZwwCnXPkLVmCTMItj6AXFxRS465/BTnkAJvkLkJe+7AKKoi2AtRS2zuAWsCb5GOlBN8gKfmuGHZ8MFqIth3ALmFoFwbwKWyAlTAp17uKqBvgBD8sM4fTjhvAhkzhaRkBMKBrfs7jGPIpzy7gFrAqnC0C0gB0EWwBDW2cBVQwm+QtPpa3wBO3sVvszCnLAhkzgL5/RLf13cLQd8/AGlu0Cb5HTx9KuAEieGJEdcehS3eRTp2ATdt3CpIm+QtZwAhROXFeb7swp/ahaM3kBE/jSIUBc/AWrgBN8uNFAl+b7sAXFxFn2YLUU5Ns7gFX8C4ib+hN8gFWXwK3bZglxEJm+gKdciLPsFV/TClsgJUwKJ5FVA7tvIFrfZhVfGJDcsCKaYgAqv6YRbE+RWOWBtu7+AL3yRalXLyKqAIIfk+zARbDgFyEsncYwJvlgFRW+GEWntIi2P0BooyFxcNr8Ep3+ANLbMO+QyhvbiqdgC0kVvgUUiLYgBS2QtPbiVI1/sgOmG9uO+Y8DW+7jS2zAOnj6O2BndwuIAUtkdRN8gFoK3wwXMQyZwHVbClsuNLd4E3yAUR6FVDBR+BafQGt93LVMxJTv8ABts4CVLhcfYWsCb5kC9/BHdU8CLYFY5bMAd+eX9MGthhpbA1vu4B7+RKkaW2Yq4AQtVBBFsAJU/AuIXBhN8gGWnstefhiZyWvLAEnbYS1uzSFP6Jvn4Baxx70JKkQojLib5AVTey1jjgkKJGO0AKWyOm7N7cSpgSpAdPH0Tfd/gp1z5C1ZgKqN9J2wFxcUUuAFLZAm+QC0Fb4YUVRFsAOvj4KW2dwtYE3yAWk/wS/PLMKfmuGHZ8MAXF/Ja32Yi5haAKWz4Ydm2cSpgU693Atb7km+Zwwh+WGcPpxw3gAkzCLY+iYUDW/Z3Adc/gpzyFrAqnALkJe+7DoItgAtRS2zuKqGE3yAx0oJvkdvYrfZmALURbDuL5/RLf13cAuDeBS2RpbtAm+QFVA3wR+3fUtFHoBDJnC0jIXH0HWsgMY8inPLuOkd9chp4z20ALQLSA8cI9jYAIa2zjzjBd8gRafS1vgiUho/kAKcsCGTOGWvoOpkAtB3z8Hm8x2Ff5ADp4+lXAlIvcmwH/2Q==")
+    repeat left top;
+}
+
 pre[class*="language-"] {
-  padding: 2em;
-  margin: 0.5em 0;
+  padding: 12px;
   overflow: auto;
 }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #1e1e3f;
-}
-
-/* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: 0.1em;
-  border-radius: 0.3em;
+  padding: 2px 6px;
 }
 
-.token {
-  font-weight: 400;
+.token.namespace {
+  opacity: 0.7;
 }
 
 .token.comment,
 .token.prolog,
+.token.doctype,
 .token.cdata {
-  color: #b362ff;
+  color: #586e75;
+  font-style: italic;
 }
 
-.token.delimiter,
-.token.keyword,
-.token.selector,
-.token.important,
-.token.atrule {
-  color: #ff9d00;
+.token.number,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #468966;
+}
+
+.token.attr-name {
+  color: #b89859;
 }
 
 .token.operator,
-.token.attr-name {
-  color: rgb(255, 180, 84);
-}
-
-.token.punctuation {
-  color: #ffffff;
-}
-
-.token.boolean {
-  color: rgb(255, 98, 140);
-}
-
-.token.tag,
-.token.tag .punctuation,
-.token.doctype,
-.token.builtin {
-  color: rgb(255, 157, 0);
-}
-
 .token.entity,
-.token.symbol {
-  color: #6897bb;
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #dccf8f;
 }
 
-.token.number {
-  color: #ff628c;
+.token.selector,
+.token.regex {
+  color: #859900;
+}
+
+.token.atrule,
+.token.keyword {
+  color: #cb4b16;
+}
+
+.token.attr-value {
+  color: #468966;
+}
+
+.token.function,
+.token.variable,
+.token.placeholder {
+  color: #b58900;
 }
 
 .token.property,
+.token.tag,
+.token.boolean,
+.token.number,
 .token.constant,
-.token.variable {
-  color: #ff628c;
+.token.symbol {
+  color: #b89859;
 }
 
-.token.string,
-.token.char {
-  color: #a5ff90;
+.token.tag {
+  color: #ffb03b;
 }
 
-.token.attr-value,
-.token.attr-value .punctuation {
-  color: #a5c261;
+.token.important,
+.token.statement,
+.token.deleted {
+  color: #dc322f;
 }
 
-.token.attr-value .punctuation:first-child {
-  color: #a9b7c6;
+.token.punctuation {
+  color: #dccf8f;
 }
 
-.token.url {
-  color: #287bde;
-  text-decoration: underline;
-}
-
-.token.function {
-  color: rgb(250, 208, 0);
-}
-
-.token.regex {
-  background: #364135;
+.token.entity {
+  cursor: help;
 }
 
 .token.bold {
@@ -148,50 +126,4 @@ pre[class*="language-"] {
 
 .token.italic {
   font-style: italic;
-}
-
-.token.inserted {
-  background: #00ff00;
-}
-
-.token.deleted {
-  background: #ff000d;
-}
-
-code.language-css .token.property,
-code.language-css .token.property + .token.punctuation {
-  color: #a9b7c6;
-}
-
-code.language-css .token.id {
-  color: #ffc66d;
-}
-
-code.language-css .token.selector > .token.class,
-code.language-css .token.selector > .token.attribute,
-code.language-css .token.selector > .token.pseudo-class,
-code.language-css .token.selector > .token.pseudo-element {
-  color: #ffc66d;
-}
-
-.token.class-name {
-  color: #fb94ff;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  background: none;
-}
-
-.line-highlight.line-highlight {
-  margin-top: 36px;
-  background: linear-gradient(to right, rgba(179, 98, 255, 0.17), transparent);
-}
-
-.line-highlight.line-highlight:before,
-.line-highlight.line-highlight[data-end]:after {
-  content: "";
 }

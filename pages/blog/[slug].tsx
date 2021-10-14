@@ -6,7 +6,7 @@ import Head from "next/head";
 import Link from "next/link";
 import path from "path";
 import CustomLink from "../../components/CustomLink";
-import Layout from "../../components/Container";
+import Container from "../../components/Container";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import classes from "../../styles/blog.module.css";
 
@@ -22,7 +22,7 @@ const components = {
 
 export default function PostPage({ source, frontMatter }) {
   return (
-    <Layout>
+    <Container>
       <div className={classes.bloglayout}>
         <div className={classes.blogpostheader}>
           <h1 style={{ color: "#db7b45" }}>{frontMatter.title}</h1>
@@ -42,7 +42,7 @@ export default function PostPage({ source, frontMatter }) {
           </Link>
         </div>
       </div>
-    </Layout>
+    </Container>
   );
 }
 

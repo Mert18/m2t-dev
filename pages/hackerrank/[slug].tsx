@@ -1,10 +1,23 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { getAllFiles, getSingleFile } from "../../lib/hackerrank";
 import Container from "../../components/Container";
+import classes from "../../styles/hackerrank.module.css";
+import { useEffect } from "react";
+import Prism from "prismjs";
 
 export default function Hackerrank({ file }) {
-  console.log(file);
-  return <Container></Container>;
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+  return (
+    <Container>
+      <div className={classes.hackerrank}>
+        <pre>
+          <code className="language-js">{file}</code>
+        </pre>
+      </div>
+    </Container>
+  );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
