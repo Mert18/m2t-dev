@@ -15,7 +15,7 @@ export default function Hackerrank({ files }) {
             .filter((el) => el.name.endsWith(".js"))
             .map((el) => {
               return (
-                <li>
+                <li key={el.name}>
                   <Link href={`/hackerrank/${el.name}`}>
                     {el.name.replace(/\.js/, "")}
                   </Link>
