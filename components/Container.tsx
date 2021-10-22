@@ -82,37 +82,37 @@ export default function Container(props) {
               <ul className={classes.navbarlist}>
                 <li>
                   <Link href="/">
-                    <a>Home</a>
+                    <a>HOME</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/me">
-                    <a>Me</a>
+                    <a>ME</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/blog">
-                    <a>Blog</a>
+                    <a>BLOG</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/projects">
-                    <a>Projects</a>
+                    <a>PROJECTS</a>
                   </Link>
                 </li>
                 <li className={classes.tmiabs}>
                   <Link href="/tmi">
-                    <a>Tmi</a>
+                    <a>TMI</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/ills">
-                    <a>Illustrations</a>
+                    <a>ILLUSTRATIONS</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/hackerrank">
-                    <a>Hackerrank</a>
+                    <a>HACKERRANK</a>
                   </Link>
                 </li>
               </ul>
