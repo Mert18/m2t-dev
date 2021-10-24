@@ -31,6 +31,7 @@
 .navbarlist {
   list-style: none;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   line-height: 25px;
   padding: 0rem;
@@ -38,9 +39,9 @@
   margin-top: 3rem;
 }
 .navbarlist li {
-  margin-right: 2rem;
+  margin-top: 1rem;
 }
-.navbarlist li:last-child {
+.navbarlist li:first-child {
   margin-right: 0rem;
 }
 .navbarlist li a {
@@ -194,5 +195,8 @@
       "mobileheader"
       "main"
       "footer";
+  }
+  .mobileheadertitle {
+    line-height: inherit;
   }
 }
