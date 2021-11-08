@@ -6,11 +6,26 @@ import path from "path";
 import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 import BlogPost from "../components/BlogPost";
 import { GetStaticProps } from "next";
+import { useEffect } from "react";
 
 export default function Home({ posts }) {
+  async function getData() {
+    const MONGODB = process.env.MONGODBURL;
+    console.log(MONGODB);
+    const response = await fetch(`${MONGODB}`);
+    console.log(response, "response send");
+    const data = await response.json();
+    console.log(data);
+    return data;
+  }
+
   const filteredBlogPosts = posts.sort(
     (a, b) => b.data.publishedAt - a.data.publishedAt
   );
+
+  useEffect(() => {
+    getData();
+  });
 
   return (
     <Container>

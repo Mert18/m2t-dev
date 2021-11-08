@@ -3,15 +3,32 @@ import { GetStaticPaths } from "next";
 import { getAllFiles } from "../../lib/hackerrank";
 import Link from "next/link";
 import Container from "../../components/Container";
+import { useState, useEffect } from "react";
 
 export default function Hackerrank({ files }) {
-  console.log(files.filter((el) => el.name.endsWith(".js")));
+  const [searchParams, setSearchParams] = useState("");
+  const [myFiles, setMyFiles] = useState(files);
+
+  useEffect(() => {
+    if (searchParams == "") {
+      setMyFiles(files);
+    } else {
+      setMyFiles(myFiles.filter((el: any) => el.name.startsWith(searchParams)));
+    }
+  }, [searchParams]);
+
   return (
     <Container>
       <section className={classes.hackerranksols}>
         <h1>Hackerrank Javascript Solutions</h1>
+        <div className={classes.hackerranksols__search}>
+          <input
+            type="text"
+            onChange={(e: any) => setSearchParams(e.target.value)}
+          />
+        </div>
         <ul>
-          {files
+          {myFiles
             .filter((el) => el.name.endsWith(".js"))
             .map((el) => {
               return (

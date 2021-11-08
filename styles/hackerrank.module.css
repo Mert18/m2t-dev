@@ -26,12 +26,61 @@
   justify-content: center;
   align-items: center;
 }
+
+.hackerranksols h1 {
+  color: var(--orange-burnt);
+}
+
+.hackerranksols__search {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hackerranksols__search input {
+  background: var(--white);
+  width: 100%;
+  font-size: 1.4rem;
+  text-align: center;
+  height: 9vh;
+  color: var(--orange-burnt);
+  border: 1px solid var(--orange);
+}
 .hackerranksols ul {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hackerranksols ul li {
-  margin: 1rem 0rem;
-  padding: 1rem 0rem;
-  border-bottom: 1px solid var(--orange-burnt);
+  margin: 0.8rem;
+  border: 1px solid var(--orange);
+  width: 16rem;
+  transition: all 0.3s ease;
+}
+
+.hackerranksols ul li a {
+  display: inline-block;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 1.5rem;
+}
+
+.hackerranksols ul li:hover {
+  background-color: var(--orange-burnt);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 800px) {
+  .hackerranksols h1 {
+    font-size: 0.8rem;
+  }
+  .hackerranksols__search {
+    width: 80%;
+  }
+  .hackerranksols input {
+    height: 7vh;
+  }
 }
