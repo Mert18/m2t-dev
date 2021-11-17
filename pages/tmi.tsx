@@ -1,19 +1,16 @@
 import Container from "../components/Container";
-import Graph from "../components/HappinessGraph";
 import NowPlaying from "../components/NowPlaying";
 import Tracks from "../components/TopTracks";
 import classes from "../styles/tmi.module.css";
 
-export default function Tmi() {
+export default function Tmi({ data }) {
+  console.log(data);
   return (
     <Container
       title="Too Much Information - Mert Uygur"
       description="Too much information about mert uygur. Spotify top songs."
     >
       <div className={classes.tmi}>
-        <div>
-          <Graph />
-        </div>
         <div className={classes.spotify}>
           <div className={classes.toptrackstitle}>Top Tracks</div>
           <div className={classes.toptracks}>
@@ -27,3 +24,12 @@ export default function Tmi() {
     </Container>
   );
 }
+
+export const getStaticProps = async () => {
+  const response = await fetch(`https://merd.dev/api/data`);
+  const data = await response.json();
+
+  return {
+    props: { data },
+  };
+};

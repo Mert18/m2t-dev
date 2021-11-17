@@ -11,11 +11,8 @@ import { useEffect } from "react";
 export default function Home({ posts }) {
   async function getData() {
     const MONGODB = process.env.MONGODBURL;
-    console.log(MONGODB);
     const response = await fetch(`${MONGODB}`);
-    console.log(response, "response send");
     const data = await response.json();
-    console.log(data);
     return data;
   }
 

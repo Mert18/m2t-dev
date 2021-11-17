@@ -14,7 +14,6 @@
     "@next/mdx": "^11.1.2",
     "@types/google.analytics": "^0.0.42",
     "@types/mongoose": "^5.11.97",
-    "chart.js": "^3.6.0",
     "date-fns": "^2.24.0",
     "express-async-handler": "^1.1.4",
     "fs": "^0.0.1-security",
@@ -28,8 +27,8 @@
     "path": "^0.12.7",
     "prismjs": "^1.25.0",
     "react": "17.0.2",
-    "react-chartjs-2": "^3.3.0",
     "react-dom": "17.0.2",
+    "recharts": "^2.1.6",
     "swr": "^1.0.1",
     "tls": "^0.0.1"
   },

@@ -45,12 +45,12 @@ export default function Container(props) {
       style={
         router.asPath === "/"
           ? width > 1100
-            ? { gridTemplateColumns: "1fr 1fr" }
+            ? { gridTemplateColumns: "2fr 1fr" }
             : width > 800
             ? { gridTemplateColumns: "2fr 1fr" }
             : { gridTemplateColumns: "1fr", gridTemplateRows: "auto auto auto" }
           : width > 1100
-          ? { gridTemplateColumns: "2fr 1fr" }
+          ? { gridTemplateColumns: "3fr 1fr" }
           : width > 800
           ? { gridTemplateColumns: "3fr 1fr" }
           : { gridTemplateColumns: "1fr", gridTemplateRows: "auto auto auto" }
@@ -137,7 +137,7 @@ export default function Container(props) {
           <Link href="/">
             <div className={classes.mobileheadertitle}>
               <h1>Mert UYĞUR</h1>
-              <p>Frontend Developer</p>
+              <p>Full Stack Developer</p>
             </div>
           </Link>
           <div
@@ -195,10 +195,10 @@ export default function Container(props) {
           style={
             router.asPath === "/"
               ? width > 1100
-                ? { gridTemplateColumns: "1fr 1fr" }
+                ? { gridTemplateColumns: "2fr 1fr" }
                 : { gridTemplateColumns: "2fr 1fr" }
               : width > 1100
-              ? { gridTemplateColumns: "2fr 1fr" }
+              ? { gridTemplateColumns: "3fr 1fr" }
               : { gridTemplateColumns: "3fr 1fr" }
           }
         >
