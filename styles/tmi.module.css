@@ -4,11 +4,32 @@
   grid-template-columns: 1fr 7fr 1fr;
   grid-template-areas:
     ". . ."
-    ". graph ."
+    "graph graph graph"
     ". spotify .";
   min-height: 90vh;
 }
 
+.chart {
+  grid-area: graph;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.chart__title {
+  margin-bottom: 2rem;
+}
+
 .spotify {
   grid-area: spotify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.toptrackstitle {
+  margin-bottom: 2rem;
 }
