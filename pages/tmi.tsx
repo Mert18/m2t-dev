@@ -19,7 +19,7 @@ export default function Tmi({ data }) {
 
   useEffect(() => {
     setHidden(false);
-  }, 2000);
+  });
 
   return (
     <Container
