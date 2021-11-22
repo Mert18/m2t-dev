@@ -22,6 +22,8 @@
 .toptrack {
   padding: 0.7rem;
   line-height: 12px;
+  display: flex;
+  align-items: center;
 }
 .toptrack:last-child {
   border-bottom: none;
@@ -48,6 +50,10 @@
   text-align: left;
   padding: 0.9rem;
   line-height: 9px;
+}
+
+.nowplayingcomp__spotifylogo {
+  padding: 0.5rem;
 }
 
 .nowplayingcomp__text .songtitle {
