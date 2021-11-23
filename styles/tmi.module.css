@@ -33,3 +33,13 @@
 .toptrackstitle {
   margin-bottom: 2rem;
 }
+
+.spotify__profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotify__profile p {
+  margin: 1rem;
+}

@@ -11,6 +11,7 @@ import {
   Tooltip,
   Brush,
 } from "recharts";
+import Image from "next/image";
 
 export default function Tmi({ data }) {
   const [hidden, setHidden] = useState(true);
@@ -77,10 +78,25 @@ export default function Tmi({ data }) {
           <div className={classes.toptracks}>
             <Tracks />
           </div>
-          <div className={classes.toptrackstitle}>Now Playing</div>
           <div className={classes.nowplaying}>
             <NowPlaying />
           </div>
+
+          <a
+            href="https://open.spotify.com/user/vnthw0w8gp2uil1unfvq4nz8n?si=9dfb7ed1658f496a"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className={classes.spotify__profile}>
+              <Image
+                src="/icons/spotify-2.svg"
+                width="60px"
+                height="60px"
+                alt="spotify icon"
+              />
+              <p>Spotify Profile</p>
+            </div>
+          </a>
         </div>
       </div>
     </Container>
