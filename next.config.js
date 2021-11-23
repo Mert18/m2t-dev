@@ -1,5 +1,5 @@
 module.exports = {
   env: {
-    MONGODB: process.env.NEXT_PUBLIC_MONGODBURL,
+    NEXT_PUBLIC_MONGODBURL: process.env.NEXT_PUBLIC_MONGODBURL,
   },
 };

@@ -4,7 +4,6 @@ import Tracks from "../components/TopTracks";
 import classes from "../styles/tmi.module.css";
 import { useState, useEffect } from "react";
 import {
-  ResponsiveContainer,
   LineChart,
   Line,
   XAxis,
@@ -14,9 +13,7 @@ import {
 } from "recharts";
 
 export default function Tmi({ data }) {
-  console.log(data);
   const [hidden, setHidden] = useState(true);
-  const LineData = data;
 
   useEffect(() => {
     setHidden(false);
@@ -31,7 +28,7 @@ export default function Tmi({ data }) {
         <div className={classes.chart}>
           <div className={classes.chart__title}>Happiness Graph</div>
           <div className={classes.chart__chart}>
-            <LineChart width={1100} height={400} data={LineData}>
+            <LineChart width={1100} height={400} data={data}>
               <Line
                 type="monotone"
                 dataKey="happiness"
@@ -71,6 +68,7 @@ export default function Tmi({ data }) {
                 minTickGap={15}
                 hide={hidden}
               />
+              <Brush startIndex={50} />
             </LineChart>
           </div>
         </div>
