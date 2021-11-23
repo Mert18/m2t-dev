@@ -77,6 +77,7 @@ export default function Tmi({ data }) {
           <div className={classes.toptracks}>
             <Tracks />
           </div>
+          <div className={classes.toptrackstitle}>Now Playing</div>
           <div className={classes.nowplaying}>
             <NowPlaying />
           </div>
