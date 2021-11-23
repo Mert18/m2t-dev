@@ -14,6 +14,7 @@ import {
 } from "recharts";
 
 export default function Tmi({ data }) {
+  console.log(data);
   const [hidden, setHidden] = useState(true);
   const LineData = data;
 
@@ -30,7 +31,7 @@ export default function Tmi({ data }) {
         <div className={classes.chart}>
           <div className={classes.chart__title}>Happiness Graph</div>
           <div className={classes.chart__chart}>
-            <LineChart width={1100} height={400} data={data}>
+            <LineChart width={1100} height={400} data={LineData}>
               <Line
                 type="monotone"
                 dataKey="happiness"
@@ -70,7 +71,6 @@ export default function Tmi({ data }) {
                 minTickGap={15}
                 hide={hidden}
               />
-              <Brush startIndex={50} />
             </LineChart>
           </div>
         </div>
@@ -94,5 +94,6 @@ export const getStaticProps = async () => {
 
   return {
     props: { data },
+    revalidate: 60,
   };
 };
