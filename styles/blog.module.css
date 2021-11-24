@@ -31,7 +31,8 @@
     ". content ."
     ". . ."
     ". back .";
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 .blogpostheader {
@@ -43,6 +44,21 @@
 }
 .goback {
   grid-area: back;
+}
+
+.colorfulheader {
+  position: relative;
+}
+
+.colorfulheader::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 5%;
+  height: 100%;
+  opacity: 0.3;
+  background: var(--black-darker);
 }
 
 @media (max-width: 800px) {

@@ -29,6 +29,7 @@
 
 .hackerranksols h1 {
   color: var(--orange-burnt);
+  font-size: 1.3rem;
 }
 
 .hackerranksols__search {
@@ -39,10 +40,10 @@
 }
 .hackerranksols__search input {
   background: var(--white);
-  width: 100%;
+  width: 80%;
   font-size: 1.4rem;
   text-align: center;
-  height: 9vh;
+  height: 6vh;
   color: var(--orange-burnt);
   border: 1px solid var(--orange);
 }
@@ -51,12 +52,15 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 50%;
 }
 
 .hackerranksols ul li {
   margin: 0.8rem;
   border: 1px solid var(--orange);
-  width: 16rem;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
   transition: all 0.3s ease;
 }
 

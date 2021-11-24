@@ -29,13 +29,11 @@ export default function Hackerrank({ files }) {
         </div>
         <ul>
           {myFiles
-            .filter((el) => el.name.endsWith(".js"))
-            .map((el) => {
+            .filter((el: any) => el.name.endsWith(".js"))
+            .map((el: any) => {
               return (
                 <li key={el.name}>
-                  <Link href={`/hackerrank/${el.name}`}>
-                    {el.name.replace(/\.js/, "")}
-                  </Link>
+                  <Link href={`/hackerrank/${el.name}`}>.</Link>
                 </li>
               );
             })}

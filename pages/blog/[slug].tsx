@@ -10,8 +10,20 @@ import Container from "../../components/Container";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import classes from "../../styles/blog.module.css";
 
-const MyH1 = (props) => <h1 style={{ color: "#db7b45" }} {...props} />;
-const MyH2 = (props) => <h2 style={{ color: "#1d0c35" }} {...props} />;
+const MyH1 = (props) => (
+  <h1
+    className={classes.colorfulheader}
+    style={{ color: "#db7b45" }}
+    {...props}
+  />
+);
+const MyH2 = (props) => (
+  <h2
+    className={classes.colorfulheader}
+    style={{ color: "#1d0c35" }}
+    {...props}
+  />
+);
 
 const components = {
   h1: MyH1,

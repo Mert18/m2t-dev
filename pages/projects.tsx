@@ -15,7 +15,7 @@ const arrProjects = [
   {
     title: "Hachiko Dictionary",
     desc: "A dictionary application. I built for myself, learning new words. Built with NextJS, MongoDB as database.",
-    techs: ["next-js", "mongodb"],
+    techs: ["next-js", "mongodb", "node-js"],
     link: "https://hachiko-dictionary.vercel.app/",
     linkSource: "https://github.com/Mert18/hachiko-dictionary",
     complexity: 0.6,
