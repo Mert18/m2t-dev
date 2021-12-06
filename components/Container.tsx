@@ -102,7 +102,7 @@ export default function Container(props) {
                 </li>
                 <li className={classes.tmiabs}>
                   <Link href="/tmi">
-                    <a>TMI</a>
+                    <a>TOO MUCH INFORMATION</a>
                   </Link>
                 </li>
                 <li>

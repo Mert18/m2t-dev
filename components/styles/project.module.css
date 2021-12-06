@@ -1,30 +1,25 @@
 .project {
-  font-weight: 300;
-  margin-bottom: 3rem;
+  border: 1px solid var(--orange);
+  padding: 2rem;
+  margin: 2rem 0rem;
 }
 
-.title {
-  color: var(--orange);
+.title p {
+  font-size: 2rem;
 }
-
 .link {
-  font-weight: 200;
   display: flex;
-  line-height: 0px;
-}
-.link a {
-  margin-right: 1rem;
-  word-wrap: normal;
-  display: inline-block;
-  transition: all 0.3s ease;
 }
 
-.link a:last-child {
-  margin-right: 0rem;
+.link a {
+  margin: 0rem 2rem;
+  color: var(--orange);
 }
 
 .link a:hover {
   color: var(--orange-burnt);
-  cursor: pointer;
-  transition: all 0.3s ease;
+}
+
+.link a:first-child {
+  margin: 0rem 2rem 0rem 0rem;
 }

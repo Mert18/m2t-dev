@@ -52,29 +52,35 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 50%;
+  width: 80%;
 }
 
 .hackerranksols ul li {
-  margin: 0.8rem;
-  border: 1px solid var(--orange);
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  transition: all 0.3s ease;
-}
-
-.hackerranksols ul li a {
-  display: inline-block;
-  min-width: 100%;
-  min-height: 100%;
-  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 40%;
+  border: 2px solid var(--orange-burnt);
+  margin: 2rem;
+  height: 12rem;
+  padding: 1rem;
+  transition: all 0.4s ease;
+  border-right: 4px solid var(--orange);
+  border-bottom: 4px solid var(--orange);
+  color: var(--black);
+  overflow: hidden;
 }
 
 .hackerranksols ul li:hover {
-  background-color: var(--orange-burnt);
+  cursor: pointer;
+  background: var(--orange-burnt);
   color: var(--white);
-  transition: all 0.3s ease;
+  padding: 0.5rem;
+  transition: all 0.4s ease;
+  border: 6px solid var(--orange-burnt);
+  border-right: 4px solid var(--black);
+  border-bottom: 4px solid var(--black);
 }
 
 @media (max-width: 800px) {

@@ -1,6 +1,4 @@
 import classes from "../../styles/hackerrank.module.css";
-import { GetStaticPaths } from "next";
-import { getAllFiles } from "../../lib/hackerrank";
 import Link from "next/link";
 import Container from "../../components/Container";
 import { useState, useEffect } from "react";
@@ -33,7 +31,11 @@ export default function Hackerrank({ files }) {
             .map((el: any) => {
               return (
                 <li key={el.name}>
-                  <Link href={`/hackerrank/${el.name}`}>.</Link>
+                  <Link href={`/hackerrank/${el.name}`}>
+                    <div className={classes.singlehack}>
+                      <p>{el.name.replace(/\.js/, "")}</p>
+                    </div>
+                  </Link>
                 </li>
               );
             })}
