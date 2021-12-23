@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import classes from "./styles/blogpost.module.css";
 
+// Blogpost component
 const BlogPost = ({ post }) => {
   return (
     <article className={classes.blogpostcard}>
