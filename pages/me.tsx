@@ -4,15 +4,22 @@ import classes from "../styles/me.module.css";
 const technologies = [
   "HTML",
   "CSS",
+  "Javascript",
+  "Typescript",
   "React.js",
   "Next.js",
   "MongoDB",
   "PostgreSQL",
-
-  "GraphQL",
 ];
 
-const tools = ["Git", "Atlassian", "Figma", "Webpack", "Adobe Illustrator"];
+const tools = [
+  "Git",
+  "Atlassian",
+  "Figma",
+  "Adobe Illustrator",
+  "Linux",
+  "Vim",
+];
 
 export default function Me() {
   return (
