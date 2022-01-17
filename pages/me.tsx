@@ -8,7 +8,7 @@ const technologies = [
   "Next.js",
   "MongoDB",
   "PostgreSQL",
-  "Typescript",
+
   "GraphQL",
 ];
 
