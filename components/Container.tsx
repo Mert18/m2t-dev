@@ -76,7 +76,7 @@ export default function Container(props) {
           <div className={classes.sidebarwrapper}>
             <div className={classes.sidebartitle}>
               <h1>Mert UYĞUR</h1>
-              <p>Full Stack Developer</p>
+              <p>Software Developer</p>
             </div>
             <nav className={classes.navbar}>
               <ul className={classes.navbarlist}>
