@@ -1,12 +1,25 @@
 .homepage {
   min-height: 80vh;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto 50vw auto;
+  grid-template-rows: 10vh auto;
+  grid-template-areas:
+    ". . ."
+    ". bloglist .";
 }
 
 .bloglist {
+  padding: 0;
+  grid-area: bloglist;
+  justify-self: center;
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin-top: 3rem;
+}
+
+@media (max-width: 800px) {
+  .homepage {
+    grid-template-columns: auto 80vw auto;
+    font-size: 1rem;
+  }
 }

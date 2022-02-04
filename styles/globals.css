@@ -1,43 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;300;400;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 :root {
-  /* Your default theme */
-  --black: #333333;
-  --white: #efefef;
   --orange: #db7b45;
   --orange-burnt: #cc5500;
   --black-darker: #1d0c35;
+
+  /* Default */
+
+  --black: #333333;
+  --reddish: #fd7575;
+  --white: #efefef;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  background: transparent;
+  width: 16px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--black);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--orange);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--orange-burnt);
+  background: var(--reddish);
+  border-radius: 20px;
+  border: 3px solid var(--white);
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Exo 2", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background: var(--white);
+  color: var(--black);
 }
 
 a {

@@ -1,11 +1,12 @@
 .spotifycomp {
   display: grid;
   grid-template-rows: 10vh auto auto;
-  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-columns: auto 50vw auto;
   grid-template-areas:
     ". title ."
     ". toptracks ."
     ". nowplaying .";
+  min-height: 90vh;
 }
 .spotifycomp h2 {
   grid-area: title;
@@ -21,7 +22,6 @@
 /* TOP TRACK component */
 .toptrack {
   padding: 0.7rem;
-  line-height: 12px;
   display: flex;
   align-items: center;
 }
@@ -33,7 +33,7 @@
 }
 .toptrack__artist {
   font-weight: 300;
-  color: var(--orange);
+  color: var(--reddish);
 }
 
 /* NOW PLAYING component */
@@ -49,11 +49,6 @@
 .nowplayingcomp__text {
   text-align: left;
   padding: 0.9rem;
-  line-height: 9px;
-}
-
-.nowplayingcomp__spotifylogo {
-  padding: 0.5rem;
 }
 
 .nowplayingcomp__text .songtitle {
@@ -61,7 +56,7 @@
 }
 .nowplayingcomp__text .songartist {
   font-weight: 300;
-  color: var(--orange);
+  color: var(--reddish);
 }
 
 .notplaying {

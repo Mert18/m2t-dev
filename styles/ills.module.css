@@ -1,7 +1,7 @@
 .ills {
   display: grid;
   grid-template-rows: 10vh auto;
-  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-columns: auto 50vw auto;
   grid-template-areas:
     ". . ."
     ". ills .";
@@ -15,4 +15,10 @@
 
 .illslist li {
   margin: 2rem 0rem;
+}
+
+@media (max-width: 800px) {
+  .ills {
+    grid-template-columns: auto 80vw auto;
+  }
 }

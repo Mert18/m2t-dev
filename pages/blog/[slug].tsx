@@ -13,14 +13,14 @@ import classes from "../../styles/blog.module.css";
 const MyH1 = (props) => (
   <h1
     className={classes.colorfulheader}
-    style={{ color: "#db7b45" }}
+    style={{ color: "#fd7575" }}
     {...props}
   />
 );
 const MyH2 = (props) => (
   <h2
     className={classes.colorfulheader}
-    style={{ color: "#1d0c35" }}
+    style={{ color: "#fd7575" }}
     {...props}
   />
 );
@@ -37,7 +37,7 @@ export default function PostPage({ source, frontMatter }) {
     <Container>
       <div className={classes.bloglayout}>
         <div className={classes.blogpostheader}>
-          <h1 style={{ color: "#db7b45" }}>{frontMatter.title}</h1>
+          <h1 style={{ color: "#fd7575" }}>{frontMatter.title}</h1>
           {frontMatter.description && (
             <p className={classes.blogpostdesc}>{frontMatter.description}</p>
           )}

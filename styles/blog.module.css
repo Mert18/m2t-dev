@@ -1,13 +1,13 @@
 .blog {
   display: grid;
+  grid-template-columns: auto 50vw auto;
   grid-template-rows: 10vh auto;
-  grid-template-columns: 8vw auto 8vw;
   grid-template-areas:
     ". . ."
-    ". posts .";
+    ". bloglist .";
 }
 .blogposthome {
-  grid-area: posts;
+  grid-area: bloglist;
   justify-self: center;
 }
 
@@ -24,14 +24,14 @@
 .bloglayout {
   display: grid;
   grid-template-rows: 10vh auto auto 10vh 10vh;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: auto 50vw auto;
   grid-template-areas:
     ". . ."
     ". header ."
     ". content ."
     ". . ."
     ". back .";
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 300;
 }
 
@@ -41,29 +41,18 @@
 .blogcontent {
   grid-area: content;
   overflow: auto;
+  line-height: 40px;
 }
 .goback {
   grid-area: back;
 }
 
-.colorfulheader {
-  position: relative;
-}
-
-.colorfulheader::before {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 5%;
-  height: 100%;
-  opacity: 0.3;
-  background: var(--black-darker);
-}
-
 @media (max-width: 800px) {
   .bloglayout {
-    grid-template-columns: 1fr 16fr 1fr;
+    grid-template-columns: auto 80vw auto;
     font-size: 1rem;
+  }
+  .blog {
+    grid-template-columns: auto 80vw auto;
   }
 }

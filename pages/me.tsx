@@ -9,17 +9,9 @@ const technologies = [
   "React.js",
   "Next.js",
   "MongoDB",
-  "PostgreSQL",
 ];
 
-const tools = [
-  "Git",
-  "Atlassian",
-  "Figma",
-  "Adobe Illustrator",
-  "Linux",
-  "Vim",
-];
+const tools = ["Git", "Jira", "Figma", "Adobe Illustrator", "Linux"];
 
 export default function Me() {
   return (
@@ -29,15 +21,9 @@ export default function Me() {
           <div className={classes.textpart}>
             <p className={classes.textparttitle}>Introduction</p>
             <p>
-              Full Stack Developer with 2 years experience building responsive
-              websites. Proficient in HTML, CSS, Javascript, modern technologies
-              such as React.js, Next.js, and Node.js.{" "}
-            </p>
-            <p>Currently learning Typescript, PHP, and PostgreSQL.</p>
-            <p>
-              I mostly use MongoDB as database in my projects, I have also a bit
-              knowledge on SQL databases, have used PostgreSQL in a small
-              project before.
+              Front End Engineer with 2.5 years experience building responsive
+              websites and systems. Proficient in HTML, CSS, Javascript, modern
+              technologies such as React.js, Next.js, Node.js, and Typescript.
             </p>
           </div>
           <div className={classes.textpart}>

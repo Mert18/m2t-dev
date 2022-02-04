@@ -1,6 +1,66 @@
+/* Page contains list of files */
+.hackerranksols {
+  display: grid;
+  grid-template-columns: auto 50vw auto;
+  grid-template-rows: 10vh auto auto 20vh;
+  grid-template-areas:
+    ". title ."
+    ". search ."
+    ". files ."
+    ". . .";
+  min-height: 80vh;
+}
+
+.hackerranksols h1 {
+  justify-self: center;
+  color: var(--reddish);
+  font-size: 1.3rem;
+  grid-area: title;
+}
+
+.hackerranksols__search {
+  grid-area: search;
+}
+.hackerranksols__search input {
+  background: var(--white);
+  font-size: 1.4rem;
+  text-align: center;
+  height: 6vh;
+  border: 1px solid black;
+  color: var(--reddish);
+  width: 100%;
+}
+
+.hackerranksols ul {
+  grid-area: files;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hackerranksols ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  color: var(--black);
+  overflow: hidden;
+}
+
+.hackerranksols ul li::after {
+  content: "";
+}
+
+.hackerranksols ul li:hover {
+  cursor: pointer;
+  color: var(--reddish);
+}
+
 .hackerrank {
   display: grid;
-  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-columns: auto 50vw auto;
   grid-template-rows: 10vh auto auto;
   grid-template-areas:
     ". . ."
@@ -17,61 +77,6 @@
   -webkit-box-shadow: -1px 1px 35px -12px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 1px 35px -12px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 1px 35px -12px rgba(0, 0, 0, 0.75);
-}
-
-/* Page contains list of files */
-.hackerranksols {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hackerranksols h1 {
-  color: var(--orange-burnt);
-  font-size: 1.3rem;
-}
-
-.hackerranksols__search {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hackerranksols__search input {
-  background: var(--white);
-  width: 80%;
-  font-size: 1.4rem;
-  text-align: center;
-  height: 6vh;
-  color: var(--orange-burnt);
-  border: 1px solid var(--orange);
-}
-.hackerranksols ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 80%;
-}
-
-.hackerranksols ul li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  transition: all 0.4s ease;
-  color: var(--black);
-  overflow: hidden;
-}
-
-.hackerranksols ul li::after {
-  content: "-";
-}
-
-.hackerranksols ul li:hover {
-  cursor: pointer;
-  color: var(--orange-burnt);
 }
 
 @media (max-width: 800px) {

@@ -40,22 +40,7 @@ export default function Container(props) {
     setMobileMenuVisible(!mobileMenuVisible);
   };
   return (
-    <div
-      className={classes.container}
-      style={
-        router.asPath === "/"
-          ? width > 1100
-            ? { gridTemplateColumns: "2fr 1fr" }
-            : width > 800
-            ? { gridTemplateColumns: "2fr 1fr" }
-            : { gridTemplateColumns: "1fr", gridTemplateRows: "auto auto auto" }
-          : width > 1100
-          ? { gridTemplateColumns: "3fr 1fr" }
-          : width > 800
-          ? { gridTemplateColumns: "3fr 1fr" }
-          : { gridTemplateColumns: "1fr", gridTemplateRows: "auto auto auto" }
-      }
-    >
+    <div className={classes.container}>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -71,81 +56,103 @@ export default function Container(props) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      {width > 800 ? (
-        <header className={classes.sidebar}>
-          <div className={classes.sidebarwrapper}>
-            <div className={classes.sidebartitle}>
-              <h1>Mert UYĞUR</h1>
-              <p>Front End Engineer</p>
-            </div>
-            <nav className={classes.navbar}>
-              <ul className={classes.navbarlist}>
+      {width > 900 ? (
+        <header className={classes.header}>
+          <div className={classes.headerupper}>
+            <div className={classes.headerupper__options}>
+              <ul className={classes.left}>
+                <li className={classes.titlelink}>WHERE I AM</li>
                 <li>
-                  <Link href="/">
-                    <a>HOME</a>
-                  </Link>
+                  <a
+                    href="https://github.com/Mert18"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GITHUB
+                  </a>
                 </li>
                 <li>
-                  <Link href="/me">
-                    <a>ME</a>
-                  </Link>
+                  <a href="" target="_blank" rel="noreferrer">
+                    LINKEDIN
+                  </a>
                 </li>
                 <li>
-                  <Link href="/blog">
-                    <a>BLOG</a>
-                  </Link>
+                  <a href="" target="_blank" rel="noreferrer">
+                    HACKERRANK
+                  </a>
                 </li>
                 <li>
-                  <Link href="/projects">
-                    <a>PROJECTS</a>
-                  </Link>
-                </li>
-                <li className={classes.tmiabs}>
-                  <Link href="/tmi">
-                    <a>TOO MUCH INFORMATION</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/ills">
-                    <a>ILLUSTRATIONS</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/hackerrank">
-                    <a>HACKERRANK</a>
-                  </Link>
+                  <a href="" target="_blank" rel="noreferrer">
+                    FRONTENDMASTER
+                  </a>
                 </li>
               </ul>
-            </nav>
+            </div>
+            <div className={classes.headerupper__main}>
+              <h1>MERD</h1>
+              <p>Front End Engineer</p>
+            </div>
+
+            <div className={classes.headerupper__options}>
+              <ul>
+                <li className={classes.titlelink}>THEMES</li>
+                <li>
+                  <button>LES JOURS TRISTES</button>
+                </li>
+                <li>
+                  <button>BEYOND</button>
+                </li>
+                <li>
+                  <button>ANKARA RUZGARI</button>
+                </li>
+              </ul>
+            </div>
           </div>
-          <ul className={classes.sociallinks}>
-            <li>
-              <a href="https://github.com/Mert18">Github</a>
-            </li>
-            <li>
-              <a href="https://github.com/Mert18/merd-dev">Source Code</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/mert-u-8248ab135/">
-                Linkedin
-              </a>
-            </li>
-          </ul>
+          <nav className={classes.headerlower}>
+            <ul>
+              <li>
+                <Link href="/">
+                  <a>HOME</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/me">
+                  <a>ME</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog">
+                  <a>BLOG</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/tmi">
+                  <a>TOO MUCH INFORMATION</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/ills">
+                  <a>ILLUSTRATIONS</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/hackerrank">
+                  <a>HACKERRANK</a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </header>
       ) : (
         <header className={classes.mobileheader}>
-          <Link href="/">
-            <div className={classes.mobileheadertitle}>
-              <h1>Mert UYĞUR</h1>
-              <p>Full Stack Developer</p>
-            </div>
-          </Link>
+          <div className={classes.mobileheader__main}>
+            <h1>MERD</h1>
+            <p>Front End Engineer</p>
+          </div>
           <div
-            className={classes.mobileheaderlines}
+            className={classes.mobileheader__lines}
             onClick={mobileMenuVisibleHandler}
           >
-            <div></div>
-            <div></div>
             <div></div>
           </div>
           {mobileMenuVisible ? (
@@ -166,11 +173,6 @@ export default function Container(props) {
                 </Link>
               </li>
               <li>
-                <Link href="/projects">
-                  <a>PROJECTS</a>
-                </Link>
-              </li>
-              <li className={classes.tmiabs}>
                 <Link href="/tmi">
                   <a>TMI</a>
                 </Link>
@@ -189,26 +191,7 @@ export default function Container(props) {
       <main className={classes.main} role="main">
         {children}
       </main>
-      {width > 800 ? (
-        <footer
-          className={classes.footer}
-          style={
-            router.asPath === "/"
-              ? width > 1100
-                ? { gridTemplateColumns: "2fr 1fr" }
-                : { gridTemplateColumns: "2fr 1fr" }
-              : width > 1100
-              ? { gridTemplateColumns: "3fr 1fr" }
-              : { gridTemplateColumns: "3fr 1fr" }
-          }
-        >
-          {" "}
-          <div className={classes.footerright}></div>
-          <div className={classes.footerleft}></div>
-        </footer>
-      ) : (
-        ""
-      )}
+      <footer className={classes.footer}></footer>
     </div>
   );
 }

@@ -1,22 +1,20 @@
 .blogpostcard {
-  line-height: 10px;
   margin: 2rem 0rem;
 }
 
 .posttitle {
-  font-family: "Arima Madurai", cursive;
-  font-weight: 300;
+  font-weight: 400;
   transition: all 0.3s ease;
+  font-size: 1.2rem;
 }
 .posttitle:hover {
   transition: all 0.3s ease;
-  color: var(--orange-burnt);
+  color: var(--reddish);
 }
 
 .postdate {
-  font-weight: 300;
-  font-size: 0.9rem;
-  color: var(--orange);
+  font-size: 1rem;
+  color: var(--reddish);
 }
 
 @media (max-width: 800px) {

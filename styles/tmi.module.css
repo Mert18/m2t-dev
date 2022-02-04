@@ -1,7 +1,7 @@
 .tmi {
   display: grid;
   grid-template-rows: 10vh auto auto;
-  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-columns: auto 50vw auto;
   grid-template-areas:
     ". . ."
     "graph graph graph"
@@ -29,6 +29,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.1rem;
 }
 .toptrackstitle {
   margin-bottom: 2rem;
@@ -41,5 +42,5 @@
 }
 
 .spotify__profile p {
-  margin: 1rem;
+  margin: 2rem 2rem;
 }

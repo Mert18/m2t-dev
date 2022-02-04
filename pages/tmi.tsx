@@ -88,12 +88,6 @@ export default function Tmi({ data }) {
             rel="noreferrer"
           >
             <div className={classes.spotify__profile}>
-              <Image
-                src="/icons/spotify-2.svg"
-                width="60px"
-                height="60px"
-                alt="spotify icon"
-              />
               <p>Spotify Profile</p>
             </div>
           </a>

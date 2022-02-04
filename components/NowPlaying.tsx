@@ -12,24 +12,16 @@ export default function NowPlaying() {
   }
   return (
     <div className={classes.nowplayingcomp}>
-      <div className={classes.nowplayingcomp__spotifylogo}>
-        <Image
-          src="/icons/spotify-2.svg"
-          width="50px"
-          height="50px"
-          alt="spotify"
-        />
-      </div>
-      {data.isPlaying ? (
-        <div className={classes.nowplayingcomp__text}>
-          <a href={data.songUrl} target="_blank" rel="noreferrer">
+      <a href={data.songUrl} target="_blank" rel="noreferrer">
+        {data.isPlaying ? (
+          <div className={classes.nowplayingcomp__text}>
             <p className={classes.songtitle}>{data.title}</p>
             <p className={classes.songartist}>{data.artist}</p>
-          </a>
-        </div>
-      ) : (
-        <div className={classes.notplaying}>Not Playing</div>
-      )}
+          </div>
+        ) : (
+          <div className={classes.notplaying}>Not Playing</div>
+        )}
+      </a>
     </div>
   );
 }

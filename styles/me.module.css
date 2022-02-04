@@ -1,6 +1,6 @@
 .resume {
   display: grid;
-  grid-template-columns: 8vw auto 8vw;
+  grid-template-columns: auto 50vw auto;
   grid-template-rows: 10vh auto;
   grid-template-areas: ". . ." ". texts .";
 }
@@ -10,12 +10,12 @@
 }
 
 .textpart {
-  font-weight: 300;
+  font-size: 1.2rem;
 }
 
 .textparttitle {
   font-weight: 300;
-  color: var(--orange);
+  color: var(--reddish);
 }
 
 .techlist {
@@ -35,5 +35,8 @@
 @media (max-width: 800px) {
   .techlist li {
     padding: 0.5rem 0rem;
+  }
+  .resume {
+    grid-template-columns: auto 80vw auto;
   }
 }

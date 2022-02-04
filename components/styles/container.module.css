@@ -1,198 +1,186 @@
-.container {
+.header {
+  font-weight: 400;
+  min-height: 50vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: minmax(0vh, 10vh) auto minmax(0, 10vh);
+  grid-template-rows: 10vh auto auto 4vh;
   grid-template-areas:
-    "main sidebar"
-    "footer footer";
+    ". . ."
+    ". upper ."
+    ". lower ."
+    ". . .";
 }
 
-.sidebar {
-  grid-area: sidebar;
-  background: var(--black-darker);
-  position: relative;
-  color: var(--white);
-  padding: 2rem;
-}
-
-.sidebartitle h1 {
-  font-size: 3rem;
-}
-.sidebartitle p {
-  color: var(--orange);
-}
-.sidebarwrapper {
-  position: fixed;
-}
-
-.navbarlist {
-  list-style: none;
+.headerupper {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  line-height: 25px;
-  padding: 0rem;
-  font-weight: 300;
-  margin-top: 3rem;
-}
-.navbarlist li {
-  margin-top: 1rem;
-}
-.navbarlist li:first-child {
-  margin-right: 0rem;
-}
-.navbarlist li a {
-  transition: all 0.3s ease;
-}
-.navbarlist li a:hover {
-  cursor: pointer;
-  color: var(--orange);
-  transition: all 0.3s ease;
-}
-
-.sociallinks {
-  list-style: none;
-  display: flex;
-  position: fixed;
-  top: 90%;
-  padding: 0;
-}
-.sociallinks a {
-  margin-right: 1rem;
-  transition: all 0.3s ease;
-}
-.sociallinks a:hover {
-  transition: all 0.3s ease;
-  color: var(--orange);
-}
-
-.main {
-  grid-area: main;
-  background: var(--white);
-  color: var(--black);
-  min-height: 90vh;
-  direction: ltr;
-  overflow-y: auto;
-}
-
-.footer {
-  display: grid;
-  grid-area: footer;
-  font-weight: 200;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "left right";
-}
-.footerleft {
-  background: var(--white);
-  grid-area: left;
-  height: 15vh;
-  color: var(--black-darker);
-}
-
-.footerright {
-  list-style: none;
-  grid-area: right;
-  margin: 0rem;
-  grid-column: 2 / -1;
-  background: var(--black-darker);
-  color: var(--white);
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-}
-.footerright li {
-  margin-right: 1rem;
-}
-.footerright li a:hover {
-  text-decoration: underline;
-}
-
-.mobileheader {
-  grid-area: mobileheader;
-  width: 100%;
-  background: var(--black-darker);
-  min-height: 9vh;
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-}
-.mobileheadertitle {
-  color: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 2rem;
-}
-.mobileheadertitle h1 {
-  color: var(--white);
-  font-size: 1.6rem;
-}
-.mobileheadertitle p {
-  color: var(--orange);
-  font-size: 0.9rem;
+  grid-area: upper;
+  font-family: "Righteous", cursive;
 }
 
-.mobileheaderlines {
+.headerupper__options ul {
+  list-style: none;
+}
+.left {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: center;
-  padding: 2rem;
 }
-.mobileheaderlines div {
-  height: 0.25rem;
-  width: 2.8rem;
-  background: var(--white);
-  margin: 0.2rem;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+.headerupper__options ul li {
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
+}
+.headerupper__options ul li a {
+  transition: all 0.3s;
+  color: var(--black);
+}
+
+.headerupper__options ul li a:hover {
+  color: var(--reddish);
+  transition: all 0.3s;
+}
+
+.headerupper__options ul li button {
+  transition: all 0.3s;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--black);
+  font-size: 1.1rem;
+  padding: 0;
+  font-family: "Righteous", cursive;
+}
+
+.headerupper__options ul li button:hover {
+  color: var(--reddish);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.titlelink {
+  color: var(--reddish);
+  font-weight: 600;
+}
+
+.headerupper__main {
+  position: relative;
+}
+.headerupper__main h1 {
+  font-size: 6rem;
+}
+
+.headerupper__main p {
+  position: absolute;
+  bottom: 12%;
+  right: 0%;
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: var(--reddish);
+  color: var(--white);
+}
+
+.headerlower {
+  grid-area: lower;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerlower ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerlower ul li {
+  margin-right: 4rem;
+  font-size: 1.1rem;
+}
+.headerlower ul li:last-child {
+  margin-right: 0rem;
+}
+
+.headerlower ul li a {
+  transition: all 0.3s ease;
+}
+.headerlower ul li a:hover {
+  color: var(--reddish);
+  transition: all 0.3s ease;
+}
+
+/* MOBILE */
+
+.mobileheader {
+  display: grid;
+  grid-template-columns: minmax(0vh, 10vh) auto minmax(0, 10vh);
+  grid-template-rows: 2vh auto auto 4vh;
+  grid-template-areas:
+    ". . ."
+    ". upper ."
+    ". lower ."
+    ". . .";
+  position: relative;
+}
+
+.mobileheader__main {
+  position: relative;
+  grid-area: upper;
+  justify-self: center;
+}
+
+.mobileheader__main h1 {
+  font-size: 4rem;
+}
+
+.mobileheader__main p {
+  position: absolute;
+  bottom: 5%;
+  right: -20%;
+  padding: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: var(--reddish);
+  color: var(--white);
+}
+
+.mobileheader__lines div {
+  position: absolute;
+  top: 8%;
+  left: 4%;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background: var(--reddish);
 }
 
 .mobilemenu {
-  position: absolute;
-  top: 20%;
-  left: 0;
+  backdrop-filter: blur(2px);
   list-style: none;
-  color: var(--orange-burnt);
-  width: 100%;
-  height: max-content;
   padding: 0rem;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 96vw;
+  min-height: 100vh;
+  font-weight: 600;
   z-index: 999;
-  backdrop-filter: blur(3px);
 }
+
 .mobilemenu li {
+  height: 13vh;
+  font-size: 1.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
-  width: 100%;
-  height: 10vh;
+  overflow-x: hidden;
 }
+
 .mobilemenu li a {
   display: block;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 1100px) {
-  .sidebartitle {
-    line-height: initial;
-  }
-}
-
-@media (max-width: 800px) {
-  .container {
-    grid-template-areas:
-      "mobileheader"
-      "main"
-      "footer";
-  }
-  .mobileheadertitle {
-    line-height: inherit;
-  }
+  min-width: 100%;
+  min-height: 100%;
+  text-align: center;
+  padding-top: 2rem;
 }
