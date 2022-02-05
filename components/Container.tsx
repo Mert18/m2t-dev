@@ -122,15 +122,6 @@ export default function Container(props) {
                         setTheme("lesjourstristes");
                         Cookies.set("theme", "lesjourstristes");
                       }}
-                      style={
-                        theme == "lesjourstristes"
-                          ? {
-                              textDecoration: "underline",
-                              textDecorationColor: "var(--tertiary)",
-                              textDecorationThickness: "2px",
-                            }
-                          : {}
-                      }
                     >
                       LES JOURS TRISTES
                     </button>
@@ -142,15 +133,6 @@ export default function Container(props) {
                         setTheme("beyond");
                         Cookies.set("theme", "beyond");
                       }}
-                      style={
-                        theme == "beyond"
-                          ? {
-                              textDecoration: "underline",
-                              textDecorationColor: "var(--tertiary)",
-                              textDecorationThickness: "2px",
-                            }
-                          : {}
-                      }
                     >
                       BEYOND
                     </button>
@@ -162,15 +144,6 @@ export default function Container(props) {
                         setTheme("ankararuzgari");
                         Cookies.set("theme", "ankararuzgari");
                       }}
-                      style={
-                        theme == "ankararuzgari"
-                          ? {
-                              textDecoration: "underline",
-                              textDecorationColor: "var(--tertiary)",
-                              textDecorationThickness: "2px",
-                            }
-                          : {}
-                      }
                     >
                       ANKARA RUZGARI
                     </button>
@@ -183,15 +156,6 @@ export default function Container(props) {
                         setTheme("sadabad");
                         Cookies.set("theme", "sadabad");
                       }}
-                      style={
-                        theme == "sadabad"
-                          ? {
-                              textDecoration: "underline",
-                              textDecorationColor: "var(--tertiary)",
-                              textDecorationThickness: "2px",
-                            }
-                          : {}
-                      }
                     >
                       SULTAN-I YEGAH
                     </button>

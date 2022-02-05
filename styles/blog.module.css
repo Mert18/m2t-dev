@@ -57,6 +57,9 @@
     grid-template-columns: auto 80vw auto;
     font-size: 1rem;
   }
+  .blogcontent {
+    line-height: 30px;
+  }
   .blog {
     grid-template-columns: auto 80vw auto;
   }

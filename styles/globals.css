@@ -58,20 +58,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-  background: transparent;
-  width: 16px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--primary);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--reddish);
-  border-radius: 20px;
-  border: 3px solid var(--white);
+  display: none;
 }
 
 html,
