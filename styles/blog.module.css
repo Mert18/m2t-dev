@@ -35,6 +35,8 @@
     ". back .";
   font-size: 1.3rem;
   font-weight: 300;
+  background: var(--primary);
+  color: var(--secondary);
 }
 
 .blogpostheader {

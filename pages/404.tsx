@@ -12,7 +12,7 @@ export default function NotFound() {
   useEffect(() => {
     let random = Math.trunc(Math.random() * beKindToWhoisLost.length);
     setSiteyt(beKindToWhoisLost[random]);
-  });
+  }, []);
   return (
     <Container>
       <div className={classes.forofor}>

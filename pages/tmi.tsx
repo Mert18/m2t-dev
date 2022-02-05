@@ -3,15 +3,7 @@ import NowPlaying from "../components/NowPlaying";
 import Tracks from "../components/TopTracks";
 import classes from "../styles/tmi.module.css";
 import { useState, useEffect } from "react";
-import {
-  LineChart,
-  Line,
-  Legend,
-  XAxis,
-  CartesianGrid,
-  Tooltip,
-  Brush,
-} from "recharts";
+import { LineChart, Line, Legend, XAxis, CartesianGrid, Brush } from "recharts";
 import Image from "next/image";
 
 export default function Tmi({ data }) {
@@ -19,7 +11,7 @@ export default function Tmi({ data }) {
 
   useEffect(() => {
     setHidden(false);
-  });
+  }, []);
 
   return (
     <Container
@@ -31,11 +23,7 @@ export default function Tmi({ data }) {
           <div className={classes.chart__title}>Happiness Graph</div>
           <div className={classes.chart__chart}>
             <LineChart width={1200} height={450} data={data}>
-              <Legend
-                verticalAlign="top"
-                height={48}
-                margin={{ top: 5, left: 10, right: 20, bottom: 30 }}
-              />
+              <Legend verticalAlign="top" height={48} />
               <Line
                 type="monotone"
                 dataKey="happiness"
