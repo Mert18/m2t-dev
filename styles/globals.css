@@ -27,9 +27,9 @@
   --flavor3: #7b3f8c;
 }
 [data-theme="beyond"] {
-  --primary: #ab5959;
+  --primary: #6e1212;
   --secondary: #f4efed;
-  --tertiary: #deb463;
+  --tertiary: #c8873a;
 
   --flavor: #deecd3;
   --flavor2: #061431;
@@ -44,6 +44,16 @@
   --flavor: #f6f339;
   --flavor2: #c8ff80;
   --flavor3: #631c68;
+}
+
+[data-theme="sadabad"] {
+  --primary: #2e7131;
+  --secondary: #efefef;
+  --tertiary: #42a682;
+
+  --flavor: #fb7a6e;
+  --flavor2: #9a63e2;
+  --flavor3: #660a29;
 }
 
 /* width */

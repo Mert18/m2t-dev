@@ -144,7 +144,7 @@
   bottom: 5%;
   right: -20%;
   padding: 0.4rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   background: var(--tertiary);
   color: var(--secondary);
@@ -154,8 +154,8 @@
   position: absolute;
   top: 8%;
   left: 4%;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border-radius: 50%;
   background: var(--tertiary);
 }
@@ -168,14 +168,13 @@
   top: 80%;
   left: 0;
   width: 96vw;
-  min-height: 100vh;
-  font-weight: 600;
+  font-weight: 400;
   z-index: 999;
 }
 
 .mobilemenu li {
   height: 13vh;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,4 +187,21 @@
   min-height: 100%;
   text-align: center;
   padding-top: 2rem;
+}
+
+.footer {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
+}
+.footer div a {
+  text-decoration: none;
+  color: var(--secondary);
+  transition: all 0.3s ease;
+}
+.footer div a:hover {
+  color: var(--tertiary);
+  transition: all 0.3s ease;
 }

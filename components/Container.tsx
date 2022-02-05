@@ -68,7 +68,7 @@ export default function Container(props) {
             <div className={classes.headerupper}>
               <div className={classes.headerupper__options}>
                 <ul className={classes.left}>
-                  <li className={classes.titlelink}>WHERE I AM</li>
+                  <li className={classes.titlelink}>ME ELSEWHERE</li>
                   <li>
                     <a
                       href="https://github.com/Mert18"
@@ -122,6 +122,15 @@ export default function Container(props) {
                         setTheme("lesjourstristes");
                         Cookies.set("theme", "lesjourstristes");
                       }}
+                      style={
+                        theme == "lesjourstristes"
+                          ? {
+                              textDecoration: "underline",
+                              textDecorationColor: "var(--tertiary)",
+                              textDecorationThickness: "2px",
+                            }
+                          : {}
+                      }
                     >
                       LES JOURS TRISTES
                     </button>
@@ -133,6 +142,15 @@ export default function Container(props) {
                         setTheme("beyond");
                         Cookies.set("theme", "beyond");
                       }}
+                      style={
+                        theme == "beyond"
+                          ? {
+                              textDecoration: "underline",
+                              textDecorationColor: "var(--tertiary)",
+                              textDecorationThickness: "2px",
+                            }
+                          : {}
+                      }
                     >
                       BEYOND
                     </button>
@@ -144,8 +162,38 @@ export default function Container(props) {
                         setTheme("ankararuzgari");
                         Cookies.set("theme", "ankararuzgari");
                       }}
+                      style={
+                        theme == "ankararuzgari"
+                          ? {
+                              textDecoration: "underline",
+                              textDecorationColor: "var(--tertiary)",
+                              textDecorationThickness: "2px",
+                            }
+                          : {}
+                      }
                     >
                       ANKARA RUZGARI
+                    </button>
+                  </li>
+
+                  <li>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setTheme("sadabad");
+                        Cookies.set("theme", "sadabad");
+                      }}
+                      style={
+                        theme == "sadabad"
+                          ? {
+                              textDecoration: "underline",
+                              textDecorationColor: "var(--tertiary)",
+                              textDecorationThickness: "2px",
+                            }
+                          : {}
+                      }
+                    >
+                      SULTAN-I YEGAH
                     </button>
                   </li>
                 </ul>
@@ -234,7 +282,17 @@ export default function Container(props) {
         <main className={classes.main} role="main">
           {children}
         </main>
-        <footer className={classes.footer}></footer>
+        <footer className={classes.footer}>
+          <div>
+            <a
+              href="https://github.com/Mert18/merd-dev"
+              rel="noreferrer"
+              target="_blank"
+            >
+              github
+            </a>
+          </div>
+        </footer>
       </div>
     </ThemeContext.Provider>
   );
