@@ -6,15 +6,16 @@
   font-weight: 400;
   transition: all 0.3s ease;
   font-size: 1.2rem;
+  color: var(--secondary);
 }
 .posttitle:hover {
   transition: all 0.3s ease;
-  color: var(--reddish);
+  color: var(--tertiary);
 }
 
 .postdate {
   font-size: 1rem;
-  color: var(--reddish);
+  color: var(--tertiary);
 }
 
 @media (max-width: 800px) {

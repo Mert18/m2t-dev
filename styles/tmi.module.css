@@ -7,6 +7,8 @@
     "graph graph graph"
     ". spotify .";
   min-height: 90vh;
+  background: var(--primary);
+  color: var(--secondary);
 }
 
 .chart {
@@ -39,6 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--secondary);
 }
 
 .spotify__profile p {

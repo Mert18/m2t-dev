@@ -9,6 +9,7 @@
     ". upper ."
     ". lower ."
     ". . .";
+  background: var(--primary);
 }
 
 .headerupper {
@@ -33,11 +34,11 @@
 }
 .headerupper__options ul li a {
   transition: all 0.3s;
-  color: var(--black);
+  color: var(--secondary);
 }
 
 .headerupper__options ul li a:hover {
-  color: var(--reddish);
+  color: var(--tertiary);
   transition: all 0.3s;
 }
 
@@ -46,19 +47,19 @@
   border: none;
   outline: none;
   background: transparent;
-  color: var(--black);
+  color: var(--secondary);
   font-size: 1.1rem;
   padding: 0;
   font-family: "Righteous", cursive;
 }
 
 .headerupper__options ul li button:hover {
-  color: var(--reddish);
+  color: var(--tertiary);
   transition: all 0.3s;
   cursor: pointer;
 }
 .titlelink {
-  color: var(--reddish);
+  color: var(--tertiary);
   font-weight: 600;
 }
 
@@ -67,6 +68,7 @@
 }
 .headerupper__main h1 {
   font-size: 6rem;
+  color: var(--secondary);
 }
 
 .headerupper__main p {
@@ -76,8 +78,8 @@
   padding: 0.7rem;
   font-size: 1.1rem;
   font-weight: 700;
-  background: var(--reddish);
-  color: var(--white);
+  background: var(--tertiary);
+  color: var(--secondary);
 }
 
 .headerlower {
@@ -85,6 +87,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--secondary);
 }
 
 .headerlower ul {
@@ -106,7 +109,7 @@
   transition: all 0.3s ease;
 }
 .headerlower ul li a:hover {
-  color: var(--reddish);
+  color: var(--tertiary);
   transition: all 0.3s ease;
 }
 
@@ -122,6 +125,8 @@
     ". lower ."
     ". . .";
   position: relative;
+  background: var(--primary);
+  color: var(--secondary);
 }
 
 .mobileheader__main {
@@ -141,8 +146,8 @@
   padding: 0.4rem;
   font-size: 1.1rem;
   font-weight: 700;
-  background: var(--reddish);
-  color: var(--white);
+  background: var(--tertiary);
+  color: var(--secondary);
 }
 
 .mobileheader__lines div {
@@ -152,7 +157,7 @@
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
-  background: var(--reddish);
+  background: var(--tertiary);
 }
 
 .mobilemenu {

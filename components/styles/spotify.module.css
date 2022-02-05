@@ -30,10 +30,11 @@
 }
 .toptrack__title {
   font-weight: 300;
+  color: var(--secondary);
 }
 .toptrack__artist {
   font-weight: 300;
-  color: var(--reddish);
+  color: var(--tertiary);
 }
 
 /* NOW PLAYING component */
@@ -53,10 +54,11 @@
 
 .nowplayingcomp__text .songtitle {
   font-weight: 300;
+  color: var(--secondary);
 }
 .nowplayingcomp__text .songartist {
   font-weight: 300;
-  color: var(--reddish);
+  color: var(--tertiary);
 }
 
 .notplaying {

@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import {
   LineChart,
   Line,
+  Legend,
   XAxis,
   CartesianGrid,
   Tooltip,
@@ -29,13 +30,18 @@ export default function Tmi({ data }) {
         <div className={classes.chart}>
           <div className={classes.chart__title}>Happiness Graph</div>
           <div className={classes.chart__chart}>
-            <LineChart width={1100} height={400} data={data}>
+            <LineChart width={1200} height={450} data={data}>
+              <Legend
+                verticalAlign="top"
+                height={48}
+                margin={{ top: 5, left: 10, right: 20, bottom: 30 }}
+              />
               <Line
                 type="monotone"
                 dataKey="happiness"
                 activeDot={{ r: 8 }}
-                fill="var(--orange)"
-                stroke="var(--orange)"
+                fill="var(--tertiary)"
+                stroke="var(--tertiary)"
                 strokeWidth={3}
               />
               <Line
@@ -43,33 +49,33 @@ export default function Tmi({ data }) {
                 dataKey="work"
                 activeDot={{ r: 8 }}
                 dot={false}
-                stroke="#07596D"
+                stroke="var(--flavor)"
                 strokeWidth={2}
               />
               <Line
                 type="monotone"
                 dataKey="leisure"
                 activeDot={{ r: 8 }}
-                stroke="#8884d8"
+                stroke="var(--flavor2)"
                 dot={false}
               />
               <Line
                 type="monotone"
                 dataKey="game"
                 activeDot={{ r: 8 }}
-                stroke="#39D310"
-                strokeDasharray="3 4 5 2"
+                stroke="var(--flavor3)"
                 dot={false}
+                strokeWidth={2}
               />
-              <Tooltip />
-              <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+              <CartesianGrid stroke="var(--tertiary)" strokeDasharray="5 5" />
               <XAxis
                 dataKey="date"
                 tickCount={50}
                 minTickGap={15}
+                stroke="var(--tertiary)"
                 hide={hidden}
               />
-              <Brush startIndex={50} />
+              <Brush startIndex={80} stroke="var(--tertiary)" />
             </LineChart>
           </div>
         </div>

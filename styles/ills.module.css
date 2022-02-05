@@ -5,6 +5,8 @@
   grid-template-areas:
     ". . ."
     ". ills .";
+  background: var(--primary);
+  color: var(--secondary);
 }
 .illslist {
   grid-area: ills;

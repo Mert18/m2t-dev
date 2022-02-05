@@ -5,6 +5,8 @@
   grid-template-areas:
     ". . ."
     ". bloglist .";
+  background: var(--primary);
+  color: var(--secondary);
 }
 .blogposthome {
   grid-area: bloglist;

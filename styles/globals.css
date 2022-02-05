@@ -8,10 +8,42 @@
   --black-darker: #1d0c35;
 
   /* Default */
+  --primary: #efefef;
+  --secondary: #333333;
+  --tertiary: #fd7575;
 
   --black: #333333;
   --reddish: #fd7575;
   --white: #efefef;
+}
+
+[data-theme="lesjourstristes"] {
+  --primary: #efefef;
+  --secondary: #333333;
+  --tertiary: #fd7575;
+
+  --flavor: #125b8b;
+  --flavor2: #58774f;
+  --flavor3: #7b3f8c;
+}
+[data-theme="beyond"] {
+  --primary: #ab5959;
+  --secondary: #f4efed;
+  --tertiary: #deb463;
+
+  --flavor: #deecd3;
+  --flavor2: #061431;
+  --flavor3: #38053b;
+}
+
+[data-theme="ankararuzgari"] {
+  --primary: #0e0a28;
+  --secondary: #f3f3f7;
+  --tertiary: #f75a5a;
+
+  --flavor: #f6f339;
+  --flavor2: #c8ff80;
+  --flavor3: #631c68;
 }
 
 /* width */
@@ -22,6 +54,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
+  background: var(--primary);
 }
 
 /* Handle */
@@ -36,8 +69,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: var(--white);
-  color: var(--black);
+  background: var(--primary);
 }
 
 a {

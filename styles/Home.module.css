@@ -6,6 +6,7 @@
   grid-template-areas:
     ". . ."
     ". bloglist .";
+  background: var(--primary);
 }
 
 .bloglist {

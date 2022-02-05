@@ -9,6 +9,8 @@
     ". files ."
     ". . .";
   min-height: 80vh;
+  background: var(--primary);
+  color: var(--secondary);
 }
 
 .hackerranksols h1 {
@@ -22,12 +24,12 @@
   grid-area: search;
 }
 .hackerranksols__search input {
-  background: var(--white);
+  background: var(--primary);
   font-size: 1.4rem;
   text-align: center;
   height: 6vh;
-  border: 1px solid black;
-  color: var(--reddish);
+  border: 1px solid var(--tertiary);
+  color: var(--secondary);
   width: 100%;
 }
 
@@ -45,7 +47,7 @@
   align-items: center;
   font-size: 1.2rem;
   transition: all 0.3s ease;
-  color: var(--black);
+  color: var(--secondary);
   overflow: hidden;
 }
 
