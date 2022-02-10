@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useRef } from "react";
 import classes from "./styles/container.module.css";
 import Link from "next/link";
 import useWindowDimensions from "./useWindowDimensions";
@@ -14,6 +14,7 @@ export default function Container(props) {
   const router = useRouter();
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [theme, setTheme] = useState(Cookies.get("theme"));
+  const [navbar, setNavbar] = useState(false);
 
   const { height, width } = useWindowDimensions();
   useEffect(() => {
@@ -28,6 +29,14 @@ export default function Container(props) {
     if (width > 1100) {
       setMobileMenuVisible(false);
     }
+    const changeNavbar = () => {
+      if (window.scrollY >= 380) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+    };
+    window.addEventListener("scroll", changeNavbar);
   }, [router, width]);
 
   const { children, ...customMeta } = props;
@@ -153,8 +162,8 @@ export default function Container(props) {
                     <button
                       onClick={(e) => {
                         e.preventDefault();
-                        setTheme("sadabad");
-                        Cookies.set("theme", "sadabad");
+                        setTheme("sultaniyegah");
+                        Cookies.set("theme", "sultaniyegah");
                       }}
                     >
                       SULTAN-I YEGAH
@@ -163,7 +172,7 @@ export default function Container(props) {
                 </ul>
               </div>
             </div>
-            <nav className={classes.headerlower}>
+            <nav className={navbar ? classes.sticky : classes.headerlower}>
               <ul>
                 <li>
                   <Link href="/">

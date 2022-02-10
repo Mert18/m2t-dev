@@ -90,6 +90,46 @@
   color: var(--secondary);
 }
 
+.sticky {
+  grid-area: lower;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary);
+  background: var(--primary);
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.3s all ease;
+  border-bottom: 4px solid var(--tertiary);
+}
+
+.sticky ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sticky ul li {
+  margin-right: 4rem;
+  font-size: 1.1rem;
+}
+
+.sticky ul li:last-child {
+  margin-right: 0rem;
+}
+
+.sticky ul li a {
+  transition: all 0.3s ease;
+}
+
+.sticky ul li a:hover {
+  color: var(--tertiary);
+  transition: all 0.3s ease;
+}
+
 .headerlower ul {
   list-style: none;
   display: flex;
