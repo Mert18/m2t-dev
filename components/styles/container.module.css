@@ -97,6 +97,7 @@
   align-items: center;
   color: var(--secondary);
   background: var(--primary);
+  z-index: 9999;
   height: 10vh;
   position: fixed;
   top: 0;
