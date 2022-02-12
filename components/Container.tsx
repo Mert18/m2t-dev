@@ -43,7 +43,7 @@ export default function Container(props) {
 
   const meta = {
     title: "Mert Uygur Personal Website",
-    description: `Software Developer, Full Stack Developer`,
+    description: `Software Developer, Software Engineer`,
     type: "website",
     ...customMeta,
   };

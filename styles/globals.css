@@ -3,18 +3,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 :root {
-  --orange: #db7b45;
-  --orange-burnt: #cc5500;
-  --black-darker: #1d0c35;
-
-  /* Default */
-  --primary: #efefef;
-  --secondary: #333333;
-  --tertiary: #fd7575;
-
   --black: #333333;
   --reddish: #fd7575;
   --white: #efefef;
+
+  --primary: #0e0a28;
+  --secondary: #f3f3f7;
+  --tertiary: #f75a5a;
+
+  --flavor: #f6f339;
+  --flavor2: #c8ff80;
+  --flavor3: #631c68;
 }
 
 [data-theme="lesjourstristes"] {
