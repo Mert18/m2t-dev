@@ -118,7 +118,7 @@ export default function Container(props) {
               </div>
               <div className={classes.headerupper__main}>
                 <h1>MERD</h1>
-                <p>Front End Engineer</p>
+                <p>Software Engineer</p>
               </div>
 
               <div className={classes.headerupper__options}>
