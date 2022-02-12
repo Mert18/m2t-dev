@@ -21,7 +21,7 @@ export default function Me() {
           <div className={classes.textpart}>
             <p className={classes.textparttitle}>Introduction</p>
             <p>
-              Front End Engineer with 2.5 years experience building responsive
+              Software Engineer with 2.5 years experience building responsive
               websites and systems. Proficient in HTML, CSS, Javascript, modern
               technologies such as React.js, Next.js, Node.js, and Typescript.
             </p>
