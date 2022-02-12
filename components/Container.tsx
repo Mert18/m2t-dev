@@ -128,6 +128,17 @@ export default function Container(props) {
                     <button
                       onClick={(e) => {
                         e.preventDefault();
+                        setTheme("ankararuzgari");
+                        Cookies.set("theme", "ankararuzgari");
+                      }}
+                    >
+                      ANKARA RUZGARI
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
                         setTheme("lesjourstristes");
                         Cookies.set("theme", "lesjourstristes");
                       }}
@@ -144,17 +155,6 @@ export default function Container(props) {
                       }}
                     >
                       BEYOND
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setTheme("ankararuzgari");
-                        Cookies.set("theme", "ankararuzgari");
-                      }}
-                    >
-                      ANKARA RUZGARI
                     </button>
                   </li>
 

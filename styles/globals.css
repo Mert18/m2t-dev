@@ -18,8 +18,8 @@
 }
 
 [data-theme="lesjourstristes"] {
-  --primary: #efefef;
-  --secondary: #333333;
+  --primary: #06292e;
+  --secondary: #ecdcdc;
   --tertiary: #fd7575;
 
   --flavor: #125b8b;
@@ -47,9 +47,9 @@
 }
 
 [data-theme="sultaniyegah"] {
-  --primary: #175019;
+  --primary: #2f062a;
   --secondary: #efefef;
-  --tertiary: #55a084;
+  --tertiary: #992ca3;
 
   --flavor: #fb7a6e;
   --flavor2: #9a63e2;
