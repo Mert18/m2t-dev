@@ -68,10 +68,12 @@
     ". . ."
     ". text ."
     ". code .";
+  background: var(--primary);
 }
 
 .hackerrank__title {
   grid-area: text;
+  color: var(--secondary);
 }
 
 .hackerrank__code {
