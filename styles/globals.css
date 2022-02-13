@@ -22,8 +22,8 @@
   --tertiary: #fd7575;
 
   --flavor: #125b8b;
-  --flavor2: #58774f;
-  --flavor3: #7b3f8c;
+  --flavor2: #6cac5a;
+  --flavor3: #913ca8;
 }
 [data-theme="beyond"] {
   --primary: #6e1212;
@@ -31,8 +31,8 @@
   --tertiary: #c8873a;
 
   --flavor: #deecd3;
-  --flavor2: #061431;
-  --flavor3: #38053b;
+  --flavor2: #70e476;
+  --flavor3: #ce7676;
 }
 
 [data-theme="ankararuzgari"] {
@@ -42,7 +42,7 @@
 
   --flavor: #f6f339;
   --flavor2: #c8ff80;
-  --flavor3: #631c68;
+  --flavor3: #a436ac;
 }
 
 [data-theme="sultaniyegah"] {
@@ -52,12 +52,24 @@
 
   --flavor: #fb7a6e;
   --flavor2: #9a63e2;
-  --flavor3: #660a29;
+  --flavor3: #df507f;
 }
 
-/* width */
 ::-webkit-scrollbar {
-  display: none;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fffafa;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(207, 207, 207);
 }
 
 html,
@@ -66,6 +78,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background: var(--primary);
+  overflow: overlay;
 }
 
 a {

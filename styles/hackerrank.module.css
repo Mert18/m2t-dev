@@ -15,7 +15,7 @@
 
 .hackerranksols h1 {
   justify-self: center;
-  color: var(--reddish);
+  color: var(--tertiary);
   font-size: 1.3rem;
   grid-area: title;
 }
@@ -29,7 +29,7 @@
   text-align: center;
   height: 6vh;
   border: 1px solid var(--tertiary);
-  color: var(--secondary);
+  color: var(--tertiary);
   width: 100%;
 }
 
@@ -57,7 +57,7 @@
 
 .hackerranksols ul li:hover {
   cursor: pointer;
-  color: var(--reddish);
+  color: var(--tertiary);
 }
 
 .hackerrank {

@@ -8,7 +8,8 @@ export default function CustomLink({ as, href, ...otherProps }) {
       </Link>
       <style jsx>{`
         a {
-          color: blue;
+          color: var(--tertiary);
+          text-decoration: underline;
         }
       `}</style>
     </>
