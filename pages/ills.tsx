@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import Container from "../components/Container";
+import Layout from "../components/Layout";
 import classes from "../styles/ills.module.css";
 import fs from "fs";
 import path from "path";
@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Ills({ fileNames }) {
   return (
-    <Container
+    <Layout
       title="Illustrations - Mert Uygur"
       description="Illustrations by Mert Uygur. Drawn with Adobe Illustrator."
     >
@@ -27,7 +27,7 @@ export default function Ills({ fileNames }) {
           })}
         </ul>
       </div>
-    </Container>
+    </Layout>
   );
 }
 

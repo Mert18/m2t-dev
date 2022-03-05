@@ -1,4 +1,4 @@
-import Container from "../components/Container";
+import Layout from "../components/Layout";
 import { useState, useEffect } from "react";
 import classes from "../styles/forofor.module.css";
 
@@ -14,10 +14,10 @@ export default function NotFound() {
     setSiteyt(beKindToWhoisLost[random]);
   }, []);
   return (
-    <Container>
+    <Layout>
       <div className={classes.forofor}>
         <p>{siteyt}</p>
       </div>
-    </Container>
+    </Layout>
   );
 }

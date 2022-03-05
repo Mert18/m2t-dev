@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { getAllFiles, getSingleFile } from "../../lib/hackerrank";
-import Container from "../../components/Container";
+import Layout from "../../components/Layout";
 import classes from "../../styles/hackerrank.module.css";
 import { useEffect } from "react";
 import Prism from "prismjs";
@@ -14,7 +14,7 @@ export default function Solution({ file }) {
   const router = useRouter();
   const myroute = router.query.slug.toString().replace(/\.js/, "");
   return (
-    <Container>
+    <Layout>
       <div className={classes.hackerrank}>
         <div className={classes.hackerrank__title}>
           <h2>Hackerrank Javascript Solutions</h2>
@@ -24,7 +24,7 @@ export default function Solution({ file }) {
           <code className="language-js">{file}</code>
         </pre>
       </div>
-    </Container>
+    </Layout>
   );
 }
 

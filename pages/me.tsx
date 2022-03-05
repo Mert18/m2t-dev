@@ -1,4 +1,4 @@
-import Container from "../components/Container";
+import Layout from "../components/Layout";
 import classes from "../styles/me.module.css";
 
 const technologies = [
@@ -15,7 +15,7 @@ const tools = ["Git", "Jira", "Figma", "Adobe Illustrator", "Linux"];
 
 export default function Me() {
   return (
-    <Container title="About - Mert Uygur" description="About Mert Uygur">
+    <Layout title="About - Mert Uygur" description="About Mert Uygur">
       <div className={classes.resume}>
         <div className={classes.resumecontent}>
           <div className={classes.textpart}>
@@ -47,6 +47,6 @@ export default function Me() {
           </div>
         </div>
       </div>
-    </Container>
+    </Layout>
   );
 }

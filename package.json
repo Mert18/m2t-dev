@@ -30,7 +30,7 @@
     "swr": "^1.0.1"
   },
   "devDependencies": {
-    "@types/react": "^17.0.27",
+    "@types/react": "^17.0.39",
     "@types/styled-components": "^5.1.24",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",

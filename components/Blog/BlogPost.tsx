@@ -1,22 +1,23 @@
 import React from "react";
 import Link from "next/link";
 import classes from "./styles/blogpost.module.css";
+import { BlogPostCard, PostDate, PostTitle } from "./BlogPost.styles";
 
 // Blogpost component
 const BlogPost = ({ post }) => {
   return (
-    <article className={classes.blogpostcard}>
+    <BlogPostCard>
       <Link
         as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
         href={`/blog/[slug]`}
       >
         <a>
-          <h3 className={classes.posttitle}>{post.data.title}</h3>
+          <PostTitle>{post.data.title}</PostTitle>
         </a>
       </Link>
 
-      <p className={classes.postdate}>{post.data.date}</p>
-    </article>
+      <PostDate>{post.data.date}</PostDate>
+    </BlogPostCard>
   );
 };
 

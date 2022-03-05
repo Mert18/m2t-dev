@@ -1,14 +1,18 @@
-import classes from "../styles/Home.module.css";
-import Container from "../components/Container";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import {postFilePaths, POSTS_PATH} from "../utils/mdxUtils";
-import BlogPost from "../components/BlogPost";
-import {GetStaticProps} from "next";
-import {useEffect} from "react";
+import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
+import { GetStaticProps } from "next";
+import { useEffect } from "react";
+import Layout from "../components/Layout";
+import BlogPostList from "../components/Blog/BlogPostList";
+import styled from "styled-components";
 
-export default function Home({posts}) {
+const HomeWrapper = styled.div`
+  background: var(--primary);
+`;
+
+export default function Home({ posts }) {
   async function getData() {
     const MONGODB = process.env.MONGODBURL;
     const response = await fetch(`${MONGODB}`);
@@ -25,24 +29,18 @@ export default function Home({posts}) {
   });
 
   return (
-    <Container>
-      <div className={classes.homepage}>
-        <ul className={classes.bloglist}>
-          {filteredBlogPosts.map((post) => (
-            <li key={post.filePath}>
-              <BlogPost post={post} />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Container>
+    <Layout>
+      <HomeWrapper>
+        <BlogPostList posts={filteredBlogPosts} />
+      </HomeWrapper>
+    </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = () => {
   const posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
-    const {content, data} = matter(source);
+    const { content, data } = matter(source);
 
     return {
       content,
@@ -51,5 +49,5 @@ export const getStaticProps: GetStaticProps = () => {
     };
   });
 
-  return {props: {posts}};
+  return { props: { posts } };
 };

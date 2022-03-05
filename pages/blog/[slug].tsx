@@ -5,8 +5,8 @@ import { serialize } from "next-mdx-remote/serialize";
 import Head from "next/head";
 import Link from "next/link";
 import path from "path";
-import CustomLink from "../../components/CustomLink";
-import Container from "../../components/Container";
+import CustomLink from "../../components/Blog/CustomLink";
+import Layout from "../../components/Layout";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import classes from "../../styles/blog.module.css";
 
@@ -34,7 +34,7 @@ const components = {
 
 export default function PostPage({ source, frontMatter }) {
   return (
-    <Container>
+    <Layout>
       <div className={classes.bloglayout}>
         <div className={classes.blogpostheader}>
           <h1 style={{ color: "var(--tertiary)" }}>{frontMatter.title}</h1>
@@ -54,7 +54,7 @@ export default function PostPage({ source, frontMatter }) {
           </Link>
         </div>
       </div>
-    </Container>
+    </Layout>
   );
 }
 

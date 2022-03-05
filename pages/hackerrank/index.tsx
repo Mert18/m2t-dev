@@ -1,6 +1,6 @@
 import classes from "../../styles/hackerrank.module.css";
 import Link from "next/link";
-import Container from "../../components/Container";
+import Layout from "../../components/Layout";
 import { useState, useEffect } from "react";
 
 export default function Hackerrank({ files }) {
@@ -16,7 +16,7 @@ export default function Hackerrank({ files }) {
   }, [searchParams]);
 
   return (
-    <Container>
+    <Layout>
       <section className={classes.hackerranksols}>
         <h1>Hackerrank Javascript Solutions</h1>
         <div className={classes.hackerranksols__search}>
@@ -41,7 +41,7 @@ export default function Hackerrank({ files }) {
             })}
         </ul>
       </section>
-    </Container>
+    </Layout>
   );
 }
 
