@@ -10,7 +10,6 @@ import Cookies from "js-cookie";
 
 export default function Container(props) {
   const [mounted, setMounted] = useState(false);
-  const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [theme, setTheme] = useState(Cookies.get("theme"));
@@ -20,12 +19,6 @@ export default function Container(props) {
   useEffect(() => {
     setMounted(true);
     Prism.highlightAll();
-    if (router.asPath === "/") {
-      setCurrentPath("HOME");
-    } else {
-      let myroute = router.asPath.substring(1, 11).toUpperCase();
-      setCurrentPath(myroute);
-    }
     if (width > 1100) {
       setMobileMenuVisible(false);
     }

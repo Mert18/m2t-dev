@@ -1,30 +1,9 @@
-.spotifycomp {
-  display: grid;
-  grid-template-rows: 10vh auto auto;
-  grid-template-columns: auto 50vw auto;
-  grid-template-areas:
-    ". title ."
-    ". toptracks ."
-    ". nowplaying .";
-  min-height: 90vh;
-}
-.spotifycomp h2 {
-  grid-area: title;
-  font-weight: 400;
-}
-.spotifycomp__toptracks {
-  grid-area: toptracks;
-}
-.spotifycomp__nowplaying {
-  grid-area: nowplaying;
-}
-
 /* TOP TRACK component */
 .toptrack {
-  padding: 0.7rem;
   display: flex;
-  align-items: center;
+  border-bottom: 1.4px solid var(--white);
 }
+
 .toptrack:last-child {
   border-bottom: none;
 }
@@ -44,7 +23,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 3rem 0rem;
 }
 
 .nowplayingcomp__text {

@@ -1,18 +1,9 @@
 .tmi {
-  display: grid;
-  grid-template-rows: 10vh auto auto;
-  grid-template-columns: auto 50vw auto;
-  grid-template-areas:
-    ". . ."
-    "graph graph graph"
-    ". spotify .";
-  min-height: 90vh;
   background: var(--primary);
   color: var(--secondary);
 }
 
 .chart {
-  grid-area: graph;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -26,15 +17,12 @@
 }
 
 .spotify {
-  grid-area: spotify;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-}
-.toptrackstitle {
-  margin-bottom: 2rem;
+  border: 2px solid white;
 }
 
 .spotify__profile {

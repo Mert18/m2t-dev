@@ -3,12 +3,12 @@ import Container from "../components/Container";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
+import {postFilePaths, POSTS_PATH} from "../utils/mdxUtils";
 import BlogPost from "../components/BlogPost";
-import { GetStaticProps } from "next";
-import { useEffect } from "react";
+import {GetStaticProps} from "next";
+import {useEffect} from "react";
 
-export default function Home({ posts }) {
+export default function Home({posts}) {
   async function getData() {
     const MONGODB = process.env.MONGODBURL;
     const response = await fetch(`${MONGODB}`);
@@ -42,7 +42,7 @@ export default function Home({ posts }) {
 export const getStaticProps: GetStaticProps = () => {
   const posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath));
-    const { content, data } = matter(source);
+    const {content, data} = matter(source);
 
     return {
       content,
@@ -51,5 +51,5 @@ export const getStaticProps: GetStaticProps = () => {
     };
   });
 
-  return { props: { posts } };
+  return {props: {posts}};
 };
