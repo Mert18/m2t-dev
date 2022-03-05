@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 const SpotifyWrapper = styled.div`
   padding: 1rem;
+  background: var(--primary);
 `;
 
 const Spotify: React.FC = () => {

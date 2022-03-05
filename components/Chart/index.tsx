@@ -12,6 +12,7 @@ import styled from "styled-components";
 import SectionHeader from "../SectionHeader";
 
 const ChartWrapper = styled.div`
+  background: var(--primary);
   padding: 1rem;
 `;
 
