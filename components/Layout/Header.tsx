@@ -50,7 +50,7 @@ const Header = ({ theme, setTheme }: HeaderProps) => {
     <div>
       <HeaderWrapper>
         <HeaderUpper>
-          <HeaderUpperOptions>
+          <HeaderUpperOptions right={false}>
             <HeaderUpperOptionsTitle>ME ELSEWHERE</HeaderUpperOptionsTitle>
             <li>
               <a
@@ -94,7 +94,7 @@ const Header = ({ theme, setTheme }: HeaderProps) => {
             <p>Software Engineer</p>
           </HeaderUpperMain>
 
-          <HeaderUpperOptions right={right}>
+          <HeaderUpperOptions right={true}>
             <HeaderUpperOptionsTitle>THEMES</HeaderUpperOptionsTitle>
             <li>
               <button
