@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
   font-weight: 400;
-  min-height: 30vh;
+  min-height: 40vh;
   display: grid;
-  grid-template-columns: minmax(0vh, 10vh) auto minmax(0, 10vh);
+  grid-template-columns: minmax(0vh, 5vh) auto minmax(0, 5vh);
   grid-template-rows: 2vh auto auto 2vh;
   grid-template-areas:
     ". . ."
@@ -16,10 +16,77 @@ export const HeaderWrapper = styled.header`
 
 export const HeaderUpper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   grid-area: upper;
   font-family: "Righteous", cursive;
+`;
+
+export const HeaderUpperOptions = styled.ul<{ right: boolean }>`
+  padding: 0rem;
+  margin-left: 3rem;
+  & > li {
+    margin-top: 0.4rem;
+    & > a {
+      color: var(--secondary);
+      &:hover {
+        color: var(--tertiary);
+        transition: all 0.3s;
+      }
+    }
+
+    & > button {
+      transition: all 0.3s;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--secondary);
+      font-size: 1.1rem;
+      padding: 0;
+      font-family: "Righteous", cursive;
+      &:hover {
+        color: var(--tertiary);
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+
+  ${(props) =>
+    props.right &&
+    `
+    margin-left: 0rem;
+  margin-right: 3rem;
+
+    display: flex;
+  flex-direction: column;
+    align-items: flex-end; 
+`}
+`;
+
+export const HeaderUpperOptionsTitle = styled.li`
+  color: var(--tertiary);
+  font-weight: 600;
+`;
+
+export const HeaderUpperMain = styled.div`
+  position: relative;
+
+  & > h1 {
+    font-size: 6rem;
+    color: var(--secondary);
+  }
+
+  & > p {
+    position: absolute;
+    bottom: 12%;
+    right: 0%;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: var(--tertiary);
+    color: var(--secondary);
+  }
 `;
 
 export const HeaderLower = styled.div`
@@ -89,60 +156,6 @@ export const Sticky = styled.div`
         margin-right: 0rem;
       }
     }
-  }
-`;
-
-export const HeaderUpperOptions = styled.ul`
-  & > li {
-    margin-top: 0.4rem;
-    & > a {
-      color: var(--secondary);
-      &:hover {
-        color: var(--tertiary);
-        transition: all 0.3s;
-      }
-    }
-
-    & > button {
-      transition: all 0.3s;
-      border: none;
-      outline: none;
-      background: transparent;
-      color: var(--secondary);
-      font-size: 1.1rem;
-      padding: 0;
-      font-family: "Righteous", cursive;
-      &:hover {
-        color: var(--tertiary);
-        transition: all 0.3s;
-        cursor: pointer;
-      }
-    }
-  }
-`;
-
-export const HeaderUpperOptionsTitle = styled.li`
-  color: var(--tertiary);
-  font-weight: 600;
-`;
-
-export const HeaderUpperMain = styled.div`
-  position: relative;
-
-  & > h1 {
-    font-size: 6rem;
-    color: var(--secondary);
-  }
-
-  & > p {
-    position: absolute;
-    bottom: 12%;
-    right: 0%;
-    padding: 0.7rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    background: var(--tertiary);
-    color: var(--secondary);
   }
 `;
 

@@ -25,6 +25,8 @@ const Header = ({ theme, setTheme }: HeaderProps) => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [navbar, setNavbar] = useState(false);
 
+  const right = true;
+
   const { height, width } = useWindowDimensions();
 
   useEffect(() => {
@@ -92,7 +94,7 @@ const Header = ({ theme, setTheme }: HeaderProps) => {
             <p>Software Engineer</p>
           </HeaderUpperMain>
 
-          <HeaderUpperOptions>
+          <HeaderUpperOptions right={right}>
             <HeaderUpperOptionsTitle>THEMES</HeaderUpperOptionsTitle>
             <li>
               <button
@@ -220,7 +222,7 @@ const Header = ({ theme, setTheme }: HeaderProps) => {
       <MobileHeader>
         <MobileHeaderMain>
           <h1>MERD</h1>
-          <p>Front End Engineer</p>
+          <p>Software Engineer</p>
         </MobileHeaderMain>
         <MobileHeaderIcon onClick={mobileMenuVisibleHandler}>
           <div></div>

@@ -1,6 +1,5 @@
 import Layout from "../components/Layout";
 import { useState, useEffect } from "react";
-import classes from "../styles/forofor.module.css";
 
 const beKindToWhoisLost = [
   "You are lost. Just like me after watched I Am Thinking Of Ending Things.",
@@ -15,7 +14,7 @@ export default function NotFound() {
   }, []);
   return (
     <Layout>
-      <div className={classes.forofor}>
+      <div>
         <p>{siteyt}</p>
       </div>
     </Layout>

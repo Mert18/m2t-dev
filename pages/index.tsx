@@ -10,6 +10,8 @@ import styled from "styled-components";
 
 const HomeWrapper = styled.div`
   background: var(--primary);
+  min-height: 80vh;
+  margin-top: -2rem;
 `;
 
 export default function Home({ posts }) {

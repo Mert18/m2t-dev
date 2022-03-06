@@ -4,32 +4,49 @@ import classes from "../styles/ills.module.css";
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
+import styled from "styled-components";
 
-export default function Ills({ fileNames }) {
+const IllsWrapper = styled.div`
+  min-height: 70vh;
+  background: var(--primary);
+  padding: 3rem;
+`;
+
+const IllsList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+`;
+const Ill = styled.li`
+  align-self: center;
+`;
+
+const Ills = ({ fileNames }) => {
   return (
     <Layout
       title="Illustrations - Mert Uygur"
       description="Illustrations by Mert Uygur. Drawn with Adobe Illustrator."
     >
-      <div className={classes.ills}>
-        <ul className={classes.illslist}>
+      <IllsWrapper>
+        <IllsList>
           {fileNames.map((file) => {
             return (
-              <li key={file}>
+              <Ill key={file}>
                 <Image
                   src={`/ills/${file}`}
-                  width="1024px"
-                  height="1024px"
                   alt={file}
+                  width={1800}
+                  height={1800}
                 />
-              </li>
+              </Ill>
             );
           })}
-        </ul>
-      </div>
+        </IllsList>
+      </IllsWrapper>
     </Layout>
   );
-}
+};
 
 export const getStaticProps: GetStaticProps = async () => {
   const directory = path.join(process.cwd(), "public", "ills");
@@ -40,3 +57,5 @@ export const getStaticProps: GetStaticProps = async () => {
     props: { fileNames },
   };
 };
+
+export default Ills;

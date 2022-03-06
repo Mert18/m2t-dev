@@ -22,7 +22,7 @@
   --secondary: #ecdcdc;
   --tertiary: #fd7575;
 
-  --flavor: #125b8b;
+  --flavor: #125b8b20;
   --flavor2: #6cac5a;
   --flavor3: #913ca8;
 }
@@ -31,9 +31,9 @@
   --secondary: #f4efed;
   --tertiary: #c8873a;
 
-  --flavor: #deecd3;
-  --flavor2: #70e476;
-  --flavor3: #ce7676;
+  --flavor: #deecd320;
+  --flavor2: #70e47620;
+  --flavor3: #ce767620;
 }
 
 [data-theme="ankararuzgari"] {
@@ -41,9 +41,9 @@
   --secondary: #f3f3f7;
   --tertiary: #f75a5a;
 
-  --flavor: #f6f339;
-  --flavor2: #c8ff80;
-  --flavor3: #a436ac;
+  --flavor: #f6f33920;
+  --flavor2: #c8ff8020;
+  --flavor3: #a436ac20;
 }
 
 [data-theme="sultaniyegah"] {
@@ -51,9 +51,9 @@
   --secondary: #efefef;
   --tertiary: #992ca3;
 
-  --flavor: #fb7a6e;
-  --flavor2: #9a63e2;
-  --flavor3: #df507f;
+  --flavor: #fb7a6e20;
+  --flavor2: #9a63e220;
+  --flavor3: #df507f20;
 }
 
 ::-webkit-scrollbar {

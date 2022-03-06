@@ -1,22 +1,21 @@
 import React from "react";
 import Link from "next/link";
-import classes from "./styles/blogpost.module.css";
-import { BlogPostCard, PostDate, PostTitle } from "./BlogPost.styles";
+import { BlogPostCard, PostLink, PostDate, PostTitle } from "./BlogPost.styles";
 
 // Blogpost component
 const BlogPost = ({ post }) => {
   return (
     <BlogPostCard>
       <Link
+        passHref
         as={`/blog/${post.filePath.replace(/\.mdx?$/, "")}`}
         href={`/blog/[slug]`}
       >
-        <a>
+        <PostLink>
           <PostTitle>{post.data.title}</PostTitle>
-        </a>
+          <PostDate>{post.data.date}</PostDate>
+        </PostLink>
       </Link>
-
-      <PostDate>{post.data.date}</PostDate>
     </BlogPostCard>
   );
 };
