@@ -22,7 +22,7 @@ const ResumeWrapper = styled.div`
   grid-template-rows: 1fr;
   grid-template-areas: "left right";
   @media (max-width: 1100px) {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-columns: 1fr;
     grid-template-areas:
       "left"
@@ -40,13 +40,10 @@ const ResumeRight = styled.div`
 `;
 
 const Introduction = styled.div`
-  grid-area: intro;
 `;
 const Technologies = styled.div`
-  grid-area: tech;
 `;
 const Tools = styled.div`
-  grid-area: tools;
 `;
 
 const AreaTitle = styled.h2`

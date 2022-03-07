@@ -15,6 +15,12 @@ const BlogPageWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "left posts";
+
+  @media(max-width: 1100px){
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "left" "posts";
+  }
 `;
 
 const Left = styled.div`
