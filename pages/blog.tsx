@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import classes from "../styles/blog.module.css";
 import { GetStaticProps } from "next";
 import fs from "fs";
 import matter from "gray-matter";

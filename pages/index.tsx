@@ -12,8 +12,6 @@ const HomeWrapper = styled.div`
   background: var(--primary);
   min-height: 80vh;
   margin-top: -2rem;
-
-  margin: 6rem;
 `;
 
 export default function Home({ posts }) {

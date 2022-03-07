@@ -1,5 +1,4 @@
 import Layout from "../components/Layout";
-import classes from "../styles/me.module.css";
 import styled from "styled-components";
 
 const technologies = [

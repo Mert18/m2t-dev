@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next";
 import Layout from "../components/Layout";
-import classes from "../styles/ills.module.css";
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
