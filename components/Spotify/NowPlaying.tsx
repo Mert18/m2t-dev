@@ -6,18 +6,18 @@ import styled from "styled-components";
 import { NowPlayingSong } from "../../lib/types";
 
 const NowPlayingWrapper = styled.div`
+  grid-area: nowplaying;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   padding: 1rem;
 `;
 
 const RightNowPlaying = styled.div`
-  flex: 1;
 `;
 
 const LinkToProfile = styled.div`
-  flex: 1;
   color: var(--white);
 `;
 
@@ -53,6 +53,7 @@ const NowPlaying = () => {
         {data.isPlaying ? (
           <Link href={data.songUrl} target="_blank" rel="noreferrer">
             <>
+              <Artist>| Now Playing | </Artist>
               <Title className={classes.songtitle}>{data.title}</Title>
               <Artist className={classes.songartist}>{data.artist}</Artist>
             </>

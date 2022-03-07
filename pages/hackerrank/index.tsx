@@ -2,45 +2,64 @@ import classes from "../../styles/hackerrank.module.css";
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import { useState, useEffect } from "react";
+import styled from "styled-components";
+import SectionHeader from "../../components/SectionHeader";
+
+const HackerrankWrapper = styled.div`
+  background: var(--primary);
+  margin-top: -2rem;
+  color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const List = styled.div`
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+const ListItem = styled.div`
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledLink = styled.a`
+  background: var(--flavor);
+  transition: all 0.3s ease;
+  padding: 0.4rem;
+  &:hover {
+    transition: all 0.3s ease;
+    color: var(--tertiary);
+    cursor: pointer;
+  }
+`;
 
 export default function Hackerrank({ files }) {
-  const [searchParams, setSearchParams] = useState("");
   const [myFiles, setMyFiles] = useState(files);
-
-  useEffect(() => {
-    if (searchParams == "") {
-      setMyFiles(files);
-    } else {
-      setMyFiles(myFiles.filter((el: any) => el.name.startsWith(searchParams)));
-    }
-  }, [searchParams]);
 
   return (
     <Layout>
-      <section className={classes.hackerranksols}>
-        <h1>Hackerrank Javascript Solutions</h1>
-        <div className={classes.hackerranksols__search}>
-          <input
-            type="text"
-            onChange={(e: any) => setSearchParams(e.target.value)}
-          />
-        </div>
-        <ul>
+      <HackerrankWrapper>
+        <SectionHeader title="Hackerrank Javascript Solutions" />
+        <List>
           {myFiles
             .filter((el: any) => el.name.endsWith(".js"))
             .map((el: any) => {
               return (
-                <li key={el.name}>
+                <ListItem key={el.name}>
                   <Link href={`/hackerrank/${el.name}`}>
-                    <div className={classes.singlehack}>
-                      <p>{el.name.replace(/\.js/, "")}</p>
-                    </div>
+                    <StyledLink>{el.name.replace(/\.js/, "")}</StyledLink>
                   </Link>
-                </li>
+                </ListItem>
               );
             })}
-        </ul>
-      </section>
+        </List>
+      </HackerrankWrapper>
     </Layout>
   );
 }

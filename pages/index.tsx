@@ -12,6 +12,18 @@ const HomeWrapper = styled.div`
   background: var(--primary);
   min-height: 80vh;
   margin-top: -2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "blog info";
+`;
+
+const BlogPart = styled.div`
+  grid-area: blog;
+`;
+
+const Info = styled.div`
+  grid-area: info;
 `;
 
 export default function Home({ posts }) {
@@ -19,6 +31,7 @@ export default function Home({ posts }) {
     const MONGODB = process.env.MONGODBURL;
     const response = await fetch(`${MONGODB}`);
     const data = await response.json();
+
     return data;
   }
 
@@ -33,7 +46,10 @@ export default function Home({ posts }) {
   return (
     <Layout>
       <HomeWrapper>
-        <BlogPostList posts={filteredBlogPosts} />
+        <BlogPart>
+          <BlogPostList posts={filteredBlogPosts} />
+        </BlogPart>
+        <Info></Info>
       </HomeWrapper>
     </Layout>
   );

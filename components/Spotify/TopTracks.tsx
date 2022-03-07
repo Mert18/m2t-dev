@@ -5,6 +5,7 @@ import { TopTracks } from "../../lib/types";
 import styled from "styled-components";
 
 const TracksWrapper = styled.div`
+  grid-area: tracks;
   padding: 1rem;
 `;
 

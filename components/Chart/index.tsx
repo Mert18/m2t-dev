@@ -12,9 +12,11 @@ import styled from "styled-components";
 import SectionHeader from "../SectionHeader";
 
 const ChartWrapper = styled.div`
+  grid-area: chart;
   background: var(--primary);
   padding: 1rem;
-`;
+  overflow: auto;
+`
 
 const Chart = ({ data }) => {
   const [hidden, setHidden] = useState(true);
@@ -26,7 +28,7 @@ const Chart = ({ data }) => {
   return (
     <ChartWrapper>
       <SectionHeader title="Happiness Graph" />
-      <ResponsiveContainer width={1850} height={700}>
+      <ResponsiveContainer width={1850} height={500}>
         <LineChart data={data}>
           <Legend verticalAlign="top" height={48} />
           <Line
@@ -42,7 +44,7 @@ const Chart = ({ data }) => {
             dataKey="work"
             activeDot={{ r: 8 }}
             dot={false}
-            stroke="var(--flavor)"
+            stroke="var(--work)"
             strokeWidth={2}
           />
           <Line

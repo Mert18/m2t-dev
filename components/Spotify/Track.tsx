@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const TopTrack = styled.article``;
+const TopTrack = styled.article`
+  background: var(--flavor);
+  padding: .6rem;
+  margin: .4rem;
+`;
 
 const Link = styled.a``;
 
