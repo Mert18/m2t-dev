@@ -15,6 +15,13 @@ const SpotifyInside = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "tracks nowplaying";
+
+  @media(max-width: 1100px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "tracks"
+    "nowplaying";
+  }
 `;
 
 const Spotify: React.FC = () => {
