@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const BlogPostCard = styled.article`
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid transparent;
+  margin-top: .2rem;
   @media (max-width: 800px) {
     line-height: 20px;
     padding: 0.3rem;
@@ -8,7 +11,7 @@ export const BlogPostCard = styled.article`
   &:hover {
     transition: all 0.3s ease;
     color: var(--tertiary);
-    background: var(--flavor);
+    border: 1px solid var(--flavor)
   }
 `;
 
