@@ -44,6 +44,7 @@ const Chart = ({ data }) => {
             dataKey="work"
             activeDot={{ r: 8 }}
             dot={false}
+            fill="var(--work)"
             stroke="var(--work)"
             strokeWidth={2}
           />
