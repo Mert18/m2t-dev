@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Layout from "../components/Layout";
 import BlogPostList from "../components/Blog/BlogPostList";
 import styled from "styled-components";
+import SectionHeader from "../components/SectionHeader";
 
 const HomeWrapper = styled.div`
   background: var(--primary);
@@ -54,6 +55,7 @@ export default function Home({ posts }) {
     <Layout>
       <HomeWrapper>
         <BlogPart>
+        <SectionHeader title="Latest Blog Posts" />  
           <BlogPostList posts={filteredBlogPosts} />
         </BlogPart>
         <Info></Info>

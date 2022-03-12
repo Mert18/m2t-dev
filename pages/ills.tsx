@@ -3,23 +3,9 @@ import Layout from "../components/Layout";
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
-import styled from "styled-components";
+import {IllsWrapper, IllsList, Ill} from "../styles/ills.styles"
+import SectionHeader from "../components/SectionHeader";
 
-const IllsWrapper = styled.div`
-  min-height: 70vh;
-  background: var(--primary);
-  padding: 3rem;
-`;
-
-const IllsList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0;
-`;
-const Ill = styled.li`
-  align-self: center;
-`;
 
 const Ills = ({ fileNames }) => {
   return (
@@ -28,6 +14,7 @@ const Ills = ({ fileNames }) => {
       description="Illustrations by Mert Uygur. Drawn with Adobe Illustrator."
     >
       <IllsWrapper>
+        <SectionHeader title="Illustrations" />
         <IllsList>
           {fileNames.map((file) => {
             return (

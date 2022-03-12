@@ -5,31 +5,8 @@ import matter from "gray-matter";
 import path from "path";
 import { postFilePaths, POSTS_PATH } from "../utils/mdxUtils";
 import BlogPostList from "../components/Blog/BlogPostList";
-import styled from "styled-components";
-
-const BlogPageWrapper = styled.div`
-  min-height: 70vh;
-  margin-top: -3rem;
-  background: var(--primary);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "left posts";
-
-  @media(max-width: 1100px){
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "left" "posts";
-  }
-`;
-
-const Left = styled.div`
-  grid-area: left;
-`
-
-const Posts = styled.div`
-  grid-area: posts;
-`
+import { BlogPageWrapper, Posts, Left } from "../styles/blog.styles";
+import SectionHeader from "../components/SectionHeader";
 
 const Blog = ({ posts }) => {
   const filteredBlogPosts = posts.sort(
@@ -41,10 +18,10 @@ const Blog = ({ posts }) => {
       description="Blog posts about software development, frontend development and backend development."
     >
       <BlogPageWrapper>
-        <Left>
-        </Left>
-        <Posts> 
-        <BlogPostList posts={posts} />
+        <Left></Left>
+        <Posts>
+          <SectionHeader title="Blog Posts" />
+          <BlogPostList posts={posts} />
         </Posts>
       </BlogPageWrapper>
     </Layout>

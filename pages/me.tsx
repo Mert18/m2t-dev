@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
-import styled from "styled-components";
+import SectionHeader from "../components/SectionHeader";
+import {ResumeLeft, ResumeRight, ResumeWrapper, AreaList, AreaPara, AreaTitle, AreaListItem, Introduction, Technologies, Tools} from "../styles/me.styles"
 
 const technologies = [
   "HTML",
@@ -13,74 +14,13 @@ const technologies = [
 
 const tools = ["Git", "Jira", "Figma", "Adobe Illustrator", "Linux"];
 
-const ResumeWrapper = styled.div`
-  color: white;
-  background: var(--primary);
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "left right";
-  @media (max-width: 1100px) {
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "left"
-      "right";
-  }
-`;
-
-const ResumeLeft = styled.div`
-  grid-area: left;
-  padding: 1rem;
-`;
-
-const ResumeRight = styled.div`
-  grid-area: right;
-`;
-
-const Introduction = styled.div`
-`;
-const Technologies = styled.div`
-`;
-const Tools = styled.div`
-`;
-
-const AreaTitle = styled.h2`
-  color: var(--tertiary);
-`;
-
-const AreaPara = styled.p`
-
-`;
-
-const AreaList = styled.ul<{ tech: boolean }>`
-  padding: 0rem;
-  display: flex;
-
-  ${(props) =>
-    props.tech &&
-    `
-      display: flex;
-`}
-`;
-
-const AreaListItem = styled.li`
-  margin-right: 1rem;
-
-  @media (max-width: 1100px) {
-    font-size: 1rem;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
-`;
 
 const Me = () => {
   return (
     <Layout title="About - Mert Uygur" description="About Mert Uygur">
       <ResumeWrapper>
         <ResumeLeft>
+          <SectionHeader title="About Me" />
           <Introduction>
             <AreaTitle>Introduction</AreaTitle>
             <AreaPara>
