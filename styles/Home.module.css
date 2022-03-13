@@ -1,0 +1,10 @@
+.container {
+  padding: 0 2rem;
+}
+
+.yapiorm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
