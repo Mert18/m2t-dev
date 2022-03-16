@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <div className={styles.yapiorm}>
-        <p>yapıyorum 1sn</p>
+        <p>yapiorm bi sn</p>
       </div>
 
     </div>
