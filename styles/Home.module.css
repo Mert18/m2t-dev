@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 97vh;
+  position: relative;
 }
 
 .box {
@@ -31,6 +32,17 @@
 
 .social li {
   margin: 0.5rem;
+}
+
+.white{
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  z-index: 999;
+  transform: rotate(45deg);
 }
 
 @keyframes example {

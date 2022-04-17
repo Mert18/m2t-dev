@@ -17,4 +17,6 @@ a {
 
 body {
   background: #FDE55C;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }

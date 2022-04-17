@@ -1,8 +1,16 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    setTimeout(() => {
+      console.log(
+        "Actually I haven't got time to develop this. So it is not under construction but sssh!"
+      );
+    }, 2000);
+  }, []);
   return (
     <div className={styles.container}>
       <Head>
@@ -39,6 +47,7 @@ export default function Home() {
           </li>
         </ul>
       </div>
+      <div className={styles.white}></div>
     </div>
   );
 }
