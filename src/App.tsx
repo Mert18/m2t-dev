@@ -1,9 +1,13 @@
-import { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import { useQuery, gql } from "@apollo/client";
+import Header from "./components/Layout/Header/Header";
 
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
 
 export default App;
