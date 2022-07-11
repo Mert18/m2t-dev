@@ -54,33 +54,28 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="">
-      <div className="h-[20vh] p-4 flex justify-center">
-        <div className="flex flex-col items-start ">
-          <p className="uppercase font-bold text-sm text-blue-200">
-            Github contributions
+    <header className="grid grid-cols-12 p-4 relative">
+      <section className="col-start-4 col-end-10 flex flex-col items-center p-4">
+        <div className="flex flex-col justify-center items-center mb-2">
+          <p className="">Merd</p>
+          <p>
+            Software Engineer{" "}
+            <a
+              href="http://www.robolaunch.io/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-purple-600"
+            >
+              @Robolaunch
+            </a>
           </p>
-          <ul className="h-full flex items-start justify-center p-4 bg-white-200">
-            {contributions.map((cont: any) => (
-              <li
-                key={cont.firstDay}
-                className="flex flex-col items-center justify-center"
-              >
-                <ul>
-                  {cont.contributionDays.map((day: any) => (
-                    <li key={day.date}>
-                      <ContributionDot
-                        count={day.contributionCount}
-                        color={day.color}
-                        date={day.date}
-                      />
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
         </div>
+        <a href="" target="_blank" rel="noreferrer">
+          <img src="/icons/github.svg" width="32px" />
+        </a>
+      </section>
+      <div className="absolute top-8 right-8">
+        <img src="/icons/moon.svg" />
       </div>
     </header>
   );
