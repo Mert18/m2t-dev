@@ -1,11 +1,10 @@
 import { data } from "autoprefixer";
 import React, { useEffect, useState } from "react";
-import ContributionBar from "./ContributionBar/ContributionBar";
+import ContributionDot from "./ContributionDot/ContributionDot";
 
 const Header = () => {
   const [loading, setLoading] = useState(false);
   const [contributions, setContributions] = useState([]);
-  const [weeklyConts, setWeeklyConts] = useState<any>([{}]);
   const [maxCont, setMaxCont] = useState<any>({});
 
   useEffect(() => {
@@ -54,36 +53,34 @@ const Header = () => {
     getContributions();
   }, []);
 
-  const getWeeklyContributions = (contributions: any) => {
-    contributions.map((cont: any) => {
-      let sumOfTheWeek = cont.contributionDays.reduce((acc: any, curr: any) => {
-        return acc + curr.contributionCount;
-      }, 0);
-      setWeeklyConts((prev: any) => [
-        ...prev,
-        { day: cont.firstDay, count: sumOfTheWeek },
-      ]);
-    });
-  };
-
-  useEffect(() => {
-    getWeeklyContributions(contributions);
-    const max = weeklyConts.reduce(function (prev: any, current: any) {
-      return prev.count > current.count ? prev : current;
-    });
-    setMaxCont(max);
-  }, [contributions]);
-
   return (
-    <header>
+    <header className="">
       <div className="h-[20vh] p-4 flex justify-center">
-        <ul className="h-full flex items-end justify-center">
-          {weeklyConts.slice(-53).map((week: any, index: any) => (
-            <li key={index} className="flex items-end h-full">
-              <ContributionBar week={week} maxCont={maxCont} />
-            </li>
-          ))}
-        </ul>
+        <div className="flex flex-col items-start ">
+          <p className="uppercase font-bold text-sm text-blue-200">
+            Github contributions
+          </p>
+          <ul className="h-full flex items-start justify-center p-4 bg-white-200">
+            {contributions.map((cont: any) => (
+              <li
+                key={cont.firstDay}
+                className="flex flex-col items-center justify-center"
+              >
+                <ul>
+                  {cont.contributionDays.map((day: any) => (
+                    <li key={day.date}>
+                      <ContributionDot
+                        count={day.contributionCount}
+                        color={day.color}
+                        date={day.date}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </header>
   );
