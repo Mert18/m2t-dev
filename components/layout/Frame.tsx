@@ -9,24 +9,23 @@ interface IFrame {
 }
 
 const Frame = ({ title, color, children }: IFrame) => {
-  const [backgroundColor, setBackgroundColor] = useState<FrameColor>(
-    FrameColor.BLACK
-  );
-
-  useEffect(() => {
-    setBackgroundColor(color);
-  }, [color]);
+  const backgroundColors = {
+    [FrameColor.BLACK]: "bg-black",
+    [FrameColor.SERENDIPITY]: "bg-serendipity",
+    [FrameColor.ENIGMA]: "bg-enigma",
+    [FrameColor.RADIANCE]: "bg-radiance",
+  };
 
   return (
     <div className="flex">
       {/* Side Color Line */}
-      <div className={`w-6 ${backgroundColor}`}></div>
+      <div className={`w-6 ${backgroundColors[color]}`}></div>
 
       <div className="flex-col w-full">
         {/* Frame */}
         <div>
           <h2 className="p-2 italic">{title}.</h2>
-          <div className={`h-0.5 w-full ${backgroundColor}`}></div>
+          <div className={`h-0.5 w-full ${backgroundColors[color]}`}></div>
         </div>
 
         {/* Content */}
