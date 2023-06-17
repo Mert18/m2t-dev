@@ -16,7 +16,7 @@ module.exports = {
     colors: {
       white: "#F9F8F8",
       black: "#272838",
-      serendipty: "#EB9486",
+      serendipity: "#EB9486",
       enigma: "#F3DE8A",
       radiance: "#7E7F9A"
     }
