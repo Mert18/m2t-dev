@@ -1,7 +1,10 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Libre_Baskerville } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const libreBaskerville = Libre_Baskerville({
+  weight: '400',
+  subsets: ['latin']
+ })
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={libreBaskerville.className}>{children}</body>
     </html>
   )
 }
