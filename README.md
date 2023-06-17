@@ -1,5 +1,9 @@
 ## m2t.dev
 
+Project is currently being developed.
+
+See the `develop` branch for the latest version. 
+
 Stack:
 - Next 13
 - TailwindCSS
