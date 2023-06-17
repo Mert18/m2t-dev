@@ -2,7 +2,6 @@ import React from "react";
 import Frame from "./Frame";
 import { FrameColor } from "@/types";
 import Link from "next/link";
-import Image from "next/image";
 
 const Header = () => {
   return (
@@ -17,15 +16,9 @@ const Header = () => {
 
           {/* Routes */}
           <div className="m-4 flex justify-center">
-            <Link href="/" className={`w-14 h-6 ${FrameColor.BLACK}`}></Link>
-            <Link
-              href="/blog"
-              className={`w-14 h-6 ${FrameColor.SERENDIPITY}`}
-            ></Link>
-            <Link
-              href="/about"
-              className={`w-14 h-6 ${FrameColor.ENIGMA}`}
-            ></Link>
+            <Link href="/" className={`w-14 h-6 bg-black`}></Link>
+            <Link href="/blog" className={`w-14 h-6 bg-serendipity`}></Link>
+            <Link href="/about" className={`w-14 h-6 bg-enigma`}></Link>
           </div>
         </div>
 
