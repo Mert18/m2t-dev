@@ -23,7 +23,7 @@ const Page = ({ params }: PageProps) => {
     <div className="flex justify-center items-center">
       <div className="w-full md:w-1/2">
         <div className="flex flex-col justify-center items-start text-sm py-4">
-          <h1 className="font-bold bg-enigma p-2">{post.title}</h1>
+          <h1 className="font-bold gradient p-2">{post.title}</h1>
           <p className="py-4">{post.description}</p>
           <p className="text-serendipity font-bold">{post.date}</p>
         </div>
