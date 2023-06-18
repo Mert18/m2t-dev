@@ -1,14 +1,25 @@
 import React from "react";
-import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="py-5 flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center h-64">
       {/* Hero */}
-      <div className="flex justify-center items-center hover:-translate-y-1 transition-all hover:cursor-pointer">
-        <Link href="/">
-          <h1 className="text-sm font-bold">m2t.dev</h1>
-        </Link>
+      <div className="flex flex-col justify-center items-center w-2/5 p-2">
+        <div>
+          <Image
+            className="border border-border"
+            src="/pp.jpg"
+            alt="stickman holding flower"
+            width={100}
+            height={100}
+          />
+        </div>
+        <div className="flex flex-col justify-center items-center text-xs">
+          <p className="p-2 border border-border my-2">mert</p>
+          <p className="p-2 border border-border my-2">software engineer</p>
+        </div>
+        <div></div>
       </div>
     </div>
   );

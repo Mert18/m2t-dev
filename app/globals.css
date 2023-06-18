@@ -4,14 +4,12 @@
 
 @layer utilities {
   .blog-card {
-    background: rgb(249, 248, 248);
     background: linear-gradient(
       90deg,
       rgba(249, 248, 248, 1) 0%,
       rgba(232, 232, 232, 1) 35%,
       rgba(249, 248, 248, 1) 100%
     );
-    border: 1px solid #c9c9c9;
   }
 }
 
