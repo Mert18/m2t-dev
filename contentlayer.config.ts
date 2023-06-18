@@ -29,13 +29,17 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
+    image: {
+      type: "string",
+      required: true,
+    },
   },
   computedFields,
 }));
 
 export default makeSource({
   contentDirPath: "posts",
-  documentTypes: { Post },
+  documentTypes: [Post],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -43,7 +47,8 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "github-dark",
+          theme: "one-dark-pro",
+          keepBackground: true,
           onVisitLine(node: any) {
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
@@ -53,7 +58,7 @@ export default makeSource({
             node.properties.className.push("line--highlighted");
           },
           onVisitHighlightedWord(node: any) {
-            node.properties.className.push("word--highlighted");
+            node.properties.className = ["word--highlighted"];
           },
         },
       ],
@@ -61,8 +66,7 @@ export default makeSource({
         rehypeAutolinkHeadings,
         {
           properties: {
-            className: ["subheading-anchor"],
-            ariaLabel: "Link to section",
+            className: ["anchor"],
           },
         },
       ],
