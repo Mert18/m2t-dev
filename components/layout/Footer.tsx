@@ -1,15 +1,13 @@
 import React from "react";
-import Frame from "./Frame";
-import { FrameColor } from "@/types";
 
 const Footer = () => {
   return (
-    <Frame title="Footer" color={FrameColor.RADIANCE}>
-      <div className="py-5 flex justify-center items-center relative">
-        {/* Content */}
-        <div className="flex-col justify-center items-center"></div>
+    <div className="py-5 flex justify-center items-center">
+      {/* Content */}
+      <div className="flex-col justify-center items-center cursor-pointer text-xs hover:-translate-y-1 transition-all">
+        footer
       </div>
-    </Frame>
+    </div>
   );
 };
 
