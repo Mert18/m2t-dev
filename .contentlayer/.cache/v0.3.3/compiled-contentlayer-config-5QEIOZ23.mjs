@@ -26,13 +26,17 @@ var Post = defineDocumentType(() => ({
     date: {
       type: "string",
       required: true
+    },
+    image: {
+      type: "string",
+      required: true
     }
   },
   computedFields
 }));
 var contentlayer_config_default = makeSource({
   contentDirPath: "posts",
-  documentTypes: { Post },
+  documentTypes: [Post],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -40,7 +44,8 @@ var contentlayer_config_default = makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "github-dark",
+          theme: "one-dark-pro",
+          keepBackground: true,
           onVisitLine(node) {
             if (node.children.length === 0) {
               node.children = [{ type: "text", value: " " }];
@@ -50,7 +55,7 @@ var contentlayer_config_default = makeSource({
             node.properties.className.push("line--highlighted");
           },
           onVisitHighlightedWord(node) {
-            node.properties.className.push("word--highlighted");
+            node.properties.className = ["word--highlighted"];
           }
         }
       ],
@@ -58,8 +63,7 @@ var contentlayer_config_default = makeSource({
         rehypeAutolinkHeadings,
         {
           properties: {
-            className: ["subheading-anchor"],
-            ariaLabel: "Link to section"
+            className: ["anchor"]
           }
         }
       ]
@@ -70,4 +74,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-PWYGDJNW.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-5QEIOZ23.mjs.map

@@ -6,7 +6,9 @@ const Header = () => {
     <div className="py-5 flex-col justify-center items-center">
       {/* Hero */}
       <div className="flex justify-center items-center hover:-translate-y-1 transition-all hover:cursor-pointer">
-        <h1 className="text-sm font-bold">m2t.dev</h1>
+        <Link href="/">
+          <h1 className="text-sm font-bold">m2t.dev</h1>
+        </Link>
       </div>
     </div>
   );
