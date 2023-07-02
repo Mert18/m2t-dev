@@ -17,8 +17,8 @@ const Header = () => {
           />
         </Link>
         <div className="flex flex-col justify-center items-center text-xs">
-          <p className="p-2 border border-border my-2">mert</p>
-          <p className="p-2 border border-border my-2">software engineer</p>
+          <p className="p-2">mert</p>
+          <p className="p-2">software engineer</p>
         </div>
         <div></div>
       </div>
