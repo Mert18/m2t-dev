@@ -23,17 +23,9 @@ const Page = ({ params }: PageProps) => {
     <div className="flex justify-center items-center">
       <div className="w-full md:w-1/2">
         <div className="flex flex-col justify-center items-start text-sm py-4">
-          <h1 className="font-bold gradient p-2">{post.title}</h1>
+          <h1 className="font-bold text-xl">{post.title}</h1>
           <p className="py-4">{post.description}</p>
           <p className="text-serendipity font-bold">{post.date}</p>
-        </div>
-        <div className="h-64 overflow-hidden relative">
-          <Image
-            src={post.image}
-            alt={post.image}
-            fill
-            style={{ objectFit: "cover" }}
-          />
         </div>
         <div className="flex flex-col justify-center items-start p-2 md:py-4 md:p-0 text-sm overflow-auto">
           <Mdx code={post.body.code} />
