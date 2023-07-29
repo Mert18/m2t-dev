@@ -47,7 +47,7 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "one-dark-pro",
+          theme: "github-light",
           keepBackground: true,
           onVisitLine(node: any) {
             if (node.children.length === 0) {

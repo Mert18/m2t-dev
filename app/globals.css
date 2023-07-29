@@ -15,3 +15,13 @@
 body {
   background-color: #f9f8f8;
 }
+
+pre {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+pre > code {
+  display: grid;
+  padding: 1rem;
+}
