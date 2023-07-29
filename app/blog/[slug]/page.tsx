@@ -1,7 +1,6 @@
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { Mdx } from "@/mdx-components";
-import Image from "next/image";
 
 interface PageProps {
   params: {
