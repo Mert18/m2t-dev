@@ -1,19 +1,19 @@
 import React from "react";
-import BlogCard from "./BlogCard";
 import { allPosts } from "@/.contentlayer/generated";
+import AiTalkCard from "./AiTalkCard";
 
-const getPosts = async () => {
-  return allPosts.filter((post) => post.kind === "post");
+const getAiTalks = async () => {
+  return allPosts.filter((post: any) => post.kind === "aitalk");
 };
 
-const BlogPosts = async () => {
-  const posts = await getPosts();
+const AiTalksList = async () => {
+  const aiTalks = await getAiTalks();
 
   return (
     <div className="w-full sm:w-2/3 md:w-2/5">
-      {posts.map((post) => {
+      {aiTalks.map((post: any) => {
         return (
-          <BlogCard
+          <AiTalkCard
             key={post.title}
             title={post.title}
             description={post.description}
@@ -26,4 +26,4 @@ const BlogPosts = async () => {
   );
 };
 
-export default BlogPosts;
+export default AiTalksList;

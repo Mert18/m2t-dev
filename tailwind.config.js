@@ -15,11 +15,13 @@ module.exports = {
     },
     colors: {
       white: "#F9F8F8",
+      white_100: "#F1F1F1",
       black: "#272838",
       serendipity: "#EB9486",
       enigma: "#F3DE8A",
       radiance: "#7E7F9A",
       border: "#c9c9c9",
+      green: "#3EDD64",
     },
   },
   plugins: [],
