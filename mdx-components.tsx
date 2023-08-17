@@ -1,12 +1,12 @@
+"use client";
 import { useMDXComponent } from "next-contentlayer/hooks";
-
-const components = {};
+import Prompt from "./components/ai-talks/Prompt";
 
 interface MdxProps {
   code: string;
 }
 
 export function Mdx({ code }: MdxProps) {
-  const Component = useMDXComponent(code, components);
-  return <Component components={components} />;
+  const Component = useMDXComponent(code);
+  return <Component components={{ Prompt }} />;
 }

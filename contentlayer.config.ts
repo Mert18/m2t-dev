@@ -29,7 +29,7 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    image: {
+    kind: {
       type: "string",
       required: true,
     },
