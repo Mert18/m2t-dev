@@ -21,6 +21,7 @@ module.exports = {
       enigma: "#F3DE8A",
       radiance: "#7E7F9A",
       border: "#c9c9c9",
+      green: "#3EDD64",
     },
   },
   plugins: [],
