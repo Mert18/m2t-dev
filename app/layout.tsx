@@ -10,10 +10,6 @@ const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "m2t.dev",
-  description: "A Software Engineer Blog",
-};
 
 export default function RootLayout({
   children,
