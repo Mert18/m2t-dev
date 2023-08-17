@@ -4,12 +4,12 @@ import "./globals.css";
 import { Libre_Baskerville } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import { useEffect } from "react";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const libreBaskerville = Libre_Baskerville({
   weight: "400",
   subsets: ["latin"],
 });
-
 
 export default function RootLayout({
   children,
@@ -23,6 +23,9 @@ export default function RootLayout({
   }, []);
   return (
     <html lang="en">
+      <GoogleAnalytics
+        GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""}
+      />
       <body className={libreBaskerville.className}>
         <Header />
         {children}
