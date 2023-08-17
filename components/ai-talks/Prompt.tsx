@@ -7,8 +7,8 @@ interface IPrompt {
 
 const Prompt = ({ text }: IPrompt) => {
   return (
-    <div>
-      <div>
+    <div className="grid grid-cols-6 w-full">
+      <div className="col-start-1 col-end-2">
         <Image
           className="border border-border"
           src="/pp.jpg"
@@ -17,8 +17,9 @@ const Prompt = ({ text }: IPrompt) => {
           height={100}
         />
       </div>
-      <p className="p-2">{text}</p>
-      <p>Tam gecenin köründe</p>
+      <div className="border border-serendipity bg-white_100 col-start-2 col-end-7 h-max">
+        <p className="p-2 rounded-sm break-words">{text}</p>
+      </div>
     </div>
   );
 };
