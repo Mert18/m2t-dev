@@ -5,148 +5,38 @@ date: August, 17th. 2023
 kind: aitalk
 ---
 
-<Prompt
-  text={
-    'Talk to me like talking in real life, face to face. Do not write long answers. I want it to be like a q&a session. I am a software engineer that builds Web applications. I have experience both in frontend and backend development. While building these application, I have been using REST API\'s since the beginning. I know the principles of REST APIs. But I have heard of something like "GraphQL". First, what is graphql?'
-  }
-/>
+<Prompt>
+  <div>
+      Talk to me like talking in real life, face to face. Do not write long
+      answers. I want it to be like a q&a session. I am a software engineer that
+      builds Web applications.
 
-<br />
-<AIResponse
-  text={
-    "Hey there! No problem, I got you. GraphQL is like an alternative to REST for APIs. Instead of having multiple endpoints for different data, you just have one. Clients can request exactly what they need, no more, no less. It's like giving them a custom menu instead of a buffet. Saves bandwidth and reduces over-fetching. Cool, right? 😉"
-  }
-/>
+      ```js
+        const a = 1;
+      ```
 
-<br />
+      I have experience both in frontend and
+      backend development. While building these application, I have
+      been using REST API's since the beginning. I know the principles of REST
+      APIs. But I have heard of something like GraphQL. First, what is graphql?
 
-<Prompt
-  text={
-    "That sounds really cool, having just one endpoint makes frontend development much easier I guess. And It also reduces the amount of work on the backend when something needs to change. Why it can't compete with REST API's in today's worlds if it's awesome?"
-  }
-/>
-<br />
-<AIResponse
-  text={
-    "Absolutely, you're spot on! GraphQL's single endpoint and flexibility do make frontend development smoother. About your question, well, GraphQL is great, but it's not a one-size-fits-all. REST has been around longer and fits well for simple cases where you don't need super-customized data requests. Also, REST is more cache-friendly. Plus, migrating a whole system to GraphQL might be a bit of a hassle if you've already got a well-established REST setup. So, it's not that GraphQL can't compete, it's just that each has its place depending on the project's needs."
-  }
-/>
-<br />
+  </div>
+</Prompt>
 
-<Prompt
-  text={
-    "Hmm, before learning more about GraphQL, I want to make sure that I understand 'when' I need to use it. For what type of applications, graphql would be the perfect fit? Can you give me real life examples?"
-  }
-/>
-<br />
+<AIResponse>
+  <div>
+      Talk to me like talking in real life, face to face. Do not write long
+      answers. I want it to be like a q&a session. I am a software engineer that
+      builds Web applications.
 
-<AIResponse
-  text={
-    "Absolutely, understanding when to use GraphQL is key. If your app requires different types of data from various sources and you want to get it all in one go, GraphQL's flexibility shines. Think social media feeds with posts, comments, and user info. When your frontend wants specific data tailored to its needs, GraphQL lets it fetch exactly that, preventing over-fetching or under-fetching."
-  }
-/>
-<AIResponse
-  text={
-    "GraphQL's ability to provide just the data needed helps in mobile app development, where optimizing data transfer is crucial. If you anticipate changes in data requirements, GraphQL allows you to add or modify fields without breaking clients. In a microservices architecture, where each service might have different data needs, GraphQL can act as a unified layer to retrieve data. "
-  }
-/>
-<AIResponse
-  text={
-    "Applications requiring real-time updates, like messaging or live notifications, can benefit from GraphQL subscriptions. For example, a travel app could use GraphQL to get details about flights, hotels, and weather conditions for different destinations all in one query. Or a marketplace app could fetch product info, user reviews, and seller ratings efficiently with GraphQL. Remember, if your app has simple data needs and follows a traditional CRUD model, REST might still be a solid choice. It's all about the right tool for the right job!"
-  }
-/>
-<br />
+      ```js
+        const a = 1;
+      ```
 
-<Prompt
-  text={
-    "You mentioned microservices, we are using microservice architecture with REST where I work. We know how microservices work, we know what every component in microservices works. How graphql would change our architecture? How components such as API Gateway would change?"
-  }
-/>
-<br />
+      I have experience both in frontend and
+      backend development. While building these application, I have
+      been using REST API's since the beginning. I know the principles of REST
+      APIs. But I have heard of something like GraphQL. First, what is graphql?
 
-<AIResponse
-  text={
-    "Great question! Shifting from REST to GraphQL in a microservices setup does bring some changes, especially to the API Gateway and how components communicate. Here's a quick rundown:"
-  }
-/>
-
-<AIResponse
-  text={
-    "API Gateway Transformation: In a REST microservices setup, the API Gateway might aggregate data from various services before sending it to the client. With GraphQL, the Gateway still plays a role, but it doesn't need to assemble data in the same way. Clients directly request the needed data from different services, reducing Gateway processing."
-  }
-/>
-
-<AIResponse
-  text={
-    "Service Specialization: In a REST setup, each service usually exposes multiple endpoints for different data. In GraphQL, services can specialize in providing specific types of data. This can lead to cleaner, more focused services."
-  }
-/>
-
-<AIResponse
-  text={
-    "Reduced Over-Fetching: GraphQL eliminates over-fetching by letting clients specify exactly what data they need. In a REST setup, services might return more data than necessary. This means less data transferred and faster response times."
-  }
-/>
-
-<AIResponse
-  text={
-    "In essence, GraphQL in a microservices setup lets each service be more specialized and efficient in providing data. The API Gateway's role changes to focus on routing queries, and clients have more control over data retrieval. But remember, it's a change that requires careful planning and consideration of your project's specific requirements."
-  }
-/>
-
-<br />
-
-<Prompt
-  text={
-    "If I understood correctly, I would define one graphql server in API Gateway service, then how would I collect data from other services? Via REST Clients? Then how would expose this data to frontend? Or every service defines its own graphql? I guess I am confused."
-  }
-/>
-
-<br />
-
-<AIResponse
-  text={
-    "No worries, I'll clear that up! In a microservices setup with GraphQL, here's how it generally works:"
-  }
-/>
-<AIResponse
-  text={
-    "API Gateway and GraphQL Server: You'd have one GraphQL server in your API Gateway. This server handles incoming GraphQL queries from clients. Data Collection: The API Gateway doesn't collect data from other services via REST clients. Instead, it acts as an orchestrator. When a GraphQL query comes in, the Gateway sends requests to the relevant services to collect the required data."
-  }
-/>
-<AIResponse
-  text={
-    "Service-Driven Data: Each individual service can expose its own GraphQL schema. These schemas define how to query data specific to that service. Each service knows its data best and can provide the fields clients might need. API Gateway's Role: The API Gateway's role is to route and aggregate data. It receives a query from the client, understands which services need to be queried, and then collects the data from those services."
-  }
-/>
-<AIResponse
-  text={
-    "Exposing Data to Frontend: The API Gateway, after gathering data from various services, responds to the client with the requested data in a single JSON response. This response matches the structure of the client's query. In summary, each service defines its own GraphQL schema, exposing the data it holds. The API Gateway's GraphQL server handles client queries, distributing those queries to the relevant services and then aggregating and formatting the data before sending it back to the client. This way, the frontend only communicates with the API Gateway's GraphQL endpoint, which handles all the complexities of collecting and delivering data from various services."
-  }
-/>
-
-<br />
-
-<Prompt
-  text={
-    "Wow, It sounds like a hard work to do for graphQL. This just left me more questions than before. You told me that GraphQL does not collect data from other microservices via REST Clients, then how it does it? Should I define graphQL things in every microservice? At the end, do I have one graphql schema or n schema where n is the amount of my microservices?"
-  }
-/>
-
-<br />
-
-<AIResponse
-  text={
-    "GraphQL in a microservices setup can seem a bit intricate, but once you get the hang of it, it offers some cool benefits. So, each microservice defines its own GraphQL schema. This schema outlines what data it has and what queries you can make to get that data. This specialization helps each service stay focused."
-  }
-/>
-<AIResponse
-  text={
-    "The magic happens in the API Gateway. It's like the conductor of an orchestra. When a client sends a GraphQL query, the Gateway figures out which services need to be queried based on the requested data. Then it sends out those queries to the individual services' GraphQL schemas."
-  }
-/>
-<AIResponse
-  text={
-    "The services do their part, fetching the requested data according to their schemas. The Gateway then gathers all the data from these services and crafts a single, neat response for the client. This way, the frontend just talks to the Gateway's GraphQL endpoint. So, yes, you'll have multiple schemas, one for each microservice. But the Gateway handles the coordination, making sure everything plays nicely together. It might sound a bit complex, but it's like a well-choreographed dance once it's all set up!"
-  }
-/>
+  </div>
+</AIResponse>
