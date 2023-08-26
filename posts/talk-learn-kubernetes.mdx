@@ -7,12 +7,10 @@ kind: aitalk
 
 <Prompt>
   <p>
-    I am a software enginner and I have been developing web applications in
-    frontend and backend for 3 years. Now I want to learn what Kubernetes is. I
-    have heard of it many times, but it is just a fuzzy knowledge that I have.
-    First of all, I want to start from the beginning. Kubernetes and Cloud are
-    two words that is used always together. What is "Cloud"? Is it really just
-    "someone else's computer"?
+    I want to learn what Kubernetes is. I have heard of it many times, but it is
+    just a fuzzy knowledge that I have. First of all, I want to start from the
+    beginning. Kubernetes and Cloud are two words that is used always together.
+    What is "Cloud"? Is it really just "someone else's computer"?
   </p>
 </Prompt>
 
@@ -252,4 +250,45 @@ kind: aitalk
   </p>
 </AIResponse>
 
-<Prompt>...</Prompt>
+<Prompt>
+  <p>
+    If nodes in kubernetes are completely isolated, why we usually deploy 3
+    worker node and 1 master in a typical deployment pattern? I mean, if our
+    resources will work on one node, why do we have 3?
+  </p>
+</Prompt>
+
+<AIResponse>
+  <p>
+    So, think of Kubernetes like a team sport – you want backup players on the
+    bench, right? Having multiple worker nodes in a cluster adds a layer of
+    redundancy and fault tolerance. If one node decides to take a coffee break
+    or, worse, crashes unexpectedly, the other nodes can pick up the slack. It's
+    like having teammates ready to step in when needed.
+  </p>
+  <p>
+    Also, spreading the workload across nodes can improve performance. It's like
+    not putting all your eggs in one basket – tasks can be divided and
+    conquered, which helps with resource management and overall efficiency.
+  </p>
+  <p>
+    So, yeah, having this setup might seem like overkill at first, but it's all
+    about keeping your Kubernetes ship sailing even when some waves get rough!
+  </p>
+</AIResponse>
+
+<Prompt>
+  <p>
+    Okay, that's enough for part 1, in the next section, let's deploy an app
+    together!
+  </p>
+</Prompt>
+
+<AIResponse>
+  <p>
+    Absolutely, let's dive into some hands-on fun! Imagine we're at a coding
+    café, ready to cook up some code. So, what's the app you're thinking of? A
+    sizzling web app? A cool API? Spill the beans, and we'll whip it up together
+    step by step! 🚀
+  </p>
+</AIResponse>
