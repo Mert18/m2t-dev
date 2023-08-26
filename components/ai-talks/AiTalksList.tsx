@@ -19,6 +19,7 @@ const AiTalksList = async () => {
             description={post.description}
             date={post.date}
             link={post._raw.flattenedPath}
+            category={post.category}
           />
         );
       })}

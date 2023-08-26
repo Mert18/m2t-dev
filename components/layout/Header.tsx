@@ -16,11 +16,6 @@ const Header = () => {
             height={100}
           />
         </Link>
-        <div className="flex flex-col justify-center items-center text-xs">
-          <p className="p-2">mert</p>
-          <p className="p-2">software engineer</p>
-        </div>
-        <div></div>
       </div>
       {/* <div className="flex justify-center items-center">
         <div className="mr-4">
