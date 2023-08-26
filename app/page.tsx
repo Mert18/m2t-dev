@@ -1,3 +1,4 @@
+import AiTalksList from "@/components/ai-talks/AiTalksList";
 import BlogPosts from "@/components/blog/BlogPosts";
 
 export const metadata = {
@@ -9,7 +10,7 @@ export default async function Home() {
   return (
     <div>
       <div className="p-4 flex justify-center">
-        <BlogPosts />
+        <AiTalksList />
       </div>
     </div>
   );

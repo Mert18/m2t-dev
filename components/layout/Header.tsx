@@ -22,7 +22,7 @@ const Header = () => {
         </div>
         <div></div>
       </div>
-      <div className="flex justify-center items-center">
+      {/* <div className="flex justify-center items-center">
         <div className="mr-4">
           <Link href="/">
             <p>Blog</p>
@@ -33,7 +33,7 @@ const Header = () => {
             <p>AI Talks</p>
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
