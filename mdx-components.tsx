@@ -1,7 +1,7 @@
 "use client";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import Prompt from "./components/ai-talks/Prompt";
-import AIResponse from "./components/ai-talks/AIResponse";
+import Prompt from "./components/post/Prompt";
+import AIResponse from "./components/post/AIResponse";
 
 interface MdxProps {
   code: string;
