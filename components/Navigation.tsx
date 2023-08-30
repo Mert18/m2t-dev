@@ -5,8 +5,8 @@ import ExternalLinkIcon from "./ExternalLinkIcon";
 
 const Navigation = () => {
   return (
-    <div className="flex justify-center items-center w-2/5 p-2">
-      <div className="flex justify-center items-center mx-4">
+    <div className="flex flex-col sm:flex-row justify-center items-center w-2/5 p-2">
+      <div className="flex justify-center items-center my-2">
         <ExternalLinkIcon
           href="https://www.hackerrank.com/mertuygur02"
           src="/icon/hackerrank.svg"
@@ -18,10 +18,10 @@ const Navigation = () => {
           alt="linkedin logo"
         />
       </div>
-      <div className="mx-4">
-        <Link href="/">
+      <div className="mx-4 min-w-max">
+        <Link href="/" className="w-20">
           <Image
-            className="border border-border rounded-full"
+            className="border border-border rounded-full "
             src="/pp.jpg"
             alt="stickman holding flower"
             width={100}
@@ -29,8 +29,7 @@ const Navigation = () => {
           />
         </Link>
       </div>
-
-      <div className="flex justify-center items-center mx-4">
+      <div className="flex justify-center items-center my-2">
         <ExternalLinkIcon
           href="https://github.com/Mert18"
           src="/icon/github.svg"

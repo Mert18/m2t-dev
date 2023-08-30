@@ -10,7 +10,7 @@ const AllPosts = async () => {
   const posts = await getPosts();
 
   return (
-    <div className="w-full sm:w-2/3 md:w-2/5">
+    <div className="w-full md:w-2/3">
       {posts.map((post) => {
         return (
           <PostCard

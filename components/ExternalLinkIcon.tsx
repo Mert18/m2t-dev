@@ -10,7 +10,7 @@ interface IExternalLinkIcon {
 
 const ExternalLinkIcon = ({ href, src, alt }: IExternalLinkIcon) => {
   return (
-    <Link href={href} target="_blank" className="mx-2">
+    <Link href={href} target="_blank" className="m-2 w-10">
       <Image
         className="rounded-full"
         src={src}
