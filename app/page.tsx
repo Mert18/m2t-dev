@@ -1,5 +1,4 @@
-import AiTalksList from "@/components/ai-talks/AiTalksList";
-import BlogPosts from "@/components/blog/BlogPosts";
+import AllPosts from "@/components/post/AllPosts";
 
 export const metadata = {
   title: "m2t.dev - Blog",
@@ -10,7 +9,7 @@ export default async function Home() {
   return (
     <div>
       <div className="p-4 flex justify-center">
-        <AiTalksList />
+        <AllPosts />
       </div>
     </div>
   );
