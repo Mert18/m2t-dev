@@ -1,24 +1,25 @@
 import React from "react";
-import BlogCard from "./BlogCard";
 import { allPosts } from "@/.contentlayer/generated";
+import PostCard from "./PostCard";
 
 const getPosts = async () => {
-  return allPosts.filter((post) => post.kind === "post");
+  return allPosts;
 };
 
-const BlogPosts = async () => {
+const AllPosts = async () => {
   const posts = await getPosts();
 
   return (
     <div className="w-full sm:w-2/3 md:w-2/5">
       {posts.map((post) => {
         return (
-          <BlogCard
+          <PostCard
             key={post.title}
             title={post.title}
             description={post.description}
             date={post.date}
             link={post._raw.flattenedPath}
+            category={post.category}
           />
         );
       })}
@@ -26,4 +27,4 @@ const BlogPosts = async () => {
   );
 };
 
-export default BlogPosts;
+export default AllPosts;
