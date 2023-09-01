@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import AllPosts from "@/components/post/AllPosts";
 
 export const metadata = {
@@ -8,11 +7,9 @@ export const metadata = {
 };
 
 const Home = () => {
-  const [filter, setFilter] = useState("all");
   return (
     <div>
       <div className="p-4 flex justify-center">
-        <div></div>
         <AllPosts />
       </div>
     </div>
