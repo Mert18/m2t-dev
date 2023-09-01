@@ -10,13 +10,13 @@ interface IExternalLinkIcon {
 
 const ExternalLinkIcon = ({ href, src, alt }: IExternalLinkIcon) => {
   return (
-    <Link href={href} target="_blank" className="m-2 w-10">
+    <Link href={href} target="_blank" className="m-2 w-10 flex justify-center">
       <Image
         className="rounded-full"
         src={src}
         alt={alt}
-        width={40}
-        height={40}
+        width={25}
+        height={25}
       />
     </Link>
   );
