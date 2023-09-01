@@ -1,6 +1,7 @@
 export const postCategories: string[] = [
-  "beerchat",
+  "chat",
   "learning",
   "java",
   "cloud",
+  "ai",
 ];
