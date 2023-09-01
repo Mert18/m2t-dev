@@ -5,7 +5,7 @@ const Title = () => {
   return (
     <div className="my-4">
       <Link href="/">
-        <p className="text-sm">m2t.dev</p>
+        <p className="text-xs">m2t.dev</p>
       </Link>
     </div>
   );

@@ -12,9 +12,9 @@ const CategoryIcon = ({ category, showExplanation = true }: ICategoryIcon) => {
   const [explanation, setExplanation] = React.useState<string>("");
 
   useEffect(() => {
-    if (category === "beerchat") {
-      setCategoryImg("beerchat");
-      setExplanation("Beer Chat");
+    if (category === "chat") {
+      setCategoryImg("chat");
+      setExplanation("Chat");
     } else if (category === "learning") {
       setCategoryImg("learning");
       setExplanation("Learning");
@@ -24,6 +24,9 @@ const CategoryIcon = ({ category, showExplanation = true }: ICategoryIcon) => {
     } else if (category === "java") {
       setCategoryImg("java");
       setExplanation("Java");
+    } else if (category === "ai") {
+      setCategoryImg("ai");
+      setExplanation("Artificial Intelligence");
     } else {
       setCategoryImg("other");
     }
@@ -34,8 +37,8 @@ const CategoryIcon = ({ category, showExplanation = true }: ICategoryIcon) => {
       <Image
         src={`/icon/${categoryImg}.svg`}
         alt="stickman holding flower"
-        width={30}
-        height={30}
+        width={25}
+        height={25}
       />
       {showExplanation && (
         <div className="absolute bottom-2/3 left-2/3 hidden group-hover:block bg-white p-2 text-sm border border-border min-w-max z-10">

@@ -19,13 +19,13 @@ const Navigation = () => {
         />
       </div>
       <div className="mx-4 min-w-max">
-        <Link href="/" className="w-20">
+        <Link href="/" className="w-20 flex justify-center items-center">
           <Image
             className="border border-border rounded-full "
             src="/pp.jpg"
             alt="stickman holding flower"
-            width={100}
-            height={100}
+            width={50}
+            height={50}
           />
         </Link>
       </div>
