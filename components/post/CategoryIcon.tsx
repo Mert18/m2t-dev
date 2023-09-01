@@ -34,12 +34,15 @@ const CategoryIcon = ({ category, showExplanation = true }: ICategoryIcon) => {
 
   return (
     <div className="mx-1 p-2 shadow-md rounded-sm group relative">
-      <Image
-        src={`/icon/${categoryImg}.svg`}
-        alt="stickman holding flower"
-        width={25}
-        height={25}
-      />
+      {categoryImg !== "" && (
+        <Image
+          src={`/icon/${categoryImg}.svg`}
+          alt="stickman holding flower"
+          width={25}
+          height={25}
+        />
+      )}
+
       {showExplanation && (
         <div className="absolute bottom-2/3 left-2/3 hidden group-hover:block bg-white p-2 text-sm border border-border min-w-max z-10">
           <p>{explanation}</p>
