@@ -4,18 +4,19 @@ import Image from "../Image";
 
 interface ICategoryIcon {
   category: string;
+  showExplanation?: boolean;
 }
 
-const CategoryIcon = ({ category }: ICategoryIcon) => {
+const CategoryIcon = ({ category, showExplanation = true }: ICategoryIcon) => {
   const [categoryImg, setCategoryImg] = React.useState<string>("");
   const [explanation, setExplanation] = React.useState<string>("");
 
   useEffect(() => {
-    if (category === "beertalk") {
-      setCategoryImg("beer");
+    if (category === "beerchat") {
+      setCategoryImg("beerchat");
       setExplanation("Beer Chat");
     } else if (category === "learning") {
-      setCategoryImg("teach");
+      setCategoryImg("learning");
       setExplanation("Learning");
     } else if (category === "cloud") {
       setCategoryImg("cloud");
@@ -36,9 +37,11 @@ const CategoryIcon = ({ category }: ICategoryIcon) => {
         width={30}
         height={30}
       />
-      <div className="absolute bottom-1/2 left-1/2 hidden group-hover:block bg-white p-2 text-sm border border-border min-w-max z-10">
-        <p>{explanation}</p>
-      </div>
+      {showExplanation && (
+        <div className="absolute bottom-2/3 left-2/3 hidden group-hover:block bg-white p-2 text-sm border border-border min-w-max z-10">
+          <p>{explanation}</p>
+        </div>
+      )}
     </div>
   );
 };
