@@ -8,38 +8,35 @@ interface ICategoryIcon {
 }
 
 const CategoryIcon = ({ category, showExplanation = true }: ICategoryIcon) => {
-  const [categoryImg, setCategoryImg] = React.useState<string>("");
   const [explanation, setExplanation] = React.useState<string>("");
 
   useEffect(() => {
     if (category === "chat") {
-      setCategoryImg("chat");
       setExplanation("Chat");
     } else if (category === "learning") {
-      setCategoryImg("learning");
       setExplanation("Learning");
     } else if (category === "cloud") {
-      setCategoryImg("cloud");
       setExplanation("Cloud");
     } else if (category === "java") {
-      setCategoryImg("java");
       setExplanation("Java");
     } else if (category === "ai") {
-      setCategoryImg("ai");
       setExplanation("Artificial Intelligence");
-    } else {
-      setCategoryImg("other");
+    } else if (category === "database") {
+      setExplanation("Database");
     }
   }, [category]);
 
   return (
     <div className="mx-1 p-2 shadow-md rounded-sm group relative">
-      <Image
-        src={`/icon/${categoryImg}.svg`}
-        alt="stickman holding flower"
-        width={25}
-        height={25}
-      />
+      {category !== "" && (
+        <Image
+          src={`/icon/${category}.svg`}
+          alt="stickman holding flower"
+          width={25}
+          height={25}
+        />
+      )}
+
       {showExplanation && (
         <div className="absolute bottom-2/3 left-2/3 hidden group-hover:block bg-white p-2 text-sm border border-border min-w-max z-10">
           <p>{explanation}</p>

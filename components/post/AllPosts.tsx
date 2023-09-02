@@ -4,10 +4,18 @@ import { Post, allPosts } from "@/.contentlayer/generated";
 import PostCard from "./PostCard";
 import { postCategories } from "@/lib/PostCategories";
 import CategoryIcon from "./CategoryIcon";
+import { parseDate } from "@/util/functions.";
 
 const getPosts = (filter: string[]) => {
-  return allPosts.filter((post) => {
-    if (filter) {
+  if (!allPosts) return [] as Post[];
+  const sortedPosts = allPosts.sort((a, b) => {
+    const dateA = parseDate(a.date);
+    const dateB = parseDate(b.date);
+    return dateB.diff(dateA);
+  });
+
+  return sortedPosts.filter((post) => {
+    if (filter && filter.length > 0) {
       return filter.some((cat) => post.category.includes(cat));
     } else {
       return true;
@@ -35,7 +43,7 @@ const AllPosts = () => {
 
   useEffect(() => {
     if (!filter || filter.length === 0) {
-      setFilteredPosts(allPosts);
+      setFilteredPosts(getPosts(new Array<string>()));
       return;
     }
     setFilteredPosts(getPosts(filter));
