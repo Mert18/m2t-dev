@@ -4,4 +4,5 @@ export const postCategories: string[] = [
   "java",
   "cloud",
   "ai",
+  "database",
 ];

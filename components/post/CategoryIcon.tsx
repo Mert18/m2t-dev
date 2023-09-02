@@ -8,35 +8,29 @@ interface ICategoryIcon {
 }
 
 const CategoryIcon = ({ category, showExplanation = true }: ICategoryIcon) => {
-  const [categoryImg, setCategoryImg] = React.useState<string>("");
   const [explanation, setExplanation] = React.useState<string>("");
 
   useEffect(() => {
     if (category === "chat") {
-      setCategoryImg("chat");
       setExplanation("Chat");
     } else if (category === "learning") {
-      setCategoryImg("learning");
       setExplanation("Learning");
     } else if (category === "cloud") {
-      setCategoryImg("cloud");
       setExplanation("Cloud");
     } else if (category === "java") {
-      setCategoryImg("java");
       setExplanation("Java");
     } else if (category === "ai") {
-      setCategoryImg("ai");
       setExplanation("Artificial Intelligence");
-    } else {
-      setCategoryImg("other");
+    } else if (category === "database") {
+      setExplanation("Database");
     }
   }, [category]);
 
   return (
     <div className="mx-1 p-2 shadow-md rounded-sm group relative">
-      {categoryImg !== "" && (
+      {category !== "" && (
         <Image
-          src={`/icon/${categoryImg}.svg`}
+          src={`/icon/${category}.svg`}
           alt="stickman holding flower"
           width={25}
           height={25}
