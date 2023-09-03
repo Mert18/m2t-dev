@@ -24,7 +24,7 @@ function getPostFromParams(slug: string) {
 const Page = ({ params }: PageProps) => {
   const post = getPostFromParams(params.slug);
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center p-4">
       <div className="w-full md:w-1/2">
         <div className="flex flex-col justify-center items-start text-sm py-4">
           <h1 className="font-bold text-xl">{post.title}</h1>
