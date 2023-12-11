@@ -52,6 +52,7 @@ const AllPosts = () => {
   return (
     <div className="w-full sm:w-2/3 md:w-2/5">
       <div className="flex justify-center items-center mb-10">
+        {/* TODO: can be a separate component */}
         {postCategories.map((category: string) => {
           return (
             <div
