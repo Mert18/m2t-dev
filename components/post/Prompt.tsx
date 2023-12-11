@@ -17,7 +17,7 @@ const Prompt = ({ children }: IPrompt) => {
           height={70}
         />
       </div>
-      <div className="border border-serendipity bg-white_100 col-start-2 col-end-9 h-max rounded-sm p-4">
+      <div className="border border-serendipity bg-gradient-to-r from-white_100 to-white_50 col-start-2 col-end-9 h-max rounded-sm p-4">
         {children}
       </div>
     </div>

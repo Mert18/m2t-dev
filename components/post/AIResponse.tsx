@@ -8,7 +8,7 @@ interface IAIResponse {
 const AIResponse = ({ children }: IAIResponse) => {
   return (
     <div className="grid grid-cols-8 w-full mt-2 mb-6">
-      <div className="border border-green bg-white_100 col-start-1 col-end-8 h-max rounded-sm p-4">
+      <div className="border border-green bg-gradient-to-r from-white_50 to-white_100 col-start-1 col-end-8 h-max rounded-sm p-4">
         {children}
       </div>
 

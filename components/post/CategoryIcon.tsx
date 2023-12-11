@@ -23,6 +23,8 @@ const CategoryIcon = ({ category, showExplanation = true }: ICategoryIcon) => {
       setExplanation("Artificial Intelligence");
     } else if (category === "database") {
       setExplanation("Database");
+    } else if (category === "blog") {
+      setExplanation("blog");
     }
   }, [category]);
 
@@ -31,7 +33,7 @@ const CategoryIcon = ({ category, showExplanation = true }: ICategoryIcon) => {
       {category !== "" && (
         <Image
           src={`/icon/${category}.svg`}
-          alt="stickman holding flower"
+          alt={category}
           width={25}
           height={25}
         />
