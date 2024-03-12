@@ -1,0 +1,180 @@
+---
+title: Monitoring a dockerized spring boot application
+description: with prometheus and grafana
+date: March, 12th. 2024
+category: blog,learning,java
+---
+
+
+<div>
+    <p>I have a digital ocean droplet that runs my dockerized dictionary application’s backend . It is just a stand alone container. I decided to add monitoring to it and we are here.</p>
+</div>
+
+<br />
+
+<div>
+    <p>1. My application should expose some metrics.</p>
+<br />
+    <p>2. Prometheus and Grafana instances should be deployed as containers. Prometheus should be able to collect metrics from the application.</p>
+<br />
+    <p>3. Grafana should use this prometheus as data source and be able to create dashboards.</p>   
+</div>
+
+<br />
+
+
+<div>
+    <h2><b>Let's start from the application side</b></h2>
+    <p>There could be many options but I wanted to go with the easiest way: <i>actuator</i>. For this path, first I needed to add two libraries to my application:</p>
+</div>
+
+```xml
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+<dependency>
+	<groupId>io.micrometer</groupId>
+	<artifactId>micrometer-registry-prometheus</artifactId>
+</dependency>
+```
+
+<AIResponse>
+<p>The <i>spring-boot-starter-actuator</i> library provides a set of built-in endpoints and tools for monitoring and managing your Spring Boot application. It includes features such as health checks, metrics, environment information, and more, which are exposed via HTTP endpoints. </p>
+<br />
+<p>By adding <i>micrometer-registry-prometheus</i> to your Spring Boot application, you enable it to export metrics in a format that Prometheus can scrape and store.</p>
+</AIResponse>
+
+<div>
+    <p>Spring boot has autoconfiguration for many libraries but here we must indicate which endpoints we want to expose. In `application.properties` file, add:</p>
+</div>
+
+<br />
+
+```properties
+management.endpoints.web.exposure.include=health,prometheus,metrics
+```
+
+<div>
+    <p>That’s all for the application part. I should now see some metrics at: <i>/actuator/metrics endpoint</i>. You can inspect other endpoints too.</p>
+</div>
+
+<br />
+
+<div>
+    <h2><b>Deploying Prometheus and Grafana instances</b></h2>
+    <p>For these two brothers, I needed to create a <i>docker-compose.yml</i> file.</p>
+</div>
+
+```yaml	
+version: "3.0"
+services:
+  prometheus:
+    image: prom/prometheus:v2.35.0
+    container_name: prometheus
+    restart: unless-stopped
+    ports:
+      - 9090:9090
+    volumes:
+      - ./data/prometheus/config:/etc/prometheus/
+      - ./prometheusConfig.yml:/prometheusConfig.yml
+    command:
+      - '--config.file=/prometheusConfig.yml'
+    networks:
+      - hachiko-network
+  grafana:
+    image: grafana/grafana-oss:8.5.2
+    container_name: grafana
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SERVER_DOMAIN=localhost
+    user: "$UID:$GID"
+    networks:
+      - hachiko-network
+networks:
+  hachiko-network:
+    driver: bridge
+```
+
+<div>
+    <p>and I put <i>prometheusConfig.yml</i> in the same directory on the server:</p>
+</div>
+
+```yaml
+global:
+  scrape_interval: 1m
+  evaluation_interval: 1m 
+
+
+scrape_configs:
+  - job_name: 'hachiko-dictionary'
+    scrape_interval: 1m
+    scrape_timeout: 1m
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets:
+        - hachiko-dictionary:8080
+  - job_name: 'prometheus'
+    scrape_interval: 1m
+    scrape_timeout: 1m
+    static_configs:
+    - targets:
+      - prometheus:9090
+```
+
+<div>
+<p>First of all, notice the network definitions. I needed to create a network to enable service-to-service communication using container names.</p>
+<br />
+<p>Secondly, see that my app runs on port :8080 as many other spring boot application out there.</p>
+<br />
+<p>Finally, in the grafana definition I put user: <i>"$UID:$GID"</i> to get it working. Otherwise it threw permission errors. It may not be needed in a self-hosted environment, but i needed it in this Digital Ocean droplet.</p>
+</div>
+
+<AIResponse>
+<p>In the provided Docker Compose configuration for Grafana, the user line is used to specify the user and group that the Grafana container should run as. The container runs with the same permissions as the user executing the Docker Compose command. This ensures that the container executes with the correct permissions for accessing and modifying files within the mounted volume (./data/grafana:/var/lib/grafana).</p>
+</AIResponse>
+
+<div>
+<p>After running this docker file with command: docker compose up -d , I had the containers up and running. My app, prometheus, and grafana:</p>
+</div>
+
+<br />
+
+<img src="/posts/monitoring-a-dockerized-spring-boot-application/docker-instances-running.png" />
+
+<div>
+<p>Prometheus runs on port :9090. So let's go to server-ip:9090/targets to check if everything is ok.</p>
+</div>
+
+<br />
+
+<img src="/posts/monitoring-a-dockerized-spring-boot-application/prometheus-ui.png" />
+
+<br />
+
+<div>
+<p>Looks like it’s time to go to the Grafana.</p>
+</div>
+
+<br />
+<div>
+    <h2><b>Grafana</b></h2>
+    <p>Grafana runs on port :3000. So you should see a login screen when you hit `server-ip:3000` .</p>
+    <br />
+    <p>Default credentials are `admin` and `admin` .</p>
+    <br />
+
+    <p>Now add a new data source. Select prometheus and enter url as server-ip:9090 . Do not change anything else and click Save & test .If you see a green notification, you are almost done.</p>
+    <br />
+
+    <p>It is time to create dashboards. https://grafana.com/grafana/dashboards/ has some ready to go dashboards. So I picked the dashboard with id 4701 . Copy it and enter when creating dashboard. Select the newly created data source and viola! You have a dashboard.</p>
+</div>
+
+<br />
+
+<img src="/posts/monitoring-a-dockerized-spring-boot-application/grafana-dashboard.png" />

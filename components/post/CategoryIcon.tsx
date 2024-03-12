@@ -24,7 +24,7 @@ const CategoryIcon = ({ category, showExplanation = true }: ICategoryIcon) => {
     } else if (category === "database") {
       setExplanation("Database");
     } else if (category === "blog") {
-      setExplanation("blog");
+      setExplanation("Blog");
     }
   }, [category]);
 
