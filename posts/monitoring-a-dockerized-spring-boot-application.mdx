@@ -6,27 +6,13 @@ category: blog,learning,java
 ---
 
 
-<div>
-    <p>I have a digital ocean droplet that runs my dockerized dictionary application’s backend . It is just a stand alone container. I decided to add monitoring to it and we are here.</p>
-</div>
+<Paragraph>I have a digital ocean droplet that runs my dockerized dictionary application’s backend . It is just a stand alone container. I decided to add monitoring to it and we are here.</Paragraph>
 
-<br />
+<List points={["My application should expose some metrics.", "Prometheus and Grafana instances should be deployed as containers. Prometheus should be able to collect metrics from the application.", "Grafana should use this prometheus as data source and be able to create dashboards."]} />
 
-<div>
-    <p>1. My application should expose some metrics.</p>
-<br />
-    <p>2. Prometheus and Grafana instances should be deployed as containers. Prometheus should be able to collect metrics from the application.</p>
-<br />
-    <p>3. Grafana should use this prometheus as data source and be able to create dashboards.</p>   
-</div>
+<HeaderTwo>Let's start from the application side</HeaderTwo>
 
-<br />
-
-
-<div>
-    <h2><b>Let's start from the application side</b></h2>
-    <p>There could be many options but I wanted to go with the easiest way: <i>actuator</i>. For this path, first I needed to add two libraries to my application:</p>
-</div>
+<Paragraph>There could be many options but I wanted to go with the easiest way: <i>actuator</i>. For this path, first I needed to add two libraries to my application:</Paragraph>
 
 ```xml
 <dependency>
@@ -40,31 +26,22 @@ category: blog,learning,java
 ```
 
 <AIResponse>
-<p>The <i>spring-boot-starter-actuator</i> library provides a set of built-in endpoints and tools for monitoring and managing your Spring Boot application. It includes features such as health checks, metrics, environment information, and more, which are exposed via HTTP endpoints. </p>
-<br />
-<p>By adding <i>micrometer-registry-prometheus</i> to your Spring Boot application, you enable it to export metrics in a format that Prometheus can scrape and store.</p>
+  <Paragraph>The <i>spring-boot-starter-actuator</i> library provides a set of built-in endpoints and tools for monitoring and managing your Spring Boot application. It includes features such as health checks, metrics, environment information, and more, which are exposed via HTTP endpoints.</Paragraph>
+  <Paragraph>By adding <i>micrometer-registry-prometheus</i> to your Spring Boot application, you enable it to export metrics in a format that Prometheus can scrape and store.</Paragraph>
 </AIResponse>
 
-<div>
-    <p>Spring boot has autoconfiguration for many libraries but here we must indicate which endpoints we want to expose. In `application.properties` file, add:</p>
-</div>
 
-<br />
+<Paragraph>Spring boot has autoconfiguration for many libraries but here we must indicate which endpoints we want to expose. In `application.properties` file, add:</Paragraph>
 
 ```properties
 management.endpoints.web.exposure.include=health,prometheus,metrics
 ```
 
-<div>
-    <p>That’s all for the application part. I should now see some metrics at: <i>/actuator/metrics endpoint</i>. You can inspect other endpoints too.</p>
-</div>
+<Paragraph>That’s all for the application part. I should now see some metrics at: <i>/actuator/metrics endpoint</i>. You can inspect other endpoints too.</Paragraph>
 
-<br />
+<HeaderTwo>Deploying Prometheus and Grafana instances</HeaderTwo>
 
-<div>
-    <h2><b>Deploying Prometheus and Grafana instances</b></h2>
-    <p>For these two brothers, I needed to create a <i>docker-compose.yml</i> file.</p>
-</div>
+<Paragraph>For these two brothers, I needed to create a <i>docker-compose.yml</i> file.</Paragraph>
 
 ```yaml	
 version: "3.0"
@@ -101,9 +78,7 @@ networks:
     driver: bridge
 ```
 
-<div>
-    <p>and I put <i>prometheusConfig.yml</i> in the same directory on the server:</p>
-</div>
+<Paragraph> and I put <i>prometheusConfig.yml</i> in the same directory on the server:</Paragraph>
 
 ```yaml
 global:
@@ -127,54 +102,28 @@ scrape_configs:
       - prometheus:9090
 ```
 
-<div>
-<p>First of all, notice the network definitions. I needed to create a network to enable service-to-service communication using container names.</p>
-<br />
-<p>Secondly, see that my app runs on port :8080 as many other spring boot application out there.</p>
-<br />
-<p>Finally, in the grafana definition I put user: <i>"$UID:$GID"</i> to get it working. Otherwise it threw permission errors. It may not be needed in a self-hosted environment, but i needed it in this Digital Ocean droplet.</p>
-</div>
+<Paragraph> First of all, notice the network definitions. I needed to create a network to enable service-to-service communication using container names.</Paragraph>
+<Paragraph> Secondly, see that my app runs on port :8080 as many other spring boot application out there.</Paragraph>
+<Paragraph> Finally, in the grafana definition I put user: <i>"$UID:$GID"</i> to get it working. Otherwise it threw permission errors. It may not be needed in a self-hosted environment, but i needed it in this Digital Ocean droplet.</Paragraph>
 
 <AIResponse>
-<p>In the provided Docker Compose configuration for Grafana, the user line is used to specify the user and group that the Grafana container should run as. The container runs with the same permissions as the user executing the Docker Compose command. This ensures that the container executes with the correct permissions for accessing and modifying files within the mounted volume (./data/grafana:/var/lib/grafana).</p>
+  <Paragraph> In the provided Docker Compose configuration for Prometheus, the volumes line is used to mount the configuration file (prometheusConfig.yml) and the configuration directory (./data/prometheus/config) into the Prometheus container. This allows you to customize the Prometheus configuration and store it outside of the container, making it easier to manage and update the configuration. The command line is used to specify the location of the configuration file within the container. The networks line is used to specify the network that the Prometheus container should be connected to. This allows the Prometheus container to communicate with other containers on the same network using their container names.</Paragraph>
 </AIResponse>
 
-<div>
-<p>After running this docker file with command: docker compose up -d , I had the containers up and running. My app, prometheus, and grafana:</p>
-</div>
+<Paragraph>After running this docker file with command: <i>docker compose up -d</i> , I had the containers up and running. My app, prometheus, and grafana:</Paragraph>
 
-<br />
+<BlogImage source={"/posts/monitoring-a-dockerized-spring-boot-application/docker-instances-running.png"} description={"terminal showing docker instances running"} />
 
-<img src="/posts/monitoring-a-dockerized-spring-boot-application/docker-instances-running.png" />
+<Paragraph>Now, I needed to check if prometheus is able to scrape my application. I went to <i>server-ip:9090/targets</i> and saw that my application was up and running:</Paragraph>
 
-<div>
-<p>Prometheus runs on port :9090. So let's go to server-ip:9090/targets to check if everything is ok.</p>
-</div>
+<BlogImage source={"/posts/monitoring-a-dockerized-spring-boot-application/prometheus-ui.png"} description={"prometheus ui running two instances running"} />
 
-<br />
+<Paragraph>Looks like it’s time to go to the Grafana.</Paragraph>
 
-<img src="/posts/monitoring-a-dockerized-spring-boot-application/prometheus-ui.png" />
+<HeaderTwo>Setting up Grafana</HeaderTwo>
 
-<br />
+<Paragraph>When I hit <i>server-ip:3000</i> , I saw a login screen. Default credentials are <i>admin</i> and <i>admin</i>. After logging in, I added a new data source. I selected prometheus and entered url as <i>server-ip:9090</i>. I did not change anything else and clicked <i>Save & test</i>. If you see a green notification, you are almost done.</Paragraph>
 
-<div>
-<p>Looks like it’s time to go to the Grafana.</p>
-</div>
+<Paragraph>It is time to create dashboards. https://grafana.com/grafana/dashboards/ has some ready to go dashboards. So I picked the dashboard with id 4701 . Copy it and enter when creating dashboard. Select the newly created data source and viola! You have a dashboard.</Paragraph>
 
-<br />
-<div>
-    <h2><b>Grafana</b></h2>
-    <p>Grafana runs on port :3000. So you should see a login screen when you hit `server-ip:3000` .</p>
-    <br />
-    <p>Default credentials are `admin` and `admin` .</p>
-    <br />
-
-    <p>Now add a new data source. Select prometheus and enter url as server-ip:9090 . Do not change anything else and click Save & test .If you see a green notification, you are almost done.</p>
-    <br />
-
-    <p>It is time to create dashboards. https://grafana.com/grafana/dashboards/ has some ready to go dashboards. So I picked the dashboard with id 4701 . Copy it and enter when creating dashboard. Select the newly created data source and viola! You have a dashboard.</p>
-</div>
-
-<br />
-
-<img src="/posts/monitoring-a-dockerized-spring-boot-application/grafana-dashboard.png" />
+<BlogImage source={"/posts/monitoring-a-dockerized-spring-boot-application/grafana-dashboard.png"} description={"grafana dashboard seems working"} />

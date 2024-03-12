@@ -47,7 +47,7 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "github-light",
+          theme: "poimandres",
           keepBackground: true,
           onVisitLine(node: any) {
             if (node.children.length === 0) {
