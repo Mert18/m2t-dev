@@ -6,7 +6,7 @@ interface IParagraph {
 
 const Paragraph = ({ children }: IParagraph) => {
     return (
-      <div className="w-full my-4">
+      <div className="w-[98%] my-4">
         {children}
       </div>
     );

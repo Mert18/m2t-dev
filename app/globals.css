@@ -16,9 +16,12 @@ body {
   background-color: #f9f8f8;
 }
 
+
 pre {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  max-width: 100%;
+  width: 100%;
 }
 
 pre > code {

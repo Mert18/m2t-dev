@@ -32,7 +32,7 @@ const BlogImage = ({ source, description }: IBlogImage) => {
   }, [escFunction]);
 
   return (
-    <div className="w-full h-96 my-2" onClick={() => handleFullScreen()}>
+    <div className="w-full h-max my-2" onClick={() => handleFullScreen()}>
       {fullscreen ? (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 flex justify-center items-center">
           <Image
