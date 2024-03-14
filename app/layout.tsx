@@ -11,11 +11,11 @@ const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
-  children,
-}: {
+interface IRootLayout {
   children: React.ReactNode;
-}) {
+}
+
+export default function RootLayout({children}: IRootLayout) {
   useEffect(() => {
     window.process = {
       ...window.process,
