@@ -13,10 +13,6 @@ const BlogImage = ({ source, description }: IBlogImage) => {
     setFullscreen(!fullscreen);
   };
 
-  useEffect(() => {
-    console.log("Fullscreen: ", fullscreen);
-  }, [fullscreen]);
-
   const escFunction = useCallback((event: any) => {
     if (event.key === "Escape") {
       setFullscreen(false);
