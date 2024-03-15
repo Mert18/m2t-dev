@@ -8,11 +8,6 @@ interface PageProps {
   };
 }
 
-export const metadata = {
-  title: "m2t.dev - Blog",
-  description: "A Software Engineer Blog",
-};
-
 function getPostFromParams(slug: string) {
   const post = allPosts.find((p) => p._raw.flattenedPath === slug);
   if (!post) {
