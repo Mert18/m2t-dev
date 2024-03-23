@@ -1,8 +1,8 @@
-import AliveProofList from '@/components/alive/AliveProofList'
+import AliveProofList from '@/components/days/AliveProofList'
 import React from 'react'
 
 export const metadata = {
-  title: "m2t | am i alive?"
+  title: "m2t | days"
 }
 
 const Alive = () => {
