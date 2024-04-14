@@ -9,7 +9,7 @@ export const metadata = {
 const Home = () => {
   return (
     <div>
-      <div className="p-4 flex justify-center">
+      <div className="p-4 mt-10 flex justify-center">
         <AllPosts />
       </div>
     </div>

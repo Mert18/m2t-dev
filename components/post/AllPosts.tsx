@@ -50,13 +50,13 @@ const AllPosts = () => {
   }, [filter]);
 
   return (
-    <div className="w-full sm:w-2/3 md:w-2/5">
-      <div className="flex justify-center items-center mb-10">
+    <div className="w-full sm:w-4/5 xl:w-1/2">
+      <div className="flex justify-center items-center mb-10 flex-wrap">
         {/* TODO: can be a separate component */}
         {postCategories.map((category: string) => {
           return (
             <div
-              className="transition-all cursor-pointer hover:bg-white_100"
+              className="transition-all cursor-pointer"
               style={{
                 transform: filter?.includes(category)
                   ? "translateY(-10px)"
@@ -65,7 +65,7 @@ const AllPosts = () => {
               key={category}
               onClick={() => handleFilterChange(category)}
             >
-              <CategoryIcon category={category} showExplanation={false} />
+              <CategoryIcon category={category} />
             </div>
           );
         })}
