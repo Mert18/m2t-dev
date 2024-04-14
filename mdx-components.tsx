@@ -8,6 +8,7 @@ import HeaderThree from "./components/post/text/HeaderThree";
 import Paragraph from "./components/post/text/Paragraph";
 import List from "./components/post/text/List";
 import BlogImage from "./components/post/text/BlogImage";
+import ListItemWithTitle from "./components/post/text/ListItemWithTitle";
 
 interface MdxProps {
   code: string;
@@ -15,5 +16,5 @@ interface MdxProps {
 
 export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);
-  return <Component components={{ Prompt, AIResponse, HeaderOne, HeaderTwo, HeaderThree, Paragraph, List, BlogImage }} />;
+  return <Component components={{ Prompt, AIResponse, HeaderOne, HeaderTwo, HeaderThree, Paragraph, List, BlogImage, ListItemWithTitle }} />;
 }

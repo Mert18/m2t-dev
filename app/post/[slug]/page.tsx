@@ -1,6 +1,7 @@
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { Mdx } from "@/mdx-components";
+import Link from "next/link";
 
 interface PageProps {
   params: {
@@ -19,7 +20,7 @@ function getPostFromParams(slug: string) {
 const Page = ({ params }: PageProps) => {
   const post = getPostFromParams(params.slug);
   return (
-    <div className="flex justify-center items-center p-4">
+    <div className="flex flex-col justify-center items-center p-4">
       <div className="w-full md:w-1/2">
         <div className="flex flex-col justify-center items-start text-sm py-4">
           <h1 className="font-bold text-xl">{post.title}</h1>
@@ -29,6 +30,9 @@ const Page = ({ params }: PageProps) => {
         <div className="flex flex-col justify-center items-start p-2 md:py-4 md:p-0 text-sm overflow-auto">
           <Mdx code={post.body.code} />
         </div>
+      </div>
+      <div>
+        <Link href="/">Back to Home</Link>
       </div>
     </div>
   );
