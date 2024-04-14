@@ -14,22 +14,24 @@ interface IPostCard {
 
 const PostCard = ({ title, description, date, link, category }: IPostCard) => {
   const [categories, setCategories] = React.useState<string[]>([]);
+
   useEffect(() => {
     setCategories([]);
     category.split(",").map((cat) => {
       setCategories((prev) => [...prev, cat]);
     });
   }, [category]);
+
   return (
     <Link
-      className="flex flex-col justify-center items-center my-2 w-full relative overflow-hidden hover:shadow-lg transition-all"
+      className="flex flex-col justify-center items-center my-2 w-full relative overflow-hidden transition-all hover:bg-lighter"
       href={`/post/${link}`}
     >
-      <div className="p-4 hover:cursor-pointer border border-border text-black w-full">
+      <div className="hover:cursor-pointer text-dark w-full border-b border-b-dark p-2">
         <div>
-          <h1 className="font-bold text-sm w-max p-2">{title}</h1>
-          <p className="text-xs p-2">{description}</p>
-          <p className="text-xs p-2">{date}</p>
+          <h1 className="font-bold text-sm w-max py-1">{title}</h1>
+          <p className="text-xs py-1">{description}</p>
+          <p className="text-xs py-1 text-accent1">{date}</p>
         </div>
         <div className="flex justify-between items-center">
           <div className="flex justify-center items-center">

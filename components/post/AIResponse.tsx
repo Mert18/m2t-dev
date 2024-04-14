@@ -8,15 +8,15 @@ interface IAIResponse {
 const AIResponse = ({ children }: IAIResponse) => {
   return (
     <div className="grid grid-cols-8 w-full mt-2 mb-6">
-      <div className="border border-green bg-gradient-to-r from-white_50 to-white_100 col-start-1 col-end-8 h-max rounded-sm p-4">
+      <div className="border border-accent2 bg-lighter col-start-1 col-end-8 h-max rounded-sm p-4">
         {children}
       </div>
 
       <div className="col-start-8 col-end-9 flex justify-end items-start">
         <Image
-          className="border border-border"
+          className="border border-accent2"
           src="/ai.jpg"
-          alt="stickman holding flower"
+          alt="ai representative woman"
           width={70}
           height={70}
         />

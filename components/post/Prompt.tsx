@@ -10,14 +10,14 @@ const Prompt = ({ children }: IPrompt) => {
     <div className="grid grid-cols-8 w-full my-2">
       <div className="col-start-1 col-end-2 flex items-start justify-start">
         <Image
-          className="border border-border"
-          src="/pp.jpg"
-          alt="stickman holding flower"
+          className="border border-accent1"
+          src="/icon/frog.jpg"
+          alt="frog"
           width={70}
           height={70}
         />
       </div>
-      <div className="border border-serendipity bg-gradient-to-r from-white_100 to-white_50 col-start-2 col-end-9 h-max rounded-sm p-4">
+      <div className="border border-accent1 bg-lighter col-start-2 col-end-9 h-max rounded-sm p-4">
         {children}
       </div>
     </div>

@@ -1,12 +1,12 @@
 "use client";
 import Header from "@/components/layout/Header";
 import "./globals.css";
-import { Libre_Baskerville } from "next/font/google";
+import { Azeret_Mono } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import { useEffect } from "react";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-const libreBaskerville = Libre_Baskerville({
+const azeretMono = Azeret_Mono({
   weight: "400",
   subsets: ["latin"],
 });
@@ -26,7 +26,7 @@ export default function RootLayout({children}: IRootLayout) {
       <GoogleAnalytics
         GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""}
       />
-      <body className={libreBaskerville.className}>
+      <body className={azeretMono.className}>
         <Header />
         {children}
         <Footer />

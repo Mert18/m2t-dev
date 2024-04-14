@@ -28,7 +28,7 @@ const ImageOfTheDay = ({ image }: any) => {
         }}
       />
       {hover && (
-        <div className="flex justify-center items-center p-4 bg-black bg-opacity-60 absolute bottom-0 left-0 w-full text-white">
+        <div className="flex justify-center items-center p-4 bg-dark bg-opacity-60 absolute bottom-0 left-0 w-full text-lighter">
           <p>{image.date}</p>
         </div>
       )}

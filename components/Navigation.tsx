@@ -5,12 +5,13 @@ import ExternalLinkIcon from "./ExternalLinkIcon";
 
 const Navigation = () => {
   return (
-    <div className="flex flex-col sm:flex-row justify-center items-center w-2/5 p-2">
-      <div className="flex justify-center items-center my-2">
+    <div className="flex flex-col sm:flex-row justify-center items-center w-2/5">
+      {/* Left Icons */}
+      <div className="flex justify-center items-center">
         <ExternalLinkIcon
-          href="https://www.hackerrank.com/mertuygur02"
-          src="/icon/hackerrank.svg"
-          alt="hackerrank logo"
+          href="https://leetcode.com/hachiko2k/"
+          src="/icon/leetcode.svg"
+          alt="leetcode logo"
         />
         <ExternalLinkIcon
           href="https://www.linkedin.com/in/mert-u-8248ab135"
@@ -18,18 +19,22 @@ const Navigation = () => {
           alt="linkedin logo"
         />
       </div>
+
+      {/* Profile Picture */}
       <div className="mx-4 min-w-max">
-        <Link href="/" className="w-20 flex justify-center items-center">
+        <Link href="/" className="w-20 flex justify-center items-center bg-light">
           <Image
-            className="border border-border rounded-full "
-            src="/pp.jpg"
+            className="rounded-sm p-1"
+            src="/icon/frog.jpg"
             alt="stickman holding flower"
-            width={50}
-            height={50}
+            width={100}
+            height={100}
           />
         </Link>
       </div>
-      <div className="flex justify-center items-center my-2">
+
+      {/* Right Icons */}
+      <div className="flex justify-center items-center">
         <ExternalLinkIcon
           href="https://github.com/Mert18"
           src="/icon/github.svg"

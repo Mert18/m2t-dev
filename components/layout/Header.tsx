@@ -4,9 +4,9 @@ import Title from "../Title";
 
 const Header = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-72">
-      <Navigation />
+    <div className="flex flex-col justify-evenly items-center h-72 bg-dark">
       <Title />
+      <Navigation />
     </div>
   );
 };
