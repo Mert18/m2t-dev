@@ -28,7 +28,11 @@ export default function RootLayout({children}: IRootLayout) {
       />
       <body className={azeretMono.className}>
         <Header />
-        {children}
+        <div className="grid lg:grid-cols-12">
+          <div className="bg-accent1 row-auto col-start-1 col-end-2"></div>
+          <div className="bg-light row-auto col-start-2 col-end-12 min-h-screen shadow-lg">{children}</div>
+          <div className="bg-accent2 row-auto col-start-12 col-end-13"></div>
+        </div>
         <Footer />
       </body>
     </html>
