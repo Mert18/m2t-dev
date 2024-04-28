@@ -53,22 +53,22 @@ const AllPosts = () => {
     <div className="w-full sm:w-4/5 xl:w-1/2">
       <div className="flex justify-center items-center mb-10 flex-wrap">
         {/* TODO: can be a separate component */}
-        {postCategories.map((category: string) => {
-          return (
-            <div
-              className="transition-all cursor-pointer"
-              style={{
-                transform: filter?.includes(category)
-                  ? "translateY(-10px)"
-                  : "none",
-              }}
-              key={category}
-              onClick={() => handleFilterChange(category)}
-            >
-              <CategoryIcon category={category} />
-            </div>
-          );
-        })}
+        <div>
+          <button
+            className="mr-2 my-1 rounded-sm relative text-dark text-xs"
+            onClick={() => handleFilterChange("work")}
+            style={filter?.includes("work") ? { textDecoration: "underline" } : {}}
+          >
+            <p>Work</p>
+          </button>
+          <button
+            className="mr-2 my-1 rounded-sm relative text-dark text-xs"
+            onClick={() => handleFilterChange("life")}
+            style={filter?.includes("life") ? { textDecoration: "underline"} : {}}
+          >
+            <p>Life</p>
+          </button>
+        </div>
       </div>
       {filteredPosts.map((post) => {
         return (
