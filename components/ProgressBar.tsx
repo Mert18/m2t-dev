@@ -3,7 +3,7 @@ import React from "react";
 
 const ProgressBar = () => {
   const ONE_DAY = 1000 * 60 * 60 * 24;
-  const targetDate = new Date("2060-03-20");
+  const targetDate = new Date("2070-03-20");
   const currentDate = new Date();
   const startDate = new Date("2000-03-20");
   const differenceInTime = targetDate.getTime() - currentDate.getTime();
