@@ -7,8 +7,8 @@ interface IPrompt {
 
 const Prompt = ({ children }: IPrompt) => {
   return (
-    <div className="grid grid-cols-8 w-full my-2">
-      <div className="col-start-1 col-end-2 flex items-start justify-start">
+    <div className="grid grid-cols-8 w-full mt-2 mb-6">
+      <div className="col-start-1 col-end-9 lg:col-start-1 lg:col-end-2 flex items-start justify-start">
         <Image
           className="border border-accent1"
           src="/icon/frog.jpg"
@@ -17,7 +17,7 @@ const Prompt = ({ children }: IPrompt) => {
           height={70}
         />
       </div>
-      <div className="border border-accent1 bg-lighter col-start-2 col-end-9 h-max rounded-sm p-4">
+      <div className="col-start-1 col-end-9 lg:col-start-2 lg:col-end-9 border border-accent1 bg-lighter h-max rounded-sm p-4">
         {children}
       </div>
     </div>

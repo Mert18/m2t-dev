@@ -23,12 +23,12 @@ const PostCard = ({ title, description, date, link, category }: IPostCard) => {
 
   return (
     <Link
-      className="flex flex-col justify-center items-center my-2 w-full relative overflow-hidden transition-all hover:underline"
+      className="my-2 w-full transition-all hover:underline"
       href={`/post/${link}`}
     >
       <div className="hover:cursor-pointer text-dark w-full p-2">
         <div>
-          <h1 className="font-bold text-sm w-max py-1">{title}</h1>
+          <h1 className="font-bold text-xs lg:text-sm py-1">{title}</h1>
           <p className="text-xs py-1">{description}</p>
           <p className="text-xs py-1 text-accent1">{date}</p>
         </div>

@@ -5,6 +5,9 @@ import PostCard from "./PostCard";
 import { postCategories } from "@/lib/PostCategories";
 import CategoryIcon from "./CategoryIcon";
 import { parseDate } from "@/util/functions.";
+import Loader from "../Loader";
+import LoaderPb from "../FakeLoader";
+import FakeLoader from "../FakeLoader";
 
 const getPosts = (filter: string[]) => {
   if (!allPosts) return [] as Post[];
@@ -70,7 +73,7 @@ const AllPosts = () => {
           </button>
         </div>
       </div>
-      {filteredPosts.map((post) => {
+      {filteredPosts.length === 0 ? <FakeLoader /> : filteredPosts.map((post) => {
         return (
           <PostCard
             key={post.title}
