@@ -9,11 +9,11 @@ interface IBlogImage {
 const BlogImage = ({ source, description }: IBlogImage) => {
   const [fullscreen, setFullscreen] = React.useState(false);
 
-  const handleFullScreen = () => {
-    setFullscreen(!fullscreen);
+  const toggleFullScreen = () => {
+    setFullscreen(prev => !prev);
   };
 
-  const escFunction = useCallback((event: any) => {
+  const escFunction = useCallback((event: KeyboardEvent) => {
     if (event.key === "Escape") {
       setFullscreen(false);
     }
@@ -28,33 +28,27 @@ const BlogImage = ({ source, description }: IBlogImage) => {
   }, [escFunction]);
 
   return (
-    <div className="w-full h-max my-2" onClick={() => handleFullScreen()}>
+    <div className="w-full h-max my-2" onClick={toggleFullScreen} aria-label="Toggle fullscreen image">
       {fullscreen ? (
-        <div className="fixed top-0 left-0 w-full h-full bg-dark bg-opacity-90 z-50 flex justify-center items-center">
-          <Image
-            src={source}
-            alt={description}
-            sizes="100vw"
-            style={{
-              width: "90%",
-              height: "auto",
-            }}
-            width={500}
-            height={300}
-          />
+        <div className="fixed top-0 left-0 w-full h-full bg-light bg-opacity-80 z-50 flex justify-center items-center overflow-hidden">
+          <div className="relative w-full h-full">
+            <Image
+              src={source}
+              alt={description}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
         </div>
       ) : (
         <div className="relative w-full h-max flex justify-center hover:cursor-pointer">
           <Image
             src={source}
             alt={description}
-            sizes="100vw"
-            style={{
-              width: "90%",
-              height: "auto",
-            }}
+            layout="responsive"
             width={500}
             height={300}
+            objectFit="contain"
           />
         </div>
       )}
