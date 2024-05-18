@@ -17,7 +17,7 @@ const FakeLoader = () => {
         const updatedProgress = oldProgress + randomIncrement;
         return updatedProgress > 99 ? 99 : updatedProgress;
       });
-    }, 1000); // Update every second
+    }, 300); // Update every second
 
     return () => clearInterval(interval);
   }, []);
@@ -29,7 +29,7 @@ const FakeLoader = () => {
         setShownLoaderText(loaderTexts[i]);
         i++;
       }
-    }, 1000); // Update every second
+    }, 100); // Update every second
 
     return () => clearInterval(interval);
   }, [loaderTexts]);
@@ -40,8 +40,8 @@ const FakeLoader = () => {
       <div
         style={{
           width: `${progress}%`,
-          transition: "width 1s ease-in-out",
-          height: "48px",
+          transition: "width .2s ease-in-out",
+          height: "36px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

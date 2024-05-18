@@ -2,11 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Post, allPosts } from "@/.contentlayer/generated";
 import PostCard from "./PostCard";
-import { postCategories } from "@/lib/PostCategories";
-import CategoryIcon from "./CategoryIcon";
 import { parseDate } from "@/util/functions.";
-import Loader from "../Loader";
-import LoaderPb from "../FakeLoader";
 import FakeLoader from "../FakeLoader";
 
 const getPosts = (filter: string[]) => {
@@ -27,6 +23,7 @@ const getPosts = (filter: string[]) => {
 };
 
 const AllPosts = () => {
+  const [fakeLoaderVisible, setFakeLoaderVisible] = useState(true);
   const [filter, setFilter] = useState<string[]>();
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
 
@@ -43,6 +40,13 @@ const AllPosts = () => {
       });
     }
   };
+
+  useEffect(() => {
+    setInterval(() => {
+      setFakeLoaderVisible(false);
+    }
+    , 3000);
+  }, [])
 
   useEffect(() => {
     if (!filter || filter.length === 0) {
@@ -73,7 +77,7 @@ const AllPosts = () => {
           </button>
         </div>
       </div>
-      {filteredPosts.length === 0 ? <FakeLoader /> : filteredPosts.map((post) => {
+      {fakeLoaderVisible ? <FakeLoader /> : filteredPosts.map((post) => {
         return (
           <PostCard
             key={post.title}
