@@ -1,6 +1,6 @@
 import React from "react";
 
-const AliveProofPagination = ({
+const FotorafPagination = ({
   currentPage,
   setCurrentPage,
   totalPages,
@@ -28,4 +28,4 @@ const AliveProofPagination = ({
   );
 };
 
-export default AliveProofPagination;
+export default FotorafPagination;

@@ -1,13 +1,13 @@
 import React from 'react'
 
-interface IAlive {
+interface IFotoraf {
     children: React.ReactNode;
   }
 
-const AliveLayout = ({children}: IAlive) => {
+const FotorafLayout = ({children}: IFotoraf) => {
   return (
     <div>{children}</div>
   )
 }
 
-export default AliveLayout
+export default FotorafLayout

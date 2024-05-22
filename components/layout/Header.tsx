@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "../Navigation";
 import Title from "../Title";
 import ProgressBar from "../ProgressBar";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -9,6 +10,7 @@ const Header = () => {
       <Title />
       <Navigation />
       <ProgressBar />
+      <Link href="/fotoraf" className="text-light text-xs">fotoraf</Link>
     </div>
   );
 };

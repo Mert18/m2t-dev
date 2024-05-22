@@ -9,11 +9,6 @@ const Navigation = () => {
       {/* Left Icons */}
       <div className="flex justify-center items-center">
         <ExternalLinkIcon
-          href="https://leetcode.com/hachiko2k/"
-          src="/icon/leetcode.svg"
-          alt="leetcode logo"
-        />
-        <ExternalLinkIcon
           href="https://www.linkedin.com/in/mert-u-8248ab135"
           src="/icon/linkedin.svg"
           alt="linkedin logo"
@@ -39,11 +34,6 @@ const Navigation = () => {
           href="https://github.com/Mert18"
           src="/icon/github.svg"
           alt="github logo"
-        />
-        <ExternalLinkIcon
-          href="https://stackoverflow.com/users/14037079/mert-uygur"
-          src="/icon/stack-overflow.svg"
-          alt="stack overflow logo"
         />
       </div>
     </div>

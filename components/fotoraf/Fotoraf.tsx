@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-const ImageOfTheDay = ({ image }: any) => {
+const Fotoraf = ({ image }: any) => {
   const [hover, setHover] = useState(false);
   const handleMouseEnter = () => {
     setHover(true);
@@ -19,7 +19,7 @@ const ImageOfTheDay = ({ image }: any) => {
     >
       <Image
         src={image.url}
-        alt="Alive proof"
+        alt="fotoraf"
         width={500}
         height={500}
         style={{
@@ -36,4 +36,4 @@ const ImageOfTheDay = ({ image }: any) => {
   );
 };
 
-export default ImageOfTheDay;
+export default Fotoraf;
