@@ -2,7 +2,7 @@ const { withContentlayer } = require("next-contentlayer");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["scontent.cdninstagram.com"],
+    domains: ["m2t-dev-static.fra1.digitaloceanspaces.com"],
   },
 };
 

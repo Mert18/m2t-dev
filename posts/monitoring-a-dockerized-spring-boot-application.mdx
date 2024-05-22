@@ -112,11 +112,11 @@ scrape_configs:
 
 <Paragraph>After running this docker file with command: <i>docker compose up -d</i> , I had the containers up and running. My app, prometheus, and grafana:</Paragraph>
 
-<BlogImage source={"/posts/monitoring-a-dockerized-spring-boot-application/docker-instances-running.png"} description={"terminal showing docker instances running"} />
+<BlogImage source={"https://m2t-dev-static.fra1.digitaloceanspaces.com/posts/monitoring-a-dockerized-spring-boot-application/docker-instances-running.png"} description={"terminal showing docker instances running"} />
 
 <Paragraph>Now, I needed to check if prometheus is able to scrape my application. I went to <i>server-ip:9090/targets</i> and saw that my application was up and running:</Paragraph>
 
-<BlogImage source={"/posts/monitoring-a-dockerized-spring-boot-application/prometheus-ui.png"} description={"prometheus ui running two instances running"} />
+<BlogImage source={"https://m2t-dev-static.fra1.digitaloceanspaces.com/posts/monitoring-a-dockerized-spring-boot-application/prometheus-ui.png"} description={"prometheus ui running two instances running"} />
 
 <Paragraph>Looks like it’s time to go to the Grafana.</Paragraph>
 
@@ -126,4 +126,4 @@ scrape_configs:
 
 <Paragraph>It is time to create dashboards. https://grafana.com/grafana/dashboards/ has some ready to go dashboards. So I picked the dashboard with id 4701 . Copy it and enter when creating dashboard. Select the newly created data source and viola! You have a dashboard.</Paragraph>
 
-<BlogImage source={"/posts/monitoring-a-dockerized-spring-boot-application/grafana-dashboard.png"} description={"grafana dashboard seems working"} />
+<BlogImage source={"https://m2t-dev-static.fra1.digitaloceanspaces.com/posts/monitoring-a-dockerized-spring-boot-application/grafana-dashboard.png"} description={"grafana dashboard seems working"} />
