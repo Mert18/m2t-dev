@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { Mdx } from "@/mdx-components";
@@ -20,7 +20,7 @@ function getPostFromParams(slug: string) {
 
 const handleBackToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
-}
+};
 
 const Page = ({ params }: PageProps) => {
   const post = getPostFromParams(params.slug);
@@ -32,6 +32,16 @@ const Page = ({ params }: PageProps) => {
           <p className="py-4">{post.description}</p>
           <p className="text-accent1 font-bold">{post.date}</p>
         </div>
+        {post.image && (
+          <div className="flex justify-center items-center py-4">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-64 object-cover"
+            />
+          </div>
+        )}
+
         <div className="flex flex-col justify-center items-start p-2 md:py-4 md:p-0 text-xs xl:text-sm overflow-auto">
           <Mdx code={post.body.code} />
         </div>

@@ -35,7 +35,7 @@ const FakeLoader = () => {
   }, [loaderTexts]);
 
   return (
-    <div style={{ width: "100%"}}>
+    <div style={{ width: "100%"}} className="w-full flex flex-col justify-center items-center h-full mt-20">
       <p>{shownLoaderText}</p>
       <div
         style={{
@@ -45,7 +45,7 @@ const FakeLoader = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          backgroundColor: "#B64326",
+          backgroundColor: "#6A8C45",
           color: "#efefef",
         }}
       >

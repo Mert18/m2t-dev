@@ -28,7 +28,7 @@ const Fotoraf = ({ image }: any) => {
         }}
       />
       {hover && (
-        <div className="flex justify-center items-center p-4 bg-dark bg-opacity-60 absolute bottom-0 left-0 w-full text-lighter">
+        <div className="flex justify-center items-center p-4 bg-dark bg-opacity-60 absolute bottom-0 left-0 w-full text-white">
           <p>{image.date}</p>
         </div>
       )}

@@ -17,7 +17,7 @@ const Navigation = () => {
 
       {/* Profile Picture */}
       <div className="mx-4 min-w-max">
-        <Link href="/" className="w-20 flex justify-center items-center bg-light">
+        <Link href="/" className="w-20 flex justify-center items-center bg-dark">
           <Image
             className="rounded-sm p-1"
             src="/icon/frog.jpg"
