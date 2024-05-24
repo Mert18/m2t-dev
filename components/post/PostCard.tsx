@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import CategoryIcon from "./CategoryIcon";
+import Image from "next/image";
 
 interface IPostCard {
   title: string;
@@ -9,9 +10,17 @@ interface IPostCard {
   date: string;
   link: string;
   category: string;
+  image: string | null;
 }
 
-const PostCard = ({ title, description, date, link, category }: IPostCard) => {
+const PostCard = ({
+  title,
+  description,
+  date,
+  link,
+  category,
+  image,
+}: IPostCard) => {
   const [categories, setCategories] = React.useState<string[]>([]);
 
   useEffect(() => {
@@ -22,25 +31,31 @@ const PostCard = ({ title, description, date, link, category }: IPostCard) => {
   }, [category]);
 
   return (
-    <Link
-      className="my-2 w-full transition-all hover:underline"
-      href={`/post/${link}`}
-    >
-      <div className="hover:cursor-pointer text-dark w-full p-2">
-        <div>
-          <h1 className="font-bold text-xs lg:text-sm py-1">{title}</h1>
-          <p className="text-xs py-1">{description}</p>
-          <p className="text-xs py-1 text-accent1">{date}</p>
-        </div>
-        <div className="flex justify-between items-center">
-          <div className="flex justify-center items-center">
-            {categories.map((cat) => {
-              return <CategoryIcon key={cat} category={cat} />;
-            })}
+    <div className="odd:text-dark even:text-white even:bg-greend odd:bg-white h-96 lg:h-64">
+      <Link
+        className="hover:underline w-full h-full"
+        href={`/post/${link}`}
+      >
+        <div className="hover:cursor-pointer w-full h-full p-4 flex flex-col lg:flex-row justify-center items-center lg:justify-start">
+            {image && (
+              <Image
+                src={image}
+                alt="Lycians pixel art"
+                width={150}
+                height={150}
+                className="mr-4"
+              />
+            )}
+          <div className="flex flex-col lg:flex-col lg:justify-start items-center lg:items-start mt-4 lg:mt-0">
+            <h1 className="font-bold text-base md:text-xl lg:text-2xl">
+              {title}
+            </h1>
+            <p className="text-xs lg:text-sm">{description}</p>
+            <p className="text-xs lg:text-sm">{date}</p>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 

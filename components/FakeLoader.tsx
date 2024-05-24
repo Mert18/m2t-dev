@@ -35,17 +35,17 @@ const FakeLoader = () => {
   }, [loaderTexts]);
 
   return (
-    <div style={{ width: "100%"}}>
+    <div style={{ width: "100%"}} className="w-full flex flex-col justify-center items-center h-full mt-20">
       <p>{shownLoaderText}</p>
       <div
         style={{
           width: `${progress}%`,
-          transition: "width .2s ease-in-out",
+          transition: "width .1s ease-in-out",
           height: "36px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          backgroundColor: "#B64326",
+          backgroundColor: "#6A8C45",
           color: "#efefef",
         }}
       >
