@@ -31,13 +31,22 @@ const PostCard = ({
   }, [category]);
 
   return (
-    <div className="odd:text-dark even:text-white even:bg-greend odd:bg-white h-64">
+    <div className="odd:text-dark even:text-white even:bg-greend odd:bg-white h-96 lg:h-64">
       <Link
-        className="hover:underline w-full h-full flex justify-between items-center relative"
+        className="hover:underline w-full h-full"
         href={`/post/${link}`}
       >
-        <div className="hover:cursor-pointer w-full p-4">
-          <div>
+        <div className="hover:cursor-pointer w-full h-full p-4 flex flex-col lg:flex-row justify-center items-center lg:justify-start">
+            {image && (
+              <Image
+                src={image}
+                alt="Lycians pixel art"
+                width={150}
+                height={150}
+                className="mr-4"
+              />
+            )}
+          <div className="flex flex-col lg:flex-col lg:justify-start items-center lg:items-start mt-4 lg:mt-0">
             <h1 className="font-bold text-base md:text-xl lg:text-2xl">
               {title}
             </h1>
@@ -45,14 +54,6 @@ const PostCard = ({
             <p className="text-xs lg:text-sm">{date}</p>
           </div>
         </div>
-        {image && (
-            <Image
-              src={image}
-              alt="Lycians pixel art"
-              layout="fill"
-              objectFit="contain"
-            />
-        )}
       </Link>
     </div>
   );

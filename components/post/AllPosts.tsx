@@ -21,7 +21,7 @@ const AllPosts = () => {
   useEffect(() => {
     setInterval(() => {
       setFakeLoaderVisible(false);
-    }, 3000);
+    }, 1000);
   }, []);
 
   useEffect(() => {

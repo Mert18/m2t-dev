@@ -17,7 +17,7 @@ const Prompt = ({ children }: IPrompt) => {
           height={70}
         />
       </div>
-      <div className="col-start-1 col-end-9 lg:col-start-2 lg:col-end-9 border border-accent1 bg-lighter h-max rounded-sm p-4">
+      <div className="col-start-1 col-end-9 lg:col-start-2 lg:col-end-9 border border-accent1 bg-white2 h-max rounded-sm p-4">
         {children}
       </div>
     </div>

@@ -40,7 +40,7 @@ const FakeLoader = () => {
       <div
         style={{
           width: `${progress}%`,
-          transition: "width .2s ease-in-out",
+          transition: "width .1s ease-in-out",
           height: "36px",
           display: "flex",
           justifyContent: "center",

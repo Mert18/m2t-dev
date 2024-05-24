@@ -3,9 +3,9 @@ import React from "react";
 
 const Title = () => {
   return (
-    <div className="flex flex-col justify-center items-center text-dark">
+    <div className="flex flex-col justify-center items-center ml-4">
       <Link href="/">
-        <p className="text-xl">m2t.dev</p>
+        <p className="text-3xl text-white">m2t.dev</p>
       </Link>
     </div>
   );
