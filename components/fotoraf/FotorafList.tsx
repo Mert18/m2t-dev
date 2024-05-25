@@ -2,16 +2,13 @@
 import React, { useEffect, useState } from "react";
 import Fotoraf from "./Fotoraf";
 import FotorafPagination from "./FotorafPagination";
-import FakeLoader from "../FakeLoader";
 
 const FotorafList = () => {
   const [images, setImages] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
-  const [loading, setLoading] = useState(false);
 
   const callAPI = async () => {
-    setLoading(true);
     const res = await fetch(
       `https://${
         process.env.NEXT_PUBLIC_API_URL || ""
@@ -23,7 +20,6 @@ const FotorafList = () => {
     const data = await res.json();
     setImages(data?.content);
     setTotalPages(data?.totalPages);
-    setLoading(false);
   };
 
   useEffect(() => {
@@ -33,13 +29,9 @@ const FotorafList = () => {
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {loading ? (
-          <FakeLoader />
-        ) : (
-          images.map((image: any) => (
-            <Fotoraf key={image.uploadedAt} image={image} />
-          ))
-        )}
+        {images.map((image: any) => (
+          <Fotoraf key={image.uploadedAt} image={image} />
+        ))}
       </div>
 
       <FotorafPagination
