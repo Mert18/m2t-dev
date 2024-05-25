@@ -13,7 +13,7 @@ const Navigation = () => {
           className="w-20 flex justify-center items-center bg-light"
         >
           <Image
-            className="rounded-sm p-1"
+            className="rounded-sm p-1 pointer-events-none"
             src="/icon/frog.jpg"
             alt="stickman holding flower"
             width={100}

@@ -41,7 +41,7 @@ const BlogImage = ({ source, description }: IBlogImage) => {
           </div>
         </div>
       ) : (
-        <div className="relative w-full h-max flex justify-center hover:cursor-pointer">
+        <div className="relative w-full h-max flex flex-col justify-center hover:cursor-pointer">
           <Image
             src={source}
             alt={description}
@@ -50,6 +50,7 @@ const BlogImage = ({ source, description }: IBlogImage) => {
             height={300}
             objectFit="contain"
           />
+          <p className="text-gray opacity-60 text-xs">{description}</p>
         </div>
       )}
     </div>

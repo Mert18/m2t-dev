@@ -37,7 +37,7 @@ const Page = ({ params }: PageProps) => {
             <img
               src={post.image}
               alt={post.title}
-              className="w-full h-64 object-cover"
+              className="w-full h-64 object-cover pointer-events-none"
             />
           </div>
         )}

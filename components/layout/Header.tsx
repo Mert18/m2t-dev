@@ -18,8 +18,7 @@ const Header = () => {
         </Link>
       </div>
       </div>
-      <Image src="/euras-blackbird.png" alt="eurasian blackbird" width={150} height={150} className="rounded-sm p-1 opacity-20 absolute right-1/4 -bottom-2" />
-      
+      <Image src="/euras-blackbird.png" alt="eurasian blackbird" width={150} height={150} className="rounded-sm p-1 opacity-20 absolute right-1/4 -bottom-2 pointer-events-none" />
     </div>
   );
 };
