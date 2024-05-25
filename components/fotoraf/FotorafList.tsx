@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Fotoraf from "./Fotoraf";
-import Loader from "../Loader";
 import FotorafPagination from "./FotorafPagination";
 import FakeLoader from "../FakeLoader";
 

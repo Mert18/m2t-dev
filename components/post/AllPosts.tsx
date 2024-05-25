@@ -15,38 +15,43 @@ const getPosts = () => {
 };
 
 const AllPosts = () => {
-  const [fakeLoaderVisible, setFakeLoaderVisible] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    setInterval(() => {
-      setFakeLoaderVisible(false);
-    }, 1000);
+    const fetchPosts = () => {
+      try {
+        const fetchedPosts = getPosts(); // Directly call the synchronous function
+        setPosts(fetchedPosts);
+      } catch (error) {
+        console.error("Failed to fetch posts", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
   }, []);
 
-  useEffect(() => {
-    setPosts(getPosts());
-  }, []);
+  if (loading) {
+    return <FakeLoader />;
+  }
 
   return (
     <div>
-      {fakeLoaderVisible ? (
-        <FakeLoader />
-      ) : (
-        posts.map((post) => {
-          return (
-            <PostCard
-              key={post.title}
-              title={post.title}
-              description={post.description}
-              date={post.date}
-              link={post._raw.flattenedPath}
-              category={post.category}
-              image={post.image ?? null}
-            />
-          );
-        })
-      )}
+      {posts.map((post) => {
+        return (
+          <PostCard
+            key={post.title}
+            title={post.title}
+            description={post.description}
+            date={post.date}
+            link={post._raw.flattenedPath}
+            category={post.category}
+            image={post.image ?? null}
+          />
+        );
+      })}
     </div>
   );
 };

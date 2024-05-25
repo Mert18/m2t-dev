@@ -46,7 +46,7 @@ const FakeLoader = () => {
           justifyContent: "center",
           alignItems: "center",
           backgroundColor: "#6A8C45",
-          color: "#efefef",
+          color: "#E2DCD1",
         }}
       >
         {progress}%
