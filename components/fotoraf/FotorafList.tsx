@@ -4,41 +4,56 @@ import Fotoraf from "./Fotoraf";
 import FotorafPagination from "./FotorafPagination";
 
 const FotorafList = () => {
-  const [images, setImages] = useState([]);
-  const [totalPages, setTotalPages] = useState(0);
-  const [currentPage, setCurrentPage] = useState(0);
-
-  const callAPI = async () => {
-    const res = await fetch(
-      `https://${
-        process.env.NEXT_PUBLIC_API_URL || ""
-      }/api/v1/stored-image/list?page=${currentPage}`,
-      {
-        method: "GET",
-      }
-    );
-    const data = await res.json();
-    setImages(data?.content);
-    setTotalPages(data?.totalPages);
-  };
+  const [images, setImages] = useState<string[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const limit = 10; // Number of images per page
 
   useEffect(() => {
-    callAPI();
+    const fetchImages = async (page: number) => {
+      const res = await fetch(`/api/images?page=${page}&limit=${limit}`);
+      if (res.ok) {
+        const data = await res.json();
+        setImages(data.images);
+        setCurrentPage(data.currentPage);
+        setTotalPages(data.totalPages);
+      } else {
+        console.error('Failed to fetch images');
+      }
+    };
+
+    fetchImages(currentPage);
   }, [currentPage]);
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
 
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {images.map((image: any) => (
-          <Fotoraf key={image.uploadedAt} image={image} />
+          <Fotoraf key={image} image={image} />
         ))}
       </div>
 
-      <FotorafPagination
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        totalPages={totalPages}
-      />
+      <div>
+        <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+          Previous
+        </button>
+        <span>Page {currentPage} of {totalPages}</span>
+        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
+      </div>
     </div>
   );
 };
