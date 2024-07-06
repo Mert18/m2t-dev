@@ -1,13 +1,16 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import ExternalLinkIcon from "./ExternalLinkIcon";
+import NavigationLink from "./NavigationLink";
 
 const Navigation = () => {
   return (
-    <div className="flex flex-col sm:flex-row justify-center items-center">
+    <div className="custom-mr flex justify-center items-center bg-primarylighter text-secondary border border-secondary rounded-md font-bold">
+      <NavigationLink href="/" text="Home" />
+      <NavigationLink href="/blog" text="Blog" />
+      <NavigationLink href="/fotoraf" text="Fotoraf" />
+      <NavigationLink href="/valks" text="Valks" />
+
       {/* Profile Picture */}
-      <div className="mx-4 min-w-max">
+      {/* <div className="mx-4 min-w-max">
         <Link
           href="/"
           className="w-20 flex justify-center items-center bg-light"
@@ -36,7 +39,7 @@ const Navigation = () => {
           src="/icon/github.svg"
           alt="github logo"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,0 +1,10 @@
+html[data-theme="nature"] {
+    --color-primary: #EFF9EF;
+    --color-primary-lighter: #F5F7F5;
+    --color-secondary: #53C58C;
+    --color-accent: #423E37;
+    --color-text: #234C38;
+    --color-text-secondary: #7FAE97;
+    --color-background: #FBFBF0;
+  }
+  

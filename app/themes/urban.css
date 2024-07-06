@@ -1,0 +1,10 @@
+html[data-theme="urban"] {
+    --color-primary: #07020D;
+    --color-primary-lighter: #4A4451;
+    --color-secondary: #5DB7DE;
+    --color-accent: #E74C3C;
+    --color-text: #F1E9DB;
+    --color-text-secondary: #F7F5F0;
+    --color-background: #150825;
+  }
+  

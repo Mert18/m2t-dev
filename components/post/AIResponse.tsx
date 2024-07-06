@@ -10,7 +10,7 @@ const AIResponse = ({ children }: IAIResponse) => {
     <div className="grid grid-cols-8 w-full mt-2 mb-6">
       <div className="col-start-1 col-end-9 lg:col-start-1 lg:col-end-2 flex items-start justify-start">
         <Image
-          className="border border-greenl"
+          className="border border-text"
           src="/ai.jpg"
           alt="ai representative woman"
           width={70}

@@ -1,9 +1,9 @@
 import React from "react";
-import { Post, allPosts } from "@/.contentlayer/generated";
-import PostCard from "./PostCard";
 import { parseDate } from "@/util/functions.";
+import { Post, allPosts } from "@/.contentlayer/generated";
+import PostCard from "@/components/post/PostCard";
 
-const AllPosts = () => {
+const Blog = () => {
   const sortedPosts = () => {
     if (!allPosts) return [] as Post[];
     return allPosts.sort((a, b) => {
@@ -29,7 +29,7 @@ const AllPosts = () => {
         );
       })}
     </div>
-  );
+  )
 };
 
-export default AllPosts;
+export default Blog;

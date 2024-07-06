@@ -1,0 +1,10 @@
+html[data-theme="retro"] {
+    --color-primary: #F1E9DB;
+    --color-primary-lighter: #FDF7EC;
+    --color-secondary: #DE6E4B;
+    --color-accent: #E56399;
+    --color-text: #2C2830;
+    --color-text-secondary: #4A484C;
+    --color-background: #F7F2EA;
+  }
+  

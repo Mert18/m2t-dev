@@ -25,12 +25,12 @@ const handleBackToTop = () => {
 const Page = ({ params }: PageProps) => {
   const post = getPostFromParams(params.slug);
   return (
-    <div className="flex flex-col justify-center items-center p-4">
+    <div className="flex flex-col justify-center items-center p-4 text-text">
       <div className="w-full sm:w-4/5 xl:w-1/2">
         <div className="flex flex-col justify-center items-start text-sm py-4">
           <h1 className="font-bold text-xl">{post.title}</h1>
           <p className="py-4">{post.description}</p>
-          <p className="text-accent1 font-bold">{post.date}</p>
+          <p className="text-accent font-bold">{post.date}</p>
         </div>
         {post.image && (
           <div className="flex justify-center items-center py-4">

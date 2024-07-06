@@ -1,24 +1,49 @@
 import React from "react";
-import Navigation from "../Navigation";
-import Title from "../Title";
-import ProgressBar from "../ProgressBar";
-import Link from "next/link";
-import Image from "next/image";
+import Navigation from "../header/Navigation";
+import Title from "../header/Title";
+import ThemeHandler from "../header/ThemeHandler";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import HamburgerMenu from "../header/HamburgerMenu";
 
 const Header = () => {
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
+  
   return (
-    <div className={`flex lg:flex-row flex-col lg:items-start items-center h-96 bg-greenl justify-between relative overflow-hidden`}>
-      <div className="flex flex-col justify-evenly lg:items-start items-center h-full">
+    <div className={`bg-primary flex items-center justify-between p-2 text-sm border-b border-secondary`}>
+      <div className="flex justify-between items-center w-full relative">
         <Title />
-        <Navigation />
-        <ProgressBar />
-        <div className="p-4">
-        <Link href="/fotoraf" className="text-white text-base underline my-2 z-10">
-          fotoraf
-        </Link>
+        {isSmallScreen ? (
+          <HamburgerMenu />
+        ) : (
+          <>
+            <Navigation />
+            <ThemeHandler />
+          </>
+        )}
+
+        {/* <ProgressBar /> */}
+        {/* <button
+          onClick={() => changeTheme(theme === "theme1" ? "theme2" : "theme1")}
+          style={{ backgroundColor: "var(--color-buttons)" }}
+        >
+          Toggle Theme
+        </button> */}
+        {/* <div className="p-4">
+          <Link
+            href="/fotoraf"
+            className="text-white text-base underline my-2 z-10"
+          >
+            fotoraf
+          </Link>
+        </div> */}
       </div>
-      </div>
-      <Image src="/euras-blackbird.png" alt="eurasian blackbird" width={150} height={150} className="rounded-sm p-1 opacity-20 absolute right-1/4 -bottom-2 pointer-events-none" />
+      {/* <Image
+        src="/euras-blackbird.png"
+        alt="eurasian blackbird"
+        width={150}
+        height={150}
+        className="rounded-sm p-1 opacity-20 absolute right-1/4 -bottom-2 pointer-events-none"
+      /> */}
     </div>
   );
 };

@@ -20,13 +20,15 @@ const Fotoraf = ({ image }: any) => {
       <Image
         src={image.url}
         alt={`Image from ${image.date}`}
-        width={500}
-        height={500}
+        sizes="100vw"
         style={{
           width: "100%",
-          height: "auto"
+          height: "auto",
         }}
+        width={500}
+        height={300}
         loading="lazy"
+        className="rounded-md border border-secondary"
       />
     </div>
   );

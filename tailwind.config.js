@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: "jit",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -21,6 +22,13 @@ module.exports = {
       white: "#efefef",
       white2: "#f3f3f3",
       gray: "#333333",
+      primary: "var(--color-primary)",
+      primarylighter: "var(--color-primary-lighter)",
+      secondary: "var(--color-secondary)",
+      accent: "var(--color-accent)",
+      text: "var(--color-text)",
+      textsecondary: "var(--color-text-secondary)",
+      background: "var(--color-background)",
     },
   },
   plugins: [],
