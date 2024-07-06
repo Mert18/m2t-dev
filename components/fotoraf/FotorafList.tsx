@@ -12,7 +12,7 @@ const FotorafList = () => {
   const [images, setImages] = useState<ImageData[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const limit = 10; // Number of images per page
+  const limit = 8; // Number of images per page
 
   useEffect(() => {
     const fetchImages = async (page: number) => {
@@ -20,7 +20,7 @@ const FotorafList = () => {
       if (res.ok) {
         const data: ImageData[] = await res.json();
         const sortedData = data.sort(
-          (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
         );
         setImages(sortedData.slice((page - 1) * limit, page * limit));
         setTotalPages(Math.ceil(data.length / limit));
@@ -52,7 +52,7 @@ const FotorafList = () => {
                     page === currentPage
                       ? "bg-secondary text-background"
                       : "bg-primary"
-                  } px-3 py-1 m-1 w-9 h-9 rounded-md border border-secondary text-secondary hover:bg-secondary hover:text-primary`}
+                  } px-3 py-1 m-1 w-9 h-9 rounded-md border border-secondary hover:bg-secondary hover:text-primary`}
                 >
                   {page}
                 </button>
