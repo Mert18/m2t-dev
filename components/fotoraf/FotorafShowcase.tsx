@@ -10,42 +10,7 @@ interface ImageData {
 
 const FotorafShowcase = () => {
   const [images, setImages] = useState<ImageData[]>([]);
-  const limit = 10; // Number of images per page
-
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    const scrollContainer = scrollContainerRef.current;
-    if (scrollContainer) {
-      (scrollContainer as any).isDown = true;
-      (scrollContainer as any).startX = e.pageX - scrollContainer.offsetLeft;
-      (scrollContainer as any).scrollLeft = scrollContainer.scrollLeft;
-    }
-  };
-
-  const handleMouseLeave = () => {
-    const scrollContainer = scrollContainerRef.current;
-    if (scrollContainer) {
-      (scrollContainer as any).isDown = false;
-    }
-  };
-
-  const handleMouseUp = () => {
-    const scrollContainer = scrollContainerRef.current;
-    if (scrollContainer) {
-      (scrollContainer as any).isDown = false;
-    }
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    const scrollContainer = scrollContainerRef.current;
-    if (scrollContainer && (scrollContainer as any).isDown) {
-      e.preventDefault();
-      const x = e.pageX - scrollContainer.offsetLeft;
-      const walk = (x - (scrollContainer as any).startX) * 2; // Scroll speed
-      scrollContainer.scrollLeft = (scrollContainer as any).scrollLeft - walk;
-    }
-  };
+  const limit = 7; // Number of images per page
 
   useEffect(() => {
     const fetchImages = async (page: number) => {
@@ -64,28 +29,18 @@ const FotorafShowcase = () => {
     fetchImages(1);
   }, []);
 
-  useEffect(() => {
-    console.log("imgs. ", images);
-  }, [images]);
   return (
     <div className="my-2">
-      <div
-        className="flex overflow-hidden whitespace-nowrap cursor-grab select-none"
-        ref={scrollContainerRef}
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseLeave}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-      >
+      <div className="flex overflow-x-scroll whitespace-nowrap custom-mr">
         {images.map((image) => (
-          <div key={image.url} className="flex-none w-72 h-96 mr-2 relative">
+          <div key={image.url} className="flex-none w-72 h-96 relative select-none pointer-events-none">
             <Image
               src={image.url}
               alt={`Image from ${image.date}`}
               width={300}
               height={500}
               loading="lazy"
-              className="w-full h-full object-cover pointer-events-none select-none rounded-md border border-secondary"
+              className="w-full h-full object-cover rounded-md border border-secondary select-none pointer-events-none"
             />
           </div>
         ))}
