@@ -30,7 +30,7 @@ const PostCard = ({
   }, [category]);
 
   return (
-    <div className="bg-primary border-t border-b border-secondary my-2">
+    <div className="bg-primary border border-secondary rounded-md my-2 md:m-2 m-0">
       <Link
         className="hover:underline w-full h-full flex justify-start items-center text-text"
         href={`/blog/${link}`}
@@ -43,7 +43,7 @@ const PostCard = ({
                 alt="Lycians pixel art"
                 width={250}
                 height={250}
-                className="mr-4 border border-secondary md:mb-0 mb-4"
+                className="mr-4 border border-secondary md:mb-0 mb-4 rounded-md"
               />
             )}
             <div className="flex flex-col justify-start w-full">
