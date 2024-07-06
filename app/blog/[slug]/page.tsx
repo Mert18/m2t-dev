@@ -3,6 +3,7 @@ import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { Mdx } from "@/mdx-components";
 import Link from "next/link";
+import PostHeader from "@/components/post/PostHeader";
 
 interface PageProps {
   params: {
@@ -22,27 +23,14 @@ const handleBackToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-const Page = ({ params }: PageProps) => {
+const Post = ({ params }: PageProps) => {
   const post = getPostFromParams(params.slug);
   return (
-    <div className="flex flex-col justify-center items-center p-4 text-text">
+    <div className="flex flex-col justify-center items-center md:p-4 p-0 text-text">
       <div className="w-full sm:w-4/5 xl:w-1/2">
-        <div className="flex flex-col justify-center items-start text-sm py-4">
-          <h1 className="font-bold text-xl">{post.title}</h1>
-          <p className="py-4">{post.description}</p>
-          <p className="text-accent font-bold">{post.date}</p>
-        </div>
-        {post.image && (
-          <div className="flex justify-center items-center py-4">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-64 object-cover pointer-events-none"
-            />
-          </div>
-        )}
+        <PostHeader post={post} />
 
-        <div className="flex flex-col justify-center items-start p-2 md:py-4 md:p-0 text-xs xl:text-sm overflow-auto">
+        <div className="flex flex-col justify-center items-start md:py-4 text-xs xl:text-sm overflow-auto bg-primary p-4 border border-secondary rounded-md">
           <Mdx code={post.body.code} />
         </div>
         <div className="flex justify-between items-center">
@@ -56,4 +44,4 @@ const Page = ({ params }: PageProps) => {
   );
 };
 
-export default Page;
+export default Post;
