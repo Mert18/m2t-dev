@@ -1,0 +1,9 @@
+html[data-theme="frost"] {
+  --color-primary: #ECF0F1;
+  --color-primary-lighter: #FFFFFF;
+  --color-secondary: #3734DB;
+  --color-accent: #E74C3C;
+  --color-text: #2C3E50;
+  --color-text-secondary: #7F8C8D;
+  --color-background: #FFFFFF;
+}

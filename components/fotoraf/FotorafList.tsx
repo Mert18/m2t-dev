@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Fotoraf from "./Fotoraf";
-import FotorafPagination from "./FotorafPagination";
 
 interface ImageData {
   desc: string;
@@ -20,45 +19,47 @@ const FotorafList = () => {
       const res = await fetch(`/api/images`);
       if (res.ok) {
         const data: ImageData[] = await res.json();
-        const sortedData = data.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+        const sortedData = data.sort(
+          (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+        );
         setImages(sortedData.slice((page - 1) * limit, page * limit));
         setTotalPages(Math.ceil(data.length / limit));
       } else {
-        console.error('Failed to fetch images');
+        console.error("Failed to fetch images");
       }
     };
 
     fetchImages(currentPage);
   }, [currentPage]);
 
-  const handlePreviousPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-
-  const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 m-1">
         {images.map((image: any) => (
-          <Fotoraf key={image} image={image} />
+          <Fotoraf key={image.url} image={image} />
         ))}
       </div>
 
-      <div>
-        <button onClick={handlePreviousPage} disabled={currentPage === 1}>
-          Previous
-        </button>
-        <span>Page {currentPage} of {totalPages}</span>
-        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-          Next
-        </button>
+      <div className="flex justify-center">
+        {totalPages > 1 && (
+          <ul className="flex">
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <li key={page}>
+                <button
+                  onClick={() => setCurrentPage(page)}
+                  disabled={page === currentPage}
+                  className={`${
+                    page === currentPage
+                      ? "bg-secondary text-background"
+                      : "bg-primary"
+                  } px-3 py-1 m-1 w-9 h-9 rounded-md border border-secondary text-secondary hover:bg-secondary hover:text-primary`}
+                >
+                  {page}
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );

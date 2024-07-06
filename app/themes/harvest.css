@@ -1,0 +1,9 @@
+html[data-theme="harvest"] {
+  --color-primary: #423E37;
+  --color-primary-lighter: #696868;
+  --color-secondary: #E3B23C;
+  --color-accent: #E74C3C;
+  --color-text: #EDEBD7;
+  --color-text-secondary: #F3F2E8;
+  --color-background: #383221;
+}

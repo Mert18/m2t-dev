@@ -1,5 +1,6 @@
+import FotorafShowcase from "@/components/fotoraf/FotorafShowcase";
+import HighlightedPost from "@/components/post/HighlightedPost";
 import React from "react";
-import AllPosts from "@/components/post/AllPosts";
 
 export const metadata = {
   title: "m2t.dev | blog",
@@ -8,7 +9,10 @@ export const metadata = {
 
 const Home = () => {
   return (
-    <AllPosts />
+    <div>
+      <HighlightedPost />
+      <FotorafShowcase />
+    </div>
   );
 };
 

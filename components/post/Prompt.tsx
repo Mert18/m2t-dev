@@ -10,7 +10,7 @@ const Prompt = ({ children }: IPrompt) => {
     <div className="grid grid-cols-8 w-full mt-2 mb-6">
       <div className="col-start-1 col-end-9 lg:col-start-1 lg:col-end-2 flex items-start justify-start">
         <Image
-          className="border border-accent1"
+          className="border border-accent"
           src="/icon/frog.jpg"
           alt="frog"
           width={70}

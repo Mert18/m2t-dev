@@ -1,0 +1,9 @@
+html[data-theme="beige"] {
+  --color-primary: #EDEBD7;
+  --color-primary-lighter: #F7F7F4;
+  --color-secondary: #E3B23C;
+  --color-accent: #E74C3C;
+  --color-text: #423E37;
+  --color-text-secondary: #83817C;
+  --color-background: #FFFFFF;
+}

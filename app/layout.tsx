@@ -1,12 +1,13 @@
 "use client";
 import Header from "@/components/layout/Header";
 import "./globals.css";
-import { Azeret_Mono } from "next/font/google";
+import { Kanit } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import { useEffect } from "react";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { ThemeProvider } from "./themeContext";
 
-const azeretMono = Azeret_Mono({
+const kanit = Kanit({
   weight: "400",
   subsets: ["latin"],
 });
@@ -15,7 +16,7 @@ interface IRootLayout {
   children: React.ReactNode;
 }
 
-export default function RootLayout({children}: IRootLayout) {
+export default function RootLayout({ children }: IRootLayout) {
   useEffect(() => {
     window.process = {
       ...window.process,
@@ -26,10 +27,12 @@ export default function RootLayout({children}: IRootLayout) {
       <GoogleAnalytics
         GA_TRACKING_ID={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""}
       />
-      <body className={azeretMono.className}>
-        <Header />
-        <div className="bg-light min-h-screen">{children}</div>
-        <Footer />
+      <body className={kanit.className}>
+        <ThemeProvider>
+          <Header />
+          <div className="min-h-screen my-4">{children}</div>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
