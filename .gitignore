@@ -38,5 +38,4 @@ next-env.d.ts
 
 .env
 
-/public/fotoraf
-/public/posts
+/public/hosted

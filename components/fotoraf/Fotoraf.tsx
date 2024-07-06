@@ -18,14 +18,15 @@ const Fotoraf = ({ image }: any) => {
       className="relative w-full"
     >
       <Image
-        src={`/fotoraf/${image}`}
-        alt="fotoraf"
+        src={image.url}
+        alt={`Image from ${image.date}`}
         width={500}
         height={500}
         style={{
           width: "100%",
           height: "auto"
         }}
+        loading="lazy"
       />
     </div>
   );

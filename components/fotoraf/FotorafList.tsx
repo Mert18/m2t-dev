@@ -3,20 +3,26 @@ import React, { useEffect, useState } from "react";
 import Fotoraf from "./Fotoraf";
 import FotorafPagination from "./FotorafPagination";
 
+interface ImageData {
+  desc: string;
+  date: string;
+  url: string;
+}
+
 const FotorafList = () => {
-  const [images, setImages] = useState<string[]>([]);
+  const [images, setImages] = useState<ImageData[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const limit = 10; // Number of images per page
 
   useEffect(() => {
     const fetchImages = async (page: number) => {
-      const res = await fetch(`/api/images?page=${page}&limit=${limit}`);
+      const res = await fetch(`/api/images`);
       if (res.ok) {
-        const data = await res.json();
-        setImages(data.images);
-        setCurrentPage(data.currentPage);
-        setTotalPages(data.totalPages);
+        const data: ImageData[] = await res.json();
+        const sortedData = data.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+        setImages(sortedData.slice((page - 1) * limit, page * limit));
+        setTotalPages(Math.ceil(data.length / limit));
       } else {
         console.error('Failed to fetch images');
       }
