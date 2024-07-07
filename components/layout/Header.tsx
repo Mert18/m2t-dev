@@ -4,12 +4,15 @@ import Title from "../header/Title";
 import ThemeHandler from "../header/ThemeHandler";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import HamburgerMenu from "../header/HamburgerMenu";
+import LanguageHandler from "../header/LanguageHandler";
 
 const Header = () => {
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
-  
+
   return (
-    <div className={`bg-primary flex items-center justify-between p-2 text-sm border-b border-secondary`}>
+    <div
+      className={`bg-primary flex items-center justify-between p-2 text-sm border-b border-secondary`}
+    >
       <div className="flex justify-between items-center w-full relative">
         <Title />
         {isSmallScreen ? (
@@ -17,7 +20,10 @@ const Header = () => {
         ) : (
           <>
             <Navigation />
-            <ThemeHandler />
+            <div className="flex justify-center  items-center">
+              <LanguageHandler />
+              <ThemeHandler />
+            </div>
           </>
         )}
 

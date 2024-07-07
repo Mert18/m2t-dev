@@ -8,7 +8,7 @@ import remarkGfm from "remark-gfm";
 const computedFields: any = {
   slug: {
     type: "string",
-    resolve: (post: any) => `/${post._raw.flattenedPath}`,
+    resolve: (post: any) => `/${post._raw.flattenedPath.split("/").slice(1).join("/")}`,
   },
 };
 
@@ -17,6 +17,10 @@ export const Post = defineDocumentType(() => ({
   filePathPattern: "**/*.mdx",
   contentType: "mdx",
   fields: {
+    language: {
+      type: "string",
+      required: true,
+    },
     title: {
       type: "string",
       required: true,

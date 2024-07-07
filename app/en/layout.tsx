@@ -1,11 +1,11 @@
 "use client";
 import Header from "@/components/layout/Header";
-import "./globals.css";
+import "../globals.css";
 import { Kanit } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import { useEffect } from "react";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import { ThemeProvider } from "./themeContext";
+import { ThemeProvider } from "../themeContext";
 
 const kanit = Kanit({
   weight: "400",

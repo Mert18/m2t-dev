@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import useLanguage from "@/hooks/useLanguage";
 
 interface IPostCard {
   title: string;
@@ -10,6 +11,7 @@ interface IPostCard {
   link: string;
   category: string;
   image: string | null;
+  slug: string;
 }
 
 const PostCard = ({
@@ -19,7 +21,9 @@ const PostCard = ({
   link,
   category,
   image,
+  slug
 }: IPostCard) => {
+  const language = useLanguage();
   const [categories, setCategories] = React.useState<string[]>([]);
 
   useEffect(() => {
@@ -33,7 +37,7 @@ const PostCard = ({
     <div className="bg-primary border border-secondary rounded-md my-2 md:m-2 m-0">
       <Link
         className="hover:underline w-full h-full flex justify-start items-center text-text"
-        href={`/blog/${link}`}
+        href={`/${language}/blog${slug}`}
       >
         <div className="py-8 px-2">
           <div className="flex w-full md:flex-row flex-col md:items-start items-center">
