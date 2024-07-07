@@ -18,7 +18,7 @@ const FotorafShowcase = () => {
       if (res.ok) {
         const data: ImageData[] = await res.json();
         const sortedData = data.sort(
-          (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
         );
         setImages(sortedData.slice((page - 1) * limit, page * limit));
       } else {

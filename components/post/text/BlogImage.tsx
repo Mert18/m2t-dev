@@ -30,7 +30,7 @@ const BlogImage = ({ source, description }: IBlogImage) => {
   return (
     <div className="w-full h-max my-2" onClick={toggleFullScreen} aria-label="Toggle fullscreen image">
       {fullscreen ? (
-        <div className="fixed top-0 left-0 w-full h-full border border-secondary bg-opacity-80 z-50 flex justify-center items-center overflow-hidden">
+        <div className="fixed top-0 left-0 w-full h-full border border-secondary bg-gray bg-opacity-90 z-50 flex justify-center items-center overflow-hidden">
           <div className="relative w-full h-full">
             <Image
               src={source}
@@ -50,7 +50,7 @@ const BlogImage = ({ source, description }: IBlogImage) => {
             height={300}
             objectFit="contain"
           />
-          <p className="text-gray opacity-60 text-xs">{description}</p>
+          <p className="text-accent opacity-60 text-xs">{description}</p>
         </div>
       )}
     </div>

@@ -32,8 +32,10 @@ const Fotoraf = ({ image }: any) => {
         className="rounded-md border border-secondary select-none pointer-events-none"
       />
       {hover && (
-        <div className="absolute inset-0 bg-secondary bg-opacity-25 flex items-center justify-center rounded-md">
-          <p className="text-white text-lg">{image.date}</p>
+        <div className="absolute inset-0 bg-secondary bg-opacity-25 flex flex-col items-center justify-center rounded-md">
+          <p className="text-primary text-lg">{image.date}</p>
+          {image.desc && <p className="text-sm text-primary">{image.desc}</p>}
+          {image.place && <p className="text-sm text-primary">{image.place}</p>}
         </div>
       )}
     </div>

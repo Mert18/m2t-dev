@@ -18,12 +18,12 @@ const ThemeHandler = () => {
       </button>
       {themeMenuOpen && (
         <div className="absolute w-full z-50 mt-2 top-full left-0 flex flex-col justify-center items-center bg-primarylighter text-secondary border border-secondary rounded-md font-bold">
-          <button className="p-2" onClick={() => handleThemeChange("nature")}>Nature</button>
-          <button className="p-2" onClick={() => handleThemeChange("beige")}>Beige</button>
-          <button className="p-2" onClick={() => handleThemeChange("frost")}>Frost</button>
-          <button className="p-2" onClick={() => handleThemeChange("harvest")}>Harvest</button>
-          <button className="p-2" onClick={() => handleThemeChange("retro")}>Retro</button>
-          <button className="p-2" onClick={() => handleThemeChange("urban")}>Urban</button>
+          <button className="p-2 w-full" onClick={() => handleThemeChange("nature")}>Nature</button>
+          <button className="p-2 w-full" onClick={() => handleThemeChange("beige")}>Beige</button>
+          <button className="p-2 w-full" onClick={() => handleThemeChange("frost")}>Frost</button>
+          <button className="p-2 w-full" onClick={() => handleThemeChange("harvest")}>Harvest</button>
+          <button className="p-2 w-full" onClick={() => handleThemeChange("retro")}>Retro</button>
+          <button className="p-2 w-full" onClick={() => handleThemeChange("urban")}>Urban</button>
         </div>
       )}
     </div>
