@@ -1,14 +1,16 @@
+'use client'
 import React from "react";
 import NavigationLink from "./NavigationLink";
+import useLanguage from "@/hooks/useLanguage";
 
 const Navigation = () => {
+  const language = useLanguage();
   return (
     <div className="custom-mr flex justify-center items-center bg-primarylighter text-secondary border border-secondary rounded-md font-bold">
-      <NavigationLink href="/" text="Home" />
-      <NavigationLink href="/blog" text="Blog" />
-      <NavigationLink href="/fotoraf" text="Fotoraf" />
-      <NavigationLink href="/valks" text="Valks" />
-
+      <NavigationLink href={`/${language}`} text={language == "en" ? "Home" : "Ana Sayfa"} />
+      <NavigationLink href={`/${language}/blog`} text="Blog" />
+      <NavigationLink href={`/${language}/fotoraf`} text="Fotoraf" />
+      <NavigationLink href={`/${language}/valks`} text="Valks" />
       {/* Profile Picture */}
       {/* <div className="mx-4 min-w-max">
         <Link

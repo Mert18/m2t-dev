@@ -1,9 +1,7 @@
-'use client'
 import React from "react";
-import { Post, allPosts } from "@/.contentlayer/generated";
-import PostCard from "./PostCard";
 import { parseDate } from "@/util/functions.";
-import useLanguage from "@/hooks/useLanguage";
+import { Post, allPosts } from "@/.contentlayer/generated";
+import PostCard from "@/components/post/PostCard";
 
 type MonthMapping = {
   [key: string]: number;
@@ -30,32 +28,19 @@ function parseTurkishDate(dateStr: string) {
   return new Date(parseInt(year), month, parseInt(day));
 }
 
-const HighlightedPost = () => {
-  const language = useLanguage();
+const Blog = () => {
   const sortedPosts = () => {
     if (!allPosts) return [] as Post[];
-
-    return allPosts.filter(
-      (post) => post.language === language
-    ).sort((a, b) => {
-      if(language === 'en') {
-        const dateA = parseDate(a.date);
-        const dateB = parseDate(b.date);
-        return dateB.diff(dateA);
-      }else if(language === 'tr') {
-        const dateA = parseTurkishDate(a.date);
-        const dateB = parseTurkishDate(b.date);
-        return dateB.getTime() - dateA.getTime();
-      }else {
-        return 0;
-      }
+    return allPosts.filter((post) => post.language === "tr").sort((a, b) => {
+      const dateA = parseTurkishDate(a.date);
+      const dateB = parseTurkishDate(b.date);
+      return dateB.getTime() - dateA.getTime();
     });
   };
 
-
   return (
     <div>
-      {sortedPosts().slice(0, 1).map((post) => {
+      {sortedPosts().map((post) => {
         return (
           <PostCard
             key={post.title}
@@ -70,7 +55,7 @@ const HighlightedPost = () => {
         );
       })}
     </div>
-  );
+  )
 };
 
-export default HighlightedPost;
+export default Blog;
