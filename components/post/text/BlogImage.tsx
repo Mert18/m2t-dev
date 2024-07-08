@@ -49,6 +49,7 @@ const BlogImage = ({ source, description }: IBlogImage) => {
             width={500}
             height={300}
             objectFit="contain"
+            className="border border-secondary rounded-md"
           />
           <p className="text-accent opacity-60 text-xs">{description}</p>
         </div>

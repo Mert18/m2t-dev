@@ -6,7 +6,7 @@ import PostCard from "@/components/post/PostCard";
 const Blog = () => {
   const sortedPosts = () => {
     if (!allPosts) return [] as Post[];
-    return allPosts.filter((post) => post.language === "en").sort((a, b) => {
+    return allPosts.filter((post) => post.language === "en" && post.category !== "valk").sort((a, b) => {
       const dateA = parseDate(a.date);
       const dateB = parseDate(b.date);
       return dateB.diff(dateA);
