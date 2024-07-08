@@ -36,7 +36,7 @@ const HighlightedPost = () => {
     if (!allPosts) return [] as Post[];
 
     return allPosts.filter(
-      (post) => post.language === language
+      (post) => post.language === language && post.category !== "valk"
     ).sort((a, b) => {
       if(language === 'en') {
         const dateA = parseDate(a.date);

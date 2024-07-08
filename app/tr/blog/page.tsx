@@ -31,7 +31,7 @@ function parseTurkishDate(dateStr: string) {
 const Blog = () => {
   const sortedPosts = () => {
     if (!allPosts) return [] as Post[];
-    return allPosts.filter((post) => post.language === "tr").sort((a, b) => {
+    return allPosts.filter((post) => post.language === "tr" && post.category !== "valk").sort((a, b) => {
       const dateA = parseTurkishDate(a.date);
       const dateB = parseTurkishDate(b.date);
       return dateB.getTime() - dateA.getTime();
