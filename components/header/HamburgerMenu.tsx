@@ -2,6 +2,7 @@ import { useState } from "react";
 import MobileNavigationLink from "./MobileNavigationLink";
 import ThemeHandler from "./ThemeHandler";
 import useLanguage from "@/hooks/useLanguage";
+import LanguageHandler from "./LanguageHandler";
 
 const HamburgerMenu = () => {
   const language = useLanguage();
@@ -54,6 +55,8 @@ const HamburgerMenu = () => {
               onClick={toggleMenu}
             />
           </div>
+          <LanguageHandler />
+          <br />
           <ThemeHandler />
         </div>
       )}

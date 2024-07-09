@@ -22,6 +22,7 @@ const Header = () => {
             <Navigation />
             <div className="flex justify-center  items-center">
               <LanguageHandler />
+              <div className="p-2"></div>
               <ThemeHandler />
             </div>
           </>
