@@ -4,7 +4,7 @@ import HighlightedValk from "@/components/post/HighlightedValk";
 import React from "react";
 
 export const metadata = {
-  title: "m2t.dev | blog",
+  title: "m2t.dev",
   description: "A Software Engineering Blog",
 };
 

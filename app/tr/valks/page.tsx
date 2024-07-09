@@ -3,6 +3,11 @@ import { Post, allPosts } from "@/.contentlayer/generated";
 import { parseDate } from "@/util/functions.";
 import ValkCard from '@/components/valk/ValkCard';
 
+export const metadata = {
+  title: "m2t.dev | valks",
+  description: "A Software Engineering Blog, walk conversations with myself.",
+};
+
 const Valks = () => {
   const sortedValks = () => {
     if (!allPosts) return [] as Post[];

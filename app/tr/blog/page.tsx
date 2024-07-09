@@ -2,6 +2,11 @@ import React from "react";
 import { Post, allPosts } from "@/.contentlayer/generated";
 import PostCard from "@/components/post/PostCard";
 
+export const metadata = {
+  title: "m2t.dev | blog",
+  description: "A Software Engineering Blog, Blog section",
+};
+
 type MonthMapping = {
   [key: string]: number;
 };

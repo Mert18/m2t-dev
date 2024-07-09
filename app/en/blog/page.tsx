@@ -3,6 +3,11 @@ import { parseDate } from "@/util/functions.";
 import { Post, allPosts } from "@/.contentlayer/generated";
 import PostCard from "@/components/post/PostCard";
 
+export const metadata = {
+  title: "m2t.dev | blog",
+  description: "A Software Engineering Blog, Blog section",
+};
+
 const Blog = () => {
   const sortedPosts = () => {
     if (!allPosts) return [] as Post[];
