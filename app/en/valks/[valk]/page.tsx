@@ -1,3 +1,4 @@
+'use client'
 import { allPosts } from '@/.contentlayer/generated';
 import PostHeader from '@/components/post/PostHeader';
 import useLanguage from '@/hooks/useLanguage';
@@ -29,7 +30,6 @@ const handleBackToTop = () => {
 const Valk = ({ params }: PageProps) => {
   const language = useLanguage();
   const post = getPostFromParams(params.valk);
-  console.log("pp: ", post);
   return (
     <div className="flex flex-col justify-center items-center md:p-4 p-0 text-text">
       <div className="w-full sm:w-4/5 xl:w-1/2">
