@@ -1,5 +1,6 @@
 import FotorafShowcase from "@/components/fotoraf/FotorafShowcase";
 import HighlightedPost from "@/components/post/HighlightedPost";
+import HighlightedValk from "@/components/post/HighlightedValk";
 import React from "react";
 
 export const metadata = {
@@ -10,7 +11,14 @@ export const metadata = {
 const Home = () => {
   return (
     <div>
-      <HighlightedPost />
+      <div className="flex lg:flex-row flex-col justify-center items-center">
+        <div className="flex-1 w-full">
+          <HighlightedPost />
+        </div>
+        <div className="flex-1 w-full">
+          <HighlightedValk />
+        </div>
+      </div>
       <FotorafShowcase />
     </div>
   );

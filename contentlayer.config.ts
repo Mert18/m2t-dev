@@ -41,6 +41,18 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       required: false,
     },
+    steps: {
+      type: "string",
+      required: false,
+    },
+    distance: {
+      type: "string",
+      required: false,
+    },
+    duration: {
+      type: "string",
+      required: false,
+    }
   },
   computedFields,
 }));
