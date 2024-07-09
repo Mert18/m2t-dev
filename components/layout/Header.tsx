@@ -27,30 +27,7 @@ const Header = () => {
             </div>
           </>
         )}
-
-        {/* <ProgressBar /> */}
-        {/* <button
-          onClick={() => changeTheme(theme === "theme1" ? "theme2" : "theme1")}
-          style={{ backgroundColor: "var(--color-buttons)" }}
-        >
-          Toggle Theme
-        </button> */}
-        {/* <div className="p-4">
-          <Link
-            href="/fotoraf"
-            className="text-white text-base underline my-2 z-10"
-          >
-            fotoraf
-          </Link>
-        </div> */}
       </div>
-      {/* <Image
-        src="/euras-blackbird.png"
-        alt="eurasian blackbird"
-        width={150}
-        height={150}
-        className="rounded-sm p-1 opacity-20 absolute right-1/4 -bottom-2 pointer-events-none"
-      /> */}
     </div>
   );
 };

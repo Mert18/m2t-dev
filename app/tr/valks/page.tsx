@@ -30,6 +30,9 @@ const Valks = () => {
             category={post.category}
             image={post.image ?? null}
             valk={post.slug}
+            steps={post.steps ?? ""}
+            distance={post.distance ?? ""}
+            duration={post.duration ?? ""}
           />
         );
       })}

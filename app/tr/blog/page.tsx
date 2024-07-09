@@ -1,5 +1,4 @@
 import React from "react";
-import { parseDate } from "@/util/functions.";
 import { Post, allPosts } from "@/.contentlayer/generated";
 import PostCard from "@/components/post/PostCard";
 

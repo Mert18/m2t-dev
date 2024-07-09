@@ -12,6 +12,9 @@ interface IValkCard {
     category: string;
     image: string | null;
     valk: string;
+    steps: string;
+    distance: string;
+    duration: string;
   }
   
   const ValkCard = ({
@@ -21,7 +24,10 @@ interface IValkCard {
     link,
     category,
     image,
-    valk
+    valk,
+    steps,
+    distance,
+    duration
   }: IValkCard) => {
     const language = useLanguage();
     const [categories, setCategories] = React.useState<string[]>([]);
@@ -34,7 +40,7 @@ interface IValkCard {
     }, [category]);
   
     return (
-      <div className="bg-primary border border-secondary rounded-md my-2 md:m-2 m-0">
+      <div className="bg-primary border border-secondary rounded-md my-2 md:m-2 m-0 flex justify-center items-center">
         <Link
           className="hover:underline w-full h-full flex justify-start items-center text-text"
           href={`/${language}${valk}`}
@@ -52,6 +58,10 @@ interface IValkCard {
               )}
               <div className="flex flex-col justify-start w-full">
                 <h1 className="font-bold text-base md:text-xl lg:text-2xl mb-4">{title}</h1>
+                <p className="text-xs lg:text-sm my-2">{description}</p>
+                <p className="text-xs lg:text-sm my-2">{steps} {language === "en" ? "Steps" : "Adım"}</p>
+                <p className="text-xs lg:text-sm my-2">{distance}</p> 
+                <p className="text-xs lg:text-sm my-2">{duration}</p>
               </div>
             </div>
           </div>
