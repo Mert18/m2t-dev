@@ -11,15 +11,24 @@ export const metadata = {
 const Home = () => {
   return (
     <div>
-      <div className="flex lg:flex-row flex-col justify-center items-center">
-        <div className="flex-1 w-full">
-          <HighlightedPost />
+      <div className="flex lg:flex-row flex-col justify-center items-start">
+        <div className="flex-1 w-full my-2 md:m-2 m-0">
+          <h3 className="uppercase font-bold text-text text-xs">Posts</h3>
+          <div>
+            <HighlightedPost />
+          </div>
         </div>
-        <div className="flex-1 w-full">
-          <HighlightedValk />
+        <div className="flex-1 w-full my-2 md:m-2 m-0">
+          <h3 className="uppercase font-bold text-text text-xs">Valks</h3>
+          <div>
+            <HighlightedValk />
+          </div>
         </div>
       </div>
-      <FotorafShowcase />
+      <div className="flex-1 w-full my-2 md:m-2 m-0">
+        <h3 className="uppercase font-bold text-text text-xs">Fotorafs</h3>
+        <FotorafShowcase />
+      </div>
     </div>
   );
 };

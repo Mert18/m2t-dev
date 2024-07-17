@@ -30,21 +30,22 @@ const FotorafShowcase = () => {
   }, []);
 
   return (
-    <div className="md:m-2 m-0">
-      <div className="flex overflow-x-scroll whitespace-nowrap custom-mr">
-        {images.map((image) => (
-          <div key={image.url} className="flex-none w-72 h-96 relative select-none pointer-events-none">
-            <Image
-              src={image.url}
-              alt={`Image from ${image.date}`}
-              width={300}
-              height={500}
-              loading="lazy"
-              className="w-full h-full object-cover rounded-md border border-secondary select-none pointer-events-none"
-            />
-          </div>
-        ))}
-      </div>
+    <div className="flex overflow-x-scroll whitespace-nowrap custom-mr m-2">
+      {images.map((image) => (
+        <div
+          key={image.url}
+          className="flex-none w-72 h-96 relative select-none pointer-events-none"
+        >
+          <Image
+            src={image.url}
+            alt={`Image from ${image.date}`}
+            width={300}
+            height={500}
+            loading="lazy"
+            className="w-full h-full object-cover rounded-md border border-secondary select-none pointer-events-none"
+          />
+        </div>
+      ))}
     </div>
   );
 };

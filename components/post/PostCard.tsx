@@ -34,7 +34,7 @@ const PostCard = ({
   }, [category]);
 
   return (
-    <div className="bg-primary border border-secondary rounded-md my-2 md:m-2 m-0">
+    <div className="bg-primary border border-secondary rounded-md m-2">
       <Link
         className="hover:underline w-full h-full flex justify-start items-center text-text"
         href={`/${language}/blog${slug}`}
